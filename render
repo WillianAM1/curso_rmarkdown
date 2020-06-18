@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# apostila
+cd apostila
+Rscript _render.R
+
+# slides
+cd ../slides
+Rscript _render.R

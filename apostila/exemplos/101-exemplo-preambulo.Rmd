@@ -1,0 +1,28 @@
+---
+title: "Preâmbulo"
+author: "Departamento de Estatística - UEM"
+date: "`r format(Sys.Date(), '%d/%m/%Y')`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 6
+    number_sections: true
+---
+
+```{r setup, include = FALSE}
+
+```
+
+
+O código abaixo foi usado no preâmbulo deste arquivo
+
+```{yaml, parse = FALSE}
+title: "Preâmbulo"
+author: "Departamento de Estatística - UEM"
+date: "`r format(Sys.Date(), '%d/%m/%Y')`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 6
+    number_sections: true
+```

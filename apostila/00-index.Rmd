@@ -1,0 +1,18 @@
+--- 
+title: "Curso de R Markdown"
+author: "Samuel"
+date: "`r Sys.Date()`"
+output: pdf_document
+description: Curso de R Markdown...
+documentclass: book
+link-citations: yes
+site: bookdown::bookdown_site
+biblio-style: apalike
+github-repo: estatsej/curso_rmarkdown
+---
+
+# Prefácio {-}
+
+```{r eval=FALSE}
+install.packages("bookdown")
+```

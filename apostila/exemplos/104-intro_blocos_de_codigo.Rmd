@@ -1,0 +1,282 @@
+---
+title: "Blocos de Código"
+author: "Departamento de Estatística - UEM"
+date: "`r format(Sys.Date(), '%d/%m/%Y')`"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(reticulate)
+```
+
+## Executando código no meio do texto
+
+Executando código em meio do texto `r format(Sys.Date(), "%d/%m/%Y")`.
+
+Executando código em meio do texto `` ` `` r format(Sys.Date(), "%d/%m/%Y") `` ` ``.
+
+## Executando código de r em blocos
+
+````markdown
+`r ''````{r}
+teste_bool <- TRUE
+```
+````
+
+```{r}
+teste_bool <- TRUE
+```
+
+````markdown
+`r ''````{r, eval = teste_bool}
+2 + 2
+```
+````
+
+```{r, eval = teste_bool}
+2 + 2
+```
+
+## Opções básicas dos blocos de código
+
+````markdown
+`r ''````{r teste, eval = TRUE, results = "asis", collapse = TRUE, warning = FALSE, message = FALSE, error = FALSE, include = TRUE, fig.width = 7, fig.height = 5, fig.align = "center", dev = "png", fig.cap = "plot(cars)"}
+plot(cars, pch = 19)
+```
+````
+
+```{r teste, eval = TRUE, results = "asis", collapse = TRUE, warning = FALSE, message = FALSE, error = FALSE, include = TRUE, fig.width = 7, fig.height = 5, fig.align = "center", dev = "png", fig.cap = "plot(cars)"}
+plot(cars, pch = 19)
+```
+
+## Inserindo figuras em blocos de código
+
+````markdown
+`r ''````{r image}
+knitr::include_graphics("http://tny.im/lTZ")
+```
+````
+
+```{r image}
+knitr::include_graphics("http://tny.im/lTZ")
+```
+
+## Inserindo tabelas em blocos de código
+
+````markdown
+`r ''````{r}
+knitr::kable(cars[1:5,], caption = "Cars")
+```
+````
+
+```{r}
+knitr::kable(cars[1:5,], caption = "Cars")
+```
+
+## Executando código de python em blocos
+
+````markdown
+`r ''````{python}
+x = 5
+print(x)
+```
+````
+
+```{python}
+x = 5
+print(x)
+```
+
+### Acessando objetos de python em R
+
+````markdown
+`r ''````{r}
+py$x
+```
+````
+
+```{r}
+py$x
+```
+
+````markdown
+`r ''````{python}
+import matplotlib.pyplot as plt
+plt.plot([0, 2, 1, 4])
+plt.show()
+```
+````
+
+```{python}
+import matplotlib.pyplot as plt
+plt.plot([0, 2, 1, 4])
+plt.show()
+```
+
+## Executando comandos de bash em blocos de código
+
+````markdown
+`r ''````{bash}
+echo "teste"
+```
+````
+
+```{bash}
+echo "teste"
+```
+
+## Compilando código de C++ em blocos
+
+````markdown
+`r ''````{Rcpp, cache = TRUE}
+#include <Rcpp.h>
+using namespace Rcpp;
+
+// [[Rcpp::export]]
+int timesTwo(int x) {
+  return x * 2;
+}
+```
+````
+
+```{Rcpp, cache = TRUE}
+#include <Rcpp.h>
+using namespace Rcpp;
+
+// [[Rcpp::export]]
+int timesTwo(int x) {
+  return x * 2;
+}
+```
+
+### Acessando funções criadas em C++ em R
+
+````markdown
+`r ''````{r}
+timesTwo(1)
+```
+````
+
+```{r}
+timesTwo(1)
+```
+
+## Executando comandos de Stan em blocos de código
+
+````markdown
+`r ''````{stan, output.var="ex1", cache = TRUE}
+parameters {
+  real y[2];
+}
+model {
+  y[1] ~ normal(0, 1);
+  y[2] ~ double_exponential(0, 2);
+}
+```
+````
+
+```{stan, output.var="ex1", cache = TRUE}
+parameters {
+  real y[2];
+}
+model {
+  y[1] ~ normal(0, 1);
+  y[2] ~ double_exponential(0, 2);
+}
+```
+
+### Acessando modelos criados em Stan em R
+
+````markdown
+`r ''````{r, cache = TRUE, include = FALSE}
+library(rstan)
+fit = sampling(ex1)
+```
+````
+
+```{r, cache = TRUE, include = FALSE}
+library(rstan)
+fit = sampling(ex1)
+```
+
+````markdown
+`r ''````{r}
+print(fit)
+```
+````
+
+```{r}
+print(fit)
+```
+
+## Executando código de JavaScript em bloco
+
+````markdown
+`r ''````{js, echo=FALSE}
+$('.title').css('color', 'red')
+```
+````
+
+```{js, echo=FALSE}
+$('.title').css('color', 'red')
+```
+
+## Executando css em blocos de código
+
+````markdown
+`r ''````{css, echo=FALSE}
+body {
+  color: red;
+}
+```
+````
+
+```{css, echo=FALSE}
+body {
+  color: red;
+}
+```
+
+## Executando código de Julia em bloco
+
+````markdown
+`r ''````{julia, cache = TRUE}
+a = sqrt(2);  # o ponto e virgula impede julia de printar o resultado
+```
+````
+
+```{julia, cache = TRUE}
+a = sqrt(2);  # o ponto e virgula impede julia de printar o resultado
+```
+
+## Executando código de C em bloco
+
+````markdown
+`r ''````{c, test-c, results='hide', cache = TRUE}
+void square(double *x) {
+  *x = *x * *x;
+}
+```
+````
+
+```{c, test-c, results='hide', cache = TRUE}
+void square(double *x) {
+  *x = *x * *x;
+}
+```
+
+### Acessando a função criada em C em R
+
+````markdown
+`r ''````{r}
+.C('square', 9)
+.C('square', 123)
+```
+````
+
+```{r}
+.C('square', 9)
+.C('square', 123)
+```

@@ -1,0 +1,136 @@
+---
+title: "Sintaxe Básica de R Markdown"
+author: "Departamento de Estatística - UEM"
+date: "`r format(Sys.Date(), '%d/%m/%Y')`"
+output:
+  html_document:
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Formatação de Texto
+
+## Itálico
+'`_Itálico_`' resulta em '_Itálico_'
+
+'`*Itálico*` ' resulta em '*Itálico*'
+
+## Negrito
+'`**Negrito**` ' resulta em '**Negrito**'
+
+## Subscrito
+'`H~3~PO~4~`' resulta em 'H~3~PO~4~'
+
+## Sobrescrito
+'`e^2^`' resulta em 'e^2^'
+
+## Código
+'`` `Código` ``' resulta em '`Código`'
+
+## Hiperlinks
+'`[DES](http://www.des.uem.br)`' resulta em '[DES](http://www.des.uem.br)'
+
+## Imagens
+'`![](http://tny.im/lTZ)`' resulta em '![](http://tny.im/lTZ)'
+
+## Rodapé
+'`^[Rodapé]`' resulta em '^[Rodapé]'
+
+# Listas
+
+## Listas Não Ordenadas
+
+Listas podem ser geradas utilizando `-`, `+` ou `*`.
+
+```
+- item
++ item
+* item
+  - item
+  - item
+  - item
+    - item
+    - item
+    - item
+```
+O texto acima resulta em:
+
+- item
++ item
+* item
+  - item
+  - item
+  - item
+    - item
+    - item
+    - item
+    
+## Listas Ordenadas
+
+Listas ordenadas começam com um número, mesmo fora de ordem.
+
+```
+1. item 1
+3. item 2
+2. item 3
+   1. item 1
+   2. item 2
+```
+
+O texto acima resulta em:
+
+1. item 1
+3. item 2
+2. item 3
+   1. item 1
+   2. item 2
+   
+# Citação em Bloco
+
+```
+> "É notável uma ciência que começou com jogos de azar tenha se tornado o mais importante objeto do conhecimento humano.”
+>
+> --- Pierre Simon Laplace
+```
+    
+> "É notável uma ciência que começou com jogos de azar tenha se tornado o mais importante objeto do conhecimento humano.”
+>
+> --- Pierre Simon Laplace
+
+# Texto literal
+
+````
+```
+# Exemplo^2^
+```
+````
+
+Este texto é apresentado de forma literal, com caracteres da sintaxe.
+
+```
+# Exemplo^2^
+```
+
+# Expressões matemáticas
+R Markdown pode gerar expressões matemáticas utilizando sintaxe de LaTeX, tanto em linha como em blocos.
+
+Por exemplo `$f_x(x) = \lambda e^{-\lambda x}$` resulta em $f_x(x) = \lambda e^{-\lambda x}$
+
+Em blocos, `$$f_x(x) = \lambda e^{-\lambda x}$$` resulta em:
+$$f_x(x) = \lambda e^{-\lambda x}$$
+```
+$$X = \begin{bmatrix}1 & x_{1}\\
+1 & x_{2}\\
+1 & x_{3}
+\end{bmatrix}$$
+```
+Resulta em:
+
+$$X = \begin{bmatrix}1 & x_{1}\\
+1 & x_{2}\\
+1 & x_{3}
+\end{bmatrix}$$

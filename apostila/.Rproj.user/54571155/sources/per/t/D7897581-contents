@@ -1,0 +1,74 @@
+# get data
+source("R/02_data.R")
+
+pop <- read_csv("data/pop.csv") %>%
+  mutate(country = str_replace(country, "Czech Republic (Czechia)", "Czech Republic"),
+         country = str_replace(country, "State of Palestine", "Palestine"))
+
+covid <- covid %>%
+  mutate(`Country/Region` = str_replace(`Country/Region`, "('St. Martin',)", "Saint Martin"),
+         `Country/Region` = str_replace(`Country/Region`, "St. Martin", "Saint Martin"),
+         `Country/Region` = str_replace(`Country/Region`, "US", "United States"),
+         `Country/Region` = str_replace(`Country/Region`, "UK", "United Kingdom"),
+         `Country/Region` = str_replace(`Country/Region`, "Congo.*$", "Congo"))
+
+covid_pop_updated <- covid %>%
+  filter(Situation == "Confirmed") %>%
+  left_join(pop, by = c(`Country/Region` = "country")) %>%
+  mutate(conf_per_mil = Number * 10^6 / pop) %>%
+  na.omit()
+
+top10_today <- covid_pop_updated %>%
+  filter(pop > 10^6,
+         ObservationDate == max(ObservationDate)) %>%
+  top_n(10, conf_per_mil) 
+
+# 
+top10_today_img <- top10_today %>%
+  ggplot(aes(reorder(`Country/Region`, conf_per_mil), conf_per_mil)) +
+  geom_col() +
+  coord_flip()
+
+# save image
+ggsave("img/top10_today.png", top10_today_img, "png", scale = 2, width = 6, height = 4.5, units = "in")
+
+# colors
+cores <- hue_pal(l = 35)(10)
+
+# Animation confirmed cases top10 countries
+anim_top10 <- top10_today %>%
+  select(`Country/Region`) %>%
+  inner_join(covid_pop_updated) %>%
+  filter(ObservationDate >= ymd("2020-03-01")) %>%
+  ggplot(aes(ObservationDate, conf_per_mil, col = `Country/Region`, fill = `Country/Region`)) +
+  geom_line(size = 1.5) +
+  scale_color_manual(values = cores) +
+  dark_theme_light() +
+  theme(legend.position = c(.3, .95), legend.direction = "horizontal",
+        legend.title= element_blank(), legend.background = element_blank(),
+        legend.text = element_text(size = 11)) +
+  transition_reveal(ObservationDate) +
+  labs(title = "Ten countries with most confirmed cases per million people ({format(ymd(frame_along), '%B %d')})")
+
+# Export gif
+anim_save('gif/top10_countries_per_mil.gif', anim_top10, fps = 20, duration = 10,
+          end_pause = 20, width = 800, height = 600, res = 100)
+
+
+first_case <- covid_pop_updated %>%
+  group_by(`Country/Region`) %>%
+  filter(Number <= 1,
+         ObservationDate == min(ObservationDate)) %>%
+  select(ObservationDate, `Country/Region`)
+
+covid_pop_updated %>%
+  filter(ObservationDate == max(ObservationDate)) %>%
+  select(`Country/Region`, conf_per_mil, pop, Number) %>%
+  arrange(desc(Number)) %>%
+  mutate(conf_pos = 1:n()) %>%
+  arrange(desc(conf_per_mil)) %>%
+  mutate(mil_pos = 1:n()) %>%
+  inner_join(first_case) %>%
+  mutate(ObservationDate = today() - ObservationDate) %>%
+  arrange(desc(conf_per_mil)) %>%
+  print(n = 35)

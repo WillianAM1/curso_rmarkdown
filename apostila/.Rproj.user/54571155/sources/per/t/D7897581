@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1591048670849.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2558374444",
+    "id" : "D7897581",
+    "lastKnownWriteTime" : 1591049775,
+    "last_content_update" : 1591049775122,
+    "path" : "~/Documents/R/covid/R/05_top10_per_mil.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "56,0",
+        "scrollLine" : "37"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

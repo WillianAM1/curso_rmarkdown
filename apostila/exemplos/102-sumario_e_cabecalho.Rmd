@@ -1,0 +1,33 @@
+---
+title: "Demonstração de Sumário e Cabeçalhos"
+author: "Departamento de Estatística - UEM"
+date: "`r format(Sys.Date(), '%d/%m/%Y')`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 6
+    number_sections: true
+---
+
+# Cabeçalho (1)
+``# Cabeçalho (1)``
+
+## Cabeçalho (2)
+``## Cabeçalho (2)``
+
+### Cabeçalho (3)
+``### Cabeçalho (3)``
+
+### Cabeçalho sem marcação (3) {-}
+``### Cabeçalho sem marcação {-}``
+
+Este cabeçalho não é enumerado
+
+#### Cabeçalho (4)
+``#### Cabeçalho (4)``
+
+##### Cabeçalho (5)
+``##### Cabeçalho (5)``
+
+###### Cabeçalho (6)
+``###### Cabeçalho (6)``
