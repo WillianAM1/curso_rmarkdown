@@ -1,6 +1,6 @@
 --- 
 title: "Curso de R Markdown"
-author: "Samuel"
+author: "Eduardo José de Campos Lemos Júnior, Samuel Vianna Quintanilha"
 date: "`r Sys.Date()`"
 output: pdf_document
 description: Curso de R Markdown...
@@ -13,6 +13,7 @@ github-repo: estatsej/curso_rmarkdown
 
 # Prefácio {-}
 
-```{r eval=FALSE}
+```{r eval=FALSE, echo = F}
 install.packages("bookdown")
 ```
+Quem leu é otário
