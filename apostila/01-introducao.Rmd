@@ -2,7 +2,15 @@
 
 ## O que é 
 
+"linguagem para criar documentos"
+"Uma linguagem específica pra ser simples"
+"Usa Pandoc para transformar MD em vários arquivos diferentes"
+"Rmd é um pacote do R para criar um script MD que rode códigos do R dentro dele"
+"RMD -> MD -> Pandoc -> output"
+
 ## História
+
+
 
 ## Possíveis tipos de Outputs
 
