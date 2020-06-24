@@ -2,11 +2,53 @@
 
 ## Prêambulo
 
+Para adicionar informações ao prêambulo, e configurar opções do output, os comandos são executados no começo do arquivo com extensão `.Rmd`, entre `---`. A seguir, algumas configurações gerais:
+
+- `title:` Título do arquivo
+- `author:` Nome do autor
+- `date:` Data
+- `output:` formato do output
+
+A seguir, um exemplo de um prêambulo básico:
+
+```{r, eval = F}
+---
+title: "introdução ao Rmd"
+author: "Estats Consultoria"
+date: "24/06/20"
+output: html_document
+---
+```
+
+*OBS:* dps vai ter mais informações sobre o output
+
 ## Textos
 
 ### cabeçalhos
 
+```{r}
+# h1
+
+## h2
+
+### h3 
+
+#### h4
+
+##### h5
+
+```
+
 ### Formatação de textos (negrito, itálico e código)
+
+- Negrito: 
+- Itálico: 
+- Código: 
+
+```{r}
+
+
+```
 
 ### Links
 
