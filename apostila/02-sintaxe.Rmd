@@ -2,19 +2,112 @@
 
 ## Prêambulo
 
+```
+---
+output: pdf_document()
+---
+```
+
+
 ## Textos
+
 
 ### cabeçalhos
 
+```
+#
+
+##
+
+###
+
+####
+```
+
+
 ### Formatação de textos (negrito, itálico e código)
+
+```
+*Negrito* _Negrito_
+```
+
+**Negrito** __Negrito__
+
+```
+**Italico** __italico__
+```
+
+*Italico* _Italico_
+
+
+````markdown
+`r ''````{r}
+Sys.info()
+```
+````
+```{r}
+Sys.Date()
+```
 
 ### Links
 
+Inserindo links [Curso de R Markdown](https://estatsej.github.io/curso_rmarkdown)
+
+[Rstudio](https://rstudio.com/)
+
 ### Listas
+
+```
+- Exemplo
+- De
+- Listas
+  - 1
+  - 2
+  - 3
+  
+1. primeiro
+2. segundo
+3. terceiro
+```
+
+- Exemplo
+- De
+- Listas
+  - 1
+  - 2
+  - 3
+  
+1. primeiro
+2. segundo
+3. terceiro
 
 ## Sumário
 
+```
+---
+output: 
+  document_*:
+    toc: true
+---
+```
+
 ## Inserindo Imagens
+
+```
+![](http://tny.im/lTZ)
+```
+
+![](http://tny.im/lTZ)
+
+````markdown
+`r ''````{r}
+knitr::include_graphics("http://tny.im/lTZ")
+```
+````
+
+```{r}
+knitr::include_graphics("http://tny.im/lTZ")
+```
 
 ## Exemplos
 
