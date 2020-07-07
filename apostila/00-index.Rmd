@@ -1,7 +1,6 @@
 --- 
-title: "Curso de R Markdown"
+title: "Uma breve introdução R MarkDown"
 author: "Eduardo José de Campos Lemos Júnior, Samuel Vianna Quintanilha"
-date: "`r Sys.Date()`"
 output: pdf_document
 description: Curso de R Markdown...
 documentclass: book
@@ -16,4 +15,6 @@ github-repo: estatsej/curso_rmarkdown
 ```{r eval=FALSE, echo = F}
 install.packages("bookdown")
 ```
-Quem leu é otário
+
+Essa Apostila tem por objetivo apresentar alguns conceitos básicos sobre o R MarkDown, como a sintaxe, como executar blocos de códigos, tipos de output e customizações.
+
