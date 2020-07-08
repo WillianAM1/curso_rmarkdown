@@ -8,6 +8,11 @@ output: pdf_document()
 ---
 ```
 
+### Informações Gerais (autor titulo data...)
+
+### Definindo tipo de output
+
+### Sumario
 
 ## Textos
 
@@ -81,16 +86,6 @@ Inserindo links [Curso de R Markdown](https://estatsej.github.io/curso_rmarkdown
 2. segundo
 3. terceiro
 
-## Sumário
-
-```
----
-output: 
-  document_*:
-    toc: true
----
-```
-
 ## Inserindo Imagens
 
 ```
@@ -111,6 +106,6 @@ knitr::include_graphics("http://tny.im/lTZ")
 
 ## Exemplos
 
-[Exemplo Sumário e Cabeçalhos](curso_rmarkdown/exemplos/102-sumario_e_cabecalho.html)
+[Exemplo Sumário e Cabeçalhos](exemplos/102-sumario_e_cabecalho.html)
 
-[Exemplo formatação de textos](curso_rmarkdown/exemplos/103-formatacao_de_texto.html)
+[Exemplo formatação de textos](exemplos/103-formatacao_de_texto.html)

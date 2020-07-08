@@ -2,7 +2,7 @@
 
 ## O que é 
 
-## História
+Exmplicar Rmarkdown markdown e explicar a diferença
 
 ## Possíveis tipos de Outputs
 
@@ -17,6 +17,8 @@
 ### MacOS
 
 ## Criando o primeiro documento
+
+Mostrar como se cria um arquivo Rmd, tanto no Rstudio quanto fora
 
 ````
 

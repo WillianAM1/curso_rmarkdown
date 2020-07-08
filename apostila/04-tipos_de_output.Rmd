@@ -1,9 +1,5 @@
-# Tipos de Output
-
-## Documentos
+# Tipos adicionais de Output
 
 ## Apresentação em Slides
-
-## HTML
 
 ## Pacotes extras
