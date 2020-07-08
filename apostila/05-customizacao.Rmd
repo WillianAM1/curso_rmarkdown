@@ -1,7 +1,0 @@
-# Customização
-
-## Opções avançadas no prêambulo
-
-## Pacotes úteis
-
-## Outputs Adicionais
