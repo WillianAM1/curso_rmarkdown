@@ -1,0 +1,525 @@
+---
+output:
+  html_document:
+    css: "style.css"
+---
+
+<!-- Cabeçalho -->
+:::::: {.columns}
+::: {.column .colname width="48%" data-latex="{0.48\textwidth}"}
+**Sintaxe**
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column .colname width="48%" data-latex="{0.48\textwidth}"}
+**Resultado**
+:::
+::::::
+***
+
+<!-- Texto -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`Texto`
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+Texto
+:::
+::::::
+***
+
+<!-- Paragrafo -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`Termine uma linha com dois espaços para começar um novo`
+`parágrafo.  `
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+Termine uma linha com dois espaços para começar um novo parágrafo.  
+:::
+::::::
+***
+
+<!-- Itálico -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`*Itálico* e _itálico_`
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+*Itálico* e _itálico_
+:::
+::::::
+***
+
+<!-- Negrito -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`**Negrito** e __negrito__`
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+**Negrito** e __negrito__
+:::
+::::::
+***
+
+<!-- Sobrescrito -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`Sobrescrito^2^`
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+Sobrescrito^2^
+:::
+::::::
+***
+
+<!-- Texto Taxado -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`~~Texto taxado~~`
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+~~Texto taxado~~
+:::
+::::::
+***
+
+<!-- Link -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`[Link](des.uem.br)`
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+[Link](des.uem.br)
+:::
+::::::
+***
+
+<!-- Cabeçalho 1 -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`# Cabeçalho 1`
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+# Cabeçalho 1
+:::
+::::::
+***
+
+<!-- Cabeçalho 2 -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`## Cabeçalho 2`
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+## Cabeçalho 2
+:::
+::::::
+***
+
+<!-- Cabeçalho 3 -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`### Cabeçalho 3`
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+### Cabeçalho 3
+:::
+::::::
+***
+
+<!-- Cabeçalho 4 -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`#### Cabeçalho 4`
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+#### Cabeçalho 4
+:::
+::::::
+***
+
+<!-- Cabeçalho 5 -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`##### Cabeçalho 5`
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+##### Cabeçalho 5
+:::
+::::::
+***
+
+<!-- Cabeçalho 6 -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`###### Cabeçalho 6`
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+###### Cabeçalho 6
+:::
+::::::
+***
+
+<!-- Expressões matemáticas -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`Expressão matemática: `  
+`$f_x(x) = \lambda e^{- \lambda x}$`
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+Expressão matemática: $f_x(x) = \lambda e^{- \lambda x}$
+:::
+::::::
+***
+
+<!-- Expressões matemáticas em bloco -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`Expressão matemática em bloco: `
+
+`$$X = \begin{bmatrix}1 & x_{1}\\`  
+`1 & x_{2}\\`  
+`1 & x_{3}`  
+`\end{bmatrix}$$`
+
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+Expressão matemática em bloco: 
+
+$$X = \begin{bmatrix}1 & x_{1}\\
+1 & x_{2}\\
+1 & x_{3}
+\end{bmatrix}$$
+:::
+::::::
+***
+
+<!-- Imagem -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`Imagem: ![](http://tny.im/lTZ)`
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+Imagem: ![](http://tny.im/lTZ)
+:::
+::::::
+***
+
+<!-- Linha horizontal -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`Linha horizontal: `
+
+`***`
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+Linha horizontal: 
+
+***
+:::
+::::::
+***
+
+<!--  Nota de rodapé-->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+`Exemplo de nota de rodapé^[Nota de rodapé]`
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+Exemplo de nota de rodapé^[Nota de rodapé]
+:::
+::::::
+
+<!-- Listas -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+```
+- item
++ item
+* item
+  - item
+  - item
+  - item
+    - item
+    - item
+    - item
+```
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+- item
++ item
+* item
+  - item
+  - item
+  - item
+    - item
+    - item
+    - item
+:::
+::::::
+***
+
+<!-- Lista Ordenada -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+```
+1. item 1
+3. item 2
+2. item 3
+   1. item 1
+   2. item 2
+```
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+1. item 1
+3. item 2
+2. item 3
+   1. item 1
+   2. item 2
+:::
+::::::
+***
+
+<!-- Bloco de citação -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+```
+> "É notável uma ciência que começou com jogos de azar tenha se tornado o mais importante objeto do conhecimento humano.”
+>
+> --- Pierre Simon Laplace
+```
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+
+> "É notável uma ciência que começou com jogos de azar tenha se tornado o mais importante objeto do conhecimento humano.”
+>
+> --- Pierre Simon Laplace
+
+:::
+::::::
+***
+
+<!-- Texto literal -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+````
+```
+# Exemplo^2^
+```
+````
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+```
+Exemplo^2^
+```
+:::
+::::::
+***
+
+<!-- Tabela markdown -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+```
+Coluna 1 | Coluna 2
+---------|---------
+   11    |   12
+   21    |   22
+```
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+Coluna 1 | Coluna 2
+---------|---------
+   11    |   12
+   21    |   22
+:::
+::::::
+***
+
+<!-- Código no meio do texto -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+Rodando código r "no meio do texto"
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+Rodando código `r "no meio do texto"`
+:::
+::::::
+***
+
+<!-- Blocos de cógido -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+````markdown
+`r ''````{r}
+9*9
+```
+````
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+```{r}
+9*9
+```
+:::
+::::::
+***
+
+<!-- Bloco de código em python -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+````markdown
+`r ''````{python}
+import matplotlib.pyplot as plt
+plt.plot([0, 2, 1, 4])
+plt.show()
+```
+````
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+```{python}
+import matplotlib.pyplot as plt
+plt.plot([0, 2, 1, 4])
+plt.show()
+```
+:::
+::::::
+***
+
+<!-- plot r -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+````markdown
+`r ''````{r}
+plot(cars, pch = 19)
+```
+````
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+```{r}
+plot(cars, pch = 19)
+```
+:::
+::::::
+***
+
+<!-- Tabelas em bloco de codigo -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+````markdown
+`r ''````{r}
+knitr::kable(cars[1:5,], caption = "Cars")
+```
+````
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+```{r}
+knitr::kable(cars[1:5,], caption = "Cars")
+```
+:::
+::::::
+***
+
+<!-- Imagem em bloco de codigo -->
+:::::: {.columns}
+::: {.column width="48%" data-latex="{0.48\textwidth}"}
+````markdown
+`r ''````{r}
+knitr::include_graphics("http://tny.im/lTZ")
+```
+````
+:::
+::: {.column width="4%" data-latex="{0.04\textwidth}"}
+\ 
+:::
+:::::: {.column width="48%" data-latex="{0.48\textwidth}"}
+```{r}
+knitr::include_graphics("http://tny.im/lTZ")
+```
+:::
+::::::
+***

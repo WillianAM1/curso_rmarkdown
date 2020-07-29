@@ -1,5 +1,5 @@
 --- 
-title: "Curso de R Markdown"
+title: "Introdução ao R Markdown"
 author: "Eduardo José de Campos Lemos Júnior, Samuel Vianna Quintanilha"
 date: "`r Sys.Date()`"
 output: pdf_document
@@ -17,7 +17,7 @@ github-repo: estatsej/curso_rmarkdown
 
 ## O que é 
 
-## História
+Exmplicar Rmarkdown markdown e explicar a diferença
 
 ## Possíveis tipos de Outputs
 
@@ -32,6 +32,8 @@ github-repo: estatsej/curso_rmarkdown
 ### MacOS
 
 ## Criando o primeiro documento
+
+Mostrar como se cria um arquivo Rmd, tanto no Rstudio quanto fora
 
 ````
 
@@ -55,6 +57,11 @@ output: pdf_document()
 ---
 ```
 
+### Informações Gerais (autor titulo data...)
+
+### Definindo tipo de output
+
+### Sumario
 
 ## Textos
 
@@ -128,16 +135,6 @@ Inserindo links [Curso de R Markdown](https://estatsej.github.io/curso_rmarkdown
 2. segundo
 3. terceiro
 
-## Sumário
-
-```
----
-output: 
-  document_*:
-    toc: true
----
-```
-
 ## Inserindo Imagens
 
 ```
@@ -158,9 +155,9 @@ knitr::include_graphics("http://tny.im/lTZ")
 
 ## Exemplos
 
-[Exemplo Sumário e Cabeçalhos](curso_rmarkdown/exemplos/102-sumario_e_cabecalho.html)
+[Exemplo Sumário e Cabeçalhos](exemplos/102-sumario_e_cabecalho.html)
 
-[Exemplo formatação de textos](curso_rmarkdown/exemplos/103-formatacao_de_texto.html)
+[Exemplo formatação de textos](exemplos/103-formatacao_de_texto.html)
 
 <!--chapter:end:02-sintaxe.Rmd-->
 
@@ -220,15 +217,17 @@ citacoes **bookdown** [@R-bookdown]
 
 <!--chapter:end:03-executando_codigo.Rmd-->
 
-# Tipos de Output
-
-## Documentos
+# Tipos adicionais de Output
 
 ## Apresentação em Slides
-
-## HTML
 
 ## Pacotes extras
 
 <!--chapter:end:04-tipos_de_output.Rmd-->
+
+# Referência
+
+`r htmltools::includeHTML("../docs/exemplos/105-referencia.html")`
+
+<!--chapter:end:05-referencia.Rmd-->
 
