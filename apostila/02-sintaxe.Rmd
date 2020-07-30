@@ -4,7 +4,7 @@
 
 No início de um documento R Markdown, é utilizada a linguagem [yaml](https://pt.wikipedia.org/wiki/YAML) para definir as configurações do seu arquivo.
 As configurações disponiveis no preambulo do seu documento R Markdown são variadas, podendo inclusive ter diferentes opções para diferentes tipos de arquivos.
-Uma das configurações mais importantes para se definir no seu preambulo é o tipo de documento a ser gerado.
+Uma das configurações mais importantes para se definir no seu preambulo é o tipo de documento a ser gerado, segue abaixo um exemplo:
 
 ```
 ---
