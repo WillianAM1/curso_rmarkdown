@@ -89,7 +89,7 @@ Inserindo links [Curso de R Markdown](https://estatsej.github.io/curso_rmarkdown
 ## Inserindo Imagens
 
 ```
-![](http://tny.im/lTZ)
+![](http://tny.im/lTZ)TESTE
 ```
 
 ![](http://tny.im/lTZ)
