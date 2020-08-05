@@ -1,3 +1,9 @@
+---
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
 # Sintaxe
 
 ## Prêambulo
@@ -12,7 +18,7 @@ A opçao de [tipo de documento](#possíveis-tipos-de-outputs) é definida da seg
 
 ```
 ---
-output: pdf_document()
+output: pdf_document
 ---
 ```
 
@@ -181,20 +187,75 @@ __Lista com Sublista__
 
 ## Inserindo Imagens
 
+Antes de inserir a imagem escolhida podemos definir a configuração global para todas as imagens, lembrando que a configuração feita diretamente na imagem vai sobrepor a configuração global.
+
+````markdown
+`r ''````{r setup, include=FALSE}
+library(knitr)
+opts_chunk$set(echo = FALSE,
+               out.width = "10%", 
+               fig.align = "center")
 ```
-![](http://tny.im/lTZ)TESTE
+````
+
+Se um gráfico ou imagem não for gerado a partir de um código feito por R, você poderá incluí-lo de duas maneiras:
+
+- Usando a sintaxe Markdown ```![texto](pasta/para/image)```. Nesse caso, você pode definir o tamanho da imagem usando os atributos ```width``` ou ```height```, por exemplo:
+
+```
+![Logo da Estats](http://tny.im/lTZ){width=50%}
 ```
 
-![](http://tny.im/lTZ)
+- Usando a função ```knitr::include_graphics(```) em qualquer parte do código. Você pode usar opções de configuração de tamanho como ```out.width``` ou ```out.height``` para esse exemplo:
+
+````markdown
+`r ''````{r, echo=FALSE, out.width="50%", fig.cap="Logo da Estats"}
+knitr::include_graphics("http://tny.im/lTZ")
+```
+````
+Se você souber que deseja gerar a imagem apenas para um formato de saída específico, poderá usar uma unidade específica. Por exemplo, você pode usar ```out.width="300px"``` se o formato de saída for HTML, mas no nosso exemplo o formato que usamos ```out.width="50%"``` é válido para qualquer saída.
+
+E podemos aliar as imagens utilizando ```fig.align```. Por exemplo, você pode centralizar imagens ```fig.align="center"``` ou alinhar à direita as imagens ```fig.align="right'"```. Está opção funciona para saída HTML e LaTeX, mas pode não funcionar para outros formatos de saída (como o Word).
+
+No código a seguir é utilizado quando o seu projeto tem múltiplas saídas (PDF,HTML,...) e ocorra problema na inclusão das imagens, então a sugestão para o melhor caminho foi fazer a validação para obter a saída utilizada, sabendo disso podemos fazer configuração e inserindo imagens especifica para cada saída.
+
+````markdown
+`r ''````{r, fig.cap="Logo da Estats"}
+if (knitr::is_html_output()) {
+    knitr::include_graphics("http://tny.im/lTZ")
+} else {
+    knitr::include_graphics("http://tny.im/lTZ")
+}
+```
+````
+```{r, fig.cap="Logo da Estats", fig.align = "center"}
+if (knitr::is_html_output()) {
+    knitr::include_graphics("http://tny.im/lTZ")
+} else {
+    knitr::include_graphics("http://tny.im/lTZ")
+}
+```
+
+Os dois exemplos abaixo são casos de curiosidades:
+
+- Nesse caso podemos utilizar vetor para colocar várias imagem juntas.
+
+````markdown
+`r ''````{r image}
+include_graphics(c("img1.jpeg", "img2.jpeg"))
+```
+````
+
+- E nesse último caso podemos fazer repetição de uma imagem várias vezes.
 
 ````markdown
 `r ''````{r}
-knitr::include_graphics("http://tny.im/lTZ")
+knitr::include_graphics(rep("http://tny.im/lTZ", 3))
 ```
 ````
 
 ```{r}
-knitr::include_graphics("http://tny.im/lTZ")
+knitr::include_graphics(rep("http://tny.im/lTZ", 3))
 ```
 
 ## Exemplos
