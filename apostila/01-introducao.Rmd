@@ -21,18 +21,13 @@ R Markdown é um documento criado no R Studio (Ou em outras IDEs) que possibilit
 
 ## Criando o primeiro documento
 Para gerar um arquivo em R Markdown é necessário abrir o programa R Studio, e instalar o pacote rmarkdown :
-install.packages(“rmarkdown”)
+![](img/ins.jpg)
 
 Após a instalação do pacote no R Studio, siga os seguintes passos:
-- No canto superior esquerdo, clique em:
-- Arquivo;
-- Novo Arquivo;
-- R Markdown
+![](img/new.jpg)
 
 - Em seguida, escolha o tipo de arquivo desejado:
-- HTML
-- PDF
-- WORD
+![](img/file.jpg)
 Obs: Para gerar documentos em PDF, é necessário ter instalado em seu computador o programa [Latex](https://miktex.org/)
 
 Seguindo os passos acima, você terá criado o seu primeiro documento em R Markdown.
