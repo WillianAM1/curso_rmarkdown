@@ -1,6 +1,8 @@
 # Introdção {#intro}
 
 ## O que é 
+Markdown é uma linguagem de marcação usada para formatar de maneira simples os textos redigidos e converte-los em HTML. John Gruber e Aaron Swartz, os criadores desse sistema, utilizaram marcadores como: #, \* ,! , [] e (). Assim é possível inserir em nossos textos: títulos, listas, formatação de fonte, imagens e tabelas.
+R Markdown é um documento criado no R Studio (Ou em outras IDEs) que possibilita empregar os recursos da linguagem markdown citados acima em conjunto com a linguagem R, permitindo a melhor organização de análises, relatórios e códigos em um só documento.
 
 Exmplicar Rmarkdown markdown e explicar a diferença
 
