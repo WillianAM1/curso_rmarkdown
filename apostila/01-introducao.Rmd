@@ -17,6 +17,28 @@ Exmplicar Rmarkdown markdown e explicar a diferença
 ### MacOS
 
 ## Criando o primeiro documento
+Para gerar um arquivo em R Markdown é necessário abrir o programa R Studio, e instalar o pacote rmarkdown :
+install.packages(“rmarkdown”)
+
+Após a instalação do pacote no R Studio, siga os seguintes passos:
+- No canto superior esquerdo, clique em:
+•	File;
+•	New File;
+•	R Markdown.
+
+- Em seguida, escolha o tipo de arquivo desejado:
+•	HTML
+•	PDF 
+•	WORD
+Obs: Para gerar documentos em PDF, é necessário ter instalado em seu computador o programa Latex.
+
+Seguindo os passos acima, você terá criado o seu primeiro documento em R Markdown.
+
+Vale ressaltar que é possível utilizar o R Markdown sem que tenha instalado o R Studio, porém, é necessário ter instalado o programa Pandoc.
+
+Links para instalação:
+Latex: https://pandoc.org/
+Pandoc: https://miktex.org/
 
 Mostrar como se cria um arquivo Rmd, tanto no Rstudio quanto fora
 
