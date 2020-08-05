@@ -207,7 +207,7 @@ Uma das configurações mais importantes para se definir no seu preambulo é o <
 <h3><span class="header-section-number">2.1.1</span> Definindo tipo de output</h3>
 <p>A opçao de <a href="intro.html#possíveis-tipos-de-outputs">tipo de documento</a> é definida da seguinte forma:</p>
 <pre><code>---
-output: pdf_document()
+output: pdf_document
 ---</code></pre>
 <p>No código acima, <code>output</code> foi definido como <code>pdf_document()</code>. Output é o formato final do seu documento, e <code>pdf_document()</code> é, dentro do pacote <code>rmarkdown</code>, o formato pdf. Para gerar arquivos de formatos diferentes, é necessário somente que seja modificado a opção de <code>output</code> no preâmbulo.
 Note que a opção definida no preâmbulo foi escrita entre duas linhas tracejadas, não é possível definir suas configurações fora dessas linhas tracejadas, da mesma forma, não é possível escrever partes do seu documento ou rodar códigos de <code>R</code> dentro das linhas.
@@ -321,13 +321,60 @@ output: pdf_document:
 </div>
 <div id="inserindo-imagens" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Inserindo Imagens</h2>
-<pre><code>![](http://tny.im/lTZ)TESTE</code></pre>
-<p><img src="http://tny.im/lTZ" /></p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb21-1"><a href="sintaxe.html#cb21-1" aria-hidden="true"></a><span class="in">```{r}</span></span>
-<span id="cb21-2"><a href="sintaxe.html#cb21-2" aria-hidden="true"></a><span class="in">knitr::include_graphics(&quot;http://tny.im/lTZ&quot;)</span></span>
-<span id="cb21-3"><a href="sintaxe.html#cb21-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="sintaxe.html#cb22-1" aria-hidden="true"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;http://tny.im/lTZ&quot;</span>)</span></code></pre></div>
-<p><img src="http://tny.im/lTZ" /><!-- --></p>
+<p>Antes de inserir a imagem escolhida podemos definir a configuração global para todas as imagens, lembrando que a configuração feita diretamente na imagem vai sobrepor a configuração global.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb20-1"><a href="sintaxe.html#cb20-1" aria-hidden="true"></a><span class="in">```{r setup, include=FALSE}</span></span>
+<span id="cb20-2"><a href="sintaxe.html#cb20-2" aria-hidden="true"></a><span class="in">library(knitr)</span></span>
+<span id="cb20-3"><a href="sintaxe.html#cb20-3" aria-hidden="true"></a><span class="in">opts_chunk$set(echo = FALSE,</span></span>
+<span id="cb20-4"><a href="sintaxe.html#cb20-4" aria-hidden="true"></a><span class="in">               out.width = &quot;10%&quot;, </span></span>
+<span id="cb20-5"><a href="sintaxe.html#cb20-5" aria-hidden="true"></a><span class="in">               fig.align = &quot;center&quot;)</span></span>
+<span id="cb20-6"><a href="sintaxe.html#cb20-6" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
+<p>Se um gráfico ou imagem não for gerado a partir de um código feito por R, você poderá incluí-lo de duas maneiras:</p>
+<ul>
+<li>Usando a sintaxe Markdown <code>![texto](pasta/para/image)</code>. Nesse caso, você pode definir o tamanho da imagem usando os atributos <code>width</code> ou <code>height</code>, por exemplo:</li>
+</ul>
+<pre><code>![Logo da Estats](http://tny.im/lTZ){width=50%}</code></pre>
+<ul>
+<li>Usando a função <code>knitr::include_graphics(</code>) em qualquer parte do código. Você pode usar opções de configuração de tamanho como <code>out.width</code> ou <code>out.height</code> para esse exemplo:</li>
+</ul>
+<div class="sourceCode" id="cb22"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb22-1"><a href="sintaxe.html#cb22-1" aria-hidden="true"></a><span class="in">```{r, echo=FALSE, out.width=&quot;50%&quot;, fig.cap=&quot;Logo da Estats&quot;}</span></span>
+<span id="cb22-2"><a href="sintaxe.html#cb22-2" aria-hidden="true"></a><span class="in">knitr::include_graphics(&quot;http://tny.im/lTZ&quot;)</span></span>
+<span id="cb22-3"><a href="sintaxe.html#cb22-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
+<p>Se você souber que deseja gerar a imagem apenas para um formato de saída específico, poderá usar uma unidade específica. Por exemplo, você pode usar <code>out.width="300px"</code> se o formato de saída for HTML, mas no nosso exemplo o formato que usamos <code>out.width="50%"</code> é válido para qualquer saída.</p>
+<p>E podemos aliar as imagens utilizando <code>fig.align</code>. Por exemplo, você pode centralizar imagens <code>fig.align="center"</code> ou alinhar à direita as imagens <code>fig.align="right'"</code>. Está opção funciona para saída HTML e LaTeX, mas pode não funcionar para outros formatos de saída (como o Word).</p>
+<p>No código a seguir é utilizado quando o seu projeto tem múltiplas saídas (PDF,HTML,…) e ocorra problema na inclusão das imagens, então a sugestão para o melhor caminho foi fazer a validação para obter a saída utilizada, sabendo disso podemos fazer configuração e inserindo imagens especifica para cada saída.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb23-1"><a href="sintaxe.html#cb23-1" aria-hidden="true"></a><span class="in">```{r, fig.cap=&quot;Logo da Estats&quot;}</span></span>
+<span id="cb23-2"><a href="sintaxe.html#cb23-2" aria-hidden="true"></a><span class="in">if (knitr::is_html_output()) {</span></span>
+<span id="cb23-3"><a href="sintaxe.html#cb23-3" aria-hidden="true"></a><span class="in">    knitr::include_graphics(&quot;http://tny.im/lTZ&quot;)</span></span>
+<span id="cb23-4"><a href="sintaxe.html#cb23-4" aria-hidden="true"></a><span class="in">} else {</span></span>
+<span id="cb23-5"><a href="sintaxe.html#cb23-5" aria-hidden="true"></a><span class="in">    knitr::include_graphics(&quot;http://tny.im/lTZ&quot;)</span></span>
+<span id="cb23-6"><a href="sintaxe.html#cb23-6" aria-hidden="true"></a><span class="in">}</span></span>
+<span id="cb23-7"><a href="sintaxe.html#cb23-7" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="sintaxe.html#cb24-1" aria-hidden="true"></a><span class="cf">if</span> (knitr<span class="op">::</span><span class="kw">is_html_output</span>()) {</span>
+<span id="cb24-2"><a href="sintaxe.html#cb24-2" aria-hidden="true"></a>    knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;http://tny.im/lTZ&quot;</span>)</span>
+<span id="cb24-3"><a href="sintaxe.html#cb24-3" aria-hidden="true"></a>} <span class="cf">else</span> {</span>
+<span id="cb24-4"><a href="sintaxe.html#cb24-4" aria-hidden="true"></a>    knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;http://tny.im/lTZ&quot;</span>)</span>
+<span id="cb24-5"><a href="sintaxe.html#cb24-5" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="http://tny.im/lTZ" alt="Logo da Estats"  />
+<p class="caption">
+Figure 2.1: Logo da Estats
+</p>
+</div>
+<p>Os dois exemplos abaixo são casos de curiosidades:</p>
+<ul>
+<li>Nesse caso podemos utilizar vetor para colocar várias imagem juntas.</li>
+</ul>
+<div class="sourceCode" id="cb25"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb25-1"><a href="sintaxe.html#cb25-1" aria-hidden="true"></a><span class="in">```{r image}</span></span>
+<span id="cb25-2"><a href="sintaxe.html#cb25-2" aria-hidden="true"></a><span class="in">include_graphics(c(&quot;img1.jpeg&quot;, &quot;img2.jpeg&quot;))</span></span>
+<span id="cb25-3"><a href="sintaxe.html#cb25-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
+<ul>
+<li>E nesse último caso podemos fazer repetição de uma imagem várias vezes.</li>
+</ul>
+<div class="sourceCode" id="cb26"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb26-1"><a href="sintaxe.html#cb26-1" aria-hidden="true"></a><span class="in">```{r}</span></span>
+<span id="cb26-2"><a href="sintaxe.html#cb26-2" aria-hidden="true"></a><span class="in">knitr::include_graphics(rep(&quot;http://tny.im/lTZ&quot;, 3))</span></span>
+<span id="cb26-3"><a href="sintaxe.html#cb26-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="sintaxe.html#cb27-1" aria-hidden="true"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;http://tny.im/lTZ&quot;</span>, <span class="dv">3</span>))</span></code></pre></div>
+<p><img src="http://tny.im/lTZ" /><!-- --><img src="http://tny.im/lTZ" /><!-- --><img src="http://tny.im/lTZ" /><!-- --></p>
 </div>
 <div id="exemplos" class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> Exemplos</h2>
