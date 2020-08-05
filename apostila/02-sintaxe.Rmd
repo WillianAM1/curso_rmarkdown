@@ -1,104 +1,42 @@
+---
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
 # Sintaxe
 
 ## Prêambulo
 
-No início de um documento R Markdown, é utilizada a linguagem [yaml](https://pt.wikipedia.org/wiki/YAML) para definir as configurações do seu arquivo.
-As configurações disponiveis no preâmbulo do seu documento R Markdown são variadas, podendo inclusive ter diferentes opções para diferentes tipos de arquivos.
-Uma das configurações mais importantes para se definir no seu preambulo é o [tipo de documento](#possíveis-tipos-de-outputs) a ser gerado.
+```
+---
+output: pdf_document
+---
+```
+
+### Informações Gerais (autor titulo data...)
 
 ### Definindo tipo de output
-
-A opçao de [tipo de documento](#possíveis-tipos-de-outputs) é definida da seguinte forma:
-
-```
----
-output: pdf_document()
----
-```
-
-No código acima, `output` foi definido como `pdf_document()`. Output é o formato final do seu documento, e `pdf_document()` é, dentro do pacote `rmarkdown`, o formato pdf. Para gerar arquivos de formatos diferentes, é necessário somente que seja modificado a opção de `output` no preâmbulo.
-Note que a opção definida no preâmbulo foi escrita entre duas linhas tracejadas, não é possível definir suas configurações fora dessas linhas tracejadas, da mesma forma, não é possível escrever partes do seu documento ou rodar códigos de `R` dentro das linhas.
-Por padrão no `yaml` utilizado no preâmbulo de R Markdown, a opção a ser definida é escrita sem espaços, seguida de dois pontos, espaço e então a definição da opção.
-Existem opções dentro de outras opções, como por exemplo `pdf_document()`, podemos definir configurações se o documento terá ou não sumário, quantos níveis de [cabeçalho](#cabeçalhos) serão utilizados no sumário, etc.
-
-```
----
-output: pdf_document:
-  toc: true
-  toc_depth: 3
-  latex_engine: xelatex
----
-```
-
-No exemplo acima, definimos `toc` (table of contents) como `true`, o que vai fazer com que seja gerado um sumário no documento final, perceba que em `yaml` o valor lógico de verdadeiro é escrito com todas as letras minúsculas. Definindo `toc_depth` como `3`, quando o sumário for gerado, até três níveis de [cabeçalho](#cabeçalhos) apareceram no sumário.
-
-### Informações Gerais
-
-Além do tipo de documento, e das opções de cada tipo de documento, podemos definir algumas opções gerais, como autor, título do documento, e data.
-
-```
----
-author: "Fulano"
-output: pdf_document:
-  toc: true
-  toc_depth: 3
-  latex_engine: xelatex
----
-```
-
-Seguindo com o preâmbulo já feito anteriormente, foi adicionada a opção `author`, que irá definir o autor do seu documento. Por padrão, o autor irá aparecer na página inicial de diversos [tipos de documento](#possíveis-tipos-de-outputs).
-
-```
----
-date: 1 de janeiro de 1970
-output: pdf_document:
-  toc: true
-  toc_depth: 3
-  latex_engine: xelatex
-author: Fulano
----
-```
-
-Utilizando a opção `date` podemos definir uma data para o documento, semelhante ao autor, a data aparece por padrão no início dos documentos.
-Perceba que no exemplo acima, o nome do autor e a data foram escritas sem aspas, mas irão funcionar da mesma forma, perceba também que a opção do autor foi trocada de ordem, as opções do preâmbulo não necessitam de uma ordem específica, mas as opções de dentro de outras opções devem sempre estar abaixo da opção mae (sei la como chamar isso) e com uma identação a mais.
-
-```
----
-author: Fulano
-date: 1 de janeiro de 1970
-title: Título
-output: pdf_document:
-  toc: true
-  toc_depth: 3
-  latex_engine: xelatex
----
-```
-
-Por fim foi definida também a opção `title` que irá definir o título do documento final. Para maior customização do seu documento pelo preâmbulo veja o [capítulo 4](#depois-crio).
 
 ### Sumario
 
 ## Textos
+texto
 
-
-### Títulos
+### cabeçalhos
 
 ```
-# Título Nível 1
+#
 
-## Título Nível 2
+##
 
-### Título Nível 3
+###
 
-#### Título Nível 4
-
-##### Título Nível 5
-
-###### Título Nível 6
+####
 ```
 
 
-### Formatação de textos (negrito, itálico, sobrescrito, tachado e código )
+### Formatação de textos (negrito, itálico e código)
 
 ```
 *Negrito* _Negrito_
@@ -112,17 +50,6 @@ Por fim foi definida também a opção `title` que irá definir o título do doc
 
 *Italico* _Italico_
 
-```
-texto^sobrescrito^
-```
-
-texto^sobrescrito^
-
-```
-~~~tachado~~
-
-````
-~~~tachado~~
 
 ````markdown
 `r ''````{r}
@@ -135,66 +62,107 @@ Sys.Date()
 
 ### Links
 
-Para um link devemos utilizar a seguinte sintaxe:
-```
-[nome do link](url do link)
-[Curso de RMarkdown](https://estatsej.github.io/curso_rmarkdown)
-```
-Existem também outras variações para que utlizemos os links em nosso material.
+Inserindo links [Curso de R Markdown](https://estatsej.github.io/curso_rmarkdown)
 
-__1 - Nome do link seja ele próprio__:
-
-https://estatsej.github.io/curso_rmarkdown
-
-__2- Link contendo um título, que aparece ao deixar o cursor do mouse em cima do link:__
-
-```
-[Curso de RMakrdown](https://estatsej.github.io/curso_rmarkdown "Aqui está o nosso curso de RMarkdown")
-```
-Podemos observar:
-[Curso de RMakrdown](https://estatsej.github.io/curso_rmarkdown "Aqui está o nosso curso de RMarkdown")
-
+[Rstudio](https://rstudio.com/)
 
 ### Listas
 
-__Lista Ordenada__
-
 ```
-1. Primeiro item
-2. Segundo item
-3. Terceiro item
-```
-
-__Lista Não-Ordenada__
-```
-- Primeiro item
-- Segundo item
-- Terceiro item
+- Exemplo
+- De
+- Listas
+  - 1
+  - 2
+  - 3
+  
+1. primeiro
+2. segundo
+3. terceiro
 ```
 
-__Lista com Sublista__
-```
-1. Item
-    - Um sub-item
-    - Outro sub-item
-```
+- Exemplo
+- De
+- Listas
+  - 1
+  - 2
+  - 3
+  
+1. primeiro
+2. segundo
+3. terceiro
 
 ## Inserindo Imagens
 
+Antes de inserir a imagem escolhida podemos definir a configuração global para todas as imagens, lembrando que a configuração feita diretamente na imagem vai sobrepor a configuração global.
+
+````markdown
+`r ''````{r setup, include=FALSE}
+library(knitr)
+opts_chunk$set(echo = FALSE,
+               out.width = "10%", 
+               fig.align = "center")
 ```
-![](http://tny.im/lTZ)TESTE
+````
+
+Se um gráfico ou imagem não for gerado a partir de um código feito por R, você poderá incluí-lo de duas maneiras:
+
+- Usando a sintaxe Markdown ```![texto](pasta/para/image)```. Nesse caso, você pode definir o tamanho da imagem usando os atributos ```width``` ou ```height```, por exemplo:
+
+```
+![Logo da Estats](http://tny.im/lTZ){width=50%}
 ```
 
-![](http://tny.im/lTZ)
+- Usando a função ```knitr::include_graphics(```) em qualquer parte do código. Você pode usar opções de configuração de tamanho como ```out.width``` ou ```out.height``` para esse exemplo:
+
+````markdown
+`r ''````{r, echo=FALSE, out.width="50%", fig.cap="Logo da Estats"}
+knitr::include_graphics("http://tny.im/lTZ")
+```
+````
+Se você souber que deseja gerar a imagem apenas para um formato de saída específico, poderá usar uma unidade específica. Por exemplo, você pode usar ```out.width="300px"``` se o formato de saída for HTML, mas no nosso exemplo o formato que usamos ```out.width="50%"``` é válido para qualquer saída.
+
+E podemos aliar as imagens utilizando ```fig.align```. Por exemplo, você pode centralizar imagens ```fig.align="center"``` ou alinhar à direita as imagens ```fig.align="right'"```. Está opção funciona para saída HTML e LaTeX, mas pode não funcionar para outros formatos de saída (como o Word).
+
+No código a seguir é utilizado quando o seu projeto tem múltiplas saídas (PDF,HTML,...) e ocorra problema na inclusão das imagens, então a sugestão para o melhor caminho foi fazer a validação para obter a saída utilizada, sabendo disso podemos fazer configuração e inserindo imagens especifica para cada saída.
+
+````markdown
+`r ''````{r, fig.cap="Logo da Estats"}
+if (knitr::is_html_output()) {
+    knitr::include_graphics("http://tny.im/lTZ")
+} else {
+    knitr::include_graphics("http://tny.im/lTZ")
+}
+```
+````
+```{r, fig.cap="Logo da Estats", fig.align = "center"}
+if (knitr::is_html_output()) {
+    knitr::include_graphics("http://tny.im/lTZ")
+} else {
+    knitr::include_graphics("http://tny.im/lTZ")
+}
+```
+
+Os dois exemplos abaixo são casos de curiosidades:
+
+- Nesse caso podemos utilizar vetor para colocar várias imagem juntas.
+
+````markdown
+`r ''````{r image}
+include_graphics(c("img1.jpeg", "img2.jpeg"))
+```
+````
+
+- E nesse último caso podemos fazer repetição de uma imagem várias vezes.
 
 ````markdown
 `r ''````{r}
-knitr::include_graphics("http://tny.im/lTZ")
+knitr::include_graphics(rep("http://tny.im/lTZ", 3))
 ```
 ````
 
 ```{r}
-knitr::include_graphics("http://tny.im/lTZ")
+knitr::include_graphics(rep("http://tny.im/lTZ", 3))
 ```
 
 ## Exemplos
