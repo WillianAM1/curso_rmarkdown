@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.7.19)  5 AUG 2020 20:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.7.19)  5 AUG 2020 20:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -509,103 +509,44 @@ Overfull \hbox (20.99097pt too wide) in paragraph at lines 120--120
 
 ]
 Chapter 1.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-39.
-(/usr/share/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+[5]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-39.
+57.
 (/usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<Imagem/ins.png, id=28, 616.55344pt x 346.29375pt>
-File: Imagem/ins.png Graphic file (type png)
-<use Imagem/ins.png>
-Package pdftex.def Info: Imagem/ins.png  used on input line 182.
-(pdftex.def)             Requested size: 345.00415pt x 193.7752pt.
-<Imagem/new.png, id=29, 1028.34187pt x 578.16pt>
-File: Imagem/new.png Graphic file (type png)
-<use Imagem/new.png>
-Package pdftex.def Info: Imagem/new.png  used on input line 184.
-(pdftex.def)             Requested size: 345.0027pt x 193.9693pt.
-<Imagem/file.png, id=30, 1028.34187pt x 578.16pt>
-File: Imagem/file.png Graphic file (type png)
-<use Imagem/file.png>
-Package pdftex.def Info: Imagem/file.png  used on input line 186.
-(pdftex.def)             Requested size: 345.0027pt x 193.9693pt.
-
-Overfull \hbox (128.87881pt too wide) in paragraph at lines 181--188
-\T1/lmr/m/n/10 (-20) in-sta-lar o pa-cote rmark-down : []
- []
-
-
-Underfull \hbox (badness 2050) in paragraph at lines 181--188
-\T1/lmr/m/n/10 (+20) Após a in-sta-lação do pa-cote no R Stu-dio, siga os segui
-ntes pas-sos:
- []
-
-
-Overfull \hbox (206.27142pt too wide) in paragraph at lines 181--188
-\T1/lmr/m/n/10 (-20) - Em seguida, es-colha o tipo de ar-quivo de-se-jado: []
- []
-
-
-Underfull \vbox (badness 8113) has occurred while \output is active []
-
-[5]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[6 <./Imagem/ins.png> <./Imagem/new.png>]
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-203.
-(/usr/share/texmf-dist/tex/latex/lm/ts1lmtt.fd
-File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [7 <./Imagem/file.png>] [8
-
-]
-Chapter 2.
-[9] [10]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+64.
+(/usr/share/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 329.
+(Font)              <10> on input line 195.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 329.
+(Font)              <7> on input line 195.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 329.
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 339.
+(Font)              <5> on input line 195.
 
-LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 339.
+LaTeX Warning: File `download_MiKTex/download_windowns_MiKTex.png' not found on
+ input line 201.
 
 
-LaTeX Font Warning: Font shape `TS1/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `TS1/lmtt/b/sl' tried instead on input line 339.
+! Package pdftex.def Error: File `download_MiKTex/download_windowns_MiKTex.png'
+ not found: using draft setting.
 
-
-[11]
-Overfull \hbox (195.74843pt too wide) in paragraph at lines 375--375
-[]\T1/lmtt/m/n/10 [Curso de RMakrdown](https://estatsej.github.io/curso_rmarkdo
-wn "Aqui está o nosso curso de RMarkdown")[] 
- []
-
-[12] [13]
-
-! LaTeX Error: File `http://tny.im/lTZ' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
+See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.479 ...ering \includegraphics{http://tny.im/lTZ}
+l.201 ...load_MiKTex/download_windowns_MiKTex.png}
                                                    
 Here is how much of TeX's memory you used:
- 13459 strings out of 480478
- 194955 string characters out of 5905959
- 480987 words of memory out of 5000000
- 29104 multiletter control sequences out of 15000+600000
- 607790 words of font info for 109 fonts, out of 8000000 for 9000
+ 13322 strings out of 480478
+ 193482 string characters out of 5905959
+ 479987 words of memory out of 5000000
+ 29033 multiletter control sequences out of 15000+600000
+ 597074 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,42p,808b,481s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,6n,42p,808b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 !  ==> Fatal error occurred, no output PDF file produced!

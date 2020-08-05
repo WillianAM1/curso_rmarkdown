@@ -133,6 +133,31 @@ R Markdown é um documento criado no R Studio (Ou em outras IDEs) que possibilit
 \hypertarget{possuxedveis-tipos-de-outputs}{%
 \section{Possíveis tipos de Outputs}\label{possuxedveis-tipos-de-outputs}}
 
+O R Markdown apresenta várias possibilidades de outputs (renderizar) nos formatos de documentos, apresentações, entre outros, sendo que em cada formato há várias opções de customização. Vejamos abaixo os principais:
+Documentos
+-html\_document -- documento no formato HTML;
+-pdf\_document -- documento no formato PDF (via o modelo LaTeX);
+-word\_document -- documento no formato do editor de texto Microsoft Word (docx);
+-odt\_documento -- documento no formato dos editores de texto Libre Office e OpenDocument;
+-rtf\_documento -- documento no formato Rich Text Format (rtf).
+
+Apresentações (slides)
+-ioslides\_presentation -- apresentação no formato HTML com ioslides;
+-beamer\_presentation -- apresentação no formato PDF com LaTeX Beamer;
+-powerpoint\_presentation -- apresentação no formato power point.
+
+Outros
+-flexdashboard::flex\_dashboard -- apresentação interativa com dashboards;
+-htm\_vignette -- R package vignette no format HTML
+-github\_document -- document no format GitHub
+
+Você pode escolher o output desejado quando for criar um documento conforme a figura 1. Para fazer deve-se clicar em file \textgreater{} new file \textgreater{} R Markdown. Abrirá uma aba e nela há quatro formas de output previamente estabelecidas, a saber: Document (HTML, PDF e Word), Presentation (HTML (ioslides), HTML (slidy), PDF (Beamer) e PowerPoint), Shiny (Shiny Document e Shy Presentation) e From Template (GitHub document e Package Vignette). Escolha uma e clique em OK.
+Além disso, você também pode alterar o formato utilizando a função abaixo, sendo que render refere-se ao local que está salvo seu documento e output\_format ao tipo de documento desejado, conforme os exemplos apontados no início.
+
+\texttt{render("teste.Rmd",\ output\_format\ =\ "pdf\_document")}
+
+O mesmo pode ser feito para outros formatos.
+
 \begin{itemize}
 \tightlist
 \item
@@ -166,18 +191,21 @@ R Markdown é um documento criado no R Studio (Ou em outras IDEs) que possibilit
 \hypertarget{download-rmd-e-latex}{%
 \section{Download (rmd e latex)}\label{download-rmd-e-latex}}
 
+Para exportar um arquivo PDF utilizando o R Markdown é necessário um motor LaTex pois é ele que irá converter o arquivo .tex em PDF.
+Então é necessário que tenha instalado em seu computador a \emph{(biblioteca?)} MiKTeX,. Para fazer o download é só acessar o link: \url{https://miktex.org/download}.
+
 \hypertarget{windows}{%
 \subsection{Windows}\label{windows}}
 
-\hypertarget{linux}{%
-\subsection{Linux}\label{linux}}
-
-\hypertarget{macos}{%
-\subsection{MacOS}\label{macos}}
-
-\hypertarget{criando-o-primeiro-documento}{%
-\section{Criando o primeiro documento}\label{criando-o-primeiro-documento}}
-
+Selecione a aba Windows e clique no botão de download:
+\includegraphics{download_MiKTex/download_windowns_MiKTex.png}
+\#\#\# Linux
+Selecione a aba Linux em seguida a aba de sua distribuição Linux para receber as instruções de instalação:
+\includegraphics{download_MiKTex/download_linux_MiKTex.png}
+\#\#\# MacOS
+Selecione a aba macOS e clique no botão de download:
+\includegraphics{download_MiKTex/download_macOS_MiKTex.png}
+\#\# Criando o primeiro documento
 Para gerar um arquivo em R Markdown é necessário abrir o programa R Studio, e instalar o pacote rmarkdown :
 \includegraphics{Imagem/ins.png}
 Após a instalação do pacote no R Studio, siga os seguintes passos:
