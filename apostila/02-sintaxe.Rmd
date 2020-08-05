@@ -3,8 +3,12 @@
 ## Prêambulo
 
 No início de um documento R Markdown, é utilizada a linguagem [yaml](https://pt.wikipedia.org/wiki/YAML) para definir as configurações do seu arquivo.
-As configurações disponiveis no preambulo do seu documento R Markdown são variadas, podendo inclusive ter diferentes opções para diferentes tipos de arquivos.
-Uma das configurações mais importantes para se definir no seu preambulo é o tipo de documento a ser gerado.
+As configurações disponiveis no preâmbulo do seu documento R Markdown são variadas, podendo inclusive ter diferentes opções para diferentes tipos de arquivos.
+Uma das configurações mais importantes para se definir no seu preambulo é o [tipo de documento](#possíveis-tipos-de-outputs) a ser gerado.
+
+### Definindo tipo de output
+
+A opçao de [tipo de documento](#possíveis-tipos-de-outputs) é definida da seguinte forma:
 
 ```
 ---
@@ -12,9 +16,65 @@ output: pdf_document()
 ---
 ```
 
-### Informações Gerais (autor titulo data...)
+No código acima, `output` foi definido como `pdf_document()`. Output é o formato final do seu documento, e `pdf_document()` é, dentro do pacote `rmarkdown`, o formato pdf. Para gerar arquivos de formatos diferentes, é necessário somente que seja modificado a opção de `output` no preâmbulo.
+Note que a opção definida no preâmbulo foi escrita entre duas linhas tracejadas, não é possível definir suas configurações fora dessas linhas tracejadas, da mesma forma, não é possível escrever partes do seu documento ou rodar códigos de `R` dentro das linhas.
+Por padrão no `yaml` utilizado no preâmbulo de R Markdown, a opção a ser definida é escrita sem espaços, seguida de dois pontos, espaço e então a definição da opção.
+Existem opções dentro de outras opções, como por exemplo `pdf_document()`, podemos definir configurações se o documento terá ou não sumário, quantos níveis de [cabeçalho](#cabeçalhos) serão utilizados no sumário, etc.
 
-### Definindo tipo de output
+```
+---
+output: pdf_document:
+  toc: true
+  toc_depth: 3
+  latex_engine: xelatex
+---
+```
+
+No exemplo acima, definimos `toc` (table of contents) como `true`, o que vai fazer com que seja gerado um sumário no documento final, perceba que em `yaml` o valor lógico de verdadeiro é escrito com todas as letras minúsculas. Definindo `toc_depth` como `3`, quando o sumário for gerado, até três níveis de [cabeçalho](#cabeçalhos) apareceram no sumário.
+
+### Informações Gerais
+
+Além do tipo de documento, e das opções de cada tipo de documento, podemos definir algumas opções gerais, como autor, título do documento, e data.
+
+```
+---
+author: "Fulano"
+output: pdf_document:
+  toc: true
+  toc_depth: 3
+  latex_engine: xelatex
+---
+```
+
+Seguindo com o preâmbulo já feito anteriormente, foi adicionada a opção `author`, que irá definir o autor do seu documento. Por padrão, o autor irá aparecer na página inicial de diversos [tipos de documento](#possíveis-tipos-de-outputs).
+
+```
+---
+date: 1 de janeiro de 1970
+output: pdf_document:
+  toc: true
+  toc_depth: 3
+  latex_engine: xelatex
+author: Fulano
+---
+```
+
+Utilizando a opção `date` podemos definir uma data para o documento, semelhante ao autor, a data aparece por padrão no início dos documentos.
+Perceba que no exemplo acima, o nome do autor e a data foram escritas sem aspas, mas irão funcionar da mesma forma, perceba também que a opção do autor foi trocada de ordem, as opções do preâmbulo não necessitam de uma ordem específica, mas as opções de dentro de outras opções devem sempre estar abaixo da opção mae (sei la como chamar isso) e com uma identação a mais.
+
+```
+---
+author: Fulano
+date: 1 de janeiro de 1970
+title: Título
+output: pdf_document:
+  toc: true
+  toc_depth: 3
+  latex_engine: xelatex
+---
+```
+
+Por fim foi definida também a opção `title` que irá definir o título do documento final. Para maior customização do seu documento pelo preâmbulo veja o [capítulo 4](#depois-crio).
 
 ### Sumario
 
