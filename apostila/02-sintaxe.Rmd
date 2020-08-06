@@ -104,7 +104,7 @@ Por fim foi definida também a opção `title` que irá definir o título do doc
 ```
 
 
-### Formatação de textos (negrito, itálico, sobrescrito, tachado e código )
+### Formatação de textos (negrito, itálico, sobrescrito, tachado e código)
 
 ```
 *Negrito* _Negrito_
@@ -129,15 +129,6 @@ texto^sobrescrito^
 
 ````
 ~~~tachado~~
-
-````markdown
-`r ''````{r}
-Sys.info()
-```
-````
-```{r}
-Sys.Date()
-```
 
 ### Links
 

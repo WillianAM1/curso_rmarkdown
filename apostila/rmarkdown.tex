@@ -127,36 +127,42 @@
 
 Neste curso, iremos aprender a utilizar o R Markdown para gerar documentos.
 \#\# O que é
-Markdown é uma linguagem de marcação usada para formatar de maneira simples os textos redigidos e converte-los em HTML. John Gruber e Aaron Swartz, os criadores desse sistema, utilizaram marcadores como: \#, * ,! , {[}{]} e (). Assim é possível inserir em nossos textos: títulos, listas, formatação de fonte, imagens e tabelas.
+Markdown é uma linguagem de marcação usada para formatar de maneira simples os textos redigidos e converte-los em HTML. John Gruber e Aaron Swartz, os criadores desse sistema, utilizaram marcadores como: \texttt{\#,\ \textbackslash{}*\ ,!\ ,\ {[}{]}\ e\ ()}. Assim é possível inserir em nossos textos: títulos, listas, formatação de fonte, imagens e tabelas.
 R Markdown é um documento criado no R Studio (Ou em outras IDEs) que possibilita empregar os recursos da linguagem markdown citados acima em conjunto com a linguagem R, permitindo a melhor organização de análises, relatórios e códigos em um só documento.
 
 \hypertarget{possuxedveis-tipos-de-outputs}{%
 \section{Possíveis tipos de Outputs}\label{possuxedveis-tipos-de-outputs}}
 
 O R Markdown apresenta várias possibilidades de outputs (renderizar) nos formatos de documentos, apresentações, entre outros, sendo que em cada formato há várias opções de customização. Vejamos abaixo os principais:
-Documentos
--html\_document -- documento no formato HTML;
--pdf\_document -- documento no formato PDF (via o modelo LaTeX);
--word\_document -- documento no formato do editor de texto Microsoft Word (docx);
--odt\_documento -- documento no formato dos editores de texto Libre Office e OpenDocument;
--rtf\_documento -- documento no formato Rich Text Format (rtf).
 
-Apresentações (slides)
--ioslides\_presentation -- apresentação no formato HTML com ioslides;
--beamer\_presentation -- apresentação no formato PDF com LaTeX Beamer;
--powerpoint\_presentation -- apresentação no formato power point.
+Documentos:
+- html\_document -- documento no formato HTML;
+- pdf\_document -- documento no formato PDF (via o modelo LaTeX);
+- word\_document -- documento no formato do editor de texto Microsoft Word (docx);
+- odt\_documento -- documento no formato dos editores de texto Libre Office e OpenDocument;
+- rtf\_documento -- documento no formato Rich Text Format (rtf).
 
-Outros
--flexdashboard::flex\_dashboard -- apresentação interativa com dashboards;
--htm\_vignette -- R package vignette no format HTML
--github\_document -- document no format GitHub
+Apresentações (slides):
+- ioslides\_presentation -- apresentação no formato HTML com ioslides;
+- beamer\_presentation -- apresentação no formato PDF com LaTeX Beamer;
+- powerpoint\_presentation -- apresentação no formato power point.
 
-Você pode escolher o output desejado quando for criar um documento conforme a figura 1. Para fazer deve-se clicar em file \textgreater{} new file \textgreater{} R Markdown. Abrirá uma aba e nela há quatro formas de output previamente estabelecidas, a saber: Document (HTML, PDF e Word), Presentation (HTML (ioslides), HTML (slidy), PDF (Beamer) e PowerPoint), Shiny (Shiny Document e Shy Presentation) e From Template (GitHub document e Package Vignette). Escolha uma e clique em OK.
+Outros:
+- flexdashboard::flex\_dashboard -- apresentação interativa com dashboards;
+- htm\_vignette -- R package vignette no format HTML
+- github\_document -- document no format GitHub
+
+Você pode escolher o output desejado quando for criar um documento conforme a figura 1. Para fazer deve-se clicar em \texttt{file\ \textgreater{}\ new\ file\ \textgreater{}\ R\ Markdown}. Abrirá uma aba e nela há quatro formas de output previamente estabelecidas, a saber: Document (HTML, PDF e Word), Presentation (HTML (ioslides), HTML (slidy), PDF (Beamer) e PowerPoint), Shiny (Shiny Document e Shy Presentation) e From Template (GitHub document e Package Vignette). Escolha uma e clique em OK.
 Além disso, você também pode alterar o formato utilizando a função abaixo, sendo que render refere-se ao local que está salvo seu documento e output\_format ao tipo de documento desejado, conforme os exemplos apontados no início.
 
-\texttt{render("teste.Rmd",\ output\_format\ =\ "pdf\_document")}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{render}\NormalTok{(}\StringTok{"teste.Rmd"}\NormalTok{, }\DataTypeTok{output\_format =} \StringTok{"pdf\_document"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
 O mesmo pode ser feito para outros formatos.
+Abaixo está presente uma lista com todos os formatos suportados por padrão com o pacote \texttt{rmarkdown}.
 
 \begin{itemize}
 \tightlist
@@ -198,37 +204,34 @@ Então é necessário que tenha instalado em seu computador a \emph{(biblioteca?
 \subsection{Windows}\label{windows}}
 
 Selecione a aba Windows e clique no botão de download:
-\includegraphics{download_MiKTex/download_windowns_MiKTex.png}
+\includegraphics{img/download_windowns_MiKTex.jpg}
 \#\#\# Linux
 Selecione a aba Linux em seguida a aba de sua distribuição Linux para receber as instruções de instalação:
-\includegraphics{download_MiKTex/download_linux_MiKTex.png}
+\includegraphics{img/download_linux_MiKTex.jpg}
 \#\#\# MacOS
 Selecione a aba macOS e clique no botão de download:
-\includegraphics{download_MiKTex/download_macOS_MiKTex.png}
-\#\# Criando o primeiro documento
+\includegraphics{img/download_macOS_MiKTex.jpg}
+
+\hypertarget{criando-o-primeiro-documento}{%
+\section{Criando o primeiro documento}\label{criando-o-primeiro-documento}}
+
 Para gerar um arquivo em R Markdown é necessário abrir o programa R Studio, e instalar o pacote rmarkdown :
-\includegraphics{Imagem/ins.png}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"rmarkdown"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
 Após a instalação do pacote no R Studio, siga os seguintes passos:
-\includegraphics{Imagem/new.png}
+\includegraphics{img/new.png}
 - Em seguida, escolha o tipo de arquivo desejado:
-\includegraphics{Imagem/file.png}
+\includegraphics{img/file.png}
 Obs: Para gerar documentos em PDF, é necessário ter instalado em seu computador o programa \href{https://miktex.org/}{Latex}
 
 Seguindo os passos acima, você terá criado o seu primeiro documento em R Markdown.
 
 Vale ressaltar que é possível utilizar o R Markdown sem que tenha instalado o R Studio, porém, é necessário ter instalado o programa \href{https://pandoc.org}{Pandoc}
-
-\begin{verbatim}
-
-```r
-print(2)
-```
-
-```
-## [1] 2
-```
-
-\end{verbatim}
 
 \hypertarget{sintaxe}{%
 \chapter{Sintaxe}\label{sintaxe}}
@@ -336,7 +339,7 @@ Por fim foi definida também a opção \texttt{title} que irá definir o título
 \end{verbatim}
 
 \hypertarget{formatauxe7uxe3o-de-textos-negrito-ituxe1lico-sobrescrito-tachado-e-cuxf3digo}{%
-\subsection{Formatação de textos (negrito, itálico, sobrescrito, tachado e código )}\label{formatauxe7uxe3o-de-textos-negrito-ituxe1lico-sobrescrito-tachado-e-cuxf3digo}}
+\subsection{Formatação de textos (negrito, itálico, sobrescrito, tachado e código)}\label{formatauxe7uxe3o-de-textos-negrito-ituxe1lico-sobrescrito-tachado-e-cuxf3digo}}
 
 \begin{verbatim}
 *Negrito* _Negrito_
@@ -361,24 +364,6 @@ texto\textsuperscript{sobrescrito}
 \end{verbatim}
 
 \textasciitilde{}\sout{tachado}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r\}}
-\InformationTok{Sys.info()}
-\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{Sys.Date}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] "2020-08-05"
-\end{verbatim}
 
 \hypertarget{links}{%
 \subsection{Links}\label{links}}

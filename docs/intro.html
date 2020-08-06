@@ -141,6 +141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#windows"><i class="fa fa-check"></i><b>1.2.1</b> Windows</a></li>
 </ul></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#criando-o-primeiro-documento"><i class="fa fa-check"></i><b>1.3</b> Criando o primeiro documento</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="sintaxe.html"><a href="sintaxe.html"><i class="fa fa-check"></i><b>2</b> Sintaxe</a>
 <ul>
@@ -153,7 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="sintaxe.html"><a href="sintaxe.html#textos"><i class="fa fa-check"></i><b>2.2</b> Textos</a>
 <ul>
 <li class="chapter" data-level="2.2.1" data-path="sintaxe.html"><a href="sintaxe.html#títulos"><i class="fa fa-check"></i><b>2.2.1</b> Títulos</a></li>
-<li class="chapter" data-level="2.2.2" data-path="sintaxe.html"><a href="sintaxe.html#formatação-de-textos-negrito-itálico-sobrescrito-tachado-e-código"><i class="fa fa-check"></i><b>2.2.2</b> Formatação de textos (negrito, itálico, sobrescrito, tachado e código )</a></li>
+<li class="chapter" data-level="2.2.2" data-path="sintaxe.html"><a href="sintaxe.html#formatação-de-textos-negrito-itálico-sobrescrito-tachado-e-código"><i class="fa fa-check"></i><b>2.2.2</b> Formatação de textos (negrito, itálico, sobrescrito, tachado e código)</a></li>
 <li class="chapter" data-level="2.2.3" data-path="sintaxe.html"><a href="sintaxe.html#links"><i class="fa fa-check"></i><b>2.2.3</b> Links</a></li>
 <li class="chapter" data-level="2.2.4" data-path="sintaxe.html"><a href="sintaxe.html#listas"><i class="fa fa-check"></i><b>2.2.4</b> Listas</a></li>
 </ul></li>
@@ -202,29 +203,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Capítulo 1</span> Introdção</h1>
 <p>Neste curso, iremos aprender a utilizar o R Markdown para gerar documentos.
 ## O que é
-Markdown é uma linguagem de marcação usada para formatar de maneira simples os textos redigidos e converte-los em HTML. John Gruber e Aaron Swartz, os criadores desse sistema, utilizaram marcadores como: #, * ,! , [] e (). Assim é possível inserir em nossos textos: títulos, listas, formatação de fonte, imagens e tabelas.
+Markdown é uma linguagem de marcação usada para formatar de maneira simples os textos redigidos e converte-los em HTML. John Gruber e Aaron Swartz, os criadores desse sistema, utilizaram marcadores como: <code>#, \* ,! , [] e ()</code>. Assim é possível inserir em nossos textos: títulos, listas, formatação de fonte, imagens e tabelas.
 R Markdown é um documento criado no R Studio (Ou em outras IDEs) que possibilita empregar os recursos da linguagem markdown citados acima em conjunto com a linguagem R, permitindo a melhor organização de análises, relatórios e códigos em um só documento.</p>
 <div id="possíveis-tipos-de-outputs" class="section level2" number="1.1">
 <h2><span class="header-section-number">1.1</span> Possíveis tipos de Outputs</h2>
-<p>O R Markdown apresenta várias possibilidades de outputs (renderizar) nos formatos de documentos, apresentações, entre outros, sendo que em cada formato há várias opções de customização. Vejamos abaixo os principais:
-Documentos
--html_document – documento no formato HTML;
--pdf_document – documento no formato PDF (via o modelo LaTeX);
--word_document – documento no formato do editor de texto Microsoft Word (docx);
--odt_documento – documento no formato dos editores de texto Libre Office e OpenDocument;
--rtf_documento – documento no formato Rich Text Format (rtf).</p>
-<p>Apresentações (slides)
--ioslides_presentation – apresentação no formato HTML com ioslides;
--beamer_presentation – apresentação no formato PDF com LaTeX Beamer;
--powerpoint_presentation – apresentação no formato power point.</p>
-<p>Outros
--flexdashboard::flex_dashboard – apresentação interativa com dashboards;
--htm_vignette – R package vignette no format HTML
--github_document – document no format GitHub</p>
-<p>Você pode escolher o output desejado quando for criar um documento conforme a figura 1. Para fazer deve-se clicar em file &gt; new file &gt; R Markdown. Abrirá uma aba e nela há quatro formas de output previamente estabelecidas, a saber: Document (HTML, PDF e Word), Presentation (HTML (ioslides), HTML (slidy), PDF (Beamer) e PowerPoint), Shiny (Shiny Document e Shy Presentation) e From Template (GitHub document e Package Vignette). Escolha uma e clique em OK.
+<p>O R Markdown apresenta várias possibilidades de outputs (renderizar) nos formatos de documentos, apresentações, entre outros, sendo que em cada formato há várias opções de customização. Vejamos abaixo os principais:</p>
+<p>Documentos:
+- html_document – documento no formato HTML;
+- pdf_document – documento no formato PDF (via o modelo LaTeX);
+- word_document – documento no formato do editor de texto Microsoft Word (docx);
+- odt_documento – documento no formato dos editores de texto Libre Office e OpenDocument;
+- rtf_documento – documento no formato Rich Text Format (rtf).</p>
+<p>Apresentações (slides):
+- ioslides_presentation – apresentação no formato HTML com ioslides;
+- beamer_presentation – apresentação no formato PDF com LaTeX Beamer;
+- powerpoint_presentation – apresentação no formato power point.</p>
+<p>Outros:
+- flexdashboard::flex_dashboard – apresentação interativa com dashboards;
+- htm_vignette – R package vignette no format HTML
+- github_document – document no format GitHub</p>
+<p>Você pode escolher o output desejado quando for criar um documento conforme a figura 1. Para fazer deve-se clicar em <code>file &gt; new file &gt; R Markdown</code>. Abrirá uma aba e nela há quatro formas de output previamente estabelecidas, a saber: Document (HTML, PDF e Word), Presentation (HTML (ioslides), HTML (slidy), PDF (Beamer) e PowerPoint), Shiny (Shiny Document e Shy Presentation) e From Template (GitHub document e Package Vignette). Escolha uma e clique em OK.
 Além disso, você também pode alterar o formato utilizando a função abaixo, sendo que render refere-se ao local que está salvo seu documento e output_format ao tipo de documento desejado, conforme os exemplos apontados no início.</p>
-<p><code>render("teste.Rmd", output_format = "pdf_document")</code></p>
-<p>O mesmo pode ser feito para outros formatos.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="intro.html#cb1-1" aria-hidden="true"></a><span class="kw">render</span>(<span class="st">&quot;teste.Rmd&quot;</span>, <span class="dt">output_format =</span> <span class="st">&quot;pdf_document&quot;</span>)</span></code></pre></div>
+<p>O mesmo pode ser feito para outros formatos.
+Abaixo está presente uma lista com todos os formatos suportados por padrão com o pacote <code>rmarkdown</code>.</p>
 <ul>
 <li><code>beamer_presentation</code></li>
 <li><code>context_document</code></li>
@@ -248,36 +250,28 @@ Então é necessário que tenha instalado em seu computador a <em>(biblioteca?)<
 <div id="windows" class="section level3" number="1.2.1">
 <h3><span class="header-section-number">1.2.1</span> Windows</h3>
 <p>Selecione a aba Windows e clique no botão de download:
-<img src="download_MiKTex/download_windowns_MiKTex.png" />
+<img src="img/download_windowns_MiKTex.jpg" />
 ### Linux
 Selecione a aba Linux em seguida a aba de sua distribuição Linux para receber as instruções de instalação:
-<img src="download_MiKTex/download_linux_MiKTex.png" />
+<img src="img/download_linux_MiKTex.jpg" />
 ### MacOS
 Selecione a aba macOS e clique no botão de download:
-<img src="download_MiKTex/download_macOS_MiKTex.png" />
-## Criando o primeiro documento
-Para gerar um arquivo em R Markdown é necessário abrir o programa R Studio, e instalar o pacote rmarkdown :
-<img src="Imagem/ins.png" />
-Após a instalação do pacote no R Studio, siga os seguintes passos:
-<img src="Imagem/new.png" />
+<img src="img/download_macOS_MiKTex.jpg" /></p>
+</div>
+</div>
+<div id="criando-o-primeiro-documento" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Criando o primeiro documento</h2>
+<p>Para gerar um arquivo em R Markdown é necessário abrir o programa R Studio, e instalar o pacote rmarkdown :
+<!--![](img/ins.png)--></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="intro.html#cb2-1" aria-hidden="true"></a><span class="kw">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</span></code></pre></div>
+<p>Após a instalação do pacote no R Studio, siga os seguintes passos:
+<img src="img/new.png" />
 - Em seguida, escolha o tipo de arquivo desejado:
-<img src="Imagem/file.png" />
+<img src="img/file.png" />
 Obs: Para gerar documentos em PDF, é necessário ter instalado em seu computador o programa <a href="https://miktex.org/">Latex</a></p>
 <p>Seguindo os passos acima, você terá criado o seu primeiro documento em R Markdown.</p>
 <p>Vale ressaltar que é possível utilizar o R Markdown sem que tenha instalado o R Studio, porém, é necessário ter instalado o programa <a href="https://pandoc.org">Pandoc</a></p>
-<pre><code>
 
-```r
-print(2)
-```
-
-```
-## [1] 2
-```
-
-</code></pre>
-
-</div>
 </div>
 </div>
             </section>
