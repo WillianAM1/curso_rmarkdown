@@ -123,7 +123,7 @@
 \tableofcontents
 }
 \hypertarget{intro}{%
-\chapter{Introdção}\label{intro}}
+\chapter{Introdução}\label{intro}}
 
 Neste curso, iremos aprender a utilizar o R Markdown para gerar documentos.
 \#\# O que é
@@ -136,21 +136,44 @@ R Markdown é um documento criado no R Studio (Ou em outras IDEs) que possibilit
 O R Markdown apresenta várias possibilidades de outputs (renderizar) nos formatos de documentos, apresentações, entre outros, sendo que em cada formato há várias opções de customização. Vejamos abaixo os principais:
 
 Documentos:
-- html\_document -- documento no formato HTML;
-- pdf\_document -- documento no formato PDF (via o modelo LaTeX);
-- word\_document -- documento no formato do editor de texto Microsoft Word (docx);
-- odt\_documento -- documento no formato dos editores de texto Libre Office e OpenDocument;
-- rtf\_documento -- documento no formato Rich Text Format (rtf).
+
+\begin{itemize}
+\tightlist
+\item
+  html\_document -- documento no formato HTML;
+\item
+  pdf\_document -- documento no formato PDF (via o modelo LaTeX);
+\item
+  word\_document -- documento no formato do editor de texto Microsoft Word (docx);
+\item
+  odt\_documento -- documento no formato dos editores de texto Libre Office e OpenDocument;
+\item
+  rtf\_documento -- documento no formato Rich Text Format (rtf).
+\end{itemize}
 
 Apresentações (slides):
-- ioslides\_presentation -- apresentação no formato HTML com ioslides;
-- beamer\_presentation -- apresentação no formato PDF com LaTeX Beamer;
-- powerpoint\_presentation -- apresentação no formato power point.
+
+\begin{itemize}
+\tightlist
+\item
+  ioslides\_presentation -- apresentação no formato HTML com ioslides;
+\item
+  beamer\_presentation -- apresentação no formato PDF com LaTeX Beamer;
+\item
+  powerpoint\_presentation -- apresentação no formato power point.
+\end{itemize}
 
 Outros:
-- flexdashboard::flex\_dashboard -- apresentação interativa com dashboards;
-- htm\_vignette -- R package vignette no format HTML
-- github\_document -- document no format GitHub
+
+\begin{itemize}
+\tightlist
+\item
+  flexdashboard::flex\_dashboard -- apresentação interativa com dashboards;
+\item
+  htm\_vignette -- R package vignette no format HTML
+\item
+  github\_document -- document no format GitHub
+\end{itemize}
 
 Você pode escolher o output desejado quando for criar um documento conforme a figura 1. Para fazer deve-se clicar em \texttt{file\ \textgreater{}\ new\ file\ \textgreater{}\ R\ Markdown}. Abrirá uma aba e nela há quatro formas de output previamente estabelecidas, a saber: Document (HTML, PDF e Word), Presentation (HTML (ioslides), HTML (slidy), PDF (Beamer) e PowerPoint), Shiny (Shiny Document e Shy Presentation) e From Template (GitHub document e Package Vignette). Escolha uma e clique em OK.
 Além disso, você também pode alterar o formato utilizando a função abaixo, sendo que render refere-se ao local que está salvo seu documento e output\_format ao tipo de documento desejado, conforme os exemplos apontados no início.
@@ -205,10 +228,16 @@ Então é necessário que tenha instalado em seu computador a \emph{(biblioteca?
 
 Selecione a aba Windows e clique no botão de download:
 \includegraphics{img/download_windowns_MiKTex.jpg}
-\#\#\# Linux
+
+\hypertarget{linux}{%
+\subsection{Linux}\label{linux}}
+
 Selecione a aba Linux em seguida a aba de sua distribuição Linux para receber as instruções de instalação:
 \includegraphics{img/download_linux_MiKTex.jpg}
-\#\#\# MacOS
+
+\hypertarget{macos}{%
+\subsection{MacOS}\label{macos}}
+
 Selecione a aba macOS e clique no botão de download:
 \includegraphics{img/download_macOS_MiKTex.jpg}
 
@@ -225,8 +254,10 @@ Para gerar um arquivo em R Markdown é necessário abrir o programa R Studio, e 
 
 Após a instalação do pacote no R Studio, siga os seguintes passos:
 \includegraphics{img/new.png}
-- Em seguida, escolha o tipo de arquivo desejado:
+
+Em seguida, escolha o tipo de arquivo desejado:
 \includegraphics{img/file.png}
+
 Obs: Para gerar documentos em PDF, é necessário ter instalado em seu computador o programa \href{https://miktex.org/}{Latex}
 
 Seguindo os passos acima, você terá criado o seu primeiro documento em R Markdown.

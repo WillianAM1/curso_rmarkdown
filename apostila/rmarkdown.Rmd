@@ -13,7 +13,7 @@ github-repo: estatsej/curso_rmarkdown
 
 <!--chapter:end:00-index.Rmd-->
 
-# Introdção {#intro}
+# Introdução {#intro}
 Neste curso, iremos aprender a utilizar o R Markdown para gerar documentos.
 ## O que é 
 Markdown é uma linguagem de marcação usada para formatar de maneira simples os textos redigidos e converte-los em HTML. John Gruber e Aaron Swartz, os criadores desse sistema, utilizaram marcadores como: `#, \* ,! , [] e ()`. Assim é possível inserir em nossos textos: títulos, listas, formatação de fonte, imagens e tabelas.
@@ -24,6 +24,7 @@ R Markdown é um documento criado no R Studio (Ou em outras IDEs) que possibilit
 O R Markdown apresenta várias possibilidades de outputs (renderizar) nos formatos de documentos, apresentações, entre outros, sendo que em cada formato há várias opções de customização. Vejamos abaixo os principais: 
 
 Documentos:
+
 - html_document – documento no formato HTML;
 - pdf_document – documento no formato PDF (via o modelo LaTeX);
 - word_document – documento no formato do editor de texto Microsoft Word (docx);
@@ -31,11 +32,13 @@ Documentos:
 - rtf_documento – documento no formato Rich Text Format (rtf).
 
 Apresentações (slides):
+
 - ioslides_presentation – apresentação no formato HTML com ioslides;
 - beamer_presentation – apresentação no formato PDF com LaTeX Beamer;
 - powerpoint_presentation – apresentação no formato power point.
 
 Outros:
+
 - flexdashboard::flex_dashboard – apresentação interativa com dashboards;
 - htm_vignette – R package vignette no format HTML
 - github_document – document no format GitHub
@@ -59,9 +62,11 @@ Então é necessário que tenha instalado em seu computador a _(biblioteca?)_ Mi
 ### Windows
 Selecione a aba Windows e clique no botão de download:
 ![](img/download_windowns_MiKTex.jpg)
+
 ### Linux
 Selecione a aba Linux em seguida a aba de sua distribuição Linux para receber as instruções de instalação:
 ![](img/download_linux_MiKTex.jpg)
+
 ### MacOS
 Selecione a aba macOS e clique no botão de download:
 ![](img/download_macOS_MiKTex.jpg)
@@ -72,10 +77,13 @@ Para gerar um arquivo em R Markdown é necessário abrir o programa R Studio, e 
 ```{r, eval = FALSE}
 install.packages("rmarkdown")
 ```
+
 Após a instalação do pacote no R Studio, siga os seguintes passos:
 ![](img/new.png)
-- Em seguida, escolha o tipo de arquivo desejado:
+
+Em seguida, escolha o tipo de arquivo desejado:
 ![](img/file.png)
+
 Obs: Para gerar documentos em PDF, é necessário ter instalado em seu computador o programa [Latex](https://miktex.org/)
 
 Seguindo os passos acima, você terá criado o seu primeiro documento em R Markdown.
