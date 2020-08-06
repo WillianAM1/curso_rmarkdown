@@ -1,5 +1,0 @@
-# Tipos adicionais de Output
-
-## Apresentação em Slides
-
-## Pacotes extras
