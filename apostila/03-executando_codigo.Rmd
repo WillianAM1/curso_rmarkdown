@@ -46,8 +46,26 @@ names(knitr::knit_engines$get())
 ```
 
 
-citacoes **bookdown** [@R-bookdown]
-
+citacoes **bookdown** [@R-bookdown
 ## Exemplo
+Para que o código seja executado no meio de um texto, é necessário usar o caractere ..., antes e depois do código descrito. Exemplo:
+[](Executando código/Imagem 1.png)
+
+Quando quiser executar um código em blocos, utilize ..., antes e depois do código. Exemplo:
+[](Executando código/Imagem 2.png) [](Executando código/Imagem 2.1.png)
+
+Algumas opções básicas dos blocos de código:
+[](Executando código/Imagem 3.png)
+[](Executando código/Imagem 3.1.png)
+
+Para inserir figuras em blocos de código:
+[](Executando código/Imagem 4.png)
+[](Executando código/Imagem 4.1.png)
+
+Para inserir tabelas:
+[](Executando código/Imagem 5.png)
+[](Executando código/Imagem 5.1.png)
+
+
 
 [Exemplo](exemplos/104-intro_blocos_de_codigo.html)
