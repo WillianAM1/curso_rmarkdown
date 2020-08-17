@@ -46,26 +46,96 @@ names(knitr::knit_engines$get())
 ```
 
 
-citacoes **bookdown** [@R-bookdown
+<!-- citacoes **bookdown** [@R-bookdown] -->
+<!-- Só pra ficar claro se alguem ler essa parte aqui, esse negócio esquisito é um comentário -->
+
 ## Exemplo
-Para que o código seja executado no meio de um texto, é necessário usar o caractere ..., antes e depois do código descrito. Exemplo:
-[](img/Imagem 1.png)
+Para que o código seja executado no meio de um texto, é necessário usar o caractere `` ` ``, antes e depois do código descrito. Exemplo:
 
-Quando quiser executar um código em blocos, utilize ..., antes e depois do código. Exemplo:
-[](img/Imagem 2.png) [](img/Imagem 2.1.png)
+```{r, eval = FALSE, echo = TRUE}
+Este texto gera: `r format(Sys.Date(), "%d/%m/%Y")`.
+```
 
-Algumas opções básicas dos blocos de código:
-[](img/Imagem 3.png)
-[](img/Imagem 3.1.png)
+Este texto gera: `r format(Sys.Date(), "%d/%m/%Y")`.
 
-Para inserir figuras em blocos de código:
-[](img/Imagem 4.png)
-[](img/Imagem 4.1.png)
+***
 
-Para inserir tabelas:
-[](img/Imagem 5.png)
-[](img/Imagem 5.1.png)
+O código também pode ser executado dentro de blocos. Blocos de código são inseridos da seguinte forma:
+````markdown
+`r ''````{r}
+format(Sys.Date(), "%d/%m/%Y")
+```
+````
 
+O que gera o seguinte output ao ser compilado seu arquivo R Markdown:
 
+```{r}
+format(Sys.Date(), "%d/%m/%Y")
+```
 
-[Exemplo](exemplos/104-intro_blocos_de_codigo.html)
+***
+
+Algumas das opções básicas de blocos de código [já mencionadas](#flags):
+````markdown
+`r ''````{r, echo = FALSE}
+2 + 2
+```
+````
+
+```{r, echo = FALSE}
+2 + 2
+```
+
+````markdown
+`r ''````{r, eval = FALSE}
+2 + 2
+```
+````
+
+```{r, eval = FALSE}
+2 + 2
+```
+
+***
+
+Exemplo de utilização de blocos de código para inserir imagens como descrito no [capítulo 2](#inserindo-imagens)
+
+````markdown
+`r ''````{r}
+knitr::include_graphics("http://tny.im/lTZ")
+```
+````
+
+```{r}
+knitr::include_graphics("http://tny.im/lTZ")
+```
+
+***
+
+Inserindo tabelas dentro de blocos de código:
+````markdown
+`r ''````{r}
+knitr::kable(cars[1:5,], caption = "Carros")
+```
+````
+
+```{r}
+knitr::kable(cars[1:5,], caption = "Carros")
+```
+
+***
+
+Exemplo utilizando outra [linguagem suportada](#linguagens-suportadas), neste caso python:
+````markdown
+`r ''````{python}
+print(5 ** 3)
+```
+````
+
+```{python}
+print(5 ** 3)
+```
+
+***
+
+Exemplos mais detalhados de R e de outras linguagens suportadas estão disponíveis neste [link](exemplos/104-intro_blocos_de_codigo.html).
