@@ -6,7 +6,91 @@
 
 ### Apresentação de slides
 
-### Documentos
+## Documentos
+
+### Documento de texto OpenDocument
+
+Para criar um documento OpenDocument Text (ODT) a partir do R Markdown, você especifica o `odt_documentformato` de saída nos metadados YAML do seu documento:
+
+````markdown
+---
+title: "Curso"
+author: Estats
+date: Agosto 01, 2020
+output: odt_document
+---
+````
+
+Semelhante a `word_document`,você, também pode fornecer um documento de referência de estilo para `odt_document` percorrer a `reference_odt` opção. Para obter os melhores resultados, o documento ODT de referência deve ser uma versão modificada de um arquivo ODT produzido usando rmarkdown. Por exemplo:
+
+````markdown
+---
+title: "Curso"
+output:
+  odt_document:
+    reference_odt: meu-estilo.odt
+---
+````
+
+### Documento do Word
+
+Para criar um documento do Word a partir do R Markdown, você especifica o `word_document` formato de saída nos metadados YAML do seu documento:
+
+````markdown
+---
+title: "Curso"
+author: Estats
+date: Agosto 01, 2020
+output: word_document
+---
+````
+
+A característica mais notável dos documentos do Word é o modelo do Word, também conhecido como “documento de referência de estilo”. Você pode especificar um documento a ser usado como referência de estilo na produção de um `*.docx` arquivo (um documento do Word). Isso permitirá que você personalize itens como margens e outras características de formatação. Para obter os melhores resultados, o documento de referência deve ser uma versão modificada de um `.docx` arquivo produzido usando rmarkdown. O caminho de tal documento pode ser passado para o `reference_docx` argumento do `word_document` formato. Passe `"default"` para usar os estilos padrão. Por exemplo:
+
+````markdown
+---
+title: "Curso"
+output:
+  word_document:
+    reference_docx: meu-estilo.docx
+---
+````
+
+### Documento de PDF
+
+Para criar um documento PDF a partir do R Markdown, você especifica o `pdf_document` formato de saída nos metadados YAML:
+
+````markdown
+---
+title: "Curso"
+author: Estats
+date: Agosto 01, 2020
+output: pdf_document
+---
+````
+
+Dentro dos documentos R Markdown que geram saída em PDF, você pode usar LaTeX bruto e até mesmo definir macros LaTeX.
+
+Observe que a saída de PDF (incluindo slides Beamer) requer uma instalação do LaTeX:
+
+````markdown
+install.packages('tinytex')
+tinytex::install_tinytex()  # install TinyTeX
+````
+
+#### Índice
+
+Você pode adicionar um sumário usando a `toc` opção e especificar a profundidade dos cabeçalhos aos quais se aplica usando a `toc_depth` opção. Por exemplo:
+
+````markdown
+---
+title: "Curso"
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 2
+---
+````
 
 ### HTML
 
