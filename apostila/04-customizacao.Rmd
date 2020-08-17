@@ -10,4 +10,47 @@
 
 ### HTML
 
+#### Opções de preâmbulo:
+
+- highlight
+- toc
+- dev
+- extra_dependencies
+- toc_depth
+- df_print
+- css
+- toc_float
+- code_folding
+- includes
+- number_sections
+- code_download
+- keep_md
+- section_divs
+- self_contained
+- lib_dir
+- fig_width
+- theme
+- md_extensions=
+- fig_height
+- highlight
+- pandoc_args
+- fig_retina
+- mathjax
+- fig_caption
+- template     
+
+#### Opções de customização
+
+tabsection
+
+##### Exemplo com tabset {.tabset}
+
+##### Aba 1
+
+Conteúdo da aba 1
+
+##### Aba 2
+
+Conteúdo da aba 2
+
 ## Pacotes úteis
