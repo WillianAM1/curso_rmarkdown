@@ -9,3 +9,4 @@ Os slides podem ser acessados no [link](https://estatsej.github.io/curso_rmarkdo
 # TODO
 
 - Arrumar link imagem logo estats para gerar pdf
+- Ajustar inputs de imagem para usar {float} [H] para manter posição no pdf (fig.pos = "H")
