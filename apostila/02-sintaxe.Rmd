@@ -194,14 +194,14 @@ Se um gráfico ou imagem não for gerado a partir de um código feito por R, voc
 - Usando a sintaxe Markdown ```![texto](pasta/para/image)```. Nesse caso, você pode definir o tamanho da imagem usando os atributos ```width``` ou ```height```, por exemplo:
 
 ```
-![Logo da Estats](http://tny.im/lTZ){width=50%}
+![Logo da Estats](https://tny.im/lTZ){width=50%}
 ```
 
 - Usando a função ```knitr::include_graphics(```) em qualquer parte do código. Você pode usar opções de configuração de tamanho como ```out.width``` ou ```out.height``` para esse exemplo:
 
 ````markdown
 `r ''````{r, echo=FALSE, out.width="50%", fig.cap="Logo da Estats"}
-knitr::include_graphics("http://tny.im/lTZ")
+knitr::include_graphics("https://tny.im/lTZ")
 ```
 ````
 Se você souber que deseja gerar a imagem apenas para um formato de saída específico, poderá usar uma unidade específica. Por exemplo, você pode usar ```out.width="300px"``` se o formato de saída for HTML, mas no nosso exemplo o formato que usamos ```out.width="50%"``` é válido para qualquer saída.
@@ -213,17 +213,17 @@ No código a seguir é utilizado quando o seu projeto tem múltiplas saídas (PD
 ````markdown
 `r ''````{r, fig.cap="Logo da Estats"}
 if (knitr::is_html_output()) {
-    knitr::include_graphics("http://tny.im/lTZ")
+    knitr::include_graphics("https://tny.im/lTZ")
 } else {
-    knitr::include_graphics("http://tny.im/lTZ")
+    knitr::include_graphics("https://tny.im/lTZ")
 }
 ```
 ````
 ```{r, fig.cap="Logo da Estats", fig.align = "center"}
 if (knitr::is_html_output()) {
-    knitr::include_graphics("http://tny.im/lTZ")
+    knitr::include_graphics("https://tny.im/lTZ")
 } else {
-    knitr::include_graphics("http://tny.im/lTZ")
+    knitr::include_graphics("https://tny.im/lTZ")
 }
 ```
 
@@ -241,12 +241,12 @@ include_graphics(c("img1.jpeg", "img2.jpeg"))
 
 ````markdown
 `r ''````{r}
-knitr::include_graphics(rep("http://tny.im/lTZ", 3))
+knitr::include_graphics(rep("https://tny.im/lTZ", 3))
 ```
 ````
 
 ```{r}
-knitr::include_graphics(rep("http://tny.im/lTZ", 3))
+knitr::include_graphics(rep("https://tny.im/lTZ", 3))
 ```
 
 ## Exemplos

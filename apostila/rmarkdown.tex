@@ -113,7 +113,7 @@
 
 \title{Introdução ao R Markdown}
 \author{Eduardo José de Campos Lemos Júnior, Samuel Vianna Quintanilha}
-\date{2020-08-17}
+\date{2020-08-18}
 
 \begin{document}
 \maketitle
@@ -476,7 +476,7 @@ Se um gráfico ou imagem não for gerado a partir de um código feito por R, voc
 \end{itemize}
 
 \begin{verbatim}
-![Logo da Estats](http://tny.im/lTZ){width=50%}
+![Logo da Estats]('https://tny.im/lTZ'){width=50%}
 \end{verbatim}
 
 \begin{itemize}
@@ -488,7 +488,7 @@ Se um gráfico ou imagem não for gerado a partir de um código feito por R, voc
 \begin{Shaded}
 \begin{Highlighting}[]
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r, echo=FALSE, out.width="50\%", fig.cap="Logo da Estats"\}}
-\InformationTok{knitr::include\_graphics("http://tny.im/lTZ")}
+\InformationTok{knitr::include\_graphics("'https://tny.im/lTZ'")}
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
 \end{Highlighting}
 \end{Shaded}
@@ -503,9 +503,9 @@ No código a seguir é utilizado quando o seu projeto tem múltiplas saídas (PD
 \begin{Highlighting}[]
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r, fig.cap="Logo da Estats"\}}
 \InformationTok{if (knitr::is\_html\_output()) \{}
-\InformationTok{    knitr::include\_graphics("http://tny.im/lTZ")}
+\InformationTok{    knitr::include\_graphics("'https://tny.im/lTZ'")}
 \InformationTok{\} else \{}
-\InformationTok{    knitr::include\_graphics("http://tny.im/lTZ")}
+\InformationTok{    knitr::include\_graphics("'https://tny.im/lTZ'")}
 \InformationTok{\}}
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
 \end{Highlighting}
@@ -514,16 +514,16 @@ No código a seguir é utilizado quando o seu projeto tem múltiplas saídas (PD
 \begin{Shaded}
 \begin{Highlighting}[]
 \ControlFlowTok{if}\NormalTok{ (knitr}\OperatorTok{::}\KeywordTok{is\_html\_output}\NormalTok{()) \{}
-\NormalTok{    knitr}\OperatorTok{::}\KeywordTok{include\_graphics}\NormalTok{(}\StringTok{"http://tny.im/lTZ"}\NormalTok{)}
+\NormalTok{    knitr}\OperatorTok{::}\KeywordTok{include\_graphics}\NormalTok{(}\StringTok{"'https://tny.im/lTZ'"}\NormalTok{)}
 \NormalTok{\} }\ControlFlowTok{else}\NormalTok{ \{}
-\NormalTok{    knitr}\OperatorTok{::}\KeywordTok{include\_graphics}\NormalTok{(}\StringTok{"http://tny.im/lTZ"}\NormalTok{)}
+\NormalTok{    knitr}\OperatorTok{::}\KeywordTok{include\_graphics}\NormalTok{(}\StringTok{"'https://tny.im/lTZ'"}\NormalTok{)}
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}
 
-{\centering \includegraphics{http://tny.im/lTZ} 
+{\centering \includegraphics{'https://tny.im/lTZ'} 
 
 }
 
@@ -555,18 +555,18 @@ Os dois exemplos abaixo são casos de curiosidades:
 \begin{Shaded}
 \begin{Highlighting}[]
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r\}}
-\InformationTok{knitr::include\_graphics(rep("http://tny.im/lTZ", 3))}
+\InformationTok{knitr::include\_graphics(rep("'https://tny.im/lTZ'", 3))}
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include\_graphics}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\StringTok{"http://tny.im/lTZ"}\NormalTok{, }\DecValTok{3}\NormalTok{))}
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include\_graphics}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\StringTok{"'https://tny.im/lTZ'"}\NormalTok{, }\DecValTok{3}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{http://tny.im/lTZ} \includegraphics{http://tny.im/lTZ} \includegraphics{http://tny.im/lTZ}
+\includegraphics{'https://tny.im/lTZ'} \includegraphics{https://tny.im/lTZ} \includegraphics{https://tny.im/lTZ}
 
 \hypertarget{exemplos}{%
 \section{Exemplos}\label{exemplos}}
@@ -655,7 +655,7 @@ Para que o código seja executado no meio de um texto, é necessário usar o car
 \end{Highlighting}
 \end{Shaded}
 
-Este texto gera: 17/08/2020.
+Este texto gera: 18/08/2020.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -678,7 +678,7 @@ O que gera o seguinte output ao ser compilado seu arquivo R Markdown:
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "17/08/2020"
+## [1] "18/08/2020"
 \end{verbatim}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -718,18 +718,18 @@ Exemplo de utilização de blocos de código para inserir imagens como descrito 
 \begin{Shaded}
 \begin{Highlighting}[]
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r\}}
-\InformationTok{knitr::include\_graphics("http://tny.im/lTZ")}
+\InformationTok{knitr::include\_graphics("'https://tny.im/lTZ'")}
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include\_graphics}\NormalTok{(}\StringTok{"http://tny.im/lTZ"}\NormalTok{)}
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include\_graphics}\NormalTok{(}\StringTok{"'https://tny.im/lTZ'"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{http://tny.im/lTZ}
+\includegraphics{'https://tny.im/lTZ'}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -796,26 +796,346 @@ Exemplo utilizando outra \protect\hyperlink{linguagens-suportadas}{linguagem sup
 
 Exemplos mais detalhados de R e de outras linguagens suportadas estão disponíveis neste \href{exemplos/104-intro_blocos_de_codigo.html}{link}.
 
-\hypertarget{customizauxe7uxe3o}{%
-\chapter{Customização}\label{customizauxe7uxe3o}}
+\hypertarget{customizauxe7uxe3o-e-tipos-de-arquivo}{%
+\chapter{Customização e Tipos de Arquivo}\label{customizauxe7uxe3o-e-tipos-de-arquivo}}
 
 \hypertarget{opuxe7uxf5es-avanuxe7adas-no-preuxe2mbulo}{%
 \section{Opções avançadas no preâmbulo}\label{opuxe7uxf5es-avanuxe7adas-no-preuxe2mbulo}}
 
-\hypertarget{tipos-de-documentos}{%
-\section{Tipos de documentos}\label{tipos-de-documentos}}
-
 \hypertarget{apresentauxe7uxe3o-de-slides}{%
-\subsection{Apresentação de slides}\label{apresentauxe7uxe3o-de-slides}}
+\section{Apresentação de slides}\label{apresentauxe7uxe3o-de-slides}}
+
+\hypertarget{ioslides}{%
+\subsection{ioslides}\label{ioslides}}
+
+Para criar uma apresentação ioslides de R Markdown, você especifica \texttt{ioslides\_presentation} no output nos metadados YAML do seu documento. Você pode criar uma apresentação de slides dividida em seções usando as tags de cabeçalho \texttt{\#} e \texttt{\#\#} (você também pode criar um novo slide sem cabeçalho usando uma régua horizontal (\texttt{-\/-\/-}). Por exemplo, aqui está uma apresentação de slides simples:
+
+\begin{verbatim}
+---
+title: "Curso de R Makrdown"
+author: Departamento de Estatística
+date: 12 de Agosto de 2020
+output: ioslides_presentation
+---
+
+# Capítulo 1
+
+## O que é?
+
+- R
+- RMarkdown
+
+## Capítulo 2
+
+- R
+  - RMarkdown
+\end{verbatim}
+
+Você também pode adicionar um subtítulo ou seção incluíndo o texto após o caractere da barra vertifical (\texttt{\textbar{}}). Por exemplo:
+
+\begin{verbatim}
+## Isto é um texto | Exemplo de subtítulo ou seção
+\end{verbatim}
+
+\hypertarget{modos-de-exibiuxe7uxe3o-do-slide}{%
+\subsection{Modos de Exibição do Slide}\label{modos-de-exibiuxe7uxe3o-do-slide}}
+
+Veja a seguir um conjunto de atalhos no teclado que permitem modos de exibição alternativos:
+- \texttt{f}: habilita o modo de tela cheia
+- \texttt{w}: habilita o modo janela
+- \texttt{o}: habilita o modo de visão geral
+- \texttt{h}: habilita o modo de highlight do código
+- \texttt{p}: exibe as anotações presentes
+
+Pressione a tecla \texttt{Esc} para sair dos modos de exibição escolhidos.
+
+\hypertarget{aparuxeancia-visual}{%
+\subsection{Aparência Visual}\label{aparuxeancia-visual}}
+
+\hypertarget{tamanho-da-apresentauxe7uxe3o}{%
+\subsubsection*{Tamanho da Apresentação}\label{tamanho-da-apresentauxe7uxe3o}}
+\addcontentsline{toc}{subsubsection}{Tamanho da Apresentação}
+
+Você pode exibir a apresentação usando um wider form ao utilizar a opção \texttt{widescreen}. Você pode especificar que um texto menor seja usado com a opção \texttt{smaller}. Por exemplo:
+
+\begin{verbatim}
+---
+output:
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
+---
+\end{verbatim}
+
+Você também pode habilitar a opção \texttt{smaller} como uma opção slide-by-slide adicionando o atributo \texttt{.smaller} no cabeçario do slide:
+
+\begin{verbatim}
+## Este é um exemplo {.smaller}
+\end{verbatim}
+
+\hypertarget{velocidade-de-transiuxe7uxe3o}{%
+\subsubsection*{Velocidade de Transição}\label{velocidade-de-transiuxe7uxe3o}}
+\addcontentsline{toc}{subsubsection}{Velocidade de Transição}
+
+Você pode customizar a velocidade de transição de um slide usando a opção \texttt{transition}. Isto pode ser \texttt{"default"}, \texttt{"slower"}, \texttt{"faster"}, ou um valor número com os números em segundos (por exemplo, \texttt{0.10}). Um exemplo:
+
+\begin{verbatim}
+---
+output:
+  ioslides_presentatiom:
+    transition: slower
+---
+\end{verbatim}
+
+\hypertarget{slidy}{%
+\subsection{Slidy}\label{slidy}}
+
+Para criar uma apresentação Slidy de RMarkdown, você precisa especificar o \texttt{slidy\_presentation} no output nos metadados YAML do seu documento. Você pode criar uma apresentação de slides dividida em seções usando as tags de cabeçalho \texttt{\#\ \#} você também pode criar um novo slide sem cabeçalho usando uma régua horizontal (\texttt{-\/-\/-}). Por exemplo, aqui está uma apresentação de slides simples:
+
+\begin{verbatim}
+---
+title: "Curso de R Makrdown"
+author: Departamento de Estatística
+date: 12 de Agosto de 2020
+output: slidy_presentation
+---
+
+# Capítulo 1
+
+## O que é?
+
+- R
+- RMarkdown
+
+## Capítulo 2
+
+- R
+- RMakrdown
+\end{verbatim}
+
+\hypertarget{modos-de-exibiuxe7uxe3o}{%
+\subsubsection*{Modos de Exibição}\label{modos-de-exibiuxe7uxe3o}}
+\addcontentsline{toc}{subsubsection}{Modos de Exibição}
+
+Veja a seguir um conjunto de atalhos no teclado que permitem modos de exibição alternativos:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{\textquotesingle{}C\textquotesingle{}}: Exibe o indíce
+\item
+  \texttt{\textquotesingle{}F\textquotesingle{}}: Alterna a exibição do rodapé.
+\item
+  \texttt{\textquotesingle{}A\textquotesingle{}}: Alterna a exibição de slides atuais para todos os slides (útil para imprimir folhetos).
+\item
+  \texttt{\textquotesingle{}S\textquotesingle{}}: Dimunue o tamanho da Fonte.
+\item
+  \texttt{\textquotesingle{}B\textquotesingle{}}: Aumentya o tamanho da Fonte.
+\end{itemize}
+
+\hypertarget{tamanho-do-texto}{%
+\subsubsection*{Tamanho do Texto}\label{tamanho-do-texto}}
+\addcontentsline{toc}{subsubsection}{Tamanho do Texto}
+
+Você pode usar a opção \texttt{font\_adjustment} para aumentar ou diminuir o tamanho da fonte padrão (por exemplo, \texttt{-1} ou \texttt{+1}) para toda a apresentação. Por exemplo:
+
+\begin{verbatim}
+---
+output:
+  slidy_presentation:
+    font_adjustment: -1
+---
+\end{verbatim}
+
+Se quiser diminuir o tamanho do texto em um slide especifíco, você pode usar o atributo de slide \texttt{.smaller}. Vejamos um exemplo:
+
+\begin{verbatim}
+## Isto é um exemplo{.smaller}
+\end{verbatim}
+
+Se quiser aumentar o tamanho do texto em um slide especifíco, você pode usar o atributo de slide \texttt{.bigger}. Vejamos um exemplo:
+
+\begin{verbatim}
+## Isto é um exemplo{.bigger}
+\end{verbatim}
+
+Também é possível ajustar manualmente o tamanho da fonte padrão durante a sua apresentação usando o \texttt{\textquotesingle{}S\textquotesingle{}} (smaller) e \texttt{B}(bigger).
+
+\hypertarget{elementos-de-rodapuxe9}{%
+\subsubsection*{Elementos de Rodapé}\label{elementos-de-rodapuxe9}}
+\addcontentsline{toc}{subsubsection}{Elementos de Rodapé}
+
+Você pode adicionar uma contagem regressiva ao rodapé de seus slides usando a opção \texttt{duration} (a duração é especificada em minutos). Por exemplo:
+
+\begin{verbatim}
+---
+output:
+  slidy_presentation:
+    duration: 45
+---
+\end{verbatim}
+
+Você também pode adicionar um texto personalizado ao rodapé (por exemplo, o nome da sua organização, universidade ou Copyright) usando a opção \texttt{footer}. Por exemplo:
+
+\begin{verbatim}
+---
+output:
+  slidy_presentation:
+    footer: "Copyright (c) 2020, Curso de RMarkdown"
+---
+\end{verbatim}
+
+\hypertarget{beamer}{%
+\subsection{Beamer}\label{beamer}}
+
+\hypertarget{temas}{%
+\subsubsection*{Temas}\label{temas}}
+\addcontentsline{toc}{subsubsection}{Temas}
+
+Você pode especificar os temas do Beamer usando as opções \texttt{theme}, \texttt{colortheme}, e \texttt{fonttheme}. Por exemplo:
+
+\begin{verbatim}
+---
+output:
+  beamer_presentation:
+    theme: "AnnArbor"
+    colortheme: "dolphin"
+    fonttheme: "structurebold"
+---
+\end{verbatim}
+
+\hypertarget{nuxedvel-do-slide}{%
+\subsubsection*{Nível do Slide}\label{nuxedvel-do-slide}}
+\addcontentsline{toc}{subsubsection}{Nível do Slide}
+
+A opção \texttt{slide\_level} define o nível de título que define slides individuais.. Por padrão, este é o nível de cabeçalho mais alto na hierarquia, seguido imediatamente pelo conteúdo, e não por outro cabeçalho, em algum lugar do documento. Este padrão pode ser sobrescrito especificando um explícito \texttt{slide\_level}:
+
+\begin{verbatim}
+---
+output:
+  beamer_presentation:
+    slide_level: 2
+---
+\end{verbatim}
+
+\hypertarget{powerpoint}{%
+\subsection{PowerPoint}\label{powerpoint}}
+
+Para criar uma apresentação do PowerPoint a partir do R Markdown, você especifica a opção \texttt{powerpoint\_presentation} no output nos metadados YAML do seu documento. Note por favor que este formato de output só está disponóivel na versão v1.9 do \textbf{rmakrdown} e requer a última versão do Pandoc 2.10.1. (O Pandoc é um conversor de documentos, como por exemplo de Markdown para HTML). Você pode verificar as versões dos seus pacotes de \textbf{rmakrdown} e Pandoc com o comando \texttt{packageVersion(\textquotesingle{}rmarkdown\textquotesingle{})} e \texttt{rmarkdown::pandoc\_version()} respectivamente, no R.
+Abaixo está um exemplo rápido de um output PowerPoint:
+
+\begin{verbatim}
+---
+title: "Curso de R Makrdown"
+author: Departamento de Estatística
+date: 12 de Agosto de 2020
+output: powerpoint_presentation
+---
+
+# Capítulo 1
+
+## O que é?
+
+- R
+- RMarkdown
+
+## Capítulo 2
+
+- R
+- RMakrdown
+\end{verbatim}
+
+O nível de slide (isto é, o nível de título que define slides individuais) é determinado da mesma forma que uma apresentação Beamer, e você pode especificar um nível explícito por meio de \texttt{slide\_level} da opção sob \texttt{powerpoint\_presentation}. Você também pode iniciar um novo slide sem cabeçalho usando uma régua horizontal \texttt{-\/-\/-}
+
+Você pode gerar a maioria dos elementos suportados pelo Markdown do Pandoc no output do PowerPoint, como texto em negrito / itálico, notas de rodapé, marcadores, expressões matemáticas LaTeX, imagens e tabelas, etc.
+
+Observe que imagens e tabelas sempre serão colocadas em novos slides.Os únicos elementos que podem coexistir com uma imagem ou tabela em um slide são o cabeçalho do slide e a legenda da imagem / tabela. Quando você tem um parágrafo de texto e uma imagem no mesmo slide, a imagem será movida para um novo slide automaticamente. As imagens serão dimensionadas automaticamente para caber no slide e, se o tamanho automático não funcionar bem, você pode controlar manualmente os tamanhos das imagens: para imagens estáticas incluídas por meio da sintaxe Markdown \texttt{!{[}{]}()} você pode usar o \texttt{width} e/ou \texttt{height} atributos em um par de chaves após a imagem, por exemplo, \texttt{!{[}caption{]}(foo.png)\{width=40\%\}} para imagens geradas dinamicamente a partir de blocos de código R, você pode usar o bloco \texttt{fig.width} e \texttt{fig.height} para controlar os tamanhos.
+
+\begin{verbatim}
+:::::: {.columns}
+::: {.column width="40%"}
+Content of the left column.
+:::
+
+::: {.column width="60%"}
+Content of the right column.
+:::
+::::::
+\end{verbatim}
+
+\hypertarget{templates-customizados}{%
+\subsubsection*{Templates Customizados}\label{templates-customizados}}
+\addcontentsline{toc}{subsubsection}{Templates Customizados}
+
+Como documentos do Word você pode personalizar a aparência das apresentações do PowerPoint passando um documento de referência personalizado por meio da opção \texttt{reference\_doc}, por exemplo:
+
+\begin{verbatim}
+---
+title: "Curso de RMarkdown"
+output:
+  powerpoint_presentation:
+    reference_doc: curso-rmarkdown.pptx
+---
+\end{verbatim}
+
+Observe que a opção \texttt{reference\_doc} requer a versão 1.9 ou superior do \textbf{rmarkdown}:
+
+\begin{verbatim}
+if (packageVersion('rmarkdown') <= '1.9') {
+    install.packages('rmarkdown')  # atualiza o pacote rmarkdown do CRAN
+}
+\end{verbatim}
+
+Basicamente, qualquer modelo incluído em uma versão recente do Microsoft PowerPoint deve funcionar. Você pode criar um novo arquivo \texttt{*.pptx} do menu do PowerPoint \texttt{Arquivos\ -\textgreater{}\ Novo} com o template desejado, salve o novo arquivo e use-o como documento de referência (template) através da opção \texttt{reference\_doc}. O Pandoc lerá os estilos no modelo e os aplicará à apresentação do PowerPoint a ser criada a partir do R Markdown.
+
+\hypertarget{reveal.js}{%
+\subsection{Reveal.js}\label{reveal.js}}
+
+O pacote \textbf{revealjs} fornece um tipo de output no formato \texttt{revealjs::revealjs\_presentation} que pode ser usado para criar outro estilo de slides HTML5 com base na biblioteca JavaScript \textbf{reveal.js.} Você pode instalar o pacote R do CRAN:
+
+\begin{verbatim}
+install.packages("revealjs")
+\end{verbatim}
+
+Para criar uma apresentação reveal.js de R Markdown, você especifica \texttt{revealjs\_presentation} no output nos metadados YAML do seu documento. Você pode criar uma apresentação de slides dividida em seções usando as tags de cabeçalho \texttt{\#} e \texttt{\#\#} (você também pode criar um novo slide sem cabeçalho usando uma régua horizontal (\texttt{-\/-\/-}). Por exemplo, aqui está uma apresentação de slides simples:
+
+\begin{verbatim}
+---
+title: "Curso de R Makrdown"
+author: Departamento de Estatística
+date: 12 de Agosto de 2020
+output: revealjs::revealjs_presentation
+---
+
+# Capítulo 1
+
+## O que é?
+
+- R
+- RMarkdown
+
+## Capítulo 2
+
+- R
+- RMakrdown
+\end{verbatim}
+
+\hypertarget{xaringan}{%
+\subsection{Xaringan}\label{xaringan}}
+
+O pacote \textbf{xaringan} é uma extensão R Markdown baseada no JavaScript da biblioteca remark.js para gerar apresentações HTML5 de um estilo diferente.
+
+O nome ``xaringan'' veio do Sharingan no mangá e anime japoneses ``Naruto''. A palavra foi deliberadamente escolhida para ser difícil de pronunciar para a maioria das pessoas (a menos que você tenha assistido ao anime), porque seu autor (eu) amava muito o estilo e estava preocupado que se tornasse muito popular. A preocupação era um tanto ingênua , porque o estilo é realmente muito personalizável e os usuários começaram a contribuir com mais temas para o pacote posteriormente.
+O pacote \textbf{xaringan} é uma extensão R Markdown baseada no JavaScript da biblioteca remark.js; a biblioteca remark.js suporta apenas Markdown, e o xaringan adicionou o suporte para R Markdown, bem como outros utilitários para tornar mais fácil construir e visualizar slides. Possibilitando que você crie apresentações ninjas!.
 
 \hypertarget{documentos}{%
-\subsection{Documentos}\label{documentos}}
+\section{Documentos}\label{documentos}}
 
 \hypertarget{html}{%
-\subsection{HTML}\label{html}}
+\section{HTML}\label{html}}
 
 \hypertarget{opuxe7uxf5es-de-preuxe2mbulo}{%
-\subsubsection{Opções de preâmbulo:}\label{opuxe7uxf5es-de-preuxe2mbulo}}
+\subsection{Opções de preâmbulo:}\label{opuxe7uxf5es-de-preuxe2mbulo}}
 
 \begin{itemize}
 \tightlist
@@ -874,20 +1194,20 @@ Exemplos mais detalhados de R e de outras linguagens suportadas estão disponív
 \end{itemize}
 
 \hypertarget{opuxe7uxf5es-de-customizauxe7uxe3o}{%
-\subsubsection{Opções de customização}\label{opuxe7uxf5es-de-customizauxe7uxe3o}}
+\subsection{Opções de customização}\label{opuxe7uxf5es-de-customizauxe7uxe3o}}
 
 tabsection
 
 \hypertarget{exemplo-com-tabset}{%
-\paragraph{Exemplo com tabset}\label{exemplo-com-tabset}}
+\subsubsection{Exemplo com tabset}\label{exemplo-com-tabset}}
 
 \hypertarget{aba-1}{%
-\paragraph{Aba 1}\label{aba-1}}
+\subsubsection{Aba 1}\label{aba-1}}
 
 Conteúdo da aba 1
 
 \hypertarget{aba-2}{%
-\paragraph{Aba 2}\label{aba-2}}
+\subsubsection{Aba 2}\label{aba-2}}
 
 Conteúdo da aba 2
 
@@ -1304,7 +1624,7 @@ Expressão matemática em bloco:
 
 \begin{column}
 
-Imagem: \includegraphics{http://tny.im/lTZ}
+Imagem: \includegraphics{'https://tny.im/lTZ'}
 
 \end{column}
 

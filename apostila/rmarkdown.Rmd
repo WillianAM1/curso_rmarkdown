@@ -289,14 +289,14 @@ Se um gráfico ou imagem não for gerado a partir de um código feito por R, voc
 - Usando a sintaxe Markdown ```![texto](pasta/para/image)```. Nesse caso, você pode definir o tamanho da imagem usando os atributos ```width``` ou ```height```, por exemplo:
 
 ```
-![Logo da Estats](http://tny.im/lTZ){width=50%}
+![Logo da Estats](https://tny.im/lTZ){width=50%}
 ```
 
 - Usando a função ```knitr::include_graphics(```) em qualquer parte do código. Você pode usar opções de configuração de tamanho como ```out.width``` ou ```out.height``` para esse exemplo:
 
 ````markdown
 `r ''````{r, echo=FALSE, out.width="50%", fig.cap="Logo da Estats"}
-knitr::include_graphics("http://tny.im/lTZ")
+knitr::include_graphics("https://tny.im/lTZ")
 ```
 ````
 Se você souber que deseja gerar a imagem apenas para um formato de saída específico, poderá usar uma unidade específica. Por exemplo, você pode usar ```out.width="300px"``` se o formato de saída for HTML, mas no nosso exemplo o formato que usamos ```out.width="50%"``` é válido para qualquer saída.
@@ -308,17 +308,17 @@ No código a seguir é utilizado quando o seu projeto tem múltiplas saídas (PD
 ````markdown
 `r ''````{r, fig.cap="Logo da Estats"}
 if (knitr::is_html_output()) {
-    knitr::include_graphics("http://tny.im/lTZ")
+    knitr::include_graphics("https://tny.im/lTZ")
 } else {
-    knitr::include_graphics("http://tny.im/lTZ")
+    knitr::include_graphics("https://tny.im/lTZ")
 }
 ```
 ````
 ```{r, fig.cap="Logo da Estats", fig.align = "center"}
 if (knitr::is_html_output()) {
-    knitr::include_graphics("http://tny.im/lTZ")
+    knitr::include_graphics("https://tny.im/lTZ")
 } else {
-    knitr::include_graphics("http://tny.im/lTZ")
+    knitr::include_graphics("https://tny.im/lTZ")
 }
 ```
 
@@ -336,12 +336,12 @@ include_graphics(c("img1.jpeg", "img2.jpeg"))
 
 ````markdown
 `r ''````{r}
-knitr::include_graphics(rep("http://tny.im/lTZ", 3))
+knitr::include_graphics(rep("https://tny.im/lTZ", 3))
 ```
 ````
 
 ```{r}
-knitr::include_graphics(rep("http://tny.im/lTZ", 3))
+knitr::include_graphics(rep("https://tny.im/lTZ", 3))
 ```
 
 ## Exemplos
@@ -456,12 +456,12 @@ Exemplo de utilização de blocos de código para inserir imagens como descrito 
 
 ````markdown
 `r ''````{r}
-knitr::include_graphics("http://tny.im/lTZ")
+knitr::include_graphics("https://tny.im/lTZ")
 ```
 ````
 
 ```{r}
-knitr::include_graphics("http://tny.im/lTZ")
+knitr::include_graphics("https://tny.im/lTZ")
 ```
 
 ***
@@ -496,19 +496,313 @@ Exemplos mais detalhados de R e de outras linguagens suportadas estão disponív
 
 <!--chapter:end:03-executando_codigo.Rmd-->
 
-# Customização
+# Customização e Tipos de Arquivo
 
 ## Opções avançadas no preâmbulo
 
-## Tipos de documentos
 
-### Apresentação de slides
+## Apresentação de slides
+### ioslides
+Para criar uma apresentação ioslides de R Markdown, você especifica `ioslides_presentation` no output nos metadados YAML do seu documento. Você pode criar uma apresentação de slides dividida em seções usando as tags de cabeçalho `#` e `##` (você também pode criar um novo slide sem cabeçalho usando uma régua horizontal (`---`). Por exemplo, aqui está uma apresentação de slides simples:
 
-### Documentos
+```
+---
+title: "Curso de R Makrdown"
+author: Departamento de Estatística
+date: 12 de Agosto de 2020
+output: ioslides_presentation
+---
 
-### HTML
+# Capítulo 1
 
-#### Opções de preâmbulo:
+## O que é?
+
+- R
+- RMarkdown
+
+## Capítulo 2
+
+- R
+  - RMarkdown
+
+```
+
+Você também pode adicionar um subtítulo ou seção incluíndo o texto após o caractere da barra vertifical (`|`). Por exemplo:
+
+```
+## Isto é um texto | Exemplo de subtítulo ou seção
+```
+
+### Modos de Exibição do Slide
+
+Veja a seguir um conjunto de atalhos no teclado que permitem modos de exibição alternativos:
+- `f`: habilita o modo de tela cheia
+- `w`: habilita o modo janela
+- `o`: habilita o modo de visão geral
+- `h`: habilita o modo de highlight do código
+- `p`: exibe as anotações presentes
+
+Pressione a tecla `Esc` para sair dos modos de exibição escolhidos.
+
+### Aparência Visual
+
+#### Tamanho da Apresentação {-}
+
+Você pode exibir a apresentação usando um wider form ao utilizar a opção `widescreen`. Você pode especificar que um texto menor seja usado com a opção `smaller`. Por exemplo:
+
+```
+---
+output:
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
+---
+```
+
+Você também pode habilitar a opção `smaller` como uma opção slide-by-slide adicionando o atributo `.smaller` no cabeçario do slide:
+
+```
+## Este é um exemplo {.smaller}
+```
+
+#### Velocidade de Transição {-}
+
+Você pode customizar a velocidade de transição de um slide usando a opção `transition`. Isto pode ser `"default"`, `"slower"`, `"faster"`, ou um valor número com os números em segundos (por exemplo, `0.10`). Um exemplo:
+
+```
+---
+output:
+  ioslides_presentatiom:
+    transition: slower
+---
+```
+
+### Slidy
+Para criar uma apresentação Slidy de RMarkdown, você precisa especificar o `slidy_presentation` no output nos metadados YAML do seu documento. Você pode criar uma apresentação de slides dividida em seções usando as tags de cabeçalho `# #` você também pode criar um novo slide sem cabeçalho usando uma régua horizontal (`---`). Por exemplo, aqui está uma apresentação de slides simples:
+
+```
+---
+title: "Curso de R Makrdown"
+author: Departamento de Estatística
+date: 12 de Agosto de 2020
+output: slidy_presentation
+---
+
+# Capítulo 1
+
+## O que é?
+
+- R
+- RMarkdown
+
+## Capítulo 2
+
+- R
+- RMakrdown
+
+```
+
+#### Modos de Exibição {-}
+Veja a seguir um conjunto de atalhos no teclado que permitem modos de exibição alternativos:
+
+- `'C'`: Exibe o indíce
+- `'F'`: Alterna a exibição do rodapé.
+- `'A'`: Alterna a exibição de slides atuais para todos os slides (útil para imprimir folhetos).
+- `'S'`: Dimunue o tamanho da Fonte. 
+- `'B'`: Aumentya o tamanho da Fonte. 
+
+#### Tamanho do Texto {-}
+
+Você pode usar a opção `font_adjustment` para aumentar ou diminuir o tamanho da fonte padrão (por exemplo, `-1` ou `+1`) para toda a apresentação. Por exemplo:
+
+```
+---
+output:
+  slidy_presentation:
+    font_adjustment: -1
+---
+```
+
+Se quiser diminuir o tamanho do texto em um slide especifíco, você pode usar o atributo de slide `.smaller`. Vejamos um exemplo:
+
+``` 
+## Isto é um exemplo{.smaller}
+```
+
+Se quiser aumentar o tamanho do texto em um slide especifíco, você pode usar o atributo de slide `.bigger`. Vejamos um exemplo:
+
+``` 
+## Isto é um exemplo{.bigger}
+```
+
+Também é possível ajustar manualmente o tamanho da fonte padrão durante a sua apresentação usando o `'S'` (smaller) e `B`(bigger).
+
+#### Elementos de Rodapé {-}
+
+Você pode adicionar uma contagem regressiva ao rodapé de seus slides usando a opção `duration` (a duração é especificada em minutos). Por exemplo:
+
+```
+---
+output:
+  slidy_presentation:
+    duration: 45
+---
+```
+
+Você também pode adicionar um texto personalizado ao rodapé (por exemplo, o nome da sua organização, universidade ou Copyright) usando a opção `footer`. Por exemplo:
+
+```
+---
+output:
+  slidy_presentation:
+    footer: "Copyright (c) 2020, Curso de RMarkdown"
+---
+```
+
+### Beamer
+
+#### Temas {-}
+
+Você pode especificar os temas do Beamer usando as opções `theme`, `colortheme`, e `fonttheme`. Por exemplo:
+
+```
+---
+output:
+  beamer_presentation:
+    theme: "AnnArbor"
+    colortheme: "dolphin"
+    fonttheme: "structurebold"
+---
+```
+
+<!-- INSERIR IMAGEM AQUI --->
+
+#### Nível do Slide {-}
+A opção `slide_level` define o nível de título que define slides individuais.. Por padrão, este é o nível de cabeçalho mais alto na hierarquia, seguido imediatamente pelo conteúdo, e não por outro cabeçalho, em algum lugar do documento. Este padrão pode ser sobrescrito especificando um explícito `slide_level`:
+
+```
+---
+output:
+  beamer_presentation:
+    slide_level: 2
+---
+```
+
+### PowerPoint
+Para criar uma apresentação do PowerPoint a partir do R Markdown, você especifica a opção `powerpoint_presentation` no output nos metadados YAML do seu documento. Note por favor que este formato de output só está disponóivel na versão v1.9 do **rmakrdown** e requer a última versão do Pandoc 2.10.1. (O Pandoc é um conversor de documentos, como por exemplo de Markdown para HTML). Você pode verificar as versões dos seus pacotes de **rmakrdown** e Pandoc com o comando `packageVersion('rmarkdown')` e `rmarkdown::pandoc_version()` respectivamente, no R.
+Abaixo está um exemplo rápido de um output PowerPoint:
+
+```
+---
+title: "Curso de R Makrdown"
+author: Departamento de Estatística
+date: 12 de Agosto de 2020
+output: powerpoint_presentation
+---
+
+# Capítulo 1
+
+## O que é?
+
+- R
+- RMarkdown
+
+## Capítulo 2
+
+- R
+- RMakrdown
+
+```
+
+<!-- INSIRA UMA IMAGEM AQUI-->
+
+  O nível de slide (isto é, o nível de título que define slides individuais) é determinado da mesma forma que uma apresentação Beamer, e você pode especificar um nível explícito por meio de `slide_level` da opção sob `powerpoint_presentation`. Você também pode iniciar um novo slide sem cabeçalho usando uma régua horizontal `---`
+
+Você pode gerar a maioria dos elementos suportados pelo Markdown do Pandoc no output do PowerPoint, como texto em negrito / itálico, notas de rodapé, marcadores, expressões matemáticas LaTeX, imagens e tabelas, etc.
+
+Observe que imagens e tabelas sempre serão colocadas em novos slides.Os únicos elementos que podem coexistir com uma imagem ou tabela em um slide são o cabeçalho do slide e a legenda da imagem / tabela. Quando você tem um parágrafo de texto e uma imagem no mesmo slide, a imagem será movida para um novo slide automaticamente. As imagens serão dimensionadas automaticamente para caber no slide e, se o tamanho automático não funcionar bem, você pode controlar manualmente os tamanhos das imagens: para imagens estáticas incluídas por meio da sintaxe Markdown `![]()` você pode usar o `width` e/ou `height` atributos em um par de chaves após a imagem, por exemplo, `![caption](foo.png){width=40%}` para imagens geradas dinamicamente a partir de blocos de código R, você pode usar o bloco `fig.width` e `fig.height` para controlar os tamanhos.
+
+```
+:::::: {.columns}
+::: {.column width="40%"}
+Content of the left column.
+:::
+
+::: {.column width="60%"}
+Content of the right column.
+:::
+::::::
+```
+
+#### Templates Customizados {-}
+
+Como documentos do Word você pode personalizar a aparência das apresentações do PowerPoint passando um documento de referência personalizado por meio da opção `reference_doc`, por exemplo:
+
+```
+---
+title: "Curso de RMarkdown"
+output:
+  powerpoint_presentation:
+    reference_doc: curso-rmarkdown.pptx
+---
+```
+
+Observe que a opção `reference_doc` requer a versão 1.9 ou superior do **rmarkdown**:
+
+```
+if (packageVersion('rmarkdown') <= '1.9') {
+    install.packages('rmarkdown')  # atualiza o pacote rmarkdown do CRAN
+}
+```
+
+Basicamente, qualquer modelo incluído em uma versão recente do Microsoft PowerPoint deve funcionar. Você pode criar um novo arquivo `*.pptx` do menu  do PowerPoint `Arquivos -> Novo` com o template desejado, salve o novo arquivo e use-o como documento de referência (template) através da opção `reference_doc`. O Pandoc lerá os estilos no modelo e os aplicará à apresentação do PowerPoint a ser criada a partir do R Markdown.
+
+### Reveal.js
+O pacote **revealjs** fornece um tipo de output no formato `revealjs::revealjs_presentation` que pode ser usado para criar outro estilo de slides HTML5 com base na biblioteca JavaScript **reveal.js.** Você pode instalar o pacote R do CRAN:
+
+```
+install.packages("revealjs")
+```
+
+Para criar uma apresentação reveal.js de R Markdown, você especifica `revealjs_presentation` no output nos metadados YAML do seu documento. Você pode criar uma apresentação de slides dividida em seções usando as tags de cabeçalho `#` e `##` (você também pode criar um novo slide sem cabeçalho usando uma régua horizontal (`---`). Por exemplo, aqui está uma apresentação de slides simples:
+
+```
+---
+title: "Curso de R Makrdown"
+author: Departamento de Estatística
+date: 12 de Agosto de 2020
+output: revealjs::revealjs_presentation
+---
+
+# Capítulo 1
+
+## O que é?
+
+- R
+- RMarkdown
+
+## Capítulo 2
+
+- R
+- RMakrdown
+
+```
+
+<!-- INSERIR UMA IMAGEM AQUI-->
+
+### Xaringan
+O pacote **xaringan** é uma extensão R Markdown baseada no JavaScript da biblioteca remark.js para gerar apresentações HTML5 de um estilo diferente.
+
+<!-- INSERIR IMAGEM AQUI -->
+
+O nome “xaringan” veio do Sharingan no mangá e anime japoneses “Naruto”. A palavra foi deliberadamente escolhida para ser difícil de pronunciar para a maioria das pessoas (a menos que você tenha assistido ao anime), porque seu autor (eu) amava muito o estilo e estava preocupado que se tornasse muito popular. A preocupação era um tanto ingênua , porque o estilo é realmente muito personalizável e os usuários começaram a contribuir com mais temas para o pacote posteriormente.
+O pacote **xaringan** é uma extensão R Markdown baseada no JavaScript da biblioteca remark.js; a biblioteca remark.js suporta apenas Markdown, e o xaringan adicionou o suporte para R Markdown, bem como outros utilitários para tornar mais fácil construir e visualizar slides. Possibilitando que você crie apresentações ninjas!.
+
+## Documentos
+
+## HTML
+
+### Opções de preâmbulo:
 
 - highlight
 - toc
@@ -537,17 +831,17 @@ Exemplos mais detalhados de R e de outras linguagens suportadas estão disponív
 - fig_caption
 - template     
 
-#### Opções de customização
+### Opções de customização
 
 tabsection
 
-##### Exemplo com tabset {.tabset}
+#### Exemplo com tabset {.tabset}
 
-##### Aba 1
+#### Aba 1
 
 Conteúdo da aba 1
 
-##### Aba 2
+#### Aba 2
 
 Conteúdo da aba 2
 
