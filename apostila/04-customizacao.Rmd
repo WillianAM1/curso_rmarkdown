@@ -78,6 +78,116 @@ output:
     transition: slower
 ---
 ```
+<!-- novo conteúdo -->
+##### Destacando o código
+É possível selecionar subconjuntos de código para ênfase adicional, adicionando um comentário especial de “destaque” ao redor do código. Por exemplo:
+```
+### <b>
+x <- 10
+y <- x * 2
+### </b>
+```
+A região destacada será exibida com uma fonte em negrito. Quando você quiser ajudar o público a se concentrar exclusivamente na região destacada, pressione a tecla ```h``` o resto do código desaparecerá.
+
+##### Adicionando um Logotipo
+Você pode adicionar um logotipo à apresentação usando a opção ```logo```(por padrão, o logotipo será exibido em um quadrado de 85x85 pixels). Por exemplo:
+```
+---
+output:
+  ioslides_presentation:
+    logo: logo.png
+---
+```
+O gráfico do logotipo será redimensionado para 85x85 (se necessário) e adicionado ao slide de título. Uma versão de ícone menor do logotipo será incluída no rodapé esquerdo de cada slide.
+O logotipo na página de título e o elemento retangular que o contém podem ser personalizados com CSS. Por exemplo:
+```
+.gdbar img {
+  width: 300px !important;
+  height: 150px !important;
+  margin: 8px 8px;
+}
+
+.gdbar {
+  width: 400px !important;
+  height: 170px !important;
+}
+```
+Esses seletores devem ser colocados no arquivo de texto CSS.
+Da mesma forma, o logotipo no rodapé de cada slide pode ser redimensionado para qualquer tamanho desejado. Por exemplo:
+```
+slides > slide:not(.nobackground):before {
+  width: 150px;
+  height: 75px;
+  background-size: 150px 75px;
+}
+```
+Isso fará com que o logotipo do rodapé tenha 150 por 75 pixels de tamanho.
+
+##### Tabelas
+O modelo ioslides tem um estilo padrão atraente para tabelas, então você não deve hesitar em adicionar tabelas para apresentar conjuntos de informações mais complexos. Pandoc Markdown suporta várias sintaxes para definir tabelas, que são descritas no Manual do Pandoc.
+
+##### Layout Avançado
+Você pode centralizar o conteúdo em um slide adicionando o ```.flexbox``` e ```.vcenter``` atributos para o título do slide.
+Por exemplo:
+```
+## Código {.flexbox .vcenter}
+```
+Você pode centralizar horizontalmente o conteúdo, encerrando-o em uma tag ```div``` com a classe ```centered```. Por exemplo:
+```
+<div class="centered">
+Este texto está centralizado.
+</div>
+```
+Você pode fazer um layout de duas colunas usando a classe ```columns-2```. Por exemplo:
+```
+<div class="columns-2">
+  ![](image.png)
+
+  - Bullet 1
+  - Bullet 2
+  - Bullet 3
+</div>
+```
+Observe que o conteúdo fluirá pelas colunas, portanto, se você quiser ter uma imagem de um lado e o texto do outro, certifique-se de que a imagem tenha altura suficiente para forçar o texto para o outro lado do slide.
+
+##### Cor do Texto
+Você pode colorir o conteúdo usando classes de cores básicas ```red```, ```blue```, ```green```, ```yellow```, e ```gray``` (ou variações deles, por exemplo, ```red2```, ```red3```, ```blue2```, ```blue3```, etc.). Por exemplo:
+```
+<div class="red2">
+Este texto é vermelho
+```
+##### Modo de Apresentação
+Uma janela separada do apresentador também pode ser aberta (ideal para quando você está apresentando em uma tela, mas tem outra tela que é particular para você). A janela permanece sincronizada com a janela principal da apresentação e também mostra as notas do apresentador e uma miniatura do próximo slide. Para ativar o modo de apresentador, adicione ```?presentme=true``` ao URL da apresentação. Por exemplo:
+```
+minha-apresentacao.html?presentme=true
+```
+A janela do modo de apresentador será aberta e sempre reabrirá com a apresentação até que seja desativada com:
+```
+minha-apresentacao.html?presentme=false
+```
+Para adicionar notas do apresentador a um slide, inclua-as dentro de uma seção "notes" ```div```. Por exemplo:
+```
+<div class="notes">
+Este é a minha *nota*.
+
+- Pode conter markdown
+</div>
+```
+##### Impressão e Output em PDF
+Você pode imprimir uma apresentação ioslides a partir de navegadores que tenham um bom suporte para CSS de impressão (até o momento, o Google Chrome tem o melhor suporte). A impressão mantém a maioria dos estilos visuais da versão HTML da apresentação.
+Para criar uma versão PDF de uma apresentação, você pode usar o menu ```Print to PDF``` do Google Chrome.
+
+##### Templates Customizados
+Você pode substituir o modelo Pandoc subjacente usando a opção ```template ```:
+```
+---
+title: "Curso de RMarkdown"
+output:
+  ioslides_presentation:
+    template: quarterly-report.html
+---
+```
+No entanto, observe que o nível de personalização que pode ser alcançado é limitado em comparação com os modelos de outros formatos de saída, porque os slides são gerados por formatação personalizada escrita em Lua e, como tal, o modelo usado deve incluir a string ```RENDERED_SLIDES ``` como pode ser encontrado no arquivo de modelo padrão com o caminho ```rmarkdown:::rmarkdown_system_file("rmd/ioslides/default.html")```
 
 ### Slidy
 Para criar uma apresentação Slidy de RMarkdown, você precisa especificar o `slidy_presentation` no output nos metadados YAML do seu documento. Você pode criar uma apresentação de slides dividida em seções usando as tags de cabeçalho `# #` você também pode criar um novo slide sem cabeçalho usando uma régua horizontal (`---`). Por exemplo, aqui está uma apresentação de slides simples:
