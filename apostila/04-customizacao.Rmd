@@ -639,7 +639,8 @@ output:
 
 ## Pacotes úteis
 
-###Flexdashboard
+### Flexdashboard
+
 Um dos pacotes úteis do RMarkdown é o flexdashboars.
 Esse pacote possui várias funções como:
 - Publicar um grupo de visualizações de dados como um painel;
@@ -657,16 +658,20 @@ Depois:
 ![](img/Dash 2.png)
 Para maior conhecimento acesse, https://rmarkdown.rstudio.com/flexdashboard/
 
-###Blogdown
+### Blogdown
+
 Outro pacote que também pode ser utilizado é o “blogdown”.
 Ele é utilizado para construção de sites. Com esse pacote, pode-se escrever uma postagem de blog ou uma página geral em um documento de RMarkdown.
-Para mais infromações, acesse https://bookdown.org/yihui/blogdown/
+Para mais informações acesse, https://bookdown.org/yihui/blogdown/
 
-###Pkgdown
-O pacote “pkgdown” facilita a construção de um site de documentação para um pacote R. Ele ajuda a organizar diferentes partes da documentação. Por exemplo, páginas de ajuda, vinhetas e notícias, de uma forma mais visual, com um estilo agradável.
+### Pkgdown
+
+O pacote “pkgdown” facilita a construção de um site de documentação para um pacote R. Ele ajuda a organizar diferentes partes da documentação.
+Por exemplo, páginas de ajuda, vinhetas e notícias, de uma forma mais visual, com um estilo agradável.
 Para maior aprofundamento do pacote, acesse http://pkgdown.r-lib.org
 
-###Bookdown
+### Bookdown
+
 O “bookdown” é um pacote que facilita a construção de livros. Ele também oferece melhorias importantes: 
 - Recursos de formatação, como referência cruzada e numeração de figuras, equações e tabelas;
 - Os documentos podem ser facilmente exportados em muitos formatos adequados como PDF, e-books e sites HTML.
