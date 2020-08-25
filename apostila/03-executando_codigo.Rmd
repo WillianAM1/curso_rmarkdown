@@ -102,12 +102,12 @@ Exemplo de utilização de blocos de código para inserir imagens como descrito 
 
 ````markdown
 `r ''````{r}
-knitr::include_graphics("https://tny.im/lTZ")
+knitr::include_graphics("img/logoestats.jpeg")
 ```
 ````
 
 ```{r}
-knitr::include_graphics("https://tny.im/lTZ")
+knitr::include_graphics("img/logoestats.jpeg")
 ```
 
 ***

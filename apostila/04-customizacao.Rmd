@@ -637,18 +637,4 @@ output:
 - fig_caption
 - template     
 
-### Opções de customização
-
-tabsection
-
-#### Exemplo com tabset {.tabset}
-
-#### Aba 1
-
-Conteúdo da aba 1
-
-#### Aba 2
-
-Conteúdo da aba 2
-
 ## Pacotes úteis
