@@ -113,7 +113,7 @@
 
 \title{Introdução ao R Markdown}
 \author{Eduardo José de Campos Lemos Júnior, Samuel Vianna Quintanilha}
-\date{2020-08-18}
+\date{2020-08-25}
 
 \begin{document}
 \maketitle
@@ -476,7 +476,7 @@ Se um gráfico ou imagem não for gerado a partir de um código feito por R, voc
 \end{itemize}
 
 \begin{verbatim}
-![Logo da Estats]('https://tny.im/lTZ'){width=50%}
+![Logo da Estats](img/logoestats.jpeg){width=50%}
 \end{verbatim}
 
 \begin{itemize}
@@ -488,7 +488,7 @@ Se um gráfico ou imagem não for gerado a partir de um código feito por R, voc
 \begin{Shaded}
 \begin{Highlighting}[]
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r, echo=FALSE, out.width="50\%", fig.cap="Logo da Estats"\}}
-\InformationTok{knitr::include\_graphics("'https://tny.im/lTZ'")}
+\InformationTok{knitr::include\_graphics("img/logoestats.jpeg")}
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
 \end{Highlighting}
 \end{Shaded}
@@ -503,9 +503,9 @@ No código a seguir é utilizado quando o seu projeto tem múltiplas saídas (PD
 \begin{Highlighting}[]
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r, fig.cap="Logo da Estats"\}}
 \InformationTok{if (knitr::is\_html\_output()) \{}
-\InformationTok{    knitr::include\_graphics("'https://tny.im/lTZ'")}
+\InformationTok{    knitr::include\_graphics("img/logoestats.jpeg")}
 \InformationTok{\} else \{}
-\InformationTok{    knitr::include\_graphics("'https://tny.im/lTZ'")}
+\InformationTok{    knitr::include\_graphics("img/logoestats.jpeg")}
 \InformationTok{\}}
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
 \end{Highlighting}
@@ -514,16 +514,16 @@ No código a seguir é utilizado quando o seu projeto tem múltiplas saídas (PD
 \begin{Shaded}
 \begin{Highlighting}[]
 \ControlFlowTok{if}\NormalTok{ (knitr}\OperatorTok{::}\KeywordTok{is\_html\_output}\NormalTok{()) \{}
-\NormalTok{    knitr}\OperatorTok{::}\KeywordTok{include\_graphics}\NormalTok{(}\StringTok{"'https://tny.im/lTZ'"}\NormalTok{)}
+\NormalTok{    knitr}\OperatorTok{::}\KeywordTok{include\_graphics}\NormalTok{(}\StringTok{"img/logoestats.jpeg"}\NormalTok{)}
 \NormalTok{\} }\ControlFlowTok{else}\NormalTok{ \{}
-\NormalTok{    knitr}\OperatorTok{::}\KeywordTok{include\_graphics}\NormalTok{(}\StringTok{"'https://tny.im/lTZ'"}\NormalTok{)}
+\NormalTok{    knitr}\OperatorTok{::}\KeywordTok{include\_graphics}\NormalTok{(}\StringTok{"img/logoestats.jpeg"}\NormalTok{)}
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}
 
-{\centering \includegraphics{'https://tny.im/lTZ'} 
+{\centering \includegraphics[width=0.89in]{img/logoestats} 
 
 }
 
@@ -555,18 +555,20 @@ Os dois exemplos abaixo são casos de curiosidades:
 \begin{Shaded}
 \begin{Highlighting}[]
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r\}}
-\InformationTok{knitr::include\_graphics(rep("'https://tny.im/lTZ'", 3))}
+\InformationTok{knitr::include\_graphics(rep("img/logoestats.jpeg", 3))}
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include\_graphics}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\StringTok{"'https://tny.im/lTZ'"}\NormalTok{, }\DecValTok{3}\NormalTok{))}
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include\_graphics}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\StringTok{"img/logoestats.jpeg"}\NormalTok{, }\DecValTok{3}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{'https://tny.im/lTZ'} \includegraphics{https://tny.im/lTZ} \includegraphics{https://tny.im/lTZ}
+\includegraphics[width=0.89in]{img/logoestats}
+\includegraphics[width=0.89in]{img/logoestats}
+\includegraphics[width=0.89in]{img/logoestats}
 
 \hypertarget{exemplos}{%
 \section{Exemplos}\label{exemplos}}
@@ -655,7 +657,7 @@ Para que o código seja executado no meio de um texto, é necessário usar o car
 \end{Highlighting}
 \end{Shaded}
 
-Este texto gera: 18/08/2020.
+Este texto gera: 25/08/2020.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -678,7 +680,7 @@ O que gera o seguinte output ao ser compilado seu arquivo R Markdown:
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "18/08/2020"
+## [1] "25/08/2020"
 \end{verbatim}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -718,18 +720,18 @@ Exemplo de utilização de blocos de código para inserir imagens como descrito 
 \begin{Shaded}
 \begin{Highlighting}[]
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r\}}
-\InformationTok{knitr::include\_graphics("'https://tny.im/lTZ'")}
+\InformationTok{knitr::include\_graphics("img/logoestats.jpeg")}
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include\_graphics}\NormalTok{(}\StringTok{"'https://tny.im/lTZ'"}\NormalTok{)}
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include\_graphics}\NormalTok{(}\StringTok{"img/logoestats.jpeg"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{'https://tny.im/lTZ'}
+\includegraphics[width=0.89in]{img/logoestats}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -886,6 +888,156 @@ output:
     transition: slower
 ---
 \end{verbatim}
+
+\hypertarget{destacando-o-cuxf3digo}{%
+\paragraph{Destacando o código}\label{destacando-o-cuxf3digo}}
+
+É possível selecionar subconjuntos de código para ênfase adicional, adicionando um comentário especial de ``destaque'' ao redor do código. Por exemplo:
+
+\begin{verbatim}
+### <b>
+x <- 10
+y <- x * 2
+### </b>
+\end{verbatim}
+
+A região destacada será exibida com uma fonte em negrito. Quando você quiser ajudar o público a se concentrar exclusivamente na região destacada, pressione a tecla \texttt{h} o resto do código desaparecerá.
+
+\hypertarget{adicionando-um-logotipo}{%
+\paragraph{Adicionando um Logotipo}\label{adicionando-um-logotipo}}
+
+Você pode adicionar um logotipo à apresentação usando a opção \texttt{logo}(por padrão, o logotipo será exibido em um quadrado de 85x85 pixels). Por exemplo:
+
+\begin{verbatim}
+---
+output:
+  ioslides_presentation:
+    logo: logo.png
+---
+\end{verbatim}
+
+O gráfico do logotipo será redimensionado para 85x85 (se necessário) e adicionado ao slide de título. Uma versão de ícone menor do logotipo será incluída no rodapé esquerdo de cada slide.
+O logotipo na página de título e o elemento retangular que o contém podem ser personalizados com CSS. Por exemplo:
+
+\begin{verbatim}
+.gdbar img {
+  width: 300px !important;
+  height: 150px !important;
+  margin: 8px 8px;
+}
+
+.gdbar {
+  width: 400px !important;
+  height: 170px !important;
+}
+\end{verbatim}
+
+Esses seletores devem ser colocados no arquivo de texto CSS.
+Da mesma forma, o logotipo no rodapé de cada slide pode ser redimensionado para qualquer tamanho desejado. Por exemplo:
+
+\begin{verbatim}
+slides > slide:not(.nobackground):before {
+  width: 150px;
+  height: 75px;
+  background-size: 150px 75px;
+}
+\end{verbatim}
+
+Isso fará com que o logotipo do rodapé tenha 150 por 75 pixels de tamanho.
+
+\hypertarget{tabelas}{%
+\paragraph{Tabelas}\label{tabelas}}
+
+O modelo ioslides tem um estilo padrão atraente para tabelas, então você não deve hesitar em adicionar tabelas para apresentar conjuntos de informações mais complexos. Pandoc Markdown suporta várias sintaxes para definir tabelas, que são descritas no Manual do Pandoc.
+
+\hypertarget{layout-avanuxe7ado}{%
+\paragraph{Layout Avançado}\label{layout-avanuxe7ado}}
+
+Você pode centralizar o conteúdo em um slide adicionando o \texttt{.flexbox} e \texttt{.vcenter} atributos para o título do slide.
+Por exemplo:
+
+\begin{verbatim}
+## Código {.flexbox .vcenter}
+\end{verbatim}
+
+Você pode centralizar horizontalmente o conteúdo, encerrando-o em uma tag \texttt{div} com a classe \texttt{centered}. Por exemplo:
+
+\begin{verbatim}
+<div class="centered">
+Este texto está centralizado.
+</div>
+\end{verbatim}
+
+Você pode fazer um layout de duas colunas usando a classe \texttt{columns-2}. Por exemplo:
+
+\begin{verbatim}
+<div class="columns-2">
+  ![](image.png)
+
+  - Bullet 1
+  - Bullet 2
+  - Bullet 3
+</div>
+\end{verbatim}
+
+Observe que o conteúdo fluirá pelas colunas, portanto, se você quiser ter uma imagem de um lado e o texto do outro, certifique-se de que a imagem tenha altura suficiente para forçar o texto para o outro lado do slide.
+
+\hypertarget{cor-do-texto}{%
+\paragraph{Cor do Texto}\label{cor-do-texto}}
+
+Você pode colorir o conteúdo usando classes de cores básicas \texttt{red}, \texttt{blue}, \texttt{green}, \texttt{yellow}, e \texttt{gray} (ou variações deles, por exemplo, \texttt{red2}, \texttt{red3}, \texttt{blue2}, \texttt{blue3}, etc.). Por exemplo:
+
+\begin{verbatim}
+<div class="red2">
+Este texto é vermelho
+\end{verbatim}
+
+\hypertarget{modo-de-apresentauxe7uxe3o}{%
+\paragraph{Modo de Apresentação}\label{modo-de-apresentauxe7uxe3o}}
+
+Uma janela separada do apresentador também pode ser aberta (ideal para quando você está apresentando em uma tela, mas tem outra tela que é particular para você). A janela permanece sincronizada com a janela principal da apresentação e também mostra as notas do apresentador e uma miniatura do próximo slide. Para ativar o modo de apresentador, adicione \texttt{?presentme=true} ao URL da apresentação. Por exemplo:
+
+\begin{verbatim}
+minha-apresentacao.html?presentme=true
+\end{verbatim}
+
+A janela do modo de apresentador será aberta e sempre reabrirá com a apresentação até que seja desativada com:
+
+\begin{verbatim}
+minha-apresentacao.html?presentme=false
+\end{verbatim}
+
+Para adicionar notas do apresentador a um slide, inclua-as dentro de uma seção ``notes'' \texttt{div}. Por exemplo:
+
+\begin{verbatim}
+<div class="notes">
+Este é a minha *nota*.
+
+- Pode conter markdown
+</div>
+\end{verbatim}
+
+\hypertarget{impressuxe3o-e-output-em-pdf}{%
+\paragraph{Impressão e Output em PDF}\label{impressuxe3o-e-output-em-pdf}}
+
+Você pode imprimir uma apresentação ioslides a partir de navegadores que tenham um bom suporte para CSS de impressão (até o momento, o Google Chrome tem o melhor suporte). A impressão mantém a maioria dos estilos visuais da versão HTML da apresentação.
+Para criar uma versão PDF de uma apresentação, você pode usar o menu \texttt{Print\ to\ PDF} do Google Chrome.
+
+\hypertarget{templates-customizados}{%
+\paragraph{Templates Customizados}\label{templates-customizados}}
+
+Você pode substituir o modelo Pandoc subjacente usando a opção \texttt{template}:
+
+\begin{verbatim}
+---
+title: "Curso de RMarkdown"
+output:
+  ioslides_presentation:
+    template: quarterly-report.html
+---
+\end{verbatim}
+
+No entanto, observe que o nível de personalização que pode ser alcançado é limitado em comparação com os modelos de outros formatos de saída, porque os slides são gerados por formatação personalizada escrita em Lua e, como tal, o modelo usado deve incluir a string \texttt{RENDERED\_SLIDES} como pode ser encontrado no arquivo de modelo padrão com o caminho \texttt{rmarkdown:::rmarkdown\_system\_file("rmd/ioslides/default.html")}
 
 \hypertarget{slidy}{%
 \subsection{Slidy}\label{slidy}}
@@ -1063,8 +1215,8 @@ Content of the right column.
 ::::::
 \end{verbatim}
 
-\hypertarget{templates-customizados}{%
-\subsubsection*{Templates Customizados}\label{templates-customizados}}
+\hypertarget{templates-customizados-1}{%
+\subsubsection*{Templates Customizados}\label{templates-customizados-1}}
 \addcontentsline{toc}{subsubsection}{Templates Customizados}
 
 Como documentos do Word você pode personalizar a aparência das apresentações do PowerPoint passando um documento de referência personalizado por meio da opção \texttt{reference\_doc}, por exemplo:
@@ -1131,6 +1283,280 @@ O pacote \textbf{xaringan} é uma extensão R Markdown baseada no JavaScript da 
 \hypertarget{documentos}{%
 \section{Documentos}\label{documentos}}
 
+\hypertarget{documento-de-texto-opendocument}{%
+\subsection{Documento de texto OpenDocument}\label{documento-de-texto-opendocument}}
+
+Para criar um documento OpenDocument Text (ODT) a partir do R Markdown, você especifica o \texttt{odt\_document} no formato de saída nos metadados YAML do seu documento:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{{-}{-}{-}}
+\AnnotationTok{title:}\CommentTok{ "Curso"}
+\AnnotationTok{author:}\CommentTok{ Estats}
+\AnnotationTok{date:}\CommentTok{ Agosto 01, 2020}
+\AnnotationTok{output:}\CommentTok{ odt\_document}
+\CommentTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+Semelhante a \texttt{word\_document},você, também pode fornecer um documento de referência de estilo para \texttt{odt\_document} percorrer a \texttt{reference\_odt} na configuração. Para obter os melhores resultados, o documento ODT de referência deve ser uma versão modificada de um arquivo ODT produzido usando rmarkdown. Por exemplo:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{{-}{-}{-}}
+\AnnotationTok{title:}\CommentTok{ "Curso"}
+\AnnotationTok{output:}
+\CommentTok{  odt\_document:}
+\CommentTok{    reference\_odt: meu{-}estilo.odt}
+\CommentTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{documento-do-word}{%
+\subsection{Documento do Word}\label{documento-do-word}}
+
+Para criar um documento do Word a partir do R Markdown, você especifica o \texttt{word\_document} no formato de saída nos metadados YAML do seu documento:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{{-}{-}{-}}
+\AnnotationTok{title:}\CommentTok{ "Curso"}
+\AnnotationTok{author:}\CommentTok{ Estats}
+\AnnotationTok{date:}\CommentTok{ Agosto 01, 2020}
+\AnnotationTok{output:}\CommentTok{ word\_document}
+\CommentTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+A característica mais notável dos documentos do Word é o modelo do Word, também conhecido como ``documento de referência de estilo''. Você pode especificar um documento a ser usado como referência de estilo na produção de um \texttt{*.docx} arquivo (um documento do Word). Isso permitirá que você personalize itens como margens e outras características de formatação. Para obter os melhores resultados, o documento de referência deve ser uma versão modificada de um \texttt{.docx} arquivo produzido usando rmarkdown. O caminho de tal documento pode ser passado para o \texttt{reference\_docx} argumento do \texttt{word\_document} no formato de saída. Passe \texttt{"default"} para usar os estilos padrão. Por exemplo:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{{-}{-}{-}}
+\AnnotationTok{title:}\CommentTok{ "Curso"}
+\AnnotationTok{output:}
+\CommentTok{  word\_document:}
+\CommentTok{    reference\_docx: meu{-}estilo.docx}
+\CommentTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{documento-de-pdf}{%
+\subsection{Documento de PDF}\label{documento-de-pdf}}
+
+Para criar um documento PDF a partir do R Markdown, você especifica o \texttt{pdf\_document} no formato de saída nos metadados YAML:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{{-}{-}{-}}
+\AnnotationTok{title:}\CommentTok{ "Curso"}
+\AnnotationTok{author:}\CommentTok{ Estats}
+\AnnotationTok{date:}\CommentTok{ Agosto 01, 2020}
+\AnnotationTok{output:}\CommentTok{ pdf\_document}
+\CommentTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+Dentro dos documentos R Markdown que geram saída em PDF, você pode usar LaTeX bruto e até mesmo definir macros LaTeX.
+
+Observe que a saída de PDF (incluindo slides Beamer) requer uma instalação do LaTeX:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{install.packages(\textquotesingle{}tinytex\textquotesingle{})}
+\NormalTok{tinytex::install\_tinytex()  \# install TinyTeX}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{uxedndice}{%
+\subsubsection{Índice}\label{uxedndice}}
+
+Você pode adicionar um sumário usando a \texttt{toc} na cofiguração e especificar a profundidade dos cabeçalhos aos quais se aplica usando a \texttt{toc\_depth} na cofiguração. Por exemplo:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{{-}{-}{-}}
+\AnnotationTok{title:}\CommentTok{ "Curso"}
+\AnnotationTok{output:}
+\CommentTok{  pdf\_document:}
+\CommentTok{    toc: true}
+\CommentTok{    toc\_depth: 2}
+\CommentTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+Se a profundidade do TOC não for especificada explicitamente, o padrão é 2 (significando que todos os cabeçalhos de nível 1 e 2 serão incluídos no TOC), enquanto o padrão é 3 pol \texttt{html\_document}.
+
+Você pode adicionar numeração de seção aos cabeçalhos usando a \texttt{number\_sections} na cofiguração:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{{-}{-}{-}}
+\AnnotationTok{title:}\CommentTok{ "Curso"}
+\AnnotationTok{output:}
+\CommentTok{  pdf\_document:}
+\CommentTok{    toc: true}
+\CommentTok{    number\_sections: true}
+\CommentTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+Se você estiver familiarizado com LaTeX, \texttt{number\_sections:\ true} significa \texttt{\textbackslash{}section\{\}} e \texttt{number\_sections:\ false}significa \texttt{\textbackslash{}section*\{\}} para seções em LaTeX (também se aplica a outros níveis de ``seções'' como \texttt{\textbackslash{}chapter\{\}}, e \texttt{\textbackslash{}subsection\{\}}).
+
+\hypertarget{opuxe7uxf5es-de-imagem}{%
+\subsubsection{Opções de imagem}\label{opuxe7uxf5es-de-imagem}}
+
+Existem várias opções que afetam a saída de figuras em documentos PDF:
+
+\begin{itemize}
+\item
+  \texttt{fig\_width} e \texttt{fig\_height} pode ser usado para controlar a largura e altura da figura padrão.
+\item
+  \texttt{fig\_crop} controla se o \texttt{pdfcrop} utilitário, se disponível em seu sistema, é aplicado automaticamente a figuras em PDF.
+\item
+  \texttt{fig\_caption} controla se as figuras são renderizadas com legendas.
+\item
+  \texttt{dev} controla o dispositivo gráfico usado para renderizar figuras.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{{-}{-}{-}}
+\AnnotationTok{title:}\CommentTok{ "Curso"}
+\AnnotationTok{output:}
+\CommentTok{  pdf\_document:}
+\CommentTok{    fig\_width: 7}
+\CommentTok{    fig\_height: 6}
+\CommentTok{    fig\_caption: true}
+\CommentTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{impressuxe3o-de-tabela}{%
+\subsubsection{Impressão de Tabela}\label{impressuxe3o-de-tabela}}
+
+Você pode aprimorar a exibição padrão da tabela por meio da \texttt{df\_print} na configuração. Os valores válidos são apresentados na Tabela abaixo:
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Opção & Descrição\tabularnewline
+\midrule
+\endhead
+default & Chame o \texttt{print.data.frame} método genérico\tabularnewline
+kable & Use a \texttt{knitr::kable()} função\tabularnewline
+tibble & Use a \texttt{tibble::print.tbl\_df()} função\tabularnewline
+\bottomrule
+\end{longtable}
+
+Por Exemplo:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{{-}{-}{-}}
+\AnnotationTok{title:}\CommentTok{ "Curso"}
+\AnnotationTok{output:}
+\CommentTok{  pdf\_document:}
+\CommentTok{    df\_print: kable}
+\CommentTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{destaque-de-sintaxe}{%
+\subsubsection{Destaque de sintaxe}\label{destaque-de-sintaxe}}
+
+A \texttt{highlight} na configuração especifica o estilo de realce da sintaxe. Seu uso em \texttt{pdf\_document} é o mesmo que \texttt{html\_document}. Por exemplo:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{{-}{-}{-}}
+\AnnotationTok{title:}\CommentTok{ "Curso"}
+\AnnotationTok{output:}
+\CommentTok{  pdf\_document:}
+\CommentTok{    highlight: tango}
+\CommentTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{opuxe7uxf5es-latex}{%
+\subsubsection{Opções LaTeX}\label{opuxe7uxf5es-latex}}
+
+Muitos aspectos do modelo de látex usado para criar documentos PDF podem ser personalizados usando top-level YAML metadados (note que estas opções não aparecem por baixo da \texttt{output} secção, mas sim aparecer no nível superior, juntamente com \texttt{title}, \texttt{author} e assim por diante). Por exemplo:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{{-}{-}{-}}
+\AnnotationTok{title:}\CommentTok{ "Curso"}
+\AnnotationTok{output:}\CommentTok{ pdf\_document}
+\AnnotationTok{fontsize:}\CommentTok{ 11pt}
+\AnnotationTok{geometry:}\CommentTok{ margin=1in}
+\CommentTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+Algumas variáveis de metadados disponíveis são exibidas na Tabela abaixo:
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\begin{minipage}[b]{0.47\columnwidth}\raggedright
+Variável\strut
+\end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\raggedright
+Descrição\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.47\columnwidth}\raggedright
+lang\strut
+\end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\raggedright
+Código de idioma do documento \textbar{}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.47\columnwidth}\raggedright
+fontsize\strut
+\end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\raggedright
+Tamanho da fonte (por exemplo, \texttt{10pt}, \texttt{11pt}, ou \texttt{12pt})\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.47\columnwidth}\raggedright
+documentclass\strut
+\end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\raggedright
+Classe de documento LaTeX (por exemplo, \texttt{article})\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.47\columnwidth}\raggedright
+classoption\strut
+\end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\raggedright
+Opções para documentclass (por exemplo, \texttt{oneside})\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.47\columnwidth}\raggedright
+geometry\strut
+\end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\raggedright
+Opções para geometria e class(por exemplo, \texttt{margin=1in})\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.47\columnwidth}\raggedright
+mainfont, sansfont, monofont, mathfont\strut
+\end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\raggedright
+Fontes de documentos (funciona apenas com \texttt{xelatexe} \texttt{lualatex})\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.47\columnwidth}\raggedright
+linkcolor, urlcolor, citecolor\strut
+\end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\raggedright
+Cor para links internos, externos e de citação\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{pacotes-latex-para-citauxe7uxf5es}{%
+\subsubsection{Pacotes LaTeX para citações}\label{pacotes-latex-para-citauxe7uxf5es}}
+
+Por padrão, as citações são processadas por meio do \texttt{pandoc-citeproc}, o que funciona para todos os formatos de saída. Para saída em PDF, às vezes é melhor usar pacotes LaTeX para processar citações, como \texttt{natbib} ou \texttt{biblatex}. Para usar um desses pacotes, basta definir a opção \texttt{citation\_package} como \texttt{natbib} ou \texttt{biblatex}, por exemplo:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{{-}{-}{-}}
+\AnnotationTok{output:}
+\CommentTok{  pdf\_document:}
+\CommentTok{    citation\_package: natbib}
+\CommentTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
 \hypertarget{html}{%
 \section{HTML}\label{html}}
 
@@ -1193,26 +1619,24 @@ O pacote \textbf{xaringan} é uma extensão R Markdown baseada no JavaScript da 
   template
 \end{itemize}
 
-\hypertarget{opuxe7uxf5es-de-customizauxe7uxe3o}{%
-\subsection{Opções de customização}\label{opuxe7uxf5es-de-customizauxe7uxe3o}}
-
-tabsection
-
-\hypertarget{exemplo-com-tabset}{%
-\subsubsection{Exemplo com tabset}\label{exemplo-com-tabset}}
-
-\hypertarget{aba-1}{%
-\subsubsection{Aba 1}\label{aba-1}}
-
-Conteúdo da aba 1
-
-\hypertarget{aba-2}{%
-\subsubsection{Aba 2}\label{aba-2}}
-
-Conteúdo da aba 2
-
 \hypertarget{pacotes-uxfateis}{%
 \section{Pacotes úteis}\label{pacotes-uxfateis}}
+
+Um dos pacotes úteis do RMarkdown é o flexdashboars.
+Esse pacote possui várias funções como:
+- Publicar um grupo de visualizações de dados como um painel;
+- Incorporar uma ampla variedade de componentes, incluindo widgets HTML, gráficos R, dados tabulares, medidores, caixas de valor e anotações de texto.
+-Especificar layouts baseados em linha ou coluna (os componentes são redimensionados de forma inteligente para preencher o navegador e adaptados para exibição em dispositivos móveis).
+- Crie storyboards para apresentar sequências de visualizações e comentários relacionados;
+-Opcionalmente, use o Shiny para gerar visualizações dinamicamente.
+
+Para criar um painel no RMarkdown, existem duas opções:
+A primeira é criar um documento em RMarkdown com flexdashboard::flex\_dashboard como formato de saída.
+\includegraphics{img/Dash 1.png}
+Para a segunda opção é necessário primeiro instalar o pacote ``flexdashboard'' no RStudio, depois siga os passos abaixo:
+File -\textgreater{} New File -\textgreater{} RMarkdown
+Depois:
+\includegraphics{img/Dash 2.png}
 
 \hypertarget{referuxeancia}{%
 \chapter{Referência}\label{referuxeancia}}
@@ -1624,7 +2048,7 @@ Expressão matemática em bloco:
 
 \begin{column}
 
-Imagem: \includegraphics{'https://tny.im/lTZ'}
+Imagem: \includegraphics{http://tny.im/lTZ}
 
 \end{column}
 
@@ -1953,5 +2377,7 @@ dist
 \end{columns}
 
 Nota de rodapé↩︎
+
+--\textgreater{}
 
 \end{document}
