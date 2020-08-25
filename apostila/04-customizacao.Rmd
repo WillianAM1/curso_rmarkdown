@@ -662,5 +662,5 @@ O pacote “pkgdown” facilita a construção de um site de documentação para
 O “bookdown” é um pacote que facilita a construção de livros. Ele também oferece melhorias importantes: 
 - Recursos de formatação, como referência cruzada e numeração de figuras, equações e tabelas;
 - Os documentos podem ser facilmente exportados em muitos formatos adequados como PDF, e-books e sites HTML.
-Para maior entendimento do bookdown, acesse [](https://bookdown.org/yihui/bookdown/)
+Para maior entendimento do bookdown, acesse https://bookdown.org/yihui/bookdown/
 
