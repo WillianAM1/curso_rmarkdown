@@ -641,7 +641,7 @@ output:
 
 ### Flexdashboard
 
-Um dos pacotes úteis do RMarkdown é o flexdashboars.
+Um dos pacotes úteis do RMarkdown é o flexdashboard.
 Esse pacote possui várias funções como:
 - Publicar um grupo de visualizações de dados como um painel;
 - Incorporar uma ampla variedade de componentes, incluindo widgets HTML, gráficos R, dados tabulares, medidores, caixas de valor e anotações de texto. 
