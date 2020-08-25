@@ -638,3 +638,18 @@ output:
 - template     
 
 ## Pacotes úteis
+Um dos pacotes úteis do RMarkdown é o flexdashboars.
+Esse pacote possui várias funções como:
+- Publicar um grupo de visualizações de dados como um painel;
+- Incorporar uma ampla variedade de componentes, incluindo widgets HTML, gráficos R, dados tabulares, medidores, caixas de valor e anotações de texto. 
+-Especificar layouts baseados em linha ou coluna (os componentes são redimensionados de forma inteligente para preencher o navegador e adaptados para exibição em dispositivos móveis).
+- Crie storyboards para apresentar sequências de visualizações e comentários relacionados;
+-Opcionalmente, use o Shiny para gerar visualizações dinamicamente.
+
+Para criar um painel no RMarkdown, existem duas opções:
+A primeira é criar um documento em RMarkdown com flexdashboard::flex_dashboard como formato de saída.
+![](img/Dash 1.png)
+Para a segunda opção é necessário primeiro instalar o pacote “flexdashboard” no RStudio, depois siga os passos abaixo:
+File -> New File -> RMarkdown
+Depois:
+![](img/Dash 2.png)
