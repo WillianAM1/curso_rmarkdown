@@ -412,6 +412,200 @@ O pacote **xaringan** é uma extensão R Markdown baseada no JavaScript da bibli
 
 ## Documentos
 
+### Documento de texto OpenDocument
+
+Para criar um documento OpenDocument Text (ODT) a partir do R Markdown, você especifica o `odt_document` no formato de saída nos metadados YAML do seu documento:
+
+````markdown
+---
+title: "Curso"
+author: Estats
+date: Agosto 01, 2020
+output: odt_document
+---
+````
+
+Semelhante a `word_document`,você, também pode fornecer um documento de referência de estilo para `odt_document` percorrer a `reference_odt` na configuração. Para obter os melhores resultados, o documento ODT de referência deve ser uma versão modificada de um arquivo ODT produzido usando rmarkdown. Por exemplo:
+
+````markdown
+---
+title: "Curso"
+output:
+  odt_document:
+    reference_odt: meu-estilo.odt
+---
+````
+
+### Documento do Word
+
+Para criar um documento do Word a partir do R Markdown, você especifica o `word_document` no formato de saída nos metadados YAML do seu documento:
+
+````markdown
+---
+title: "Curso"
+author: Estats
+date: Agosto 01, 2020
+output: word_document
+---
+````
+
+A característica mais notável dos documentos do Word é o modelo do Word, também conhecido como “documento de referência de estilo”. Você pode especificar um documento a ser usado como referência de estilo na produção de um `*.docx` arquivo (um documento do Word). Isso permitirá que você personalize itens como margens e outras características de formatação. Para obter os melhores resultados, o documento de referência deve ser uma versão modificada de um `.docx` arquivo produzido usando rmarkdown. O caminho de tal documento pode ser passado para o `reference_docx` argumento do `word_document` no formato de saída. Passe `"default"` para usar os estilos padrão. Por exemplo:
+
+````markdown
+---
+title: "Curso"
+output:
+  word_document:
+    reference_docx: meu-estilo.docx
+---
+````
+
+### Documento de PDF
+
+Para criar um documento PDF a partir do R Markdown, você especifica o `pdf_document` no formato de saída nos metadados YAML:
+
+````markdown
+---
+title: "Curso"
+author: Estats
+date: Agosto 01, 2020
+output: pdf_document
+---
+````
+
+Dentro dos documentos R Markdown que geram saída em PDF, você pode usar LaTeX bruto e até mesmo definir macros LaTeX.
+
+Observe que a saída de PDF (incluindo slides Beamer) requer uma instalação do LaTeX:
+
+````markdown
+install.packages('tinytex')
+tinytex::install_tinytex()  # install TinyTeX
+````
+
+#### Índice
+
+Você pode adicionar um sumário usando a `toc` na cofiguração e especificar a profundidade dos cabeçalhos aos quais se aplica usando a `toc_depth` na cofiguração. Por exemplo:
+
+````markdown
+---
+title: "Curso"
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 2
+---
+````
+
+Se a profundidade do TOC não for especificada explicitamente, o padrão é 2 (significando que todos os cabeçalhos de nível 1 e 2 serão incluídos no TOC), enquanto o padrão é 3 pol `html_document`.
+
+Você pode adicionar numeração de seção aos cabeçalhos usando a `number_sections` na cofiguração:
+
+````markdown
+---
+title: "Curso"
+output:
+  pdf_document:
+    toc: true
+    number_sections: true
+---
+````
+
+Se você estiver familiarizado com LaTeX, `number_sections: true`  significa `\section{}` e `number_sections: false`significa `\section*{}` para seções em LaTeX (também se aplica a outros níveis de “seções” como `\chapter{}`, e `\subsection{}`).
+
+#### Opções de imagem
+
+Existem várias opções que afetam a saída de figuras em documentos PDF:
+
+- `fig_width` e `fig_height` pode ser usado para controlar a largura e altura da figura padrão.
+
+- `fig_crop` controla se o `pdfcrop` utilitário, se disponível em seu sistema, é aplicado automaticamente a figuras em PDF.
+
+- `fig_caption` controla se as figuras são renderizadas com legendas.
+
+- `dev` controla o dispositivo gráfico usado para renderizar figuras.
+
+````markdown
+---
+title: "Curso"
+output:
+  pdf_document:
+    fig_width: 7
+    fig_height: 6
+    fig_caption: true
+---
+````
+
+#### Impressão de Tabela
+
+Você pode aprimorar a exibição padrão da tabela por meio da `df_print` na configuração. Os valores válidos são apresentados na Tabela abaixo:
+
+| Opção | Descrição |
+|:-------|:-------|
+|    default  |    Chame o `print.data.frame` método genérico    |
+|    kable    |    Use a `knitr::kable()` função    |
+|    tibble   |    Use a `tibble::print.tbl_df()` função |
+
+Por Exemplo:
+
+````markdown
+---
+title: "Curso"
+output:
+  pdf_document:
+    df_print: kable
+---
+````
+
+#### Destaque de sintaxe
+
+A `highlight` na configuração especifica o estilo de realce da sintaxe. Seu uso em `pdf_document` é o mesmo que `html_document`. Por exemplo:
+
+````markdown
+---
+title: "Curso"
+output:
+  pdf_document:
+    highlight: tango
+---
+````
+
+#### Opções LaTeX
+
+Muitos aspectos do modelo de látex usado para criar documentos PDF podem ser personalizados usando top-level YAML metadados (note que estas opções não aparecem por baixo da `output` secção, mas sim aparecer no nível superior, juntamente com `title`, `author` e assim por diante). Por exemplo:
+
+````markdown
+---
+title: "Curso"
+output: pdf_document
+fontsize: 11pt
+geometry: margin=1in
+---
+````
+
+Algumas variáveis  de metadados disponíveis são exibidas na Tabela abaixo:
+
+|Variável | Descrição|
+|:----|:----|
+|    lang    |    	Código de idioma do documento    |
+|    fontsize    |    Tamanho da fonte (por exemplo, `10pt`, `11pt`, ou `12pt`)    |
+|    documentclass    |   Classe de documento LaTeX (por exemplo, `article`)    |
+|    classoption    |    Opções para documentclass (por exemplo, `oneside`)    |
+|    geometry    |    Opções para geometria e class(por exemplo, `margin=1in`)    |
+|    mainfont, sansfont,<br> monofont, mathfont    |    Fontes de documentos (funciona apenas com `xelatexe` `lualatex`)    |
+|    linkcolor, urlcolor,<br> citecolor    |    Cor para links internos, externos e de citação    |
+
+#### Pacotes LaTeX para citações
+
+Por padrão, as citações são processadas por meio do `pandoc-citeproc`, o que funciona para todos os formatos de saída. Para saída em PDF, às vezes é melhor usar pacotes LaTeX para processar citações, como `natbib` ou `biblatex`. Para usar um desses pacotes, basta definir a opção `citation_package` como `natbib` ou `biblatex`, por exemplo:
+
+````markdown
+---
+output:
+  pdf_document:
+    citation_package: natbib
+---
+````
+
 ## HTML
 
 ### Opções de preâmbulo:
