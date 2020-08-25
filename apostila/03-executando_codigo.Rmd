@@ -39,7 +39,271 @@ There are a large number of chunk options\index{chunk options} in **knitr** docu
 
 - `child`: You can include a child document in the main document. This option takes a path to an external file.
 
+3.3 Linguagens Suportadas
+
+Por meio do pacote knitr que forneceu um grande número de motores de linguagem o R Markdown suporta outras linguagens tais como Python, Julia, C++, SQL. Esses motores de linguagem podem ser acessados através do comando:
+names(knitr::knit_engines$get())
+
+3.3.1 Linguagem Python
+
+Para utilizar a linguagem python primeiro é necessário instalar o pacote reticulate com o comando:
+install.packages("reticulate")
+
+Com esse pacote é possível executar todos os fragmentos de código Python em uma mesma seção. Caso deseje executar um trecho do código pode usar o comando:
+
+python.reticulate = FALSE
+
+Vale ressaltar que se você estiver usando uma versão do knitr inferior a 1.18 você deve atualizar seus pacotes R. Por padrão o reticulate usa a versão padrão encontrada em seu path. Para encontrar onde esta instalado o python em seu computador use o comando:
+
+Sys.which (“python”)
+
+Você pode escolher a versão de Python com o comando:
+
+use_python()
+
+Vejamos no exemplo 1 como você pode fazer:
+
+## exemplo 1
+library(reticulate)
+use_python("/usr/local/bin/python")
+
+Vejamos no exemplo 2 para usar pedaços de código Python. Outrossim, para isso você deve utilizar o comando
+
+py$name 
+
+Onde name é o nome da variável que você deseja usar na sessão Python. Para recuperar um valor Python use também py$name. 
+
+## exemplo 2
+## Um pedaço de código R normal
+```{r}
+library(reticulate)
+x = 42
+print(x)
+```
+
+No exemplo 3 vemos a utilização de um pedaço de um código python 
+
+## exemplo 3 
+`` `{python}
+x = 42 * 2
+imprimir (x)
+`` `
+
+O valor de `x` na sessão Python é` r py $ x`. não é o mesmo `x` de R.
+
+3.3.2 Script Schell
+
+Você pode escrever scripts Shell em R Markdown, se seu sistema puder executá-los (o bash executável ou sh deve existir). Normalmente, isso não é um problema para usuários de Linux ou macOS. Não é impossível para os usuários do Windows, mas você terá que instalar software adicional (como Cygwin ou o Subsistema Linux).
+
+3.3.3 SQL
+
+Como o mecanismo SQL usa o pacote DBI você deve estabelecer uma conexão DBI com um banco de dados. Você pode utilizar o comando 
+
+DBI :: dbConnect ()
+
+Você pode usar essa conexão em um fragmento SQL através da opção de conexão como mosta o exemplo 4
+
+## exemplo 4
+```{r}
+library(DBI)
+db = dbConnect(RSQLite::SQLite(), dbname = "sql.sqlite")
+```
+```{sql, connection=db}
+SELECT * FROM trials
+```
+
+Como padrão, quando fazemos consulta com a opção 
+
+SELECT
+
+Ela mostra os 10 primeiros registros de seus resultados no documento. O número de registros exibidos é controlado pela opção 
+
+max.print
+
+Que é derivada da função 
+
+sql.max.print 
+
+No exemplo 5 o seguinte fragmento de código exibe os 15 primeiros registros.
+
+```{sql, connection=db, max.print = 15}
+SELECT * FROM trials
+```
+
+Caso queria especificar para nenhum limite no registro utilize 
+
+max.print = NA
+
+Se você quiser atribuir os resultados da consulta SQL a um objeto R como um quadro de dados basta utilizar o comando
+
+output.var
+
+Como mostra o exemplo 6
+
+```{sql, connection=db, output.var="trials"}
+SELECT * FROM trials
+```
+
+Quando os resultados de uma consulta SQL são atribuídos a um quadro de dados, nenhum registro será impresso no documento. Caso queira, você pode imprimir manualmente o quadro de dados em um bloco R subsequente. Se você precisar ligar os valores das variáveis R em consultas SQL, você pode fazer isso prefaciando a variável R referências com uma interrogação (?). Assim como mostra o exemplo 7.
+
+```{r}
+subjects = 10
+```
+```{sql, connection=db, output.var="trials"}
+SELECT * FROM trials WHERE subjects >= ?subjects
+```
+
+Se você tiver muitos fragmentos SQL, pode ser útil definir um padrão para a opção de fragmento de conexão no fragmento de configuração, de forma que não seja necessário especificar a conexão em cada fragmento individual. Você consegue conforme mostra o exemplo 8.
+
+```{r setup}
+library(DBI)
+db = dbConnect(RSQLite::SQLite(), dbname = "sql.sqlite")
+knitr::opts_chunk$set(connection = "db")
+```
+
+Observe que a opção de conexão deve ser uma string nomeando o objeto de conexão (não o próprio objeto). Depois de definido, você pode executar blocos SQL sem especificar uma conexão explícita como mostra o exemplo 9.
+
+```{sql}
+SELECT * FROM trials
+```
+
+3.3.4 Rcpp
+
+O mecanismo Rcpp permite a compilação de C ++ em funções R com o comando
+
+rcpp sourceCpp ()
+
+O resultado é apresentado no exemplo 10.
+
+```{Rcpp}
+#include <Rcpp.h>
+using namespace Rcpp;
+// [[Rcpp::export]]
+NumericVector timesTwo(NumericVector x) {
+return x * 2;
+}
+```
+A execução desse trecho compilará o código e tornará a função C ++ com o comando:
+
+timesTwo () 
+
+Disponível para R. Você pode armazenar em cache a compilação de blocos de código C ++ usando o cache de knitr padrão, ou seja, adicionar o comando:
+
+cache = TRUE
+
+Conforme mostra o exemplo 11. 
+
+```{Rcpp, cache=TRUE}
+#include <Rcpp.h>
+using namespace Rcpp;
+// [[Rcpp::export]]
+NumericVector timesTwo(NumericVector x) {
+return x * 2;
+}
+```
+
+Em alguns casos, é desejável combinar todos os pedaços de código Rcpp em um documento em uma única unidade de compilação, pois economiza tempo. Para isso use o comando 
+
+ref.label
+
+Junto com o comando
+
+knitr :: all_rcpp_labels ()
+
+Pois assim é possível coletar todos os fragmentos do Rcpp conforme mostra o exemplo 12
+
+## Todos os fragmentos de códigos C++ serão combinados em um único fragmento.
+```{Rcpp, ref.label=knitr::all_rcpp_labels(), include=FALSE}
+```
+#Primeiro é necessário incluir o leitor `Rcpp.h`
+```{Rcpp, eval=FALSE}
+#include <Rcpp.h>
+```
+## Depois você define a função
+```{Rcpp, eval=FALSE}
+// [[Rcpp::export]]
+int timesTwo(int x) {
+return x * 2;
+}
+```
+
+Assim os dois fragmentos com código Rcpp serão compilados juntos no primeiro pedaço.
+
+3.3.5 Stan 
+
+A linguagem Stan permite a incorporação da linguagem probabilística. Para tanto, utilize o comando:
+
+output.var 
+
+Como mostra o exemplo 13
+
+```{stan, output.var="ex1"}
+parameters {
+real y[2];
+}
+model {
+y[1] ~ normal(0, 1);
+y[2] ~ double_exponential(0, 2);
+}
+```
+```{r}
+library(rstan)
+fit = sampling(ex1)
+print(fit)
+```
+
+3.3.6 Java Script
+
+Se você visa que seu documento tenha saída HTML, é possível executar um Java Script nele usando esta linguagem denominada js.
+O exemplo 14 apresenta como mudar a cor do título para vermelho.
+
+```{js, echo=FALSE}
+$('.title').css('color', 'red')
+```
+Da mesma forma, você pode incorporar regras CSS no documento de saída. Por exemplo, o seguinte fragmento de código transforma
+texto dentro do corpo do documento vermelho:
+
+```{css, echo=FALSE}
+body {
+color: red;
+}
+```
+
+3.3.7 Julia
+
+A linguagem Julia é suportado pelo pacote JuliaCall igual a linguagem python. Vejamos o exemplo 15 abaixo
+
+```{julia}
+a = sqrt(2); # the semicolon inhibits printing
+```
+
+3.3.8 C and Fortran
+
+Para blocos de código que usam C ou Fortran, o knitr usa R CMD SHLIB para compilar o código e carregar o objeto (um arquivo * .so no Unix ou * .dll no Windows). Então você pode usar o comando
+
+ .C () / .Fortran ()
+
+ Para chamar as funções C / Fortran conforma mostra o exemplo 16.
+
+```{c, test-c, results='hide'}
+void square(double *x) {
+*x = *x * *x;
+}
+```
+Test the `square()` function:
+```{r}
+.C('square', 9)
+.C('square', 123)
+```
+
 ## Linguagens suportadas
+
+
+
+
+
+
+## Linguagens Suportadas Termina Aqui
 
 ```{r}
 names(knitr::knit_engines$get())
