@@ -608,34 +608,154 @@ output:
 
 ## HTML
 
-### Opções de preâmbulo:
+Originalmente a linguagem markdown foi feita para facilitar a geração de arquivos html, então por padrão, R Markdown te suporte para a criação de arquivos html.
 
-- highlight
-- toc
-- dev
-- extra_dependencies
-- toc_depth
-- df_print
-- css
-- toc_float
-- code_folding
-- includes
-- number_sections
-- code_download
-- keep_md
-- section_divs
-- self_contained
-- lib_dir
-- fig_width
-- theme
-- md_extensions=
-- fig_height
-- highlight
-- pandoc_args
-- fig_retina
-- mathjax
-- fig_caption
-- template     
+Todo arquivo R Markdown sem tipo de output especificado, é transformado em html.
+
+Para gerar arquivos html a partir de um arquivo R Markdown, é utilizado `html_document` como output:
+  
+```
+---
+output: html_document
+---
+```
+
+### Súmario
+
+Como demonstrado no [capítulo 2](#definindo-tipo-de-output) é possível gerar um sumário com todas as seções do arquivo criado utilizando `toc_depth`, é possível também definir os níveis de cabeçalho a serem apresentados no sumário com a opção `toc_depth`. 
+  
+Definir essas configurações para um arquivo html funciona da mesma forma que para um arquivo pdf, basta adicionar a opção e o nível que será definido dentro das opções de output html no seu preâmbulo, como demonstrado abaixo:
+    
+```
+---
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+---
+```
+
+Outra opção disponível para o cabeçalho é `toc_float`, quando definida como verdadeira, o sumário não ficara fixo no início do arquivo hmtl, ele ficará sempre visivel, independente da parte do arquivo que esteja sendo visualizada. A opção `toc_float` pode ser definida da seguinte forma:
+    
+```
+---
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+```
+  
+Dentro de `toc_float` existem duas outras opções a serem definidas, `collapsed`, que por padrão é definida como verdadeira, e `smooth_control`, que também é definida como verdadeira po padrão.
+  
+A opção `collapsed` define o que aparecerá no sumário o tempo todo, quando definido como verdadeiro, ele esconde as subseções de sessões que não estejam sendo visualizadas, as expandindo quando se estiver olhando essa determinada sessão, e quando definido como falso, o sumário mostra todas as seções e subseções o tempo todo.
+  
+A opção `smooth_control` controla a animação da transição para uma seção quando clicada no sumário, se estiver definida como verdadeira, a transição é animada de forma suave, se estiver definida como falsa a transição é imediata.
+  
+Segue exemplo de definição das opções `collapsed` e `smooth_control`:
+    
+```
+---
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_control: false
+---
+```
+  
+### Numerando seções
+  
+É possível numerar ou não seções utilizando R Markdown, para definir essa configuração é utilizada a opção `number_sections` dentro de `html_document`. Se definida como verdadeira as seções são numeradas, se definidas como falsas as seções não são numeradas.
+  
+Exemplo:
+    
+```
+---
+output:
+  html_document:
+    toc: true
+    number_sections: true
+---
+```
+  
+### Abas
+  
+Gerando arquivos html, podemos adicionar abas no meio do arquivo, para isso é utilizada a classe de cabeçalho `.tabset`, isso fará com que todo sub cabeçalho feito a partir desse cabeçalho seja uma aba diferente.
+  
+Exemplo:
+    
+```
+---
+## Seção com abas {.tabset}
+    
+### Aba 1
+    
+Conteúdo da aba 1
+  
+### Aba 2
+  
+Conteúdo da aba 2
+---
+```
+  
+### Aparência
+  
+Existem varias formas de modificar a aparência dos documentos html, desde opções no preâmbulo até a utilização de arquivos css.
+  
+No preâmbulo, utilizando a opção `theme`, é possível definir um tema [bootstrap](https://bootswatch.com/3/). Os temas suportados por R Markdown são: `default`, `cerulean`, `journal`, `flatly`, `darkly`, `readable`, `spacelab`, `united`, `cosmo`, `lumen`, `paper`, `sandstone`, `simplex`, e `yeti`. Por padrão a opção `theme` é definida como `null`, isso faz com que o arquivo html seja gerado sem temas bootstrap.
+  
+Outra opção de preâmbulo é a opção `highlight`, que definirá como será exibido o realce da sintaxe dos códigos do documento. As opções disponíveis são: `default`, `tango`, `pygments`, `kate`, `monochrome`, `espresso`, `zenburn`, `haddock`, `breezedark`, e `textmate`.
+  
+Exemplo:
+    
+```
+---
+output:
+  html_document:
+    theme: readable
+    highlight: pygments
+---
+```
+  
+**Utilizando arquivos CSS**
+    
+Para incluir um arquivo css a seu output html, basta usar a opção `css` dentro de `html_document`:
+    
+```
+---
+output:
+  html_document:
+    css: arquivo.css
+---
+```
+  
+Vale ressaltar que o arquivo css deve estar na mesma pasta que o arquivo R Markdown para ser utilizado como foi no exemplo, caso o arquivo esteja em uma pasta diferente é preciso informar o caminho para o arquivo.
+  
+É possível dentro do seu arquivo R Markdown definir classes e ids para suas seções da mesma forma que se define [abas](#abas). Por exemplo:
+    
+```
+## Cabeçalho {#cabecalho-2 .enfase}
+```
+    
+Se fosse criado um cabeçalho da forma acima, poderiamos modificar esta seção no arquivo css usado da seguinte forma:
+      
+```{css, eval = FALSE}
+#cabecalho-2 {
+  color: blue;
+}
+
+.enfase {
+  font-size: 1.2em;
+}
+```
+
+**Opções de figuras**
+  
+É possível definir opções no preâmbulo configurações para as imagens geradas em blocos de código. Nessas opções podemos definir atributos como altura da imagem, largura da imagem, etc.
+
+Utilizando a opção `fig_width` é possível definir a largura das imagens geradas, e utilizando
 
 ## Pacotes úteis
 

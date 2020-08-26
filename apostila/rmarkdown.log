@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.7.19)  25 AUG 2020 16:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.7.19)  25 AUG 2020 22:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -637,95 +637,107 @@ Chapter 3.
 [17
 
 ]
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 647--647
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 643--643
 []\T1/lmtt/m/n/10 ##  [1] "awk"         "bash"        "coffee"      "gawk"     
    "groovy"[] 
  []
 
 
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 647--647
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 643--643
 []\T1/lmtt/m/n/10 ##  [6] "haskell"     "lein"        "mysql"       "node"     
    "octave"[] 
  []
 
 
-Overfull \hbox (17.24895pt too wide) in paragraph at lines 647--647
+Overfull \hbox (17.24895pt too wide) in paragraph at lines 643--643
 []\T1/lmtt/m/n/10 ## [11] "perl"        "psql"        "Rscript"     "ruby"     
    "sas"[] 
  []
 
 
-Overfull \hbox (17.24895pt too wide) in paragraph at lines 647--647
+Overfull \hbox (17.24895pt too wide) in paragraph at lines 643--643
 []\T1/lmtt/m/n/10 ## [16] "scala"       "sed"         "sh"          "stata"    
    "zsh"[] 
  []
 
 
-Overfull \hbox (6.74898pt too wide) in paragraph at lines 647--647
+Overfull \hbox (6.74898pt too wide) in paragraph at lines 643--643
 []\T1/lmtt/m/n/10 ## [21] "highlight"   "Rcpp"        "tikz"        "dot"      
    "c"[] 
  []
 
 
-Overfull \hbox (17.24895pt too wide) in paragraph at lines 647--647
+Overfull \hbox (17.24895pt too wide) in paragraph at lines 643--643
 []\T1/lmtt/m/n/10 ## [26] "cc"          "fortran"     "fortran95"   "asy"      
    "cat"[] 
  []
 
 [18]
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 647--647
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 643--643
 []\T1/lmtt/m/n/10 ## [31] "asis"        "stan"        "block"       "block2"   
    "js"[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 647--647
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 643--643
 []\T1/lmtt/m/n/10 ## [36] "css"         "sql"         "go"          "python"   
    "julia"[] 
  []
 
 
-Overfull \hbox (48.74886pt too wide) in paragraph at lines 647--647
+Overfull \hbox (48.74886pt too wide) in paragraph at lines 643--643
 []\T1/lmtt/m/n/10 ## [41] "sass"        "scss"        "theorem"     "lemma"    
    "corollary"[] 
  []
 
 
-Overfull \hbox (43.49887pt too wide) in paragraph at lines 647--647
+Overfull \hbox (43.49887pt too wide) in paragraph at lines 643--643
 []\T1/lmtt/m/n/10 ## [46] "proposition" "conjecture"  "definition"  "example"  
    "exercise"[] 
  []
 
-[19]
+[19] [20] [21]
+Underfull \hbox (badness 1062) in paragraph at lines 871--872
+\T1/lmr/m/n/10 (+20) em um doc-u-mento em uma única unidade de com-pi-lação, po
+is econ-o-
+ []
+
+[22]
+Overfull \hbox (160.24474pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10 3.4.  TODOS OS FRAGMENTOS DE CÓDIGOS C++ SERÃO COMBINADOS EM UM
+ ÚNICO FRAGMENTO. \T1/lmr/m/n/10 23
+ []
+
+[23] [24]
 File: img/logoestats.jpeg Graphic file (type jpg)
 <use img/logoestats.jpeg>
-Package pdftex.def Info: img/logoestats.jpeg  used on input line 734.
+Package pdftex.def Info: img/logoestats.jpeg  used on input line 1083.
 (pdftex.def)             Requested size: 64.24277pt x 54.20483pt.
-[20]
+[25] [26]
 Chapter 4.
 
-Underfull \hbox (badness 1314) in paragraph at lines 813--814
+Underfull \hbox (badness 1314) in paragraph at lines 1162--1163
 \T1/lmr/m/n/10 (+20) Para criar uma ap-re-sen-tação ioslides de R Mark-down, vo
 cê es-peci-fica
  []
 
-[21
+[27
 
-] [22] [23] [24]
-Underfull \hbox (badness 1436) in paragraph at lines 1040--1041
+] [28] [29] [30]
+Underfull \hbox (badness 1436) in paragraph at lines 1389--1390
 \T1/lmr/m/n/10 (+20) porque os slides são ger-a-dos por for-matação per-son-al-
 izada es-crita em
  []
 
-[25] [26] [27] [28]
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 1239--1239
+[31] [32] [33] [34]
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 1588--1588
 []    \T1/lmtt/m/n/10 install.packages(\TS1/lmtt/m/n/10 '\T1/lmtt/m/n/10 rmarkd
 own\TS1/lmtt/m/n/10 '\T1/lmtt/m/n/10 )  # atualiza o pacote rmarkdown do CRAN[]
  
  []
 
 
-Overfull \hbox (56.74289pt too wide) in paragraph at lines 1246--1247
+Overfull \hbox (56.74289pt too wide) in paragraph at lines 1595--1596
 \T1/lmr/m/n/10 (-20) O pa-cote \T1/lmr/bx/n/10 re-vealjs \T1/lmr/m/n/10 (-20) f
 ornece um tipo de out-put no for-mato \T1/lmtt/m/n/10 revealjs::revealjs_presen
 tation
@@ -734,37 +746,32 @@ tation
 
 Underfull \vbox (badness 2698) has occurred while \output is active []
 
-[29] [30] [31]
-Underfull \hbox (badness 4266) in paragraph at lines 1390--1391
+[35] [36] [37]
+Underfull \hbox (badness 4266) in paragraph at lines 1739--1740
 []\T1/lmr/m/n/10 (+20) Você pode adi-cionar nu-mer-ação de seção aos cabeçal-ho
 s us-ando a
  []
 
-[32]
+[38]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 4.1 on input line 1449.
+(longtable)                in table 4.1 on input line 1798.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[33] [34] [35]
-<img/Dash 1.png, id=332, 237.13594pt x 48.93282pt>
+[39] [40] [41] [42] [43] [44]
+<img/Dash 1.png, id=405, 237.13594pt x 48.93282pt>
 File: img/Dash 1.png Graphic file (type png)
 <use img/Dash 1.png>
-Package pdftex.def Info: img/Dash 1.png  used on input line 1635.
+Package pdftex.def Info: img/Dash 1.png  used on input line 2083.
 (pdftex.def)             Requested size: 237.14258pt x 48.93416pt.
-<img/Dash 2.png, id=333, 435.12563pt x 371.88937pt>
+<img/Dash 2.png, id=406, 435.12563pt x 371.88937pt>
 File: img/Dash 2.png Graphic file (type png)
 <use img/Dash 2.png>
-Package pdftex.def Info: img/Dash 2.png  used on input line 1639.
+Package pdftex.def Info: img/Dash 2.png  used on input line 2087.
 (pdftex.def)             Requested size: 345.02025pt x 294.87889pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[36 <./img/Dash 1.png>] [37 <./img/Dash 2.png>] [38
-
-]
+[45 <./img/Dash 1.png> <./img/Dash 2.png>] [46]
 Chapter 5.
 
 ! LaTeX Error: Environment fluid-row undefined.
@@ -773,14 +780,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1649 \begin{fluid-row}
+l.2120 \begin{fluid-row}
                          
 Here is how much of TeX's memory you used:
- 13643 strings out of 480478
- 197702 string characters out of 5905959
+ 13690 strings out of 480478
+ 198284 string characters out of 5905959
  483987 words of memory out of 5000000
- 29138 multiletter control sequences out of 15000+600000
- 609354 words of font info for 125 fonts, out of 8000000 for 9000
+ 29139 multiletter control sequences out of 15000+600000
+ 609603 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,8n,42p,951b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
 
