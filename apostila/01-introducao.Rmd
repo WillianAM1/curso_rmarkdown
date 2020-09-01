@@ -42,7 +42,7 @@ Abaixo está presente uma lista com todos os formatos suportados por padrão com
 `r knitr::combine_words(grep('^[^_]+_(document|presentation)$', ls(asNamespace('rmarkdown')), value = TRUE), sep = '\n', and = '', before = '- \x60', after = '\x60')`
 
 ## Criando o primeiro documento
-Para gerar um arquivo em R Markdown é necessário abrir o programa R Studio, e instalar o pacote rmarkdown :
+Para gerar um arquivo em R Markdown é necessário abrir o programa R Studio e instalar o pacote rmarkdown :
 <!--![](img/ins.png)-->
 ```{r, eval = FALSE}
 install.packages("rmarkdown")
@@ -54,11 +54,9 @@ Após a instalação do pacote no R Studio, siga os seguintes passos:
 Em seguida, escolha o tipo de arquivo desejado:
 ![](img/file.png)
 
-Obs: Para gerar documentos em PDF, é necessário ter instalado em seu computador o programa [Latex](#download-rmd-e-latex)
+*Obs*: Para gerar documentos em PDF, é necessário ter instalado em seu computador o programa [Latex](#download-rmd-e-latex).
 
-Seguindo os passos acima, você terá criado o seu primeiro documento em R Markdown.
-
-Vale ressaltar que é possível utilizar o R Markdown sem que tenha instalado o R Studio, porém, é necessário ter instalado o programa [Pandoc](https://pandoc.org)
+Seguindo os passos acima, você terá criado o seu primeiro documento em R Markdown. Vale ressaltar que é possível utilizar o R Markdown sem que tenha instalado o R Studio, porém, é necessário ter instalado o programa [Pandoc](https://pandoc.org).
 
 ## Download MiKTeX
 Para exportar um arquivo PDF utilizando o R Markdown é necessário um motor LaTex pois é ele que irá converter o arquivo .tex em PDF.
