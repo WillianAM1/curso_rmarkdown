@@ -68,16 +68,17 @@ Seguindo os passos acima, você terá criado o seu primeiro documento em R Markd
 
 ## Download MiKTeX
 Para exportar um arquivo PDF utilizando o R Markdown é necessário um motor LaTex pois é ele que irá converter o arquivo .tex em PDF.
-Então é necessário que tenha instalado em seu computador o programa MiKTeX,. Para fazer o download é só acessar o link: https://miktex.org/download.
+
+É necessário que o programa MiKTeX esteja instalado no computador (download disponível em https://miktex.org/download).
 
 ### Windows
-Selecione a aba Windows e clique no botão de download:
+Selecione a aba *Windows* e clique no botão de download.
 ![](img/download_windowns_MiKTex.jpg)
 
 ### Linux
-Selecione a aba Linux em seguida a aba de sua distribuição Linux para receber as instruções de instalação:
+Selecione a aba *Linux* em seguida a aba de sua distribuição Linux para receber as instruções de instalação.
 ![](img/download_linux_MiKTex.jpg)
 
 ### MacOS
-Selecione a aba macOS e clique no botão de download:
+Selecione a aba *MacOS* e clique no botão de download.
 ![](img/download_macOS_MiKTex.jpg)
