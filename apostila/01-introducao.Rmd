@@ -1,5 +1,5 @@
 # Introdução {#intro}
-Neste curso, iremos aprender a utilizar o R Markdown para gerar documentos.
+A fim de aprimorar os membros, e passar a utilizar o software para fins internos, este curso tem como propósito ensinar R Markdown para gerar documentos.
 
 ## O que é 
 Markdown é uma linguagem de marcação usada para formatar de maneira simples os textos redigidos e converte-los em HTML. John Gruber e Aaron Swartz, os criadores desse sistema, utilizaram marcadores como: `#, \* ,! , [] e ()`. Assim é possível inserir em nossos textos: títulos, listas, formatação de fonte, imagens e tabelas.
