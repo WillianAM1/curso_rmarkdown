@@ -82,8 +82,6 @@ output: pdf_document:
 
 Por fim foi definida também a opção `title` que irá definir o título do documento final. Para maior customização do seu documento pelo preâmbulo veja o [capítulo 4](#depois-crio).
 
-### Sumario
-
 ## Textos
 
 
@@ -181,7 +179,7 @@ __Lista com Sublista__
 Antes de inserir a imagem escolhida podemos definir a configuração global para todas as imagens, lembrando que a configuração feita diretamente na imagem vai sobrepor a configuração global.
 
 ````markdown
-`r ''````{r setup, include=FALSE}
+`r ''````{r setup include=FALSE}
 library(knitr)
 opts_chunk$set(echo = FALSE,
                out.width = "10%", 

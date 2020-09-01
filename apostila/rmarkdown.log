@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.7.19)  25 AUG 2020 22:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.7.19)  31 AUG 2020 21:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -594,110 +594,113 @@ Underfull \vbox (badness 1009) has occurred while \output is active []
 ]
 Chapter 2.
 [11] [12] [13]
-Overfull \hbox (195.74843pt too wide) in paragraph at lines 422--422
+Overfull \hbox (195.74843pt too wide) in paragraph at lines 419--419
 []\T1/lmtt/m/n/10 [Curso de RMakrdown](https://estatsej.github.io/curso_rmarkdo
 wn "Aqui está o nosso curso de RMarkdown")[] 
  []
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 461.
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 458.
 
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-461.
+458.
 (/usr/share/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
 LaTeX Font Warning: Font shape `TS1/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `TS1/lmtt/b/sl' tried instead on input line 461.
+(Font)              Font shape `TS1/lmtt/b/sl' tried instead on input line 458.
 
 
 [14]
-<img/logoestats.jpeg, id=138, 64.24pt x 54.2025pt>
+<img/logoestats.jpeg, id=136, 64.24pt x 54.2025pt>
 File: img/logoestats.jpeg Graphic file (type jpg)
 <use img/logoestats.jpeg>
-Package pdftex.def Info: img/logoestats.jpeg  used on input line 526.
+Package pdftex.def Info: img/logoestats.jpeg  used on input line 523.
 (pdftex.def)             Requested size: 64.24277pt x 54.20483pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [15]
 File: img/logoestats.jpeg Graphic file (type jpg)
 <use img/logoestats.jpeg>
-Package pdftex.def Info: img/logoestats.jpeg  used on input line 569.
+Package pdftex.def Info: img/logoestats.jpeg  used on input line 566.
+(pdftex.def)             Requested size: 64.24277pt x 54.20483pt.
+File: img/logoestats.jpeg Graphic file (type jpg)
+<use img/logoestats.jpeg>
+Package pdftex.def Info: img/logoestats.jpeg  used on input line 568.
 (pdftex.def)             Requested size: 64.24277pt x 54.20483pt.
 File: img/logoestats.jpeg Graphic file (type jpg)
 <use img/logoestats.jpeg>
 Package pdftex.def Info: img/logoestats.jpeg  used on input line 570.
-(pdftex.def)             Requested size: 64.24277pt x 54.20483pt.
-File: img/logoestats.jpeg Graphic file (type jpg)
-<use img/logoestats.jpeg>
-Package pdftex.def Info: img/logoestats.jpeg  used on input line 571.
 (pdftex.def)             Requested size: 64.24277pt x 54.20483pt.
 [16 <./img/logoestats.jpeg>]
 Chapter 3.
 [17
 
 ]
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 643--643
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 642--642
 []\T1/lmtt/m/n/10 ##  [1] "awk"         "bash"        "coffee"      "gawk"     
    "groovy"[] 
  []
 
 
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 643--643
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 642--642
 []\T1/lmtt/m/n/10 ##  [6] "haskell"     "lein"        "mysql"       "node"     
    "octave"[] 
  []
 
 
-Overfull \hbox (17.24895pt too wide) in paragraph at lines 643--643
+Overfull \hbox (17.24895pt too wide) in paragraph at lines 642--642
 []\T1/lmtt/m/n/10 ## [11] "perl"        "psql"        "Rscript"     "ruby"     
    "sas"[] 
  []
 
 
-Overfull \hbox (17.24895pt too wide) in paragraph at lines 643--643
+Overfull \hbox (17.24895pt too wide) in paragraph at lines 642--642
 []\T1/lmtt/m/n/10 ## [16] "scala"       "sed"         "sh"          "stata"    
    "zsh"[] 
  []
 
 
-Overfull \hbox (6.74898pt too wide) in paragraph at lines 643--643
+Overfull \hbox (6.74898pt too wide) in paragraph at lines 642--642
 []\T1/lmtt/m/n/10 ## [21] "highlight"   "Rcpp"        "tikz"        "dot"      
    "c"[] 
  []
 
 
-Overfull \hbox (17.24895pt too wide) in paragraph at lines 643--643
+Overfull \hbox (17.24895pt too wide) in paragraph at lines 642--642
 []\T1/lmtt/m/n/10 ## [26] "cc"          "fortran"     "fortran95"   "asy"      
    "cat"[] 
  []
 
 [18]
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 643--643
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 642--642
 []\T1/lmtt/m/n/10 ## [31] "asis"        "stan"        "block"       "block2"   
    "js"[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 643--643
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 642--642
 []\T1/lmtt/m/n/10 ## [36] "css"         "sql"         "go"          "python"   
    "julia"[] 
  []
 
 
-Overfull \hbox (48.74886pt too wide) in paragraph at lines 643--643
+Overfull \hbox (48.74886pt too wide) in paragraph at lines 642--642
 []\T1/lmtt/m/n/10 ## [41] "sass"        "scss"        "theorem"     "lemma"    
    "corollary"[] 
  []
 
 
-Overfull \hbox (43.49887pt too wide) in paragraph at lines 643--643
+Overfull \hbox (43.49887pt too wide) in paragraph at lines 642--642
 []\T1/lmtt/m/n/10 ## [46] "proposition" "conjecture"  "definition"  "example"  
    "exercise"[] 
  []
 
 [19] [20] [21]
-Underfull \hbox (badness 1062) in paragraph at lines 871--872
+Underfull \hbox (badness 1062) in paragraph at lines 870--871
 \T1/lmr/m/n/10 (+20) em um doc-u-mento em uma única unidade de com-pi-lação, po
 is econ-o-
  []
@@ -711,12 +714,12 @@ Overfull \hbox (160.24474pt too wide) has occurred while \output is active
 [23] [24]
 File: img/logoestats.jpeg Graphic file (type jpg)
 <use img/logoestats.jpeg>
-Package pdftex.def Info: img/logoestats.jpeg  used on input line 1083.
+Package pdftex.def Info: img/logoestats.jpeg  used on input line 1082.
 (pdftex.def)             Requested size: 64.24277pt x 54.20483pt.
 [25] [26]
 Chapter 4.
 
-Underfull \hbox (badness 1314) in paragraph at lines 1162--1163
+Underfull \hbox (badness 1314) in paragraph at lines 1161--1162
 \T1/lmr/m/n/10 (+20) Para criar uma ap-re-sen-tação ioslides de R Mark-down, vo
 cê es-peci-fica
  []
@@ -724,20 +727,20 @@ cê es-peci-fica
 [27
 
 ] [28] [29] [30]
-Underfull \hbox (badness 1436) in paragraph at lines 1389--1390
+Underfull \hbox (badness 1436) in paragraph at lines 1388--1389
 \T1/lmr/m/n/10 (+20) porque os slides são ger-a-dos por for-matação per-son-al-
 izada es-crita em
  []
 
 [31] [32] [33] [34]
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 1588--1588
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 1587--1587
 []    \T1/lmtt/m/n/10 install.packages(\TS1/lmtt/m/n/10 '\T1/lmtt/m/n/10 rmarkd
 own\TS1/lmtt/m/n/10 '\T1/lmtt/m/n/10 )  # atualiza o pacote rmarkdown do CRAN[]
  
  []
 
 
-Overfull \hbox (56.74289pt too wide) in paragraph at lines 1595--1596
+Overfull \hbox (56.74289pt too wide) in paragraph at lines 1594--1595
 \T1/lmr/m/n/10 (-20) O pa-cote \T1/lmr/bx/n/10 re-vealjs \T1/lmr/m/n/10 (-20) f
 ornece um tipo de out-put no for-mato \T1/lmtt/m/n/10 revealjs::revealjs_presen
 tation
@@ -747,7 +750,7 @@ tation
 Underfull \vbox (badness 2698) has occurred while \output is active []
 
 [35] [36] [37]
-Underfull \hbox (badness 4266) in paragraph at lines 1739--1740
+Underfull \hbox (badness 4266) in paragraph at lines 1738--1739
 []\T1/lmr/m/n/10 (+20) Você pode adi-cionar nu-mer-ação de seção aos cabeçal-ho
 s us-ando a
  []
@@ -755,21 +758,21 @@ s us-ando a
 [38]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 4.1 on input line 1798.
+(longtable)                in table 4.1 on input line 1797.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [39] [40] [41] [42] [43] [44]
-<img/Dash 1.png, id=405, 237.13594pt x 48.93282pt>
+<img/Dash 1.png, id=403, 237.13594pt x 48.93282pt>
 File: img/Dash 1.png Graphic file (type png)
 <use img/Dash 1.png>
-Package pdftex.def Info: img/Dash 1.png  used on input line 2083.
+Package pdftex.def Info: img/Dash 1.png  used on input line 2082.
 (pdftex.def)             Requested size: 237.14258pt x 48.93416pt.
-<img/Dash 2.png, id=406, 435.12563pt x 371.88937pt>
+<img/Dash 2.png, id=404, 435.12563pt x 371.88937pt>
 File: img/Dash 2.png Graphic file (type png)
 <use img/Dash 2.png>
-Package pdftex.def Info: img/Dash 2.png  used on input line 2087.
+Package pdftex.def Info: img/Dash 2.png  used on input line 2086.
 (pdftex.def)             Requested size: 345.02025pt x 294.87889pt.
 [45 <./img/Dash 1.png> <./img/Dash 2.png>] [46]
 Chapter 5.
@@ -780,11 +783,11 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2120 \begin{fluid-row}
+l.2119 \begin{fluid-row}
                          
 Here is how much of TeX's memory you used:
- 13690 strings out of 480478
- 198284 string characters out of 5905959
+ 13688 strings out of 480478
+ 198261 string characters out of 5905959
  483987 words of memory out of 5000000
  29139 multiletter control sequences out of 15000+600000
  609603 words of font info for 128 fonts, out of 8000000 for 9000

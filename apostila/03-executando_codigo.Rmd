@@ -165,7 +165,7 @@ SELECT * FROM trials WHERE subjects >= ?subjects
 
 Se você tiver muitos fragmentos SQL, pode ser útil definir um padrão para a opção de fragmento de conexão no fragmento de configuração, de forma que não seja necessário especificar a conexão em cada fragmento individual. Você consegue conforme mostra o exemplo 8.
 
-```{r setup, eval = FALSE}
+```{r, eval = FALSE}
 library(DBI)
 db = dbConnect(RSQLite::SQLite(), dbname = "sql.sqlite")
 knitr::opts_chunk$set(connection = "db")

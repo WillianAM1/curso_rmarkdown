@@ -24,7 +24,7 @@
 <meta name="author" content="Eduardo José de Campos Lemos Júnior, Samuel Vianna Quintanilha" />
 
 
-<meta name="date" content="2020-08-25" />
+<meta name="date" content="2020-08-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -151,7 +151,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="2.1.1" data-path="sintaxe.html"><a href="sintaxe.html#definindo-tipo-de-output"><i class="fa fa-check"></i><b>2.1.1</b> Definindo tipo de output</a></li>
 <li class="chapter" data-level="2.1.2" data-path="sintaxe.html"><a href="sintaxe.html#informações-gerais"><i class="fa fa-check"></i><b>2.1.2</b> Informações Gerais</a></li>
-<li class="chapter" data-level="2.1.3" data-path="sintaxe.html"><a href="sintaxe.html#sumario"><i class="fa fa-check"></i><b>2.1.3</b> Sumario</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="sintaxe.html"><a href="sintaxe.html#textos"><i class="fa fa-check"></i><b>2.2</b> Textos</a>
 <ul>
@@ -449,7 +448,7 @@ color: red;
 <h2><span class="header-section-number">3.5</span> Exemplo</h2>
 <p>Para que o código seja executado no meio de um texto, é necessário usar o caractere <code>`</code>, antes e depois do código descrito. Exemplo:</p>
 <div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="executando-código.html#cb60-1" aria-hidden="true"></a>Este texto gera<span class="op">:</span><span class="st"> `</span><span class="dt">r format(Sys.Date(), &quot;%d/%m/%Y&quot;)</span><span class="st">`</span>.</span></code></pre></div>
-<p>Este texto gera: 25/08/2020.</p>
+<p>Este texto gera: 31/08/2020.</p>
 <hr />
 <p>O código também pode ser executado dentro de blocos. Blocos de código são inseridos da seguinte forma:</p>
 <div class="sourceCode" id="cb61"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb61-1"><a href="executando-código.html#cb61-1" aria-hidden="true"></a><span class="in">```{r}</span></span>
@@ -457,7 +456,7 @@ color: red;
 <span id="cb61-3"><a href="executando-código.html#cb61-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
 <p>O que gera o seguinte output ao ser compilado seu arquivo R Markdown:</p>
 <div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="executando-código.html#cb62-1" aria-hidden="true"></a><span class="kw">format</span>(<span class="kw">Sys.Date</span>(), <span class="st">&quot;%d/%m/%Y&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;25/08/2020&quot;</code></pre>
+<pre><code>## [1] &quot;31/08/2020&quot;</code></pre>
 <hr />
 <p>Algumas das opções básicas de blocos de código <a href="executando-código.html#flags">já mencionadas</a>:</p>
 <div class="sourceCode" id="cb64"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb64-1"><a href="executando-código.html#cb64-1" aria-hidden="true"></a><span class="in">```{r, echo = FALSE}</span></span>
@@ -474,7 +473,7 @@ color: red;
 <span id="cb68-2"><a href="executando-código.html#cb68-2" aria-hidden="true"></a><span class="in">knitr::include_graphics(&quot;img/logoestats.jpeg&quot;)</span></span>
 <span id="cb68-3"><a href="executando-código.html#cb68-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
 <div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="executando-código.html#cb69-1" aria-hidden="true"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;img/logoestats.jpeg&quot;</span>)</span></code></pre></div>
-<p><img src="img/logoestats.jpeg" width="32" /></p>
+<p><img src="img/logoestats.jpeg" width="32" style="display: block; margin: auto;" /></p>
 <hr />
 <p>Inserindo tabelas dentro de blocos de código:</p>
 <div class="sourceCode" id="cb70"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb70-1"><a href="executando-código.html#cb70-1" aria-hidden="true"></a><span class="in">```{r}</span></span>
@@ -482,7 +481,7 @@ color: red;
 <span id="cb70-3"><a href="executando-código.html#cb70-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
 <div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="executando-código.html#cb71-1" aria-hidden="true"></a>knitr<span class="op">::</span><span class="kw">kable</span>(cars[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>,], <span class="dt">caption =</span> <span class="st">&quot;Carros&quot;</span>)</span></code></pre></div>
 <table>
-<caption><span id="tab:unnamed-chunk-28">Table 3.1: </span>Carros</caption>
+<caption><span id="tab:unnamed-chunk-29">Table 3.1: </span>Carros</caption>
 <thead>
 <tr class="header">
 <th align="right">speed</th>

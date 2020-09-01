@@ -113,7 +113,7 @@
 
 \title{Introdução ao R Markdown}
 \author{Eduardo José de Campos Lemos Júnior, Samuel Vianna Quintanilha}
-\date{2020-08-25}
+\date{2020-08-31}
 
 \begin{document}
 \maketitle
@@ -349,9 +349,6 @@ output: pdf_document:
 
 Por fim foi definida também a opção \texttt{title} que irá definir o título do documento final. Para maior customização do seu documento pelo preâmbulo veja o \protect\hyperlink{depois-crio}{capítulo 4}.
 
-\hypertarget{sumario}{%
-\subsection{Sumario}\label{sumario}}
-
 \hypertarget{textos}{%
 \section{Textos}\label{textos}}
 
@@ -458,7 +455,7 @@ Antes de inserir a imagem escolhida podemos definir a configuração global para
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r setup, include=FALSE\}}
+\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r setup include=FALSE\}}
 \InformationTok{library(knitr)}
 \InformationTok{opts\_chunk$set(echo = FALSE,}
 \InformationTok{               out.width = "10\%", }
@@ -521,7 +518,7 @@ No código a seguir é utilizado quando o seu projeto tem múltiplas saídas (PD
 \end{Highlighting}
 \end{Shaded}
 
-\begin{figure}
+\begin{figure}[h]
 
 {\centering \includegraphics[width=0.89in]{img/logoestats} 
 
@@ -566,9 +563,11 @@ Os dois exemplos abaixo são casos de curiosidades:
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics[width=0.89in]{img/logoestats}
-\includegraphics[width=0.89in]{img/logoestats}
-\includegraphics[width=0.89in]{img/logoestats}
+\begin{center}\includegraphics[width=0.89in]{img/logoestats} \end{center}
+
+\begin{center}\includegraphics[width=0.89in]{img/logoestats} \end{center}
+
+\begin{center}\includegraphics[width=0.89in]{img/logoestats} \end{center}
 
 \hypertarget{exemplos}{%
 \section{Exemplos}\label{exemplos}}
@@ -1006,7 +1005,7 @@ Para que o código seja executado no meio de um texto, é necessário usar o car
 \end{Highlighting}
 \end{Shaded}
 
-Este texto gera: 25/08/2020.
+Este texto gera: 31/08/2020.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -1029,7 +1028,7 @@ O que gera o seguinte output ao ser compilado seu arquivo R Markdown:
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "25/08/2020"
+## [1] "31/08/2020"
 \end{verbatim}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -1080,7 +1079,7 @@ Exemplo de utilização de blocos de código para inserir imagens como descrito 
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics[width=0.89in]{img/logoestats}
+\begin{center}\includegraphics[width=0.89in]{img/logoestats} \end{center}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -1102,7 +1101,7 @@ Inserindo tabelas dentro de blocos de código:
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-28}Carros}
+\caption{\label{tab:unnamed-chunk-29}Carros}
 \centering
 \begin{tabular}[t]{r|r}
 \hline
