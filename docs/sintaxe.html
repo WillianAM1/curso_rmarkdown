@@ -24,7 +24,7 @@
 <meta name="author" content="Eduardo José de Campos Lemos Júnior, Samuel Vianna Quintanilha" />
 
 
-<meta name="date" content="2020-08-31" />
+<meta name="date" content="2020-09-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -243,29 +243,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="prêambulo" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Prêambulo</h2>
 <p>No início de um documento R Markdown, é utilizada a linguagem <a href="https://pt.wikipedia.org/wiki/YAML">yaml</a> para definir as configurações do seu arquivo.
-As configurações disponiveis no preâmbulo do seu documento R Markdown são variadas, podendo inclusive ter diferentes opções para diferentes tipos de arquivos.
-Uma das configurações mais importantes para se definir no seu preambulo é o <a href="intro.html#possíveis-tipos-de-outputs">tipo de documento</a> a ser gerado.</p>
+As configurações disponíveis no preâmbulo do documento R Markdown são variadas, podendo inclusive ter diferentes opções para diferentes tipos de arquivos.
+Uma das configurações mais importantes para se definir no seu preâmbulo é o <a href="intro.html#possíveis-tipos-de-outputs">tipo de documento</a> a ser gerado.</p>
 <div id="definindo-tipo-de-output" class="section level3" number="2.1.1">
 <h3><span class="header-section-number">2.1.1</span> Definindo tipo de output</h3>
 <p>A opçao de <a href="intro.html#possíveis-tipos-de-outputs">tipo de documento</a> é definida da seguinte forma:</p>
 <pre><code>---
 output: pdf_document
 ---</code></pre>
-<p>No código acima, <code>output</code> foi definido como <code>pdf_document()</code>. Output é o formato final do seu documento, e <code>pdf_document()</code> é, dentro do pacote <code>rmarkdown</code>, o formato pdf. Para gerar arquivos de formatos diferentes, é necessário somente que seja modificado a opção de <code>output</code> no preâmbulo.
-Note que a opção definida no preâmbulo foi escrita entre duas linhas tracejadas, não é possível definir suas configurações fora dessas linhas tracejadas, da mesma forma, não é possível escrever partes do seu documento ou rodar códigos de <code>R</code> dentro das linhas.
-Por padrão no <code>yaml</code> utilizado no preâmbulo de R Markdown, a opção a ser definida é escrita sem espaços, seguida de dois pontos, espaço e então a definição da opção.
-Existem opções dentro de outras opções, como por exemplo <code>pdf_document()</code>, podemos definir configurações se o documento terá ou não sumário, quantos níveis de <a href="#cabeçalhos">cabeçalho</a> serão utilizados no sumário, etc.</p>
+<p>No código acima, <code>output</code> foi definido como <code>pdf_document</code>. Output é o formato final do seu documento, e <code>pdf_document</code> é, dentro do pacote <code>rmarkdown</code>, o formato pdf. Para gerar arquivos de formatos diferentes, é necessário somente que seja modificado a opção de <code>output</code> no preâmbulo.</p>
+<p>Note que a opção definida no preâmbulo foi escrita entre duas linhas tracejadas. Não é possível definir suas configurações fora dessas linhas tracejadas, da mesma forma, não é possível escrever partes do seu documento ou rodar códigos de <code>R</code> dentro das linhas.</p>
+<p>Por padrão no <code>yaml</code>, utilizado no preâmbulo de R Markdown, a opção a ser definida é escrita sem espaços, seguida de dois pontos, espaço e então a definição da opção.</p>
+<p>Existem ainda opções dentro de outras, como por exemplo <code>pdf_document</code>, em que é possível definir configurações se o documento terá ou não sumário, quantos níveis de <a href="#cabeçalhos">cabeçalho</a> serão utilizados no sumário, etc.</p>
 <pre><code>---
 output: pdf_document:
   toc: true
   toc_depth: 3
   latex_engine: xelatex
 ---</code></pre>
-<p>No exemplo acima, definimos <code>toc</code> (table of contents) como <code>true</code>, o que vai fazer com que seja gerado um sumário no documento final, perceba que em <code>yaml</code> o valor lógico de verdadeiro é escrito com todas as letras minúsculas. Definindo <code>toc_depth</code> como <code>3</code>, quando o sumário for gerado, até três níveis de <a href="#cabeçalhos">cabeçalho</a> apareceram no sumário.</p>
+<p>No exemplo acima, foi definido <code>toc</code> (table of contents) como <code>true</code>, o que vai fazer com que seja gerado um sumário no documento final, Vale ressaltar que em <code>yaml</code> o valor lógico de verdadeiro é escrito com todas as letras minúsculas. A opção <code>toc_depth: 3</code>, dedfine que ao gerar o sumário, até três níveis de <a href="#cabeçalhos">cabeçalho</a> aparecerão no sumário.</p>
 </div>
 <div id="informações-gerais" class="section level3" number="2.1.2">
 <h3><span class="header-section-number">2.1.2</span> Informações Gerais</h3>
-<p>Além do tipo de documento, e das opções de cada tipo de documento, podemos definir algumas opções gerais, como autor, título do documento, e data.</p>
+<p>Além do tipo de documento e das opções de cada tipo de documento, pode-se definir algumas opções gerais, como autor, título do documento, e data.</p>
 <pre><code>---
 author: &quot;Fulano&quot;
 output: pdf_document:
@@ -273,7 +273,7 @@ output: pdf_document:
   toc_depth: 3
   latex_engine: xelatex
 ---</code></pre>
-<p>Seguindo com o preâmbulo já feito anteriormente, foi adicionada a opção <code>author</code>, que irá definir o autor do seu documento. Por padrão, o autor irá aparecer na página inicial de diversos <a href="intro.html#possíveis-tipos-de-outputs">tipos de documento</a>.</p>
+<p>Seguindo com o preâmbulo já feito anteriormente, foi adicionada a opção <code>author</code>, que irá definir o autor do documento. Por padrão, o autor irá aparecer na página inicial de diversos <a href="intro.html#possíveis-tipos-de-outputs">tipos de documento</a>.</p>
 <pre><code>---
 date: 1 de janeiro de 1970
 output: pdf_document:
@@ -282,8 +282,8 @@ output: pdf_document:
   latex_engine: xelatex
 author: Fulano
 ---</code></pre>
-<p>Utilizando a opção <code>date</code> podemos definir uma data para o documento, semelhante ao autor, a data aparece por padrão no início dos documentos.
-Perceba que no exemplo acima, o nome do autor e a data foram escritas sem aspas, mas irão funcionar da mesma forma, perceba também que a opção do autor foi trocada de ordem, as opções do preâmbulo não necessitam de uma ordem específica, mas as opções de dentro de outras opções devem sempre estar abaixo da opção mae (sei la como chamar isso) e com uma identação a mais.</p>
+<p>Utilizando a opção <code>date</code> pode-se definir uma data para o documento. Do mesmo modo que o autor, a data aparece por padrão no início dos documentos.
+Vale ressaltar que, no exemplo acima, a escrita do nome do autor e data sem aspas não interfere no funcionamento do programa. Do mesmo modo, a troca da ordem dos elementos também não interfere, pois as opções do preâmbulo não necessitam de uma orgem específica. Contudo, as opções dentro de outras devem sempre estar abaixo da “opção mae” com uma identação a mais.</p>
 <pre><code>---
 author: Fulano
 date: 1 de janeiro de 1970
@@ -293,7 +293,7 @@ output: pdf_document:
   toc_depth: 3
   latex_engine: xelatex
 ---</code></pre>
-<p>Por fim foi definida também a opção <code>title</code> que irá definir o título do documento final. Para maior customização do seu documento pelo preâmbulo veja o <a href="#depois-crio">capítulo 4</a>.</p>
+<p>Por fim definiu-se também a opção <code>title</code> que indica o título do documento final. Mais customizações no documento são abordadas no <a href="#depois-crio">capítulo 4</a>.</p>
 </div>
 </div>
 <div id="textos" class="section level2" number="2.2">

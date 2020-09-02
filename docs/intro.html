@@ -24,7 +24,7 @@
 <meta name="author" content="Eduardo José de Campos Lemos Júnior, Samuel Vianna Quintanilha" />
 
 
-<meta name="date" content="2020-08-31" />
+<meta name="date" content="2020-09-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -241,11 +241,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Introdução ao R Markdown</h1>
 <p class="author"><em>Eduardo José de Campos Lemos Júnior, Samuel Vianna Quintanilha</em></p>
-<p class="date"><em>2020-08-31</em></p>
+<p class="date"><em>2020-09-01</em></p>
 </div>
 <div id="intro" class="section level1" number="1">
 <h1><span class="header-section-number">Capítulo 1</span> Introdução</h1>
-<p>Neste curso, iremos aprender a utilizar o R Markdown para gerar documentos.</p>
+<p>A fim de aprimorar os membros, e passar a utilizar o software para fins internos, este curso tem como propósito ensinar R Markdown para gerar documentos.</p>
 <div id="o-que-é" class="section level2" number="1.1">
 <h2><span class="header-section-number">1.1</span> O que é</h2>
 <p>Markdown é uma linguagem de marcação usada para formatar de maneira simples os textos redigidos e converte-los em HTML. John Gruber e Aaron Swartz, os criadores desse sistema, utilizaram marcadores como: <code>#, \* ,! , [] e ()</code>. Assim é possível inserir em nossos textos: títulos, listas, formatação de fonte, imagens e tabelas.
@@ -253,32 +253,39 @@ R Markdown é um documento criado no R Studio (Ou em outras IDEs) que possibilit
 </div>
 <div id="possíveis-tipos-de-outputs" class="section level2" number="1.2">
 <h2><span class="header-section-number">1.2</span> Possíveis tipos de Outputs</h2>
-<p>O R Markdown apresenta várias possibilidades de outputs (renderizar) nos formatos de documentos, apresentações, entre outros, sendo que em cada formato há várias opções de customização. Vejamos abaixo os principais:</p>
-<p>Documentos:</p>
+<p>O R Markdown apresenta várias possibilidades de outputs (tipos de renderização), tais como nos formatos de documentos, apresentações, entre outros, sendo que em cada formato há várias opções de customização. A seguir estão os principais formatos:</p>
+<p><strong>Documentos:</strong></p>
 <ul>
 <li>html_document – documento no formato HTML;</li>
 <li>pdf_document – documento no formato PDF (via o modelo LaTeX);</li>
 <li>word_document – documento no formato do editor de texto Microsoft Word (docx);</li>
-<li>odt_documento – documento no formato dos editores de texto Libre Office e OpenDocument;</li>
-<li>rtf_documento – documento no formato Rich Text Format (rtf).</li>
+<li>odt_document – documento no formato dos editores de texto Libre Office e OpenDocument;</li>
+<li>rtf_document – documento no formato Rich Text Format (rtf).</li>
 </ul>
-<p>Apresentações (slides):</p>
+<p><strong>Apresentações (slides):</strong></p>
 <ul>
 <li>ioslides_presentation – apresentação no formato HTML com ioslides;</li>
 <li>beamer_presentation – apresentação no formato PDF com LaTeX Beamer;</li>
 <li>powerpoint_presentation – apresentação no formato power point.</li>
 </ul>
-<p>Outros:</p>
+<p><strong>Outros:</strong></p>
 <ul>
 <li>flexdashboard::flex_dashboard – apresentação interativa com dashboards;</li>
 <li>htm_vignette – R package vignette no format HTML</li>
 <li>github_document – document no format GitHub</li>
 </ul>
-<p>Você pode escolher o output desejado quando for criar um documento conforme a figura 1. Para fazer deve-se clicar em <code>file &gt; new file &gt; R Markdown</code>. Abrirá uma aba e nela há quatro formas de output previamente estabelecidas, a saber: Document (HTML, PDF e Word), Presentation (HTML (ioslides), HTML (slidy), PDF (Beamer) e PowerPoint), Shiny (Shiny Document e Shy Presentation) e From Template (GitHub document e Package Vignette). Escolha uma e clique em OK.
-Além disso, você também pode alterar o formato utilizando a função abaixo, sendo que render refere-se ao local que está salvo seu documento e output_format ao tipo de documento desejado, conforme os exemplos apontados no início.</p>
+<p>Pode-se escolher o output desejado quando for criar um documento conforme a figura 1. Para fazê-lo, deve-se clicar em <code>file &gt; new file &gt; R Markdown</code>. Será aberta uma aba com quatro opções de output previamente estabelecidas, sendo elas:
+1) Document (HTML, PDF e Word);
+2) Presentation (HTML (ioslides);
+3)HTML (slidy);
+4) PDF (Beamer);
+5) PowerPoint;
+6) Shiny (Shiny Document e Shy Presentation)
+7) From Template (GitHub document e Package Vignette)</p>
+<p>Além disso, pode-se alterar o formato utilizando a função abaixo, sendo que <code>render</code> refere-se ao local que está salvo seu documento e <code>output_format</code> ao tipo de documento desejado, conforme os exemplos apontados no início.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="intro.html#cb1-1" aria-hidden="true"></a><span class="kw">render</span>(<span class="st">&quot;teste.Rmd&quot;</span>, <span class="dt">output_format =</span> <span class="st">&quot;pdf_document&quot;</span>)</span></code></pre></div>
 <p>O mesmo pode ser feito para outros formatos.
-Abaixo está presente uma lista com todos os formatos suportados por padrão com o pacote <code>rmarkdown</code>.</p>
+Abaixo está uma lista com todos os formatos suportados por padrão com o pacote <code>rmarkdown</code>.</p>
 <ul>
 <li><code>beamer_presentation</code></li>
 <li><code>context_document</code></li>
@@ -297,34 +304,33 @@ Abaixo está presente uma lista com todos os formatos suportados por padrão com
 </div>
 <div id="criando-o-primeiro-documento" class="section level2" number="1.3">
 <h2><span class="header-section-number">1.3</span> Criando o primeiro documento</h2>
-<p>Para gerar um arquivo em R Markdown é necessário abrir o programa R Studio, e instalar o pacote rmarkdown :
+<p>Para gerar um arquivo em R Markdown é necessário abrir o programa R Studio e instalar o pacote rmarkdown :
 <!--![](img/ins.png)--></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="intro.html#cb2-1" aria-hidden="true"></a><span class="kw">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</span></code></pre></div>
 <p>Após a instalação do pacote no R Studio, siga os seguintes passos:
 <img src="img/new.png" /></p>
 <p>Em seguida, escolha o tipo de arquivo desejado:
 <img src="img/file.png" /></p>
-<p>Obs: Para gerar documentos em PDF, é necessário ter instalado em seu computador o programa <a href="#download-rmd-e-latex">Latex</a></p>
-<p>Seguindo os passos acima, você terá criado o seu primeiro documento em R Markdown.</p>
-<p>Vale ressaltar que é possível utilizar o R Markdown sem que tenha instalado o R Studio, porém, é necessário ter instalado o programa <a href="https://pandoc.org">Pandoc</a></p>
+<p><em>Obs</em>: Para gerar documentos em PDF, é necessário ter instalado em seu computador o programa <a href="#download-rmd-e-latex">Latex</a>.</p>
+<p>Seguindo os passos acima, você terá criado o seu primeiro documento em R Markdown. Vale ressaltar que é possível utilizar o R Markdown sem que tenha instalado o R Studio, porém, é necessário ter instalado o programa <a href="https://pandoc.org">Pandoc</a>.</p>
 </div>
 <div id="download-miktex" class="section level2" number="1.4">
 <h2><span class="header-section-number">1.4</span> Download MiKTeX</h2>
-<p>Para exportar um arquivo PDF utilizando o R Markdown é necessário um motor LaTex pois é ele que irá converter o arquivo .tex em PDF.
-Então é necessário que tenha instalado em seu computador o programa MiKTeX,. Para fazer o download é só acessar o link: <a href="https://miktex.org/download" class="uri">https://miktex.org/download</a>.</p>
+<p>Para exportar um arquivo PDF utilizando o R Markdown é necessário um motor LaTex pois é ele que irá converter o arquivo .tex em PDF.</p>
+<p>É necessário que o programa MiKTeX esteja instalado no computador (download disponível em <a href="https://miktex.org/download" class="uri">https://miktex.org/download</a>).</p>
 <div id="windows" class="section level3" number="1.4.1">
 <h3><span class="header-section-number">1.4.1</span> Windows</h3>
-<p>Selecione a aba Windows e clique no botão de download:
+<p>Selecione a aba <em>Windows</em> e clique no botão de download.
 <img src="img/download_windowns_MiKTex.jpg" /></p>
 </div>
 <div id="linux" class="section level3" number="1.4.2">
 <h3><span class="header-section-number">1.4.2</span> Linux</h3>
-<p>Selecione a aba Linux em seguida a aba de sua distribuição Linux para receber as instruções de instalação:
+<p>Selecione a aba <em>Linux</em> em seguida a aba de sua distribuição Linux para receber as instruções de instalação.
 <img src="img/download_linux_MiKTex.jpg" /></p>
 </div>
 <div id="macos" class="section level3" number="1.4.3">
 <h3><span class="header-section-number">1.4.3</span> MacOS</h3>
-<p>Selecione a aba macOS e clique no botão de download:
+<p>Selecione a aba <em>MacOS</em> e clique no botão de download.
 <img src="img/download_macOS_MiKTex.jpg" /></p>
 
 </div>

@@ -15,11 +15,10 @@ github-repo: estatsej/curso_rmarkdown
 knitr::opts_chunk$set(fig.pos = "h", fig.align = "center")
 ```
 
-
 <!--chapter:end:00-index.Rmd-->
 
 # Introdução {#intro}
-Neste curso, iremos aprender a utilizar o R Markdown para gerar documentos.
+A fim de aprimorar os membros, e passar a utilizar o software para fins internos, este curso tem como propósito ensinar R Markdown para gerar documentos.
 
 ## O que é 
 Markdown é uma linguagem de marcação usada para formatar de maneira simples os textos redigidos e converte-los em HTML. John Gruber e Aaron Swartz, os criadores desse sistema, utilizaram marcadores como: `#, \* ,! , [] e ()`. Assim é possível inserir em nossos textos: títulos, listas, formatação de fonte, imagens e tabelas.
@@ -27,42 +26,50 @@ R Markdown é um documento criado no R Studio (Ou em outras IDEs) que possibilit
 
 
 ## Possíveis tipos de Outputs
-O R Markdown apresenta várias possibilidades de outputs (renderizar) nos formatos de documentos, apresentações, entre outros, sendo que em cada formato há várias opções de customização. Vejamos abaixo os principais: 
+O R Markdown apresenta várias possibilidades de outputs (tipos de renderização), tais como nos formatos de documentos, apresentações, entre outros, sendo que em cada formato há várias opções de customização. A seguir estão os principais formatos:
 
-Documentos:
+**Documentos:**
 
 - html_document – documento no formato HTML;
 - pdf_document – documento no formato PDF (via o modelo LaTeX);
 - word_document – documento no formato do editor de texto Microsoft Word (docx);
-- odt_documento – documento no formato dos editores de texto Libre Office e OpenDocument;
-- rtf_documento – documento no formato Rich Text Format (rtf).
+- odt_document – documento no formato dos editores de texto Libre Office e OpenDocument;
+- rtf_document – documento no formato Rich Text Format (rtf).
 
-Apresentações (slides):
+**Apresentações (slides):**
 
 - ioslides_presentation – apresentação no formato HTML com ioslides;
 - beamer_presentation – apresentação no formato PDF com LaTeX Beamer;
 - powerpoint_presentation – apresentação no formato power point.
 
-Outros:
+**Outros:**
 
 - flexdashboard::flex_dashboard – apresentação interativa com dashboards;
 - htm_vignette – R package vignette no format HTML
 - github_document – document no format GitHub
 
-Você pode escolher o output desejado quando for criar um documento conforme a figura 1.  Para fazer deve-se clicar em `file > new file > R Markdown`. Abrirá uma aba e nela há quatro formas de output previamente estabelecidas, a saber: Document (HTML, PDF e Word), Presentation (HTML (ioslides), HTML (slidy), PDF (Beamer) e PowerPoint), Shiny (Shiny Document e Shy Presentation) e From Template (GitHub document e Package Vignette).  Escolha uma e clique em OK. 
-Além disso, você também pode alterar o formato utilizando a função abaixo, sendo que render refere-se ao local que está salvo seu documento e output_format ao tipo de documento desejado, conforme os exemplos apontados no início. 
+Pode-se escolher o output desejado quando for criar um documento conforme a figura 1.  Para fazê-lo, deve-se clicar em `file > new file > R Markdown`. Será aberta uma aba com quatro opções de output previamente estabelecidas, sendo elas:
+1) Document (HTML, PDF e Word);
+2) Presentation (HTML (ioslides);
+3)HTML (slidy);
+4) PDF (Beamer);
+5) PowerPoint;
+6) Shiny (Shiny Document e Shy Presentation)
+7) From Template (GitHub document e Package Vignette)
+
+Além disso, pode-se alterar o formato utilizando a função abaixo, sendo que `render` refere-se ao local que está salvo seu documento e `output_format` ao tipo de documento desejado, conforme os exemplos apontados no início. 
 
 ```{r, eval = FALSE}
 render("teste.Rmd", output_format = "pdf_document")
 ```
 
 O mesmo pode ser feito para outros formatos. 
-Abaixo está presente uma lista com todos os formatos suportados por padrão com o pacote `rmarkdown`.
+Abaixo está uma lista com todos os formatos suportados por padrão com o pacote `rmarkdown`.
 
 `r knitr::combine_words(grep('^[^_]+_(document|presentation)$', ls(asNamespace('rmarkdown')), value = TRUE), sep = '\n', and = '', before = '- \x60', after = '\x60')`
 
 ## Criando o primeiro documento
-Para gerar um arquivo em R Markdown é necessário abrir o programa R Studio, e instalar o pacote rmarkdown :
+Para gerar um arquivo em R Markdown é necessário abrir o programa R Studio e instalar o pacote rmarkdown :
 <!--![](img/ins.png)-->
 ```{r, eval = FALSE}
 install.packages("rmarkdown")
@@ -74,43 +81,36 @@ Após a instalação do pacote no R Studio, siga os seguintes passos:
 Em seguida, escolha o tipo de arquivo desejado:
 ![](img/file.png)
 
-Obs: Para gerar documentos em PDF, é necessário ter instalado em seu computador o programa [Latex](#download-rmd-e-latex)
+*Obs*: Para gerar documentos em PDF, é necessário ter instalado em seu computador o programa [Latex](#download-rmd-e-latex).
 
-Seguindo os passos acima, você terá criado o seu primeiro documento em R Markdown.
-
-Vale ressaltar que é possível utilizar o R Markdown sem que tenha instalado o R Studio, porém, é necessário ter instalado o programa [Pandoc](https://pandoc.org)
+Seguindo os passos acima, você terá criado o seu primeiro documento em R Markdown. Vale ressaltar que é possível utilizar o R Markdown sem que tenha instalado o R Studio, porém, é necessário ter instalado o programa [Pandoc](https://pandoc.org).
 
 ## Download MiKTeX
 Para exportar um arquivo PDF utilizando o R Markdown é necessário um motor LaTex pois é ele que irá converter o arquivo .tex em PDF.
-Então é necessário que tenha instalado em seu computador o programa MiKTeX,. Para fazer o download é só acessar o link: https://miktex.org/download.
+
+É necessário que o programa MiKTeX esteja instalado no computador (download disponível em https://miktex.org/download).
 
 ### Windows
-Selecione a aba Windows e clique no botão de download:
+Selecione a aba *Windows* e clique no botão de download.
 ![](img/download_windowns_MiKTex.jpg)
 
 ### Linux
-Selecione a aba Linux em seguida a aba de sua distribuição Linux para receber as instruções de instalação:
+Selecione a aba *Linux* em seguida a aba de sua distribuição Linux para receber as instruções de instalação.
 ![](img/download_linux_MiKTex.jpg)
 
 ### MacOS
-Selecione a aba macOS e clique no botão de download:
+Selecione a aba *MacOS* e clique no botão de download.
 ![](img/download_macOS_MiKTex.jpg)
 
 <!--chapter:end:01-introducao.Rmd-->
 
----
-output:
-  word_document: default
-  html_document: default
-  pdf_document: default
----
 # Sintaxe
 
 ## Prêambulo
 
 No início de um documento R Markdown, é utilizada a linguagem [yaml](https://pt.wikipedia.org/wiki/YAML) para definir as configurações do seu arquivo.
-As configurações disponiveis no preâmbulo do seu documento R Markdown são variadas, podendo inclusive ter diferentes opções para diferentes tipos de arquivos.
-Uma das configurações mais importantes para se definir no seu preambulo é o [tipo de documento](#possíveis-tipos-de-outputs) a ser gerado.
+As configurações disponíveis no preâmbulo do documento R Markdown são variadas, podendo inclusive ter diferentes opções para diferentes tipos de arquivos.
+Uma das configurações mais importantes para se definir no seu preâmbulo é o [tipo de documento](#possíveis-tipos-de-outputs) a ser gerado.
 
 ### Definindo tipo de output
 
@@ -122,10 +122,13 @@ output: pdf_document
 ---
 ```
 
-No código acima, `output` foi definido como `pdf_document()`. Output é o formato final do seu documento, e `pdf_document()` é, dentro do pacote `rmarkdown`, o formato pdf. Para gerar arquivos de formatos diferentes, é necessário somente que seja modificado a opção de `output` no preâmbulo.
-Note que a opção definida no preâmbulo foi escrita entre duas linhas tracejadas, não é possível definir suas configurações fora dessas linhas tracejadas, da mesma forma, não é possível escrever partes do seu documento ou rodar códigos de `R` dentro das linhas.
-Por padrão no `yaml` utilizado no preâmbulo de R Markdown, a opção a ser definida é escrita sem espaços, seguida de dois pontos, espaço e então a definição da opção.
-Existem opções dentro de outras opções, como por exemplo `pdf_document()`, podemos definir configurações se o documento terá ou não sumário, quantos níveis de [cabeçalho](#cabeçalhos) serão utilizados no sumário, etc.
+No código acima, `output` foi definido como `pdf_document`. Output é o formato final do seu documento, e `pdf_document` é, dentro do pacote `rmarkdown`, o formato pdf. Para gerar arquivos de formatos diferentes, é necessário somente que seja modificado a opção de `output` no preâmbulo.
+
+Note que a opção definida no preâmbulo foi escrita entre duas linhas tracejadas. Não é possível definir suas configurações fora dessas linhas tracejadas, da mesma forma, não é possível escrever partes do seu documento ou rodar códigos de `R` dentro das linhas.
+
+Por padrão no `yaml`, utilizado no preâmbulo de R Markdown, a opção a ser definida é escrita sem espaços, seguida de dois pontos, espaço e então a definição da opção.
+
+Existem ainda opções dentro de outras, como por exemplo `pdf_document`, em que é possível definir configurações se o documento terá ou não sumário, quantos níveis de [cabeçalho](#cabeçalhos) serão utilizados no sumário, etc.
 
 ```
 ---
@@ -136,11 +139,11 @@ output: pdf_document:
 ---
 ```
 
-No exemplo acima, definimos `toc` (table of contents) como `true`, o que vai fazer com que seja gerado um sumário no documento final, perceba que em `yaml` o valor lógico de verdadeiro é escrito com todas as letras minúsculas. Definindo `toc_depth` como `3`, quando o sumário for gerado, até três níveis de [cabeçalho](#cabeçalhos) apareceram no sumário.
+No exemplo acima, foi definido `toc` (table of contents) como `true`, o que vai fazer com que seja gerado um sumário no documento final, Vale ressaltar que em `yaml` o valor lógico de verdadeiro é escrito com todas as letras minúsculas. A opção `toc_depth: 3`, dedfine que ao gerar o sumário, até três níveis de [cabeçalho](#cabeçalhos) aparecerão no sumário.
 
 ### Informações Gerais
 
-Além do tipo de documento, e das opções de cada tipo de documento, podemos definir algumas opções gerais, como autor, título do documento, e data.
+Além do tipo de documento e das opções de cada tipo de documento, pode-se definir algumas opções gerais, como autor, título do documento, e data.
 
 ```
 ---
@@ -152,7 +155,7 @@ output: pdf_document:
 ---
 ```
 
-Seguindo com o preâmbulo já feito anteriormente, foi adicionada a opção `author`, que irá definir o autor do seu documento. Por padrão, o autor irá aparecer na página inicial de diversos [tipos de documento](#possíveis-tipos-de-outputs).
+Seguindo com o preâmbulo já feito anteriormente, foi adicionada a opção `author`, que irá definir o autor do documento. Por padrão, o autor irá aparecer na página inicial de diversos [tipos de documento](#possíveis-tipos-de-outputs).
 
 ```
 ---
@@ -165,8 +168,8 @@ author: Fulano
 ---
 ```
 
-Utilizando a opção `date` podemos definir uma data para o documento, semelhante ao autor, a data aparece por padrão no início dos documentos.
-Perceba que no exemplo acima, o nome do autor e a data foram escritas sem aspas, mas irão funcionar da mesma forma, perceba também que a opção do autor foi trocada de ordem, as opções do preâmbulo não necessitam de uma ordem específica, mas as opções de dentro de outras opções devem sempre estar abaixo da opção mae (sei la como chamar isso) e com uma identação a mais.
+Utilizando a opção `date` pode-se definir uma data para o documento. Do mesmo modo que o autor, a data aparece por padrão no início dos documentos.
+Vale ressaltar que, no exemplo acima, a escrita do nome do autor e data sem aspas não interfere no funcionamento do programa. Do mesmo modo, a troca da ordem dos elementos também não interfere, pois as opções do preâmbulo não necessitam de uma orgem específica. Contudo, as opções dentro de outras devem sempre estar abaixo da "opção mae" com uma identação a mais.
 
 ```
 ---
@@ -180,7 +183,7 @@ output: pdf_document:
 ---
 ```
 
-Por fim foi definida também a opção `title` que irá definir o título do documento final. Para maior customização do seu documento pelo preâmbulo veja o [capítulo 4](#depois-crio).
+Por fim definiu-se também a opção `title` que indica o título do documento final. Mais customizações no documento são abordadas no [capítulo 4](#depois-crio).
 
 ## Textos
 
