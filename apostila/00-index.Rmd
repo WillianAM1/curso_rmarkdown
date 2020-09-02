@@ -14,4 +14,3 @@ github-repo: estatsej/curso_rmarkdown
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(fig.pos = "h", fig.align = "center")
 ```
-

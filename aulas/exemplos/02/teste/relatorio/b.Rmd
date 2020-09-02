@@ -1,0 +1,23 @@
+```{r setup, include = FALSE}
+knitr::kable(iris)
+df = iris[3:4,]
+```
+
+
+```{r}
+knitr::kable(df)
+```
+
+```{r, fig.align = "center", fig.cap = "TESTE"}
+plot(iris)
+```
+
+```{r, error = TRUE}
+fasfs
+```
+
+```{r, results = "asis"}
+estatsr::metodologia("teste t", bloco = TRUE)
+```
+
+

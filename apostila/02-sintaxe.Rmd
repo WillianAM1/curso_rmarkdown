@@ -1,16 +1,10 @@
----
-output:
-  word_document: default
-  html_document: default
-  pdf_document: default
----
 # Sintaxe
 
 ## Prêambulo
 
 No início de um documento R Markdown, é utilizada a linguagem [yaml](https://pt.wikipedia.org/wiki/YAML) para definir as configurações do seu arquivo.
-As configurações disponiveis no preâmbulo do seu documento R Markdown são variadas, podendo inclusive ter diferentes opções para diferentes tipos de arquivos.
-Uma das configurações mais importantes para se definir no seu preambulo é o [tipo de documento](#possíveis-tipos-de-outputs) a ser gerado.
+As configurações disponíveis no preâmbulo do documento R Markdown são variadas, podendo inclusive ter diferentes opções para diferentes tipos de arquivos.
+Uma das configurações mais importantes para se definir no seu preâmbulo é o [tipo de documento](#possíveis-tipos-de-outputs) a ser gerado.
 
 ### Definindo tipo de output
 
@@ -22,10 +16,13 @@ output: pdf_document
 ---
 ```
 
-No código acima, `output` foi definido como `pdf_document()`. Output é o formato final do seu documento, e `pdf_document()` é, dentro do pacote `rmarkdown`, o formato pdf. Para gerar arquivos de formatos diferentes, é necessário somente que seja modificado a opção de `output` no preâmbulo.
-Note que a opção definida no preâmbulo foi escrita entre duas linhas tracejadas, não é possível definir suas configurações fora dessas linhas tracejadas, da mesma forma, não é possível escrever partes do seu documento ou rodar códigos de `R` dentro das linhas.
-Por padrão no `yaml` utilizado no preâmbulo de R Markdown, a opção a ser definida é escrita sem espaços, seguida de dois pontos, espaço e então a definição da opção.
-Existem opções dentro de outras opções, como por exemplo `pdf_document()`, podemos definir configurações se o documento terá ou não sumário, quantos níveis de [cabeçalho](#cabeçalhos) serão utilizados no sumário, etc.
+No código acima, `output` foi definido como `pdf_document`. Output é o formato final do seu documento, e `pdf_document` é, dentro do pacote `rmarkdown`, o formato pdf. Para gerar arquivos de formatos diferentes, é necessário somente que seja modificado a opção de `output` no preâmbulo.
+
+Note que a opção definida no preâmbulo foi escrita entre duas linhas tracejadas. Não é possível definir suas configurações fora dessas linhas tracejadas, da mesma forma, não é possível escrever partes do seu documento ou rodar códigos de `R` dentro das linhas.
+
+Por padrão no `yaml`, utilizado no preâmbulo de R Markdown, a opção a ser definida é escrita sem espaços, seguida de dois pontos, espaço e então a definição da opção.
+
+Existem ainda opções dentro de outras, como por exemplo `pdf_document`, em que é possível definir configurações se o documento terá ou não sumário, quantos níveis de [cabeçalho](#cabeçalhos) serão utilizados no sumário, etc.
 
 ```
 ---
@@ -36,11 +33,11 @@ output: pdf_document:
 ---
 ```
 
-No exemplo acima, definimos `toc` (table of contents) como `true`, o que vai fazer com que seja gerado um sumário no documento final, perceba que em `yaml` o valor lógico de verdadeiro é escrito com todas as letras minúsculas. Definindo `toc_depth` como `3`, quando o sumário for gerado, até três níveis de [cabeçalho](#cabeçalhos) apareceram no sumário.
+No exemplo acima, foi definido `toc` (table of contents) como `true`, o que vai fazer com que seja gerado um sumário no documento final, Vale ressaltar que em `yaml` o valor lógico de verdadeiro é escrito com todas as letras minúsculas. A opção `toc_depth: 3`, dedfine que ao gerar o sumário, até três níveis de [cabeçalho](#cabeçalhos) aparecerão no sumário.
 
 ### Informações Gerais
 
-Além do tipo de documento, e das opções de cada tipo de documento, podemos definir algumas opções gerais, como autor, título do documento, e data.
+Além do tipo de documento e das opções de cada tipo de documento, pode-se definir algumas opções gerais, como autor, título do documento, e data.
 
 ```
 ---
@@ -52,7 +49,7 @@ output: pdf_document:
 ---
 ```
 
-Seguindo com o preâmbulo já feito anteriormente, foi adicionada a opção `author`, que irá definir o autor do seu documento. Por padrão, o autor irá aparecer na página inicial de diversos [tipos de documento](#possíveis-tipos-de-outputs).
+Seguindo com o preâmbulo já feito anteriormente, foi adicionada a opção `author`, que irá definir o autor do documento. Por padrão, o autor irá aparecer na página inicial de diversos [tipos de documento](#possíveis-tipos-de-outputs).
 
 ```
 ---
@@ -65,8 +62,8 @@ author: Fulano
 ---
 ```
 
-Utilizando a opção `date` podemos definir uma data para o documento, semelhante ao autor, a data aparece por padrão no início dos documentos.
-Perceba que no exemplo acima, o nome do autor e a data foram escritas sem aspas, mas irão funcionar da mesma forma, perceba também que a opção do autor foi trocada de ordem, as opções do preâmbulo não necessitam de uma ordem específica, mas as opções de dentro de outras opções devem sempre estar abaixo da opção mae (sei la como chamar isso) e com uma identação a mais.
+Utilizando a opção `date` pode-se definir uma data para o documento. Do mesmo modo que o autor, a data aparece por padrão no início dos documentos.
+Vale ressaltar que, no exemplo acima, a escrita do nome do autor e data sem aspas não interfere no funcionamento do programa. Do mesmo modo, a troca da ordem dos elementos também não interfere, pois as opções do preâmbulo não necessitam de uma orgem específica. Contudo, as opções dentro de outras devem sempre estar abaixo da "opção mae" com uma identação a mais.
 
 ```
 ---
@@ -80,7 +77,7 @@ output: pdf_document:
 ---
 ```
 
-Por fim foi definida também a opção `title` que irá definir o título do documento final. Para maior customização do seu documento pelo preâmbulo veja o [capítulo 4](#depois-crio).
+Por fim definiu-se também a opção `title` que indica o título do documento final. Mais customizações no documento são abordadas no [capítulo 4](#depois-crio).
 
 ## Textos
 
