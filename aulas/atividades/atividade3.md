@@ -1,0 +1,3 @@
+- Escreva 4 frases relacionadas a estatística, cada um com uma sintaxe de texto.
+- Demonstre a fórmula de baskara.
+- Faça uma lista das músicas que você mais gosta, ultilizando seus respectivos links.

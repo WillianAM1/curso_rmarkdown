@@ -102,6 +102,27 @@ Selecione a aba *Linux* em seguida a aba de sua distribuição Linux para recebe
 Selecione a aba *MacOS* e clique no botão de download.
 ![](img/download_macOS_MiKTex.jpg)
 
+#### Configuração do MikTek para Windowns
+
+Após ter instalado o MikTek, deve-se atualizá-lo. Para isso, ao abrir o MikTek console seleciona-se a opção chek for updates. 
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("img/01.png")
+```
+
+
+Quando o MikTek checar as atualizações, deve-se prosseguir para a aba update e selecionar update now. 
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("img/02.png")
+```
+
+Por fim, na aba settings, deve-se alterar em You can chose whether missing packages are to be installed on-the-fly  a opção Ask me para Always install missing packages on-the-fly. 
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("img/03.png")
+```
+
 <!--chapter:end:01-introducao.Rmd-->
 
 # Sintaxe

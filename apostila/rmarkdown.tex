@@ -110,10 +110,13 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
 
 \title{Introdução ao R Markdown}
 \author{Eduardo José de Campos Lemos Júnior, Samuel Vianna Quintanilha}
-\date{2020-09-01}
+\date{2020-09-11}
 
 \begin{document}
 \maketitle
@@ -273,6 +276,21 @@ Selecione a aba \emph{Linux} em seguida a aba de sua distribuição Linux para r
 
 Selecione a aba \emph{MacOS} e clique no botão de download.
 \includegraphics{img/download_macOS_MiKTex.jpg}
+
+\hypertarget{configurauxe7uxe3o-do-miktek-para-windowns}{%
+\subsubsection{Configuração do MikTek para Windowns}\label{configurauxe7uxe3o-do-miktek-para-windowns}}
+
+Após ter instalado o MikTek, deve-se atualizá-lo. Para isso, ao abrir o MikTek console seleciona-se a opção chek for updates.
+
+\begin{center}\includegraphics[width=1\linewidth]{img/01} \end{center}
+
+Quando o MikTek checar as atualizações, deve-se prosseguir para a aba update e selecionar update now.
+
+\begin{center}\includegraphics[width=1\linewidth]{img/02} \end{center}
+
+Por fim, na aba settings, deve-se alterar em You can chose whether missing packages are to be installed on-the-fly a opção Ask me para Always install missing packages on-the-fly.
+
+\begin{center}\includegraphics[width=1\linewidth]{img/03} \end{center}
 
 \hypertarget{sintaxe}{%
 \chapter{Sintaxe}\label{sintaxe}}
@@ -534,7 +552,7 @@ No código a seguir é utilizado quando o seu projeto tem múltiplas saídas (PD
 
 }
 
-\caption{Logo da Estats}\label{fig:unnamed-chunk-3}
+\caption{Logo da Estats}\label{fig:unnamed-chunk-6}
 \end{figure}
 
 Os dois exemplos abaixo são casos de curiosidades:
@@ -1015,7 +1033,7 @@ Para que o código seja executado no meio de um texto, é necessário usar o car
 \end{Highlighting}
 \end{Shaded}
 
-Este texto gera: 01/09/2020.
+Este texto gera: 11/09/2020.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -1038,7 +1056,7 @@ O que gera o seguinte output ao ser compilado seu arquivo R Markdown:
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "01/09/2020"
+## [1] "11/09/2020"
 \end{verbatim}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -1111,7 +1129,7 @@ Inserindo tabelas dentro de blocos de código:
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-29}Carros}
+\caption{\label{tab:unnamed-chunk-32}Carros}
 \centering
 \begin{tabular}[t]{r|r}
 \hline
