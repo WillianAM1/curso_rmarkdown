@@ -614,36 +614,88 @@ Os dois exemplos abaixo são casos de curiosidades:
 \hypertarget{flags}{%
 \section{Flags}\label{flags}}
 
-There are a large number of chunk options\index{chunk options} in \textbf{knitr} documented at \url{https://yihui.name/knitr/options}. We list a subset of them below:
+Veja abaixo algumas flags que são costumeiramente utilizadas em nossos relatórios.
 
-\begin{itemize}
-\item
-  \texttt{eval}: Whether to evaluate a code chunk.
-\item
-  \texttt{echo}: Whether to echo the source code in the output document (someone may not prefer reading your smart source code but only results).
-\item
-  \texttt{results}: When set to \texttt{\textquotesingle{}hide\textquotesingle{}}, text output will be hidden; when set to \texttt{\textquotesingle{}asis\textquotesingle{}}, text output is written ``as-is'', e.g., you can write out raw Markdown text from R code (like \texttt{cat(\textquotesingle{}**Markdown**\ is\ cool.\textbackslash{}n\textquotesingle{})}). By default, text output will be wrapped in verbatim elements (typically plain code blocks).
-\item
-  \texttt{collapse}: Whether to merge text output and source code into a single code block in the output. This is mostly cosmetic: \texttt{collapse\ =\ TRUE} makes the output more compact, since the R source code and its text output are displayed in a single output block. The default \texttt{collapse\ =\ FALSE} means R expressions and their text output are separated into different blocks.
-\item
-  \texttt{warning}, \texttt{message}, and \texttt{error}: Whether to show warnings, messages, and errors in the output document. Note that if you set \texttt{error\ =\ FALSE}, \texttt{rmarkdown::render()} will halt on error in a code chunk, and the error will be displayed in the R console. Similarly, when \texttt{warning\ =\ FALSE} or \texttt{message\ =\ FALSE}, these messages will be shown in the R console.
-\item
-  \texttt{include}: Whether to include anything from a code chunk in the output document. When \texttt{include\ =\ FALSE}, this whole code chunk is excluded in the output, but note that it will still be evaluated if \texttt{eval\ =\ TRUE}. When you are trying to set \texttt{echo\ =\ FALSE}, \texttt{results\ =\ \textquotesingle{}hide\textquotesingle{}}, \texttt{warning\ =\ FALSE}, and \texttt{message\ =\ FALSE}, chances are you simply mean a single option \texttt{include\ =\ FALSE} instead of suppressing different types of text output individually.
-\item
-  \texttt{cache}: Whether to enable caching. If caching is enabled, the same code chunk will not be evaluated the next time the document is compiled (if the code chunk was not modified), which can save you time. However, I want to honestly remind you of the two hard problems in computer science (via Phil Karlton): naming things, and cache invalidation. Caching can be handy but also tricky sometimes.
-\item
-  \texttt{fig.width} and \texttt{fig.height}: The (graphical device) size of R plots in inches. R plots in code chunks are first recorded via a graphical device in \textbf{knitr}, and then written out to files. You can also specify the two options together in a single chunk option \texttt{fig.dim}, e.g., \texttt{fig.dim\ =\ c(6,\ 4)} means \texttt{fig.width\ =\ 6} and \texttt{fig.height\ =\ 4}.
-\item
-  \texttt{out.width} and \texttt{out.height}: The output size of R plots in the output document. These options may scale images. You can use percentages, e.g., \texttt{out.width\ =\ \textquotesingle{}80\%\textquotesingle{}} means 80\% of the page width.
-\item
-  \texttt{fig.align}: The alignment of plots. It can be \texttt{\textquotesingle{}left\textquotesingle{}}, \texttt{\textquotesingle{}center\textquotesingle{}}, or \texttt{\textquotesingle{}right\textquotesingle{}}.
-\item
-  \texttt{dev}: The graphical device to record R plots. Typically it is \texttt{\textquotesingle{}pdf\textquotesingle{}} for LaTeX output, and \texttt{\textquotesingle{}png\textquotesingle{}} for HTML output, but you can certainly use other devices, such as \texttt{\textquotesingle{}svg\textquotesingle{}} or \texttt{\textquotesingle{}jpeg\textquotesingle{}}.
-\item
-  \texttt{fig.cap}: The figure caption.
-\item
-  \texttt{child}: You can include a child document in the main document. This option takes a path to an external file.
-\end{itemize}
+Para encontrar mais flags para o seu relatório acesse a \href{https://yihui.name/knitr/options}{documentação} do \textbf{knitr}.
+
+\texttt{eval}: Não executa o chunk quando recebe o parâmetro \texttt{FALSE}, porém o código do chunk será exibido no arquivo final.
+
+\texttt{echo}: Se recebe o parâmetro \texttt{FALSE}, o código chunk será executado, mas não exibido no relatório.
+
+\texttt{results}: Modifica a saída de código chunk. Para essa flag temos os seguntes parâmetros: \texttt{markup}, \texttt{hold}, \texttt{asis} e \texttt{hide}. Veja nos exemplos a seguir as modificações decorrentes dos diferentes parâmetros.
+
+\texttt{results=\textquotesingle{}markup\textquotesingle{}}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{print}\NormalTok{(}\StringTok{"Curso de R markdown"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Curso de R markdown"
+\end{verbatim}
+
+\texttt{results="hold"}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{print}\NormalTok{(}\StringTok{"Curso de R markdown"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Curso de R markdown"
+\end{verbatim}
+
+\texttt{results=\textquotesingle{}asis\textquotesingle{}}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{print}\NormalTok{(}\StringTok{"Curso de R markdown"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+{[}1{]} ``Curso de R markdown''
+
+\texttt{results=\textquotesingle{}hide\textquotesingle{}}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{print}\NormalTok{(}\StringTok{"Curso de R markdown"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\texttt{collapse}: Comprime o código do chunk e sua saída em apenas um bloco de código no relatório final. Exemplo:
+
+\texttt{coollapse=TRUE}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{print}\NormalTok{(}\StringTok{"Curso de R markdown"}\NormalTok{)}
+\CommentTok{\#\# [1] "Curso de R markdown"}
+\end{Highlighting}
+\end{Shaded}
+
+\texttt{warning} e \texttt{message}: Quando recebem o parâmetro \texttt{FALSE}, não será exibido mensagens ou avisos decorrentes de algum código do chunk no relatório final.
+
+\texttt{error}: Usando o parâmetro \texttt{TRUE}, se houver algum erro no código do chunk, será exibido no relatório final.
+
+\texttt{include}: Quando recebe o parâmetro \texttt{FALSE}, oculta o código e o resultado do chunk, mas o código será executado.
+
+\texttt{cache}: Códigos podem ser compilados e seus resultados armazenados em cache. Se o código não for alterado, não sera necessário compila-lo novamente.
+
+\texttt{fig.width\ and\ fig.height} ou \texttt{fig.dim=c(x,y)}: Dimensiona o tamanho da figura em polegadas. Exemplo: \texttt{fig.width=2\ and\ fig.height=2} ou \texttt{fig.dim=c(2,2)}.
+
+\texttt{out.width\ and\ out.height}: Dimensiona a figura com a porcentagem da altura e largura desejada. Exemplo: \texttt{out.width="20\%"}.
+
+\texttt{fig.aligh}: Define o alinhamento da figura na página. Isso ocorre de acordo com os parâmetros: \texttt{left}, \texttt{center}, \texttt{right} e \texttt{left}.
+
+\texttt{dev}: Altera o formato de arquivo das figuras do relatório. Podemos usar os parâmetros: \texttt{’svg’}, \texttt{’jpeg’}, \texttt{\textquotesingle{}pdf\textquotesingle{}}, \texttt{’png’}, \texttt{’bmp’}, entre outros.
+
+\texttt{fig.cap}: Adiciona legenda em figuras do relatório. A legenda será passada como parâmetro desta maneira: \texttt{fig.cap=”legenda”}.
+
+\texttt{child}: Podemos rodar outro arquivo.Rmd dentro de um novo código. Ideal para ser usado em trabalhos longo que necessitem de maior organização. Para acessar o arquivo.Rmd desejado é preciso passar seu endereço como parâmetro, deste modo:\texttt{child=“endereço//arquivo.Rmd”}.
 
 \hypertarget{linguagens-suportadas}{%
 \section{Linguagens Suportadas}\label{linguagens-suportadas}}
@@ -1130,7 +1182,7 @@ Inserindo tabelas dentro de blocos de código:
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-32}Carros}
+\caption{\label{tab:unnamed-chunk-37}Carros}
 \centering
 \begin{tabular}[t]{r|r}
 \hline
