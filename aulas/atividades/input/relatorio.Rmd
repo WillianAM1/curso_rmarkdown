@@ -1,0 +1,38 @@
+---
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+    number_section: false
+    template: template.tex
+indent: true
+params:
+  titulo_projeto: NA
+  conteudo_relatorio: NA
+  n_projeto: NA
+  subtitulo: NA
+---
+
+```{r setup, echo  = FALSE, include = FALSE}
+#- \usepackage[brazil]{babel}
+library(knitr)
+Sys.setlocale("LC_TIME", "pt_BR.UTF-8")
+
+```
+
+\begin{center}
+\begin{Large}
+\textbf{`r params$titulo_projeto`}\\
+\end{Large}
+\textbf{`r params$subtitulo`}
+\end{center}
+
+\vspace{0.5cm}
+
+`r params$conteudo_relatorio`
+
+\vfill
+
+\begin{center}
+Maringá, `r format(Sys.Date(), format = "%d de %B de %Y")`
+\end{center}

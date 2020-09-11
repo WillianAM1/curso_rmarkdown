@@ -1,0 +1,26 @@
+---
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+    number_section: false
+    template: input/template.tex
+indent: true
+---
+
+```{r setup, echo  = FALSE, include = FALSE}
+#- \usepackage[brazil]{babel}
+library(knitr)
+Sys.setlocale("LC_TIME", "pt_BR.UTF-8")
+```
+
+\begin{center}
+\begin{Large}
+Atividade 4
+\end{Large}
+\end{center}
+
+\vspace{0.5cm}
+
+- Crie um arquivo no formato HTML com a opção `toc_float` definida como verdadeira
+- Crie um no formato PDF, modificando a opção `toc_depth` para 1.

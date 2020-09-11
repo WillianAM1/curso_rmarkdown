@@ -1,0 +1,28 @@
+---
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+    number_section: false
+    template: input/template.tex
+indent: true
+---
+
+```{r setup, echo  = FALSE, include = FALSE}
+#- \usepackage[brazil]{babel}
+library(knitr)
+Sys.setlocale("LC_TIME", "pt_BR.UTF-8")
+```
+
+\begin{center}
+\begin{Large}
+Atividade 7
+\end{Large}
+\end{center}
+
+\vspace{0.5cm}
+
+- Crie um arquivo R Markdown
+- Crie um bloco de códigos `setup` definindo opções globais para outros blocos de código não printarem códigos. Utilize `knitr::opt_chunks$set()`.
+- Crie um bloco de códigos gerando um gráfico e defina manualmente o alinhamento, a altura e a largura do gráfico gerado.
+- Crie um bloco de código que printe um banco de dados e printe também o código utilizado.

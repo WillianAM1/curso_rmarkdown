@@ -1,4 +1,0 @@
-- Gerar o primeiro documento em R Markdown.
-- Alterar o título para "Curso de R Markdown" ('title').
-- Coloque seu nome como autor ('author').
-- Substitua o texto presente no arquivo por um breve texto sobre Estatística.

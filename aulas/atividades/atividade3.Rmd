@@ -1,0 +1,27 @@
+---
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+    number_section: false
+    template: input/template.tex
+indent: true
+---
+
+```{r setup, echo  = FALSE, include = FALSE}
+#- \usepackage[brazil]{babel}
+library(knitr)
+Sys.setlocale("LC_TIME", "pt_BR.UTF-8")
+```
+
+\begin{center}
+\begin{Large}
+Atividade 3
+\end{Large}
+\end{center}
+
+\vspace{0.5cm}
+
+- Escreva 4 frases relacionadas a estatística, cada um com uma sintaxe de texto.
+- Demonstre a fórmula de baskara.
+- Faça uma lista das músicas que você mais gosta, ultilizando seus respectivos links.

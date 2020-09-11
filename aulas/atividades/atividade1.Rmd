@@ -1,0 +1,27 @@
+---
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+    number_section: false
+    template: input/template.tex
+indent: true
+---
+
+```{r setup, echo  = FALSE, include = FALSE}
+#- \usepackage[brazil]{babel}
+library(knitr)
+Sys.setlocale("LC_TIME", "pt_BR.UTF-8")
+```
+
+\begin{center}
+\begin{Large}
+Atividade 1
+\end{Large}
+\end{center}
+
+\vspace{0.5cm}
+
+- Faça a [instalação do RMarkdown](https://estatsej.github.io/curso_rmarkdown/intro.html#criando-o-primeiro-documento).
+
+Lembre-se que para arquivos em PDF deve ser instalado o [MikTeX](https://estatsej.github.io/curso_rmarkdown/intro.html#download-miktex).

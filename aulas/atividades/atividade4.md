@@ -1,2 +1,0 @@
-- Crie um arquivo no formato HTML com a opção `toc_float` definida como verdadeira
-- Crie um no formato PDF, modificando a opção `toc_depth` para 1.

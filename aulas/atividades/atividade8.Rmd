@@ -1,0 +1,25 @@
+---
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+    number_section: false
+    template: input/template.tex
+indent: true
+---
+
+```{r setup, echo  = FALSE, include = FALSE}
+#- \usepackage[brazil]{babel}
+library(knitr)
+Sys.setlocale("LC_TIME", "pt_BR.UTF-8")
+```
+
+\begin{center}
+\begin{Large}
+Atividade 8
+\end{Large}
+\end{center}
+
+\vspace{0.5cm}
+
+- Utilizando o pacote `estatsr` crie um breve relatório com o tema de sua escolha.
