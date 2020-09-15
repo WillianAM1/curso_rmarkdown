@@ -1,14 +1,1 @@
----
-date: 01/09/2020
-author: Estats Consultoria
-title: Teste
-output:
-  pdf_document:
-    toc: true
-    toc_depth: 2
-    latex_engine: xelatex
----
-
-\maketitle
-
 # Teste
