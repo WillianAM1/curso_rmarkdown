@@ -12,3 +12,4 @@ Os slides podem ser acessados no [link](https://estatsej.github.io/curso_rmarkdo
 - [ ] Ajustar inputs de imagem para usar {float} [H] para manter posição no pdf (fig.pos = "H")
 - [ ] Arrumar referência para pdf
 - [x] Adicionar instruções de uso de pacotes de LaTeX com MikTex
+- [ ] No capitulo 2 adicionar codigo sobescrito, formulas matematicas e citações com bibtex
