@@ -1,0 +1,10 @@
+---
+output: pdf_document
+author: Fulano
+date: xx/xx/xxxx
+title: Teste
+---
+
+\maketitle
+
+Teste

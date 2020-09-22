@@ -1,0 +1,14 @@
+---
+output: 
+  pdf_document:
+    toc: true
+    toc_depth: 2
+    latex_engine: xelatex
+author: Fulano
+date: xx/xx/xxxx
+title: Teste
+---
+
+\maketitle
+
+Teste

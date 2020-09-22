@@ -1,0 +1,25 @@
+---
+header-includes:
+  - \usepackage[portuges]{babel}
+output:
+  pdf_document:
+    citation_package: natbib
+    toc: true
+    toc_depth: 3
+    number_sections: false
+    latex_engine: xelatex
+title: Teste
+author: Fulano
+date: xx/xx/xxxx
+bibliography: [bibliografia.bib]
+---
+
+\maketitle
+
+# Teste
+
+## Teste citação
+
+@1999estatistica
+
+\newpage

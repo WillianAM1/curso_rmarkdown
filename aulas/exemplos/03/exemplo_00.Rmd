@@ -1,14 +1,66 @@
----
-date: 01/09/2020
-author: Estats Consultoria
-title: Teste
-output:
-  pdf_document:
-    toc: true
-    toc_depth: 2
-    latex_engine: xelatex
----
+# Seção 1
 
-\maketitle
+## Texto em negrito
 
-# Teste
+**Texto**
+
+__Texto__
+
+## Texto em itálico
+
+*Texto*
+
+_Texto_
+
+## Texto em negrito itálico
+
+**_Texto_**
+
+__*Texto*__
+
+## Texto tachado
+
+~~Texto~~
+
+## Texto sobrescrito
+
+texto^sobrescrito^
+
+## Texto sobescrito
+
+texto~sobescrito~
+
+# Seção 2
+
+## Links
+
+[Departamento de Estatística](des.uem.br)
+
+# Seção 3
+
+## Fórmulas matemáticas
+
+$\lambda e^{-\lambda x}$
+
+$$\color{red}{\frac{1}{\sqrt{2\sigma^2\pi}}
+e^{-\frac{1}{2}
+  \left(\frac{x - \mu}{\sigma}\right)^2}
+}$$
+
+# Seção 4
+
+## Listas
+
+- item
++ item
+* item
+ - item
+ - item
+ - item
+    - item
+    - item
+    - item
+    
+1.
+2.
+3.

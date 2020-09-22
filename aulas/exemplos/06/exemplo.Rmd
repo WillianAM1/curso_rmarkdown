@@ -1,0 +1,40 @@
+---
+output: html_document
+---
+
+
+# Bloco de código
+
+```{r}
+5 + 5
+```
+
+```{r}
+data.frame(a = 1:5, b = 6:10)
+```
+
+```{r}
+df <- data.frame(a = 1:5, b = 6:10)
+knitr::kable(df)
+```
+
+```{r}
+plot(df$a, df$b, type = "p")
+```
+
+```{r}
+knitr::kable(head(iris))
+```
+
+```{r}
+plot(iris$Sepal.Length, iris$Petal.Length, type = "p")
+```
+
+
+# Código em linha
+
+`r 5+5`
+
+`r df$a`
+
+`r knitr::kable(head(iris))`

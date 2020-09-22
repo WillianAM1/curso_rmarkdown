@@ -1,0 +1,45 @@
+---
+output: html_document
+title: "Exemplo Aula 7"
+---
+
+# Bloco de código
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo = FALSE}
+data.frame(a = 1:5, b = 6:10)
+```
+
+```{r, error = TRUE}
+dat.frame(a = 1:5, b = 6:10)
+```
+
+```{r}
+df <- data.frame(a = 1:5, b = 6:10)
+cat(knitr::kable(df))
+```
+
+```{r, results = "asis"}
+df <- data.frame(a = 1:5, b = 6:10)
+knitr::kable(df, "latex")
+```
+
+```{r, include = FALSE}
+df$c <- df$a + df$b
+plot(df$a, df$c, type = "p")
+```
+
+```{r}
+knitr::kable(df)
+```
+
+```{r, fig.width = 4, fig.height = 4, fig.align = "left", fig.cap = "Exemplo", dev = "svg"}
+plot(iris$Sepal.Length, iris$Petal.Length, type = "p")
+```
+
+```{r teste, eval = TRUE, results = "asis", collapse = TRUE, warning = FALSE, message = FALSE, error = FALSE, include = TRUE, fig.width = 7, fig.height = 5, fig.align = "center", dev = "png", fig.cap = "plot(cars)"}
+plot(cars, pch = 19)
+```

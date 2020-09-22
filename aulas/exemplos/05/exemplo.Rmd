@@ -1,0 +1,47 @@
+---
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Configuração
+
+```{r setup}
+library(knitr)
+opts_chunk$set(echo = FALSE,
+               out.width = "10%", 
+               fig.align = "center")
+```
+
+# Sintaxe de Markdown
+
+![](http://www.des.uem.br/imagensdiversas/estats/@@images/f98adf92-29aa-41da-a064-b5f5722f74f1.jpeg)
+
+![](img/1.png){width=10%}
+
+# Bloco de código
+
+## Tamanho da imagem
+
+```{r, out.width="30%", fig.cap = "Logo da Estats"}
+knitr::include_graphics("img/1.png")
+```
+
+```{r, out.width="300px", fig.cap = "Logo da Estats"}
+knitr::include_graphics("img/1.png")
+```
+
+## Alinhamento
+
+```{r, out.width="30%", fig.cap = "Logo da Estats", fig.align = "left"}
+knitr::include_graphics("img/1.png")
+```
+
+```{r, out.width="300px", fig.cap = "Logo da Estats", fig.align = "right"}
+knitr::include_graphics("img/1.png")
+```
+
+```{r}
+knitr::include_graphics(rep("img/1.png", 3))
+```
