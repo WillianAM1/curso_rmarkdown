@@ -1,0 +1,12 @@
+---
+title: "Atividade 5"
+output: html_document
+---
+
+O link para a imagem pode ser um enderço Web:
+
+![Logo do R](http://developer.r-project.org/Logo/Rlogo-5.png)
+
+Ou um endereço local:
+
+![Logo do Markdown](C:\Users\...\...\...\...\...\\imagem1.bmp)

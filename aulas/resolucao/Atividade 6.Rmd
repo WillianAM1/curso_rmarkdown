@@ -1,0 +1,11 @@
+---
+title: "Atividade 6"
+output: html_document
+---
+
+```{r grafico, echo=TRUE}
+dados = datasets::women
+
+print(dados)
+plot(dados)
+```
