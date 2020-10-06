@@ -755,7 +755,79 @@ Se fosse criado um cabeçalho da forma acima, poderiamos modificar esta seção 
   
 É possível definir opções no preâmbulo configurações para as imagens geradas em blocos de código. Nessas opções podemos definir atributos como altura da imagem, largura da imagem, etc.
 
-Utilizando a opção `fig_width` é possível definir a largura das imagens geradas, e utilizando
+Utilizando a opção `fig_width` é possível definir a largura das imagens geradas, e utilizando `fig_height` é possivel controlar altura da imagem.
+
+`fig_caption` comando para colocar legenda nas figuras.
+
+```
+---
+title: "Estats"
+output:
+  html_document:
+    fig_width: 7
+    fig_height: 6
+    fig_caption: true
+---
+```
+
+### Impressão de Tabela
+
+Quando a `df_print` opção é definida como `paged`, as tabelas são impressas como tabelas HTML com suporte para paginação em linhas e colunas.
+
+TABELA
+
+```
+---
+title: "Estats"
+output:
+  html_document:
+    df_print: paged
+---
+```
+
+### Personalização avançada
+
+**Mantendo Markdown**
+
+Quando o `knitr` processa um arquivo de entrada R Markdown, ele cria um `*.md` arquivo Markdown ( ) que é subsequentemente transformado em HTML. Se quiser manter uma cópia do arquivo Markdown após a renderização, você pode fazer isso usando a `keep_md` as opções:
+
+```
+---
+title: "Estats"
+output:
+  html_document:
+    keep_md: true
+---
+```
+
+**Includes**
+
+Você pode fazer uma personalização mais avançada da saída, incluindo conteúdo HTML adicional. Para incluir conteúdo no cabeçalho do documento ou antes \/ depois do corpo do documento, você usa a `includes` opção a seguir:
+
+```
+---
+title: "Estats"
+output:
+  html_document:
+    includes:
+      in_header: header.html
+      before_body: consultoria_prefix.html
+      after_body: consultoria_suffix.html
+---
+```
+
+**Modelos personalizados**
+
+Você também pode ultilizar modelos usando o comando `template` nas opções:
+
+```
+---
+title: "Estats"
+output:
+  html_document:
+    template: consultoria.html
+---
+```
 
 ## Pacotes úteis
 
