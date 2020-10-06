@@ -1,0 +1,24 @@
+---
+title: "Curso de R Markdown"
+author: "Autor"
+output: html_document
+
+
+
+---
+
+```{r}
+knitr::opts_chunk$set(echo =FALSE)
+
+```
+
+
+## Atividade 2
+
+Estatística é a ciência que se utiliza das teorias probabilísticas para explicar a frequência da ocorrência de eventos,[1] tanto em estudos observacionais quanto em experimentos para modelar a aleatoriedade e a incerteza de forma a estimar ou possibilitar a previsão de fenômenos futuros, conforme o caso.
+
+A estatística é uma ciência que se dedica à coleta, análise e interpretação de dados. Preocupa-se com os métodos de recolha, organização, resumo, apresentação e interpretação dos dados, assim como tirar conclusões sobre as características das fontes donde estes foram retirados, para melhor compreender as situações.
+
+Algumas práticas estatísticas incluem, por exemplo, o planejamento, a sumarização e a interpretação de observações. Dado que o objetivo da estatística é a produção da melhor informação possível a partir dos dados disponíveis, alguns autores sugerem que a estatística é um ramo da teoria da decisão.
+
+Devido às suas raízes empíricas e seu foco em aplicações, a estatística geralmente é considerada uma disciplina distinta da matemática, e não um ramo dessa.

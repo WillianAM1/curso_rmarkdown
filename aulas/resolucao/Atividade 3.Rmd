@@ -1,0 +1,29 @@
+Escreva 4 frases relacionadas a estatística, cada um com uma sintaxe de texto:
+*“Sem dados você é apenas mais uma pessoa com uma opinião.”*
+
+**“Os erros causados por dados inadequados são muito menores do que aqueles devido à falta total de dados.”**
+
+~~“No mundo dos escritores as estatísticas obscurecem as almas. Vidas inteiras são engolidas por números inteiros.”~~
+
+“Há três espécies de mentiras: as mentiras, as mentiras sagradas e as estatísticas.”
+
+
+
+Demonstre a fórmula de baskara:
+
+$\Delta = b^{2}-4\cdot a \cdot c$
+
+$X = \frac{-b \pm \sqrt[]{\Delta}}{2 \cdot a}$
+
+
+Faça uma lista das músicas que você mais gosta, ultilizando seus respectivos links:
+
+* [Highlord - Again](https://www.youtube.com/watch?v=ox0lrvuAi2o&ab_channel=ChristianPrice)
+
+* [Highlord - You'll Never Be Lonely](https://www.youtube.com/watch?v=Jlxsm96wd_4&ab_channel=AlexKadaver)
+
+* [Stratovarius - Black Diamond](https://www.youtube.com/watch?v=Tn58-Nl9NYw&ab_channel=ggonza43)
+
+* [Stratovarius - Anthem Of The World](https://www.youtube.com/watch?v=Cs16gYQzcf0&ab_channel=ggonza43)
+
+* [Journey - Don't Stop Believin](https://www.youtube.com/watch?v=1k8craCGpgs&ab_channel=journeyVEVO)
