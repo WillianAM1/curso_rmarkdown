@@ -326,7 +326,7 @@ color: red;
 
 A linguagem Julia é suportado pelo pacote JuliaCall igual a linguagem python. Vejamos o exemplo 15 abaixo
 
-```{julia}
+```{julia, cache = TRUE}
 a = sqrt(2); # the semicolon inhibits printing
 ```
 

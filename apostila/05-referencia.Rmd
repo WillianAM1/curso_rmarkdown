@@ -1,3 +1,9 @@
 # Referência
 
-<!--`r htmltools::includeHTML("../docs/exemplos/105-referencia.html")`-->
+```{r}
+if(!knitr::is_latex_output())
+{
+  htmltools::includeHTML("../docs/exemplos/105-referencia.html")
+}
+```
+

@@ -4,27 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 2 Sintaxe | Introdução ao R Markdown</title>
-  <meta name="description" content="Curso de R Markdown…" />
+  <title>Capítulo 2 Sintaxe | Curso de RMarkdown</title>
+  <meta name="description" content="Capítulo 2 Sintaxe | Curso de RMarkdown" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 2 Sintaxe | Introdução ao R Markdown" />
+  <meta property="og:title" content="Capítulo 2 Sintaxe | Curso de RMarkdown" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Curso de R Markdown…" />
+  
   <meta name="github-repo" content="estatsej/curso_rmarkdown" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 2 Sintaxe | Introdução ao R Markdown" />
+  <meta name="twitter:title" content="Capítulo 2 Sintaxe | Curso de RMarkdown" />
   
-  <meta name="twitter:description" content="Curso de R Markdown…" />
+  
   
 
-<meta name="author" content="Eduardo José de Campos Lemos Júnior, Samuel Vianna Quintanilha" />
+<meta name="author" content="Estats Consultoria" />
 
 
-<meta name="date" content="2020-09-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -130,7 +129,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="slides.html">Slides</a></li>
+<li><a href="#">Playlist das aulas</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introdução</a>
@@ -208,6 +207,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4.2" data-path="customização-e-tipos-de-arquivo.html"><a href="customização-e-tipos-de-arquivo.html#numerando-seções"><i class="fa fa-check"></i><b>4.4.2</b> Numerando seções</a></li>
 <li class="chapter" data-level="4.4.3" data-path="customização-e-tipos-de-arquivo.html"><a href="customização-e-tipos-de-arquivo.html#abas"><i class="fa fa-check"></i><b>4.4.3</b> Abas</a></li>
 <li class="chapter" data-level="4.4.4" data-path="customização-e-tipos-de-arquivo.html"><a href="customização-e-tipos-de-arquivo.html#aparência"><i class="fa fa-check"></i><b>4.4.4</b> Aparência</a></li>
+<li class="chapter" data-level="4.4.5" data-path="customização-e-tipos-de-arquivo.html"><a href="customização-e-tipos-de-arquivo.html#impressão-de-tabela-1"><i class="fa fa-check"></i><b>4.4.5</b> Impressão de Tabela</a></li>
+<li class="chapter" data-level="4.4.6" data-path="customização-e-tipos-de-arquivo.html"><a href="customização-e-tipos-de-arquivo.html#personalização-avançada"><i class="fa fa-check"></i><b>4.4.6</b> Personalização avançada</a></li>
 </ul></li>
 <li class="chapter" data-level="4.5" data-path="customização-e-tipos-de-arquivo.html"><a href="customização-e-tipos-de-arquivo.html#pacotes-úteis"><i class="fa fa-check"></i><b>4.5</b> Pacotes úteis</a>
 <ul>
@@ -230,7 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introdução ao R Markdown</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Curso de RMarkdown</a>
           </h1>
         </div>
 
@@ -252,7 +253,7 @@ Uma das configurações mais importantes para se definir no seu preâmbulo é o 
 output: pdf_document
 ---</code></pre>
 <p>No código acima, <code>output</code> foi definido como <code>pdf_document</code>. Output é o formato final do seu documento, e <code>pdf_document</code> é, dentro do pacote <code>rmarkdown</code>, o formato pdf. Para gerar arquivos de formatos diferentes, é necessário somente que seja modificado a opção de <code>output</code> no preâmbulo.</p>
-<p>Note que a opção definida no preâmbulo foi escrita entre duas linhas tracejadas. Não é possível definir suas configurações fora dessas linhas tracejadas, da mesma forma, não é possível escrever partes do seu documento ou rodar códigos de <code>R</code> dentro das linhas.</p>
+<p>Note que a opção definida no preâmbulo foi escrita entre duas linhas tracejadas. Não é possível definir as configurações fora dessas linhas tracejadas. Da mesma forma, não é possível escrever partes do documento ou rodar códigos de <code>R</code> dentro dessas linhas.</p>
 <p>Por padrão no <code>yaml</code>, utilizado no preâmbulo de R Markdown, a opção a ser definida é escrita sem espaços, seguida de dois pontos, espaço e então a definição da opção.</p>
 <p>Existem ainda opções dentro de outras, como por exemplo <code>pdf_document</code>, em que é possível definir configurações se o documento terá ou não sumário, quantos níveis de <a href="#cabeçalhos">cabeçalho</a> serão utilizados no sumário, etc.</p>
 <pre><code>---
@@ -261,7 +262,7 @@ output: pdf_document:
   toc_depth: 3
   latex_engine: xelatex
 ---</code></pre>
-<p>No exemplo acima, foi definido <code>toc</code> (table of contents) como <code>true</code>, o que vai fazer com que seja gerado um sumário no documento final, Vale ressaltar que em <code>yaml</code> o valor lógico de verdadeiro é escrito com todas as letras minúsculas. A opção <code>toc_depth: 3</code>, dedfine que ao gerar o sumário, até três níveis de <a href="#cabeçalhos">cabeçalho</a> aparecerão no sumário.</p>
+<p>No exemplo acima, foi definido <code>toc</code> (table of contents) como <code>true</code>, o que vai fazer com que seja gerado um sumário no documento final. Vale ressaltar que em <code>yaml</code> o valor lógico de verdadeiro é escrito com todas as letras minúsculas. A opção <code>toc_depth: 3</code>, dedfine que ao gerar o sumário, até três níveis de <a href="#cabeçalhos">cabeçalho</a> aparecerão no sumário.</p>
 </div>
 <div id="informações-gerais" class="section level3" number="2.1.2">
 <h3><span class="header-section-number">2.1.2</span> Informações Gerais</h3>
@@ -273,7 +274,7 @@ output: pdf_document:
   toc_depth: 3
   latex_engine: xelatex
 ---</code></pre>
-<p>Seguindo com o preâmbulo já feito anteriormente, foi adicionada a opção <code>author</code>, que irá definir o autor do documento. Por padrão, o autor irá aparecer na página inicial de diversos <a href="intro.html#possíveis-tipos-de-outputs">tipos de documento</a>.</p>
+<p>Seguindo com o preâmbulo já feito anteriormente, foi adicionada a opção <code>author</code>, que definirá o autor do documento. Por padrão, ele aparecerá na página inicial de diversos <a href="intro.html#possíveis-tipos-de-outputs">tipos de documento</a>.</p>
 <pre><code>---
 date: 1 de janeiro de 1970
 output: pdf_document:
@@ -283,7 +284,7 @@ output: pdf_document:
 author: Fulano
 ---</code></pre>
 <p>Utilizando a opção <code>date</code> pode-se definir uma data para o documento. Do mesmo modo que o autor, a data aparece por padrão no início dos documentos.
-Vale ressaltar que, no exemplo acima, a escrita do nome do autor e data sem aspas não interfere no funcionamento do programa. Do mesmo modo, a troca da ordem dos elementos também não interfere, pois as opções do preâmbulo não necessitam de uma orgem específica. Contudo, as opções dentro de outras devem sempre estar abaixo da “opção mae” com uma identação a mais.</p>
+Vale ressaltar que, no exemplo acima, a escrita do nome do autor e data sem aspas não interfere no funcionamento do programa. Do mesmo modo, a troca da ordem dos elementos também não interfere, pois as opções do preâmbulo não necessitam de uma ordem específica. Contudo, as opções dentro de outras devem sempre estar abaixo da “opção mãe” com uma identação a mais.</p>
 <pre><code>---
 author: Fulano
 date: 1 de janeiro de 1970
@@ -298,8 +299,10 @@ output: pdf_document:
 </div>
 <div id="textos" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Textos</h2>
+<p>A linguagem R Markdown possui diversos tipos de customizações para textos. A seguir, são apresentadas as principais.</p>
 <div id="títulos" class="section level3" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Títulos</h3>
+<p>É possível definir o título de uma seção, bem como seus respectivos subtítulos, ao colocar <code>#</code> antes do texto do título. A hierarquia dos títulos é definida pela quantidade de <em>hashtags</em>.</p>
 <pre><code># Título Nível 1
 
 ## Título Nível 2
@@ -314,9 +317,10 @@ output: pdf_document:
 </div>
 <div id="formatação-de-textos-negrito-itálico-sobrescrito-tachado-e-código" class="section level3" number="2.2.2">
 <h3><span class="header-section-number">2.2.2</span> Formatação de textos (negrito, itálico, sobrescrito, tachado e código)</h3>
-<pre><code>*Negrito* _Negrito_</code></pre>
+<p>Também é possível formatar o texto, podendo destacá-lo de diversas formas. A seguir, são exemplificadas as principais formatações.</p>
+<pre><code>**Negrito** __Negrito__</code></pre>
 <p><strong>Negrito</strong> <strong>Negrito</strong></p>
-<pre><code>**Italico** __italico__</code></pre>
+<pre><code>*Italico* _italico_</code></pre>
 <p><em>Italico</em> <em>Italico</em></p>
 <pre><code>texto^sobrescrito^</code></pre>
 <p>texto<sup>sobrescrito</sup></p>
@@ -326,42 +330,68 @@ output: pdf_document:
 </div>
 <div id="links" class="section level3" number="2.2.3">
 <h3><span class="header-section-number">2.2.3</span> Links</h3>
-<p>Para um link devemos utilizar a seguinte sintaxe:</p>
+<p>Para adicionar um link em um texto, deve-se utilizar a seguinte sintaxe:</p>
 <pre><code>[nome do link](url do link)
 [Curso de RMarkdown](https://estatsej.github.io/curso_rmarkdown)</code></pre>
-<p>Existem também outras variações para que utlizemos os links em nosso material.</p>
-<p><strong>1 - Nome do link seja ele próprio</strong>:</p>
-<p><a href="https://estatsej.github.io/curso_rmarkdown" class="uri">https://estatsej.github.io/curso_rmarkdown</a></p>
-<p><strong>2- Link contendo um título, que aparece ao deixar o cursor do mouse em cima do link:</strong></p>
-<pre><code>[Curso de RMakrdown](https://estatsej.github.io/curso_rmarkdown &quot;Aqui está o nosso curso de RMarkdown&quot;)</code></pre>
-<p>Podemos observar:
-<a href="https://estatsej.github.io/curso_rmarkdown" title="Aqui está o nosso curso de RMarkdown">Curso de RMakrdown</a></p>
+<p><strong>Exemplo</strong>:
+Link para a apostila o <a href="https://estatsej.github.io/curso_rmarkdown">Curso de RMarkdown</a>.</p>
+<p>Nesse caso, o nome dado ao link aparecerá em destaque e ao clicar nele, o usuário será direcionado para o caminho especificado no link.</p>
+<p>Caso não se deseje colocar um nome específico ou ocultar o link, pode-se simplesmente colocá-lo no meio do texto.</p>
+<p><strong>Exemplo</strong>:
+<a href="https://estatsej.github.io/curso_rmarkdown" class="uri">https://estatsej.github.io/curso_rmarkdown</a></p>
 </div>
 <div id="listas" class="section level3" number="2.2.4">
 <h3><span class="header-section-number">2.2.4</span> Listas</h3>
-<p><strong>Lista Ordenada</strong></p>
+<p>Por fim, também pode-se criar listas em um documento R Markdown, podendo ser ela ordenada ou não.</p>
+<div id="lista-ordenada" class="section level4" number="2.2.4.1">
+<h4><span class="header-section-number">2.2.4.1</span> Lista Ordenada</h4>
+<p>Para criar uma lista ordenada, basta numerar os itens colocando um ponto e um espaço após o número, como é mostrado a seguir.</p>
 <pre><code>1. Primeiro item
 2. Segundo item
 3. Terceiro item</code></pre>
-<p><strong>Lista Não-Ordenada</strong></p>
+<ol style="list-style-type: decimal">
+<li>Primeiro item</li>
+<li>Segundo item</li>
+<li>Terceiro item</li>
+</ol>
+</div>
+<div id="lista-não-ordenada" class="section level4" number="2.2.4.2">
+<h4><span class="header-section-number">2.2.4.2</span> Lista Não-Ordenada</h4>
+<p>Para listas não ordenadas, coloca-se apenas o caractere <code>-</code> ou <code>+</code>, seguido também de um espaço.</p>
 <pre><code>- Primeiro item
 - Segundo item
 - Terceiro item</code></pre>
-<p><strong>Lista com Sublista</strong></p>
+<ul>
+<li>Primeiro item</li>
+<li>Segundo item</li>
+<li>Terceiro item</li>
+</ul>
+</div>
+<div id="subitens-em-uma-lista" class="section level4" number="2.2.4.3">
+<h4><span class="header-section-number">2.2.4.3</span> Subitens em uma lista</h4>
+<p>Para Adicionar subitens em uma lista, é preciso adcionar um espaço de tabulação (tab) antes do caractere que indica o item.</p>
 <pre><code>1. Item
     - Um sub-item
     - Outro sub-item</code></pre>
+<ol style="list-style-type: decimal">
+<li>Item
+<ul>
+<li>Um sub-item</li>
+<li>Outro sub-item</li>
+</ul></li>
+</ol>
+</div>
 </div>
 </div>
 <div id="inserindo-imagens" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Inserindo Imagens</h2>
-<p>Antes de inserir a imagem escolhida podemos definir a configuração global para todas as imagens, lembrando que a configuração feita diretamente na imagem vai sobrepor a configuração global.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb18-1"><a href="sintaxe.html#cb18-1" aria-hidden="true"></a><span class="in">```{r setup include=FALSE}</span></span>
-<span id="cb18-2"><a href="sintaxe.html#cb18-2" aria-hidden="true"></a><span class="in">library(knitr)</span></span>
-<span id="cb18-3"><a href="sintaxe.html#cb18-3" aria-hidden="true"></a><span class="in">opts_chunk$set(echo = FALSE,</span></span>
-<span id="cb18-4"><a href="sintaxe.html#cb18-4" aria-hidden="true"></a><span class="in">               out.width = &quot;10%&quot;, </span></span>
-<span id="cb18-5"><a href="sintaxe.html#cb18-5" aria-hidden="true"></a><span class="in">               fig.align = &quot;center&quot;)</span></span>
-<span id="cb18-6"><a href="sintaxe.html#cb18-6" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
+<p>Antes de inserir a imagem escolhida pode-se definir a configuração global para todas as imagens. Lembrando que a configuração feita diretamente na imagem vai sobrepor a configuração global.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb17-1"><a href="sintaxe.html#cb17-1" aria-hidden="true"></a><span class="in">```{r setup include=FALSE}</span></span>
+<span id="cb17-2"><a href="sintaxe.html#cb17-2" aria-hidden="true"></a><span class="in">library(knitr)</span></span>
+<span id="cb17-3"><a href="sintaxe.html#cb17-3" aria-hidden="true"></a><span class="in">opts_chunk$set(echo = FALSE,</span></span>
+<span id="cb17-4"><a href="sintaxe.html#cb17-4" aria-hidden="true"></a><span class="in">               out.width = &quot;10%&quot;, </span></span>
+<span id="cb17-5"><a href="sintaxe.html#cb17-5" aria-hidden="true"></a><span class="in">               fig.align = &quot;center&quot;)</span></span>
+<span id="cb17-6"><a href="sintaxe.html#cb17-6" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
 <p>Se um gráfico ou imagem não for gerado a partir de um código feito por R, você poderá incluí-lo de duas maneiras:</p>
 <ul>
 <li>Usando a sintaxe Markdown <code>![texto](pasta/para/image)</code>. Nesse caso, você pode definir o tamanho da imagem usando os atributos <code>width</code> ou <code>height</code>, por exemplo:</li>
@@ -370,24 +400,24 @@ output: pdf_document:
 <ul>
 <li>Usando a função <code>knitr::include_graphics(</code>) em qualquer parte do código. Você pode usar opções de configuração de tamanho como <code>out.width</code> ou <code>out.height</code> para esse exemplo:</li>
 </ul>
-<div class="sourceCode" id="cb20"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb20-1"><a href="sintaxe.html#cb20-1" aria-hidden="true"></a><span class="in">```{r, echo=FALSE, out.width=&quot;50%&quot;, fig.cap=&quot;Logo da Estats&quot;}</span></span>
-<span id="cb20-2"><a href="sintaxe.html#cb20-2" aria-hidden="true"></a><span class="in">knitr::include_graphics(&quot;img/logoestats.jpeg&quot;)</span></span>
-<span id="cb20-3"><a href="sintaxe.html#cb20-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb19-1"><a href="sintaxe.html#cb19-1" aria-hidden="true"></a><span class="in">```{r, echo=FALSE, out.width=&quot;50%&quot;, fig.cap=&quot;Logo da Estats&quot;}</span></span>
+<span id="cb19-2"><a href="sintaxe.html#cb19-2" aria-hidden="true"></a><span class="in">knitr::include_graphics(&quot;img/logoestats.jpeg&quot;)</span></span>
+<span id="cb19-3"><a href="sintaxe.html#cb19-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
 <p>Se você souber que deseja gerar a imagem apenas para um formato de saída específico, poderá usar uma unidade específica. Por exemplo, você pode usar <code>out.width="300px"</code> se o formato de saída for HTML, mas no nosso exemplo o formato que usamos <code>out.width="50%"</code> é válido para qualquer saída.</p>
 <p>E podemos aliar as imagens utilizando <code>fig.align</code>. Por exemplo, você pode centralizar imagens <code>fig.align="center"</code> ou alinhar à direita as imagens <code>fig.align="right'"</code>. Está opção funciona para saída HTML e LaTeX, mas pode não funcionar para outros formatos de saída (como o Word).</p>
 <p>No código a seguir é utilizado quando o seu projeto tem múltiplas saídas (PDF,HTML,…) e ocorra problema na inclusão das imagens, então a sugestão para o melhor caminho foi fazer a validação para obter a saída utilizada, sabendo disso podemos fazer configuração e inserindo imagens especifica para cada saída.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb21-1"><a href="sintaxe.html#cb21-1" aria-hidden="true"></a><span class="in">```{r, fig.cap=&quot;Logo da Estats&quot;}</span></span>
-<span id="cb21-2"><a href="sintaxe.html#cb21-2" aria-hidden="true"></a><span class="in">if (knitr::is_html_output()) {</span></span>
-<span id="cb21-3"><a href="sintaxe.html#cb21-3" aria-hidden="true"></a><span class="in">    knitr::include_graphics(&quot;img/logoestats.jpeg&quot;)</span></span>
-<span id="cb21-4"><a href="sintaxe.html#cb21-4" aria-hidden="true"></a><span class="in">} else {</span></span>
-<span id="cb21-5"><a href="sintaxe.html#cb21-5" aria-hidden="true"></a><span class="in">    knitr::include_graphics(&quot;img/logoestats.jpeg&quot;)</span></span>
-<span id="cb21-6"><a href="sintaxe.html#cb21-6" aria-hidden="true"></a><span class="in">}</span></span>
-<span id="cb21-7"><a href="sintaxe.html#cb21-7" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="sintaxe.html#cb22-1" aria-hidden="true"></a><span class="cf">if</span> (knitr<span class="op">::</span><span class="kw">is_html_output</span>()) {</span>
-<span id="cb22-2"><a href="sintaxe.html#cb22-2" aria-hidden="true"></a>    knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;img/logoestats.jpeg&quot;</span>)</span>
-<span id="cb22-3"><a href="sintaxe.html#cb22-3" aria-hidden="true"></a>} <span class="cf">else</span> {</span>
-<span id="cb22-4"><a href="sintaxe.html#cb22-4" aria-hidden="true"></a>    knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;img/logoestats.jpeg&quot;</span>)</span>
-<span id="cb22-5"><a href="sintaxe.html#cb22-5" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb20-1"><a href="sintaxe.html#cb20-1" aria-hidden="true"></a><span class="in">```{r, fig.cap=&quot;Logo da Estats&quot;}</span></span>
+<span id="cb20-2"><a href="sintaxe.html#cb20-2" aria-hidden="true"></a><span class="in">if (knitr::is_html_output()) {</span></span>
+<span id="cb20-3"><a href="sintaxe.html#cb20-3" aria-hidden="true"></a><span class="in">    knitr::include_graphics(&quot;img/logoestats.jpeg&quot;)</span></span>
+<span id="cb20-4"><a href="sintaxe.html#cb20-4" aria-hidden="true"></a><span class="in">} else {</span></span>
+<span id="cb20-5"><a href="sintaxe.html#cb20-5" aria-hidden="true"></a><span class="in">    knitr::include_graphics(&quot;img/logoestats.jpeg&quot;)</span></span>
+<span id="cb20-6"><a href="sintaxe.html#cb20-6" aria-hidden="true"></a><span class="in">}</span></span>
+<span id="cb20-7"><a href="sintaxe.html#cb20-7" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="sintaxe.html#cb21-1" aria-hidden="true"></a><span class="cf">if</span> (knitr<span class="op">::</span><span class="kw">is_html_output</span>()) {</span>
+<span id="cb21-2"><a href="sintaxe.html#cb21-2" aria-hidden="true"></a>    knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;img/logoestats.jpeg&quot;</span>)</span>
+<span id="cb21-3"><a href="sintaxe.html#cb21-3" aria-hidden="true"></a>} <span class="cf">else</span> {</span>
+<span id="cb21-4"><a href="sintaxe.html#cb21-4" aria-hidden="true"></a>    knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;img/logoestats.jpeg&quot;</span>)</span>
+<span id="cb21-5"><a href="sintaxe.html#cb21-5" aria-hidden="true"></a>}</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
 <img src="img/logoestats.jpeg" alt="Logo da Estats" width="32" />
 <p class="caption">
@@ -398,16 +428,16 @@ Figure 2.1: Logo da Estats
 <ul>
 <li>Nesse caso podemos utilizar vetor para colocar várias imagem juntas.</li>
 </ul>
-<div class="sourceCode" id="cb23"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb23-1"><a href="sintaxe.html#cb23-1" aria-hidden="true"></a><span class="in">```{r image}</span></span>
-<span id="cb23-2"><a href="sintaxe.html#cb23-2" aria-hidden="true"></a><span class="in">include_graphics(c(&quot;img1.jpeg&quot;, &quot;img2.jpeg&quot;))</span></span>
-<span id="cb23-3"><a href="sintaxe.html#cb23-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb22-1"><a href="sintaxe.html#cb22-1" aria-hidden="true"></a><span class="in">```{r image}</span></span>
+<span id="cb22-2"><a href="sintaxe.html#cb22-2" aria-hidden="true"></a><span class="in">include_graphics(c(&quot;img1.jpeg&quot;, &quot;img2.jpeg&quot;))</span></span>
+<span id="cb22-3"><a href="sintaxe.html#cb22-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
 <ul>
 <li>E nesse último caso podemos fazer repetição de uma imagem várias vezes.</li>
 </ul>
-<div class="sourceCode" id="cb24"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb24-1"><a href="sintaxe.html#cb24-1" aria-hidden="true"></a><span class="in">```{r}</span></span>
-<span id="cb24-2"><a href="sintaxe.html#cb24-2" aria-hidden="true"></a><span class="in">knitr::include_graphics(rep(&quot;img/logoestats.jpeg&quot;, 3))</span></span>
-<span id="cb24-3"><a href="sintaxe.html#cb24-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="sintaxe.html#cb25-1" aria-hidden="true"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;img/logoestats.jpeg&quot;</span>, <span class="dv">3</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb23-1"><a href="sintaxe.html#cb23-1" aria-hidden="true"></a><span class="in">```{r}</span></span>
+<span id="cb23-2"><a href="sintaxe.html#cb23-2" aria-hidden="true"></a><span class="in">knitr::include_graphics(rep(&quot;img/logoestats.jpeg&quot;, 3))</span></span>
+<span id="cb23-3"><a href="sintaxe.html#cb23-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="sintaxe.html#cb24-1" aria-hidden="true"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;img/logoestats.jpeg&quot;</span>, <span class="dv">3</span>))</span></code></pre></div>
 <p><img src="img/logoestats.jpeg" width="32" style="display: block; margin: auto;" /><img src="img/logoestats.jpeg" width="32" style="display: block; margin: auto;" /><img src="img/logoestats.jpeg" width="32" style="display: block; margin: auto;" /></p>
 </div>
 <div id="exemplos" class="section level2" number="2.4">
@@ -441,7 +471,7 @@ gitbook.start({
 "sharing": {
 "github": true,
 "facebook": false,
-"twitter": true,
+"twitter": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,

@@ -36,8 +36,8 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Introdução ao R Markdown},
-  pdfauthor={Eduardo José de Campos Lemos Júnior, Samuel Vianna Quintanilha},
+  pdftitle={Curso de RMarkdown},
+  pdfauthor={Estats Consultoria},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
@@ -114,9 +114,9 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 
-\title{Introdução ao R Markdown}
-\author{Eduardo José de Campos Lemos Júnior, Samuel Vianna Quintanilha}
-\date{2020-09-11}
+\title{Curso de RMarkdown}
+\author{Estats Consultoria}
+\date{}
 
 \begin{document}
 \maketitle
@@ -316,7 +316,7 @@ output: pdf_document
 
 No código acima, \texttt{output} foi definido como \texttt{pdf\_document}. Output é o formato final do seu documento, e \texttt{pdf\_document} é, dentro do pacote \texttt{rmarkdown}, o formato pdf. Para gerar arquivos de formatos diferentes, é necessário somente que seja modificado a opção de \texttt{output} no preâmbulo.
 
-Note que a opção definida no preâmbulo foi escrita entre duas linhas tracejadas. Não é possível definir suas configurações fora dessas linhas tracejadas, da mesma forma, não é possível escrever partes do seu documento ou rodar códigos de \texttt{R} dentro das linhas.
+Note que a opção definida no preâmbulo foi escrita entre duas linhas tracejadas. Não é possível definir as configurações fora dessas linhas tracejadas. Da mesma forma, não é possível escrever partes do documento ou rodar códigos de \texttt{R} dentro dessas linhas.
 
 Por padrão no \texttt{yaml}, utilizado no preâmbulo de R Markdown, a opção a ser definida é escrita sem espaços, seguida de dois pontos, espaço e então a definição da opção.
 
@@ -331,7 +331,7 @@ output: pdf_document:
 ---
 \end{verbatim}
 
-No exemplo acima, foi definido \texttt{toc} (table of contents) como \texttt{true}, o que vai fazer com que seja gerado um sumário no documento final, Vale ressaltar que em \texttt{yaml} o valor lógico de verdadeiro é escrito com todas as letras minúsculas. A opção \texttt{toc\_depth:\ 3}, dedfine que ao gerar o sumário, até três níveis de \protect\hyperlink{cabeuxe7alhos}{cabeçalho} aparecerão no sumário.
+No exemplo acima, foi definido \texttt{toc} (table of contents) como \texttt{true}, o que vai fazer com que seja gerado um sumário no documento final. Vale ressaltar que em \texttt{yaml} o valor lógico de verdadeiro é escrito com todas as letras minúsculas. A opção \texttt{toc\_depth:\ 3}, dedfine que ao gerar o sumário, até três níveis de \protect\hyperlink{cabeuxe7alhos}{cabeçalho} aparecerão no sumário.
 
 \hypertarget{informauxe7uxf5es-gerais}{%
 \subsection{Informações Gerais}\label{informauxe7uxf5es-gerais}}
@@ -348,7 +348,7 @@ output: pdf_document:
 ---
 \end{verbatim}
 
-Seguindo com o preâmbulo já feito anteriormente, foi adicionada a opção \texttt{author}, que irá definir o autor do documento. Por padrão, o autor irá aparecer na página inicial de diversos \protect\hyperlink{possuxedveis-tipos-de-outputs}{tipos de documento}.
+Seguindo com o preâmbulo já feito anteriormente, foi adicionada a opção \texttt{author}, que definirá o autor do documento. Por padrão, ele aparecerá na página inicial de diversos \protect\hyperlink{possuxedveis-tipos-de-outputs}{tipos de documento}.
 
 \begin{verbatim}
 ---
@@ -362,7 +362,7 @@ author: Fulano
 \end{verbatim}
 
 Utilizando a opção \texttt{date} pode-se definir uma data para o documento. Do mesmo modo que o autor, a data aparece por padrão no início dos documentos.
-Vale ressaltar que, no exemplo acima, a escrita do nome do autor e data sem aspas não interfere no funcionamento do programa. Do mesmo modo, a troca da ordem dos elementos também não interfere, pois as opções do preâmbulo não necessitam de uma orgem específica. Contudo, as opções dentro de outras devem sempre estar abaixo da ``opção mae'' com uma identação a mais.
+Vale ressaltar que, no exemplo acima, a escrita do nome do autor e data sem aspas não interfere no funcionamento do programa. Do mesmo modo, a troca da ordem dos elementos também não interfere, pois as opções do preâmbulo não necessitam de uma ordem específica. Contudo, as opções dentro de outras devem sempre estar abaixo da ``opção mãe'' com uma identação a mais.
 
 \begin{verbatim}
 ---
@@ -381,8 +381,12 @@ Por fim definiu-se também a opção \texttt{title} que indica o título do docu
 \hypertarget{textos}{%
 \section{Textos}\label{textos}}
 
+A linguagem R Markdown possui diversos tipos de customizações para textos. A seguir, são apresentadas as principais.
+
 \hypertarget{tuxedtulos}{%
 \subsection{Títulos}\label{tuxedtulos}}
+
+É possível definir o título de uma seção, bem como seus respectivos subtítulos, ao colocar \texttt{\#} antes do texto do título. A hierarquia dos títulos é definida pela quantidade de \emph{hashtags}.
 
 \begin{verbatim}
 # Título Nível 1
@@ -401,14 +405,16 @@ Por fim definiu-se também a opção \texttt{title} que indica o título do docu
 \hypertarget{formatauxe7uxe3o-de-textos-negrito-ituxe1lico-sobrescrito-tachado-e-cuxf3digo}{%
 \subsection{Formatação de textos (negrito, itálico, sobrescrito, tachado e código)}\label{formatauxe7uxe3o-de-textos-negrito-ituxe1lico-sobrescrito-tachado-e-cuxf3digo}}
 
+Também é possível formatar o texto, podendo destacá-lo de diversas formas. A seguir, são exemplificadas as principais formatações.
+
 \begin{verbatim}
-*Negrito* _Negrito_
+**Negrito** __Negrito__
 \end{verbatim}
 
 \textbf{Negrito} \textbf{Negrito}
 
 \begin{verbatim}
-**Italico** __italico__
+*Italico* _italico_
 \end{verbatim}
 
 \emph{Italico} \emph{Italico}
@@ -428,32 +434,32 @@ texto\textsuperscript{sobrescrito}
 \hypertarget{links}{%
 \subsection{Links}\label{links}}
 
-Para um link devemos utilizar a seguinte sintaxe:
+Para adicionar um link em um texto, deve-se utilizar a seguinte sintaxe:
 
 \begin{verbatim}
 [nome do link](url do link)
 [Curso de RMarkdown](https://estatsej.github.io/curso_rmarkdown)
 \end{verbatim}
 
-Existem também outras variações para que utlizemos os links em nosso material.
+\textbf{Exemplo}:
+Link para a apostila o \href{https://estatsej.github.io/curso_rmarkdown}{Curso de RMarkdown}.
 
-\textbf{1 - Nome do link seja ele próprio}:
+Nesse caso, o nome dado ao link aparecerá em destaque e ao clicar nele, o usuário será direcionado para o caminho especificado no link.
 
+Caso não se deseje colocar um nome específico ou ocultar o link, pode-se simplesmente colocá-lo no meio do texto.
+
+\textbf{Exemplo}:
 \url{https://estatsej.github.io/curso_rmarkdown}
-
-\textbf{2- Link contendo um título, que aparece ao deixar o cursor do mouse em cima do link:}
-
-\begin{verbatim}
-[Curso de RMakrdown](https://estatsej.github.io/curso_rmarkdown "Aqui está o nosso curso de RMarkdown")
-\end{verbatim}
-
-Podemos observar:
-\href{https://estatsej.github.io/curso_rmarkdown}{Curso de RMakrdown}
 
 \hypertarget{listas}{%
 \subsection{Listas}\label{listas}}
 
-\textbf{Lista Ordenada}
+Por fim, também pode-se criar listas em um documento R Markdown, podendo ser ela ordenada ou não.
+
+\hypertarget{lista-ordenada}{%
+\subsubsection{Lista Ordenada}\label{lista-ordenada}}
+
+Para criar uma lista ordenada, basta numerar os itens colocando um ponto e um espaço após o número, como é mostrado a seguir.
 
 \begin{verbatim}
 1. Primeiro item
@@ -461,7 +467,21 @@ Podemos observar:
 3. Terceiro item
 \end{verbatim}
 
-\textbf{Lista Não-Ordenada}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Primeiro item
+\item
+  Segundo item
+\item
+  Terceiro item
+\end{enumerate}
+
+\hypertarget{lista-nuxe3o-ordenada}{%
+\subsubsection{Lista Não-Ordenada}\label{lista-nuxe3o-ordenada}}
+
+Para listas não ordenadas, coloca-se apenas o caractere \texttt{-} ou \texttt{+}, seguido também de um espaço.
 
 \begin{verbatim}
 - Primeiro item
@@ -469,7 +489,20 @@ Podemos observar:
 - Terceiro item
 \end{verbatim}
 
-\textbf{Lista com Sublista}
+\begin{itemize}
+\tightlist
+\item
+  Primeiro item
+\item
+  Segundo item
+\item
+  Terceiro item
+\end{itemize}
+
+\hypertarget{subitens-em-uma-lista}{%
+\subsubsection{Subitens em uma lista}\label{subitens-em-uma-lista}}
+
+Para Adicionar subitens em uma lista, é preciso adcionar um espaço de tabulação (tab) antes do caractere que indica o item.
 
 \begin{verbatim}
 1. Item
@@ -477,10 +510,25 @@ Podemos observar:
     - Outro sub-item
 \end{verbatim}
 
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Item
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Um sub-item
+  \item
+    Outro sub-item
+  \end{itemize}
+\end{enumerate}
+
 \hypertarget{inserindo-imagens}{%
 \section{Inserindo Imagens}\label{inserindo-imagens}}
 
-Antes de inserir a imagem escolhida podemos definir a configuração global para todas as imagens, lembrando que a configuração feita diretamente na imagem vai sobrepor a configuração global.
+Antes de inserir a imagem escolhida pode-se definir a configuração global para todas as imagens. Lembrando que a configuração feita diretamente na imagem vai sobrepor a configuração global.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1086,7 +1134,7 @@ Para que o código seja executado no meio de um texto, é necessário usar o car
 \end{Highlighting}
 \end{Shaded}
 
-Este texto gera: 11/09/2020.
+Este texto gera: 09/10/2020.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -1109,7 +1157,7 @@ O que gera o seguinte output ao ser compilado seu arquivo R Markdown:
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "11/09/2020"
+## [1] "09/10/2020"
 \end{verbatim}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -2142,7 +2190,81 @@ Se fosse criado um cabeçalho da forma acima, poderiamos modificar esta seção 
 
 É possível definir opções no preâmbulo configurações para as imagens geradas em blocos de código. Nessas opções podemos definir atributos como altura da imagem, largura da imagem, etc.
 
-Utilizando a opção \texttt{fig\_width} é possível definir a largura das imagens geradas, e utilizando
+Utilizando a opção \texttt{fig\_width} é possível definir a largura das imagens geradas, e utilizando \texttt{fig\_height} é possivel controlar altura da imagem.
+
+\texttt{fig\_caption} comando para colocar legenda nas figuras.
+
+\begin{verbatim}
+---
+title: "Estats"
+output:
+  html_document:
+    fig_width: 7
+    fig_height: 6
+    fig_caption: true
+---
+\end{verbatim}
+
+\hypertarget{impressuxe3o-de-tabela-1}{%
+\subsection{Impressão de Tabela}\label{impressuxe3o-de-tabela-1}}
+
+Quando a \texttt{df\_print} opção é definida como \texttt{paged}, as tabelas são impressas como tabelas HTML com suporte para paginação em linhas e colunas.
+
+TABELA
+
+\begin{verbatim}
+---
+title: "Estats"
+output:
+  html_document:
+    df_print: paged
+---
+\end{verbatim}
+
+\hypertarget{personalizauxe7uxe3o-avanuxe7ada}{%
+\subsection{Personalização avançada}\label{personalizauxe7uxe3o-avanuxe7ada}}
+
+\textbf{Mantendo Markdown}
+
+Quando o \texttt{knitr} processa um arquivo de entrada R Markdown, ele cria um \texttt{*.md} arquivo Markdown ( ) que é subsequentemente transformado em HTML. Se quiser manter uma cópia do arquivo Markdown após a renderização, você pode fazer isso usando a \texttt{keep\_md} as opções:
+
+\begin{verbatim}
+---
+title: "Estats"
+output:
+  html_document:
+    keep_md: true
+---
+\end{verbatim}
+
+\textbf{Includes}
+
+Você pode fazer uma personalização mais avançada da saída, incluindo conteúdo HTML adicional. Para incluir conteúdo no cabeçalho do documento ou antes / depois do corpo do documento, você usa a \texttt{includes} opção a seguir:
+
+\begin{verbatim}
+---
+title: "Estats"
+output:
+  html_document:
+    includes:
+      in_header: header.html
+      before_body: consultoria_prefix.html
+      after_body: consultoria_suffix.html
+---
+\end{verbatim}
+
+\textbf{Modelos personalizados}
+
+Você também pode ultilizar modelos usando o comando \texttt{template} nas opções:
+
+\begin{verbatim}
+---
+title: "Estats"
+output:
+  html_document:
+    template: consultoria.html
+---
+\end{verbatim}
 
 \hypertarget{pacotes-uxfateis}{%
 \section{Pacotes úteis}\label{pacotes-uxfateis}}
@@ -2192,743 +2314,14 @@ Para maior entendimento do bookdown, acesse \url{https://bookdown.org/yihui/book
 \hypertarget{referuxeancia}{%
 \chapter{Referência}\label{referuxeancia}}
 
-\textless!DOCTYPE html\textgreater{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\NormalTok{knitr}\OperatorTok{::}\KeywordTok{is\_latex\_output}\NormalTok{())}
+\NormalTok{\{}
+\NormalTok{  htmltools}\OperatorTok{::}\KeywordTok{includeHTML}\NormalTok{(}\StringTok{"../docs/exemplos/105{-}referencia.html"}\NormalTok{)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
 
-105-referencia.utf8
-
-\hypertarget{header}{}
-\begin{fluid-row}
-
-\end{fluid-row}
-
-\begin{columns}
-
-\begin{column}
-
-Sintaxe
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-Resultado
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-Texto
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-Texto
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-Termine uma linha com dois espaços para
-começar um novo parágrafo.
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-Termine uma linha com dois espaços para começar um novo parágrafo.
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\emph{Itálico} e \emph{itálico}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-Itálico e itálico
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\textbf{Negrito} e \textbf{negrito}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-Negrito e negrito
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-Sobrescrito\textsuperscript{2}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-Sobrescrito2
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\sout{Texto taxado}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-Texto taxado
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\href{des.uem.br}{Link}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-Link
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\# Cabeçalho 1
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-\hypertarget{cabeuxe7alho-1}{}
-\begin{section}
-
-Cabeçalho 1
-
-\end{section}
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\#\# Cabeçalho 2
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-\hypertarget{cabeuxe7alho-2}{}
-\begin{section}
-
-Cabeçalho 2
-
-\end{section}
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\#\#\# Cabeçalho 3
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-\hypertarget{cabeuxe7alho-3}{}
-\begin{section}
-
-Cabeçalho 3
-
-\end{section}
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\#\#\#\# Cabeçalho 4
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-\hypertarget{cabeuxe7alho-4}{}
-\begin{section}
-
-Cabeçalho 4
-
-\end{section}
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\#\#\#\#\# Cabeçalho 5
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-\hypertarget{cabeuxe7alho-5}{}
-\begin{section}
-
-Cabeçalho 5
-
-\end{section}
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\#\#\#\#\#\# Cabeçalho 6
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-\hypertarget{cabeuxe7alho-6}{}
-\begin{section}
-
-Cabeçalho 6
-
-\end{section}
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-Expressão matemática:
-\(f_x(x) = \lambda e^{- \lambda x}\)
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-Expressão matemática: {\(f_x(x) = \lambda e^{- \lambda x}\)}
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-Expressão matemática em bloco:
-
-\[X = \begin{bmatrix}1 &amp; x_{1}\\</code><br />
-<code>1 &amp; x_{2}\\</code><br />
-<code>1 &amp; x_{3}</code><br />
-<code>\end{bmatrix}\]
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-Expressão matemática em bloco:
-
-{\[X = \begin{bmatrix}1 &amp; x_{1}\\
-1 &amp; x_{2}\\
-1 &amp; x_{3}
-\end{bmatrix}\]}
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-Imagem: \includegraphics{http://tny.im/lTZ}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-Imagem:
-
-\end{column}
-
-\end{columns}
-
-\begin{column}
-
-Linha horizontal:
-
-***
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-Linha horizontal:
-
-\begin{columns}
-
-\begin{column}
-
-Exemplo de nota de rodapé\footnote{Nota de rodapé}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-Exemplo de nota de rodapé1
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-item
-
-item
-
-item
-
-item
-
-item
-
-item
-
-item
-
-item
-
-item
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-item 1
-
-item 2
-
-item 3
-
-item 1
-
-item 2
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-``É notável uma ciência que começou com jogos de azar tenha se tornado o mais importante objeto do conhecimento humano.''
-
---- Pierre Simon Laplace
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-Coluna 1
-
-Coluna 2
-
-11
-
-12
-
-21
-
-22
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-Rodando código \texttt{r\ “no\ meio\ do\ texto”}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-Rodando código no meio do texto
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-Cars
-
-speed
-
-dist
-
-4
-
-2
-
-4
-
-10
-
-7
-
-4
-
-7
-
-22
-
-8
-
-16
-
-\end{column}
-
-\end{columns}
-
-\begin{columns}
-
-\begin{column}
-
-\end{column}
-
-\begin{column}
-
-~
-
-\end{column}
-
-\begin{column}
-
-\end{column}
-
-\end{columns}
-
-Nota de rodapé↩︎
-
---\textgreater{}
 
 \end{document}

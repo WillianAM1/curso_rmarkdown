@@ -1,9 +1,7 @@
 --- 
-title: "Introdução ao R Markdown"
-author: "Eduardo José de Campos Lemos Júnior, Samuel Vianna Quintanilha"
-date: "`r Sys.Date()`"
+title: "Curso de RMarkdown"
+author: "Estats Consultoria"
 output: pdf_document
-description: Curso de R Markdown...
 documentclass: book
 link-citations: yes
 site: bookdown::bookdown_site

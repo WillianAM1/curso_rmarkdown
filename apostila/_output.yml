@@ -3,12 +3,13 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="slides.html">Slides</a></li>
+        <li><a href="#">Playlist das aulas</a></li>
       after: |
         <li><a href="https://bookdown.org" target="blank">Apostila criada com bookdown</a></li>
     sharing:
       github: yes
       facebook: no
+      twitter: no
     download: ["pdf"]
 bookdown::pdf_book:
   includes:

@@ -37,12 +37,14 @@ Texto
 ::: {.column width="48%" data-latex="{0.48\textwidth}"}
 `Termine uma linha com dois espaços para começar um novo`
 `parágrafo.  `
+`Na próxima linha.`
 :::
 ::: {.column width="4%" data-latex="{0.04\textwidth}"}
 \ 
 :::
 :::::: {.column width="48%" data-latex="{0.48\textwidth}"}
 Termine uma linha com dois espaços para começar um novo parágrafo.  
+Na próxima linha.
 :::
 ::::::
 ***
@@ -106,13 +108,13 @@ Sobrescrito^2^
 <!-- Link -->
 :::::: {.columns}
 ::: {.column width="48%" data-latex="{0.48\textwidth}"}
-`[Link](des.uem.br)`
+`[Link](http://www.des.uem.br)`
 :::
 ::: {.column width="4%" data-latex="{0.04\textwidth}"}
 \ 
 :::
 :::::: {.column width="48%" data-latex="{0.48\textwidth}"}
-[Link](des.uem.br)
+[Link](http://www.des.uem.br)
 :::
 ::::::
 ***
@@ -286,6 +288,8 @@ Exemplo de nota de rodapé^[Nota de rodapé]
 :::
 ::::::
 
+***
+
 <!-- Listas -->
 :::::: {.columns}
 ::: {.column width="48%" data-latex="{0.48\textwidth}"}
@@ -362,6 +366,7 @@ Exemplo de nota de rodapé^[Nota de rodapé]
 
 :::
 ::::::
+
 ***
 
 <!-- Texto literal -->
@@ -369,7 +374,7 @@ Exemplo de nota de rodapé^[Nota de rodapé]
 ::: {.column width="48%" data-latex="{0.48\textwidth}"}
 ````
 ```
-# Exemplo^2^
+Exemplo^2^
 ```
 ````
 :::
@@ -409,13 +414,15 @@ Coluna 1 | Coluna 2
 <!-- Código no meio do texto -->
 :::::: {.columns}
 ::: {.column width="48%" data-latex="{0.48\textwidth}"}
-Rodando código r "no meio do texto"
+```
+Rodando código "no meio do texto" `r 5^2`.
+```
 :::
 ::: {.column width="4%" data-latex="{0.04\textwidth}"}
 \ 
 :::
 :::::: {.column width="48%" data-latex="{0.48\textwidth}"}
-Rodando código `r "no meio do texto"`
+Rodando código "no meio do texto" `r 5^2`
 :::
 ::::::
 ***
