@@ -58,9 +58,11 @@ install.packages("rmarkdown")
 ```
 
 Após a instalação do pacote no R Studio, siga os seguintes passos:
+
 ![](img/new.png)
 
 Em seguida, escolha o tipo de arquivo desejado:
+
 ![](img/file.png)
 
 *Obs*: Para gerar documentos em PDF, é necessário ter instalado em seu computador o programa [Latex](#download-rmd-e-latex).
@@ -74,14 +76,17 @@ Para exportar um arquivo PDF utilizando o R Markdown é necessário um motor LaT
 
 ### Windows
 Selecione a aba *Windows* e clique no botão de download.
+
 ![](img/download_windowns_MiKTex.jpg)
 
 ### Linux
 Selecione a aba *Linux* em seguida a aba de sua distribuição Linux para receber as instruções de instalação.
+
 ![](img/download_linux_MiKTex.jpg)
 
 ### MacOS
 Selecione a aba *MacOS* e clique no botão de download.
+
 ![](img/download_macOS_MiKTex.jpg)
 
 #### Configuração do MikTek para Windowns

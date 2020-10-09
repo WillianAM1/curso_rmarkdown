@@ -1,6 +1,11 @@
-# Referência
+```{r, results = "asis", echo = FALSE}
+if(!knitr::is_latex_output())
+{
+  cat("# Referência\n")
+}
+```
 
-```{r}
+```{r, echo = FALSE}
 if(!knitr::is_latex_output())
 {
   htmltools::includeHTML("../docs/exemplos/105-referencia.html")
