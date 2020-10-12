@@ -1,3 +1,4 @@
+
 ```{r, results = "asis", echo = FALSE}
 if(!knitr::is_latex_output())
 {

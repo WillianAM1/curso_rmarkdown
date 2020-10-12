@@ -3,7 +3,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="#">Playlist das aulas</a></li>
+        <li><a href="https://www.youtube.com/playlist?list=PLByBVTMOnJlNi1Abz8Ova_LcXZfiHqwVp">Playlist das aulas</a></li>
       after: |
         <li><a href="https://bookdown.org" target="blank">Apostila criada com bookdown</a></li>
     sharing:
