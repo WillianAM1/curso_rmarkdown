@@ -4,44 +4,47 @@
 
 ## Flags
 
-Veja abaixo algumas flags que são costumeiramente utilizadas em nossos relatórios.
-<p>Para encontrar mais flags para o seu relatório acesse a [documentação](https://yihui.name/knitr/options) do **knitr**.</p>
+A lista com todas as opções de flags está disponível na [documentação](https://yihui.name/knitr/options) do **knitr**.
 
-`eval`: Não executa o chunk quando recebe o parâmetro `FALSE`, porém o código do chunk será exibido no arquivo final.
+Abaixo estão listadas algumas das flags mais utilizadas.
 
-`echo`: Se recebe o parâmetro `FALSE`, o código chunk será executado, mas não exibido no relatório.
 
-`results`: Modifica a saída de código chunk. Para essa flag temos os seguntes parâmetros: `markup`,  `hold`, `asis` e `hide`. Veja nos exemplos a seguir as modificações decorrentes dos diferentes parâmetros.
+* `eval`: Não executa o chunk quando recebe o parâmetro `FALSE`, porém o código do chunk será exibido no arquivo final.
+
+* `echo`: Se recebe o parâmetro `FALSE`, o código chunk será executado, mas não exibido no relatório.
+
+* `results`: Modifica a saída de código chunk. Essa flag possui os seguintes parâmetros: `markup`,  `hold`, `asis` e `hide`.  Os exemplos a seguir apresentam as modificações decorrentes de cada um.
 
 `results='markup'`:
 ```{r results='markup'}
 
-print("Curso de R markdown")
+print("Curso de R Markdown")
 
 ```
 
-`results="hold"`:
+`results='hold'`:
 ```{r results='hold'}
 
-print("Curso de R markdown")
+print("Curso de R Markdown")
 
 ```
 
 `results='asis'`:
 ```{r results='asis'}
 
-print("Curso de R markdown")
+print("Curso de R Markdown")
 
 ```
 
 `results='hide'`:
 ```{r results='hide'}
 
-print("Curso de R markdown")
+print("Curso de R Markdown")
 
 ```
 
-`collapse`: Comprime o código do chunk e sua saída em apenas um bloco de código no relatório final. Exemplo:
+  
+* `collapse`: Comprime o código do chunk e sua saída em apenas um bloco de código no relatório final. Exemplo:
 
 `coollapse=TRUE`:
 ```{r collapse=TRUE}
@@ -49,25 +52,26 @@ print("Curso de R markdown")
 
 ```
 
-`warning` e `message`: Quando recebem o parâmetro `FALSE`, não será exibido mensagens ou avisos decorrentes de algum código do chunk no relatório final.
+* `warning` e `message`: Quando recebem o parâmetro `FALSE`, não serão exibidas mensagens ou avisos decorrentes de algum código do chunk no relatório final.
 
-`error`: Usando o parâmetro `TRUE`, se houver algum erro no código do chunk, será exibido no relatório final.
+* `error`: Usando o parâmetro `TRUE`, se houver algum erro no código do chunk, será exibido no relatório final.
 
-`include`: Quando recebe o parâmetro `FALSE`, oculta o código e o resultado do chunk, mas o código será executado.
+* `include`: Quando recebe o parâmetro `FALSE`, oculta o código e o resultado do chunk, mas o código será executado.
 
-`cache`: Códigos podem ser compilados e seus resultados armazenados em cache. Se o código não for alterado, não sera necessário compila-lo novamente.
+* `cache`: Passando o parâmeto `TRUE`, podemos compilar codigos e armazenar seus resultados em cache. Se o mesmo não for alterado, não será necessário compila-lo novamente.
 
-`fig.width and fig.height` ou `fig.dim=c(x,y)`: Dimensiona o tamanho da figura em polegadas. Exemplo: `fig.width=2 and fig.height=2` ou `fig.dim=c(2,2)`.
+* `fig.width and fig.height` ou `fig.dim=c(x,y)`: Dimensiona o tamanho da figura em polegadas. Exemplo: `fig.width=2 and fig.height=2` ou `fig.dim=c(2,2)`.
 
-`out.width and out.height`: Dimensiona a figura com a porcentagem da altura e largura desejada. Exemplo: `out.width="20%"`.
+* `out.width and out.height`: Dimensiona a figura com a porcentagem da altura e largura desejada. Exemplo: `out.width='20%'`.
 
-`fig.aligh`: Define o alinhamento da figura na página. Isso ocorre de acordo com os parâmetros: `left`, `center`, `right` e `left`.
+* `fig.aligh`: Define o alinhamento da figura na página. Isso ocorre de acordo com os parâmetros: `center`, `left` e `right`. 
 
-`dev`: Altera o formato de arquivo das figuras do relatório. Podemos usar os parâmetros: `’svg’`, `’jpeg’`, `'pdf'`, `’png’`, `’bmp’`, entre outros.
+* `dev`: Altera o formato de arquivo das figuras do relatório. Podemos usar os parâmetros: `'svg'`, `'jpeg'`, `'pdf'`, `'png'`, `'bmp'`, entre outros.
 
-`fig.cap`: Adiciona legenda em figuras do relatório. A legenda será passada como parâmetro desta maneira: `fig.cap=”legenda”`.
+* `fig.cap`: Adiciona legenda em figuras do relatório. A legenda será passada como parâmetro desta maneira: `fig.cap='legenda'`.
 
-`child`: Podemos rodar outro arquivo.Rmd dentro de um novo código. Ideal para ser usado em trabalhos longo que necessitem de maior organização. Para acessar o arquivo.Rmd desejado é preciso passar seu endereço como parâmetro, deste modo:`child=“endereço//arquivo.Rmd”`.
+* `child`: Pode-se rodar outro arquivo de extensão *.Rmd* dentro de um novo código. Essa prática é recomendada para trabalhos longos que necessitem de maior organização. Para acessar o arquivo desejado é preciso passar o endereço com a seguinte sintaxe: `child='endereço\\arquivo.Rmd'`.
+
 
 
 ## Linguagens Suportadas
