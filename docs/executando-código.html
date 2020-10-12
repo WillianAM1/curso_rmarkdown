@@ -246,38 +246,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="flags" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Flags</h2>
-Veja abaixo algumas flags que são costumeiramente utilizadas em nossos relatórios.
-<p>
-Para encontrar mais flags para o seu relatório acesse a <a href="https://yihui.name/knitr/options">documentação</a> do <strong>knitr</strong>.
-</p>
-<p><code>eval</code>: Não executa o chunk quando recebe o parâmetro <code>FALSE</code>, porém o código do chunk será exibido no arquivo final.</p>
-<p><code>echo</code>: Se recebe o parâmetro <code>FALSE</code>, o código chunk será executado, mas não exibido no relatório.</p>
-<p><code>results</code>: Modifica a saída de código chunk. Para essa flag temos os seguntes parâmetros: <code>markup</code>, <code>hold</code>, <code>asis</code> e <code>hide</code>. Veja nos exemplos a seguir as modificações decorrentes dos diferentes parâmetros.</p>
+<p>A lista com todas as opções de flags está disponível na <a href="https://yihui.name/knitr/options">documentação</a> do <strong>knitr</strong>.</p>
+<p>Abaixo estão listadas algumas das flags mais utilizadas.</p>
+<ul>
+<li><p><code>eval</code>: Não executa o chunk quando recebe o parâmetro <code>FALSE</code>, porém o código do chunk será exibido no arquivo final.</p></li>
+<li><p><code>echo</code>: Se recebe o parâmetro <code>FALSE</code>, o código chunk será executado, mas não exibido no relatório.</p></li>
+<li><p><code>results</code>: Modifica a saída de código chunk. Essa flag possui os seguintes parâmetros: <code>markup</code>, <code>hold</code>, <code>asis</code> e <code>hide</code>. Os exemplos a seguir apresentam as modificações decorrentes de cada um.</p></li>
+</ul>
 <p><code>results='markup'</code>:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="executando-código.html#cb25-1" aria-hidden="true"></a><span class="kw">print</span>(<span class="st">&quot;Curso de R markdown&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;Curso de R markdown&quot;</code></pre>
-<p><code>results="hold"</code>:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="executando-código.html#cb27-1" aria-hidden="true"></a><span class="kw">print</span>(<span class="st">&quot;Curso de R markdown&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;Curso de R markdown&quot;</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="executando-código.html#cb25-1" aria-hidden="true"></a><span class="kw">print</span>(<span class="st">&quot;Curso de R Markdown&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Curso de R Markdown&quot;</code></pre>
+<p><code>results='hold'</code>:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="executando-código.html#cb27-1" aria-hidden="true"></a><span class="kw">print</span>(<span class="st">&quot;Curso de R Markdown&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Curso de R Markdown&quot;</code></pre>
 <p><code>results='asis'</code>:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="executando-código.html#cb29-1" aria-hidden="true"></a><span class="kw">print</span>(<span class="st">&quot;Curso de R markdown&quot;</span>)</span></code></pre></div>
-<p>[1] “Curso de R markdown”</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="executando-código.html#cb29-1" aria-hidden="true"></a><span class="kw">print</span>(<span class="st">&quot;Curso de R Markdown&quot;</span>)</span></code></pre></div>
+<p>[1] “Curso de R Markdown”</p>
 <p><code>results='hide'</code>:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="executando-código.html#cb30-1" aria-hidden="true"></a><span class="kw">print</span>(<span class="st">&quot;Curso de R markdown&quot;</span>)</span></code></pre></div>
-<p><code>collapse</code>: Comprime o código do chunk e sua saída em apenas um bloco de código no relatório final. Exemplo:</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="executando-código.html#cb30-1" aria-hidden="true"></a><span class="kw">print</span>(<span class="st">&quot;Curso de R Markdown&quot;</span>)</span></code></pre></div>
+<ul>
+<li><code>collapse</code>: Comprime o código do chunk e sua saída em apenas um bloco de código no relatório final. Exemplo:</li>
+</ul>
 <p><code>coollapse=TRUE</code>:</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="executando-código.html#cb31-1" aria-hidden="true"></a><span class="kw">print</span>(<span class="st">&quot;Curso de R markdown&quot;</span>)</span>
 <span id="cb31-2"><a href="executando-código.html#cb31-2" aria-hidden="true"></a><span class="co">## [1] &quot;Curso de R markdown&quot;</span></span></code></pre></div>
-<p><code>warning</code> e <code>message</code>: Quando recebem o parâmetro <code>FALSE</code>, não será exibido mensagens ou avisos decorrentes de algum código do chunk no relatório final.</p>
-<p><code>error</code>: Usando o parâmetro <code>TRUE</code>, se houver algum erro no código do chunk, será exibido no relatório final.</p>
-<p><code>include</code>: Quando recebe o parâmetro <code>FALSE</code>, oculta o código e o resultado do chunk, mas o código será executado.</p>
-<p><code>cache</code>: Códigos podem ser compilados e seus resultados armazenados em cache. Se o código não for alterado, não sera necessário compila-lo novamente.</p>
-<p><code>fig.width and fig.height</code> ou <code>fig.dim=c(x,y)</code>: Dimensiona o tamanho da figura em polegadas. Exemplo: <code>fig.width=2 and fig.height=2</code> ou <code>fig.dim=c(2,2)</code>.</p>
-<p><code>out.width and out.height</code>: Dimensiona a figura com a porcentagem da altura e largura desejada. Exemplo: <code>out.width="20%"</code>.</p>
-<p><code>fig.aligh</code>: Define o alinhamento da figura na página. Isso ocorre de acordo com os parâmetros: <code>left</code>, <code>center</code>, <code>right</code> e <code>left</code>.</p>
-<p><code>dev</code>: Altera o formato de arquivo das figuras do relatório. Podemos usar os parâmetros: <code>’svg’</code>, <code>’jpeg’</code>, <code>'pdf'</code>, <code>’png’</code>, <code>’bmp’</code>, entre outros.</p>
-<p><code>fig.cap</code>: Adiciona legenda em figuras do relatório. A legenda será passada como parâmetro desta maneira: <code>fig.cap=”legenda”</code>.</p>
-<p><code>child</code>: Podemos rodar outro arquivo.Rmd dentro de um novo código. Ideal para ser usado em trabalhos longo que necessitem de maior organização. Para acessar o arquivo.Rmd desejado é preciso passar seu endereço como parâmetro, deste modo:<code>child=“endereço//arquivo.Rmd”</code>.</p>
+<ul>
+<li><p><code>warning</code> e <code>message</code>: Quando recebem o parâmetro <code>FALSE</code>, não serão exibidas mensagens ou avisos decorrentes de algum código do chunk no relatório final.</p></li>
+<li><p><code>error</code>: Usando o parâmetro <code>TRUE</code>, se houver algum erro no código do chunk, será exibido no relatório final.</p></li>
+<li><p><code>include</code>: Quando recebe o parâmetro <code>FALSE</code>, oculta o código e o resultado do chunk, mas o código será executado.</p></li>
+<li><p><code>cache</code>: Passando o parâmeto <code>TRUE</code>, podemos compilar codigos e armazenar seus resultados em cache. Se o mesmo não for alterado, não será necessário compila-lo novamente.</p></li>
+<li><p><code>fig.width and fig.height</code> ou <code>fig.dim=c(x,y)</code>: Dimensiona o tamanho da figura em polegadas. Exemplo: <code>fig.width=2 and fig.height=2</code> ou <code>fig.dim=c(2,2)</code>.</p></li>
+<li><p><code>out.width and out.height</code>: Dimensiona a figura com a porcentagem da altura e largura desejada. Exemplo: <code>out.width='20%'</code>.</p></li>
+<li><p><code>fig.aligh</code>: Define o alinhamento da figura na página. Isso ocorre de acordo com os parâmetros: <code>center</code>, <code>left</code> e <code>right</code>.</p></li>
+<li><p><code>dev</code>: Altera o formato de arquivo das figuras do relatório. Podemos usar os parâmetros: <code>'svg'</code>, <code>'jpeg'</code>, <code>'pdf'</code>, <code>'png'</code>, <code>'bmp'</code>, entre outros.</p></li>
+<li><p><code>fig.cap</code>: Adiciona legenda em figuras do relatório. A legenda será passada como parâmetro desta maneira: <code>fig.cap='legenda'</code>.</p></li>
+<li><p><code>child</code>: Pode-se rodar outro arquivo de extensão <em>.Rmd</em> dentro de um novo código. Essa prática é recomendada para trabalhos longos que necessitem de maior organização. Para acessar o arquivo desejado é preciso passar o endereço com a seguinte sintaxe: <code>child='endereço\\arquivo.Rmd'</code>.</p></li>
+</ul>
 </div>
 <div id="linguagens-suportadas" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> Linguagens Suportadas</h2>
