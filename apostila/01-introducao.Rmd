@@ -89,16 +89,16 @@ Selecione a aba *MacOS* e clique no botão de download.
 
 ![](img/download_macOS_MiKTex.jpg)
 
-#### Configuração do MikTek para Windows
+#### Configuração do MikTeX para Windows
 
-Após ter instalado o MikTek, deve-se atualizá-lo. Para isso, ao abrir o MikTek console seleciona-se a opção *chek for updates*. 
+Após ter instalado o MikTeX, deve-se atualizá-lo. Para isso, ao abrir o MikTeX console seleciona-se a opção *chek for updates*. 
 
 ```{r, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("img/01.png")
 ```
 
 
-Quando o MikTek checar as atualizações, deve-se prosseguir para a aba *update* e selecionar *update now.* 
+Quando o MikTeX checar as atualizações, deve-se prosseguir para a aba *update* e selecionar *update now.* 
 
 ```{r, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("img/02.png")
