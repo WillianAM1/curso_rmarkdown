@@ -171,15 +171,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.3.2" data-path="executando-código.html"><a href="executando-código.html#script-shell"><i class="fa fa-check"></i><b>3.3.2</b> Script Shell</a></li>
 <li class="chapter" data-level="3.3.3" data-path="executando-código.html"><a href="executando-código.html#sql"><i class="fa fa-check"></i><b>3.3.3</b> SQL</a></li>
 <li class="chapter" data-level="3.3.4" data-path="executando-código.html"><a href="executando-código.html#rcpp"><i class="fa fa-check"></i><b>3.3.4</b> Rcpp</a></li>
+<li class="chapter" data-level="3.3.5" data-path="executando-código.html"><a href="executando-código.html#todos-os-fragmentos-de-códigos-c-serão-combinados-em-um-único-fragmento."><i class="fa fa-check"></i><b>3.3.5</b> Todos os fragmentos de códigos C++ serão combinados em um único fragmento.</a></li>
+<li class="chapter" data-level="3.3.6" data-path="executando-código.html"><a href="executando-código.html#stan"><i class="fa fa-check"></i><b>3.3.6</b> Stan</a></li>
+<li class="chapter" data-level="3.3.7" data-path="executando-código.html"><a href="executando-código.html#java-script"><i class="fa fa-check"></i><b>3.3.7</b> Java Script</a></li>
+<li class="chapter" data-level="3.3.8" data-path="executando-código.html"><a href="executando-código.html#julia"><i class="fa fa-check"></i><b>3.3.8</b> Julia</a></li>
+<li class="chapter" data-level="3.3.9" data-path="executando-código.html"><a href="executando-código.html#c-and-fortran"><i class="fa fa-check"></i><b>3.3.9</b> C and Fortran</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="executando-código.html"><a href="executando-código.html#todos-os-fragmentos-de-códigos-c-serão-combinados-em-um-único-fragmento."><i class="fa fa-check"></i><b>3.4</b> Todos os fragmentos de códigos C++ serão combinados em um único fragmento.</a>
-<ul>
-<li class="chapter" data-level="3.4.1" data-path="executando-código.html"><a href="executando-código.html#stan"><i class="fa fa-check"></i><b>3.4.1</b> Stan</a></li>
-<li class="chapter" data-level="3.4.2" data-path="executando-código.html"><a href="executando-código.html#java-script"><i class="fa fa-check"></i><b>3.4.2</b> Java Script</a></li>
-<li class="chapter" data-level="3.4.3" data-path="executando-código.html"><a href="executando-código.html#julia"><i class="fa fa-check"></i><b>3.4.3</b> Julia</a></li>
-<li class="chapter" data-level="3.4.4" data-path="executando-código.html"><a href="executando-código.html#c-and-fortran"><i class="fa fa-check"></i><b>3.4.4</b> C and Fortran</a></li>
-</ul></li>
-<li class="chapter" data-level="3.5" data-path="executando-código.html"><a href="executando-código.html#exemplo"><i class="fa fa-check"></i><b>3.5</b> Exemplo</a></li>
+<li class="chapter" data-level="3.4" data-path="executando-código.html"><a href="executando-código.html#exemplo"><i class="fa fa-check"></i><b>3.4</b> Exemplo</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="customização-e-tipos-de-arquivo.html"><a href="customização-e-tipos-de-arquivo.html"><i class="fa fa-check"></i><b>4</b> Customização e Tipos de Arquivo</a>
 <ul>
@@ -285,7 +283,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="linguagens-suportadas" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> Linguagens Suportadas</h2>
-<p>Por meio do pacote knitr que forneceu um grande número de motores de linguagem o R Markdown suporta outras linguagens tais como <a href="https://www.python.org/">Python</a>, <a href="https://julialang.org/">Julia</a>, C++, SQL. Esses motores de linguagem podem ser acessados dentro de blocos de código designando sua respectiva engine, as engines no knitr são:</p>
+<p>Por meio do pacote <strong>knitr</strong>, que forneceu um grande número de motores de linguagem, o R Markdown suporta outras linguagens, tais como <a href="https://www.python.org/">Python</a>, <a href="https://julialang.org/">Julia</a>, C++, SQL. Esses motores de linguagem podem ser acessados dentro de blocos de código designando sua respectiva engine, as engines no knitr são:</p>
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="executando-código.html#cb32-1" aria-hidden="true"></a><span class="kw">names</span>(knitr<span class="op">::</span>knit_engines<span class="op">$</span><span class="kw">get</span>())</span></code></pre></div>
 <pre><code>##  [1] &quot;awk&quot;         &quot;bash&quot;        &quot;coffee&quot;      &quot;gawk&quot;        &quot;groovy&quot;     
 ##  [6] &quot;haskell&quot;     &quot;lein&quot;        &quot;mysql&quot;       &quot;node&quot;        &quot;octave&quot;     
@@ -300,42 +298,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## [51] &quot;proof&quot;       &quot;remark&quot;      &quot;solution&quot;</code></pre>
 <div id="linguagem-python" class="section level3" number="3.3.1">
 <h3><span class="header-section-number">3.3.1</span> Linguagem Python</h3>
-<p>Para utilizar a linguagem python primeiro é necessário instalar o pacote reticulate com o comando:</p>
+<p>Para utilizar a linguagem python, é necessário instalar o pacote <code>reticulate</code> com o comando:</p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="executando-código.html#cb34-1" aria-hidden="true"></a><span class="kw">install.packages</span>(<span class="st">&quot;reticulate&quot;</span>)</span></code></pre></div>
-<p>Com esse pacote é possível executar todos os fragmentos de código Python em uma mesma seção. Caso deseje executar um trecho do código pode usar o comando:</p>
+<p>Com esse pacote é possível executar todos os fragmentos de código Python em uma mesma seção. Para executar um trecho do código, usa-se o seguinte comando:</p>
 <p><code>python.reticulate = FALSE</code></p>
-<p>Vale ressaltar que se você estiver usando uma versão do knitr inferior a 1.18 você deve atualizar seus pacotes R. Por padrão o reticulate usa a versão padrão encontrada em seu path. Para encontrar onde esta instalado o python em seu computador use o comando:</p>
+<p>Vale ressaltar que se a versão do <strong>kniter</strong> utilizada for inferior a 1.18é necessário a atualizar os pacotes R. Por definição, o reticulate usa a versão padrão encontrada em seu path.
+Para encontrar onde esta instalado o Python no computador, usa-se o seguinte comando:</p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="executando-código.html#cb35-1" aria-hidden="true"></a><span class="kw">Sys.which</span>(<span class="st">&quot;python&quot;</span>)</span></code></pre></div>
-<p>Você pode escolher a versão de Python com o comando:</p>
+<p>Pode-se também escolher a versão de Python a ser utilizada como a função:</p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="executando-código.html#cb36-1" aria-hidden="true"></a><span class="kw">use_python</span>()</span></code></pre></div>
-<p>Vejamos no exemplo 1 como você pode fazer:</p>
-<p>Exemplo 1:</p>
+<p>Exemplo 1: Definindo a versão do Python.</p>
 <div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="executando-código.html#cb37-1" aria-hidden="true"></a><span class="kw">library</span>(reticulate)</span>
 <span id="cb37-2"><a href="executando-código.html#cb37-2" aria-hidden="true"></a><span class="kw">use_python</span>(<span class="st">&quot;/usr/local/bin/python&quot;</span>)</span></code></pre></div>
-<p>Vejamos no exemplo 2 para usar pedaços de código Python. Outrossim, para isso você deve utilizar o comando</p>
+<p>Exemplo 2: Definindo e recuperando variáveis no Python.</p>
 <div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="executando-código.html#cb38-1" aria-hidden="true"></a>py<span class="op">$</span>name </span></code></pre></div>
-<p>Onde <code>name</code> é o nome da variável que você deseja usar na sessão Python. Para recuperar um valor Python use também py$name.</p>
-<p>Exemplo 2:</p>
-<p>Um pedaço de código R normal</p>
+<p>Onde <code>name</code> é o nome da variável que você deseja usar na sessão. Para recuperar um valor Python também utiliza-se py$name.</p>
+<p>Exemplo 3: Executando um bloco de código R e um bloco de código Python.</p>
+<p>#código em R</p>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="executando-código.html#cb39-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="dv">42</span></span>
 <span id="cb39-2"><a href="executando-código.html#cb39-2" aria-hidden="true"></a><span class="kw">print</span>(x)</span></code></pre></div>
 <pre><code>## [1] 42</code></pre>
-<p>No exemplo 3 vemos a utilização de um pedaço de um código python</p>
-<p>Exemplo 3:</p>
+<p>#código em Python</p>
 <div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="executando-código.html#cb41-1" aria-hidden="true"></a>x <span class="op">=</span> <span class="dv">42</span> <span class="op">*</span> <span class="dv">2</span></span>
 <span id="cb41-2"><a href="executando-código.html#cb41-2" aria-hidden="true"></a><span class="bu">print</span>(x)</span></code></pre></div>
 <pre><code>## 84</code></pre>
-<p>O valor de <code>x</code> na sessão Python é py$x. Não é o mesmo <code>x</code> de R.</p>
+<p>Nesse caso o valor de <code>x</code> na sessão em Python é py$x, sendo diferente do valor atribuido a <code>x</code> da sessão em R.</p>
 </div>
 <div id="script-shell" class="section level3" number="3.3.2">
 <h3><span class="header-section-number">3.3.2</span> Script Shell</h3>
-<p>Você pode escrever scripts Shell em R Markdown, se seu sistema puder executá-los (o bash executável ou sh deve existir). Normalmente, isso não é um problema para usuários de Linux ou macOS. Não é impossível para os usuários do Windows, mas você terá que instalar software adicional (como Cygwin ou o Subsistema Linux).</p>
+<p>Pode-se escrever scripts Shell em R Markdown, desde que o sistema possa executá-los, ou seja, o bash executável ou sh deve existir, o que normalmente não é um problema para usuários de Linux ou macOS. Para usuários windows, é necessário ainstalação de um software adicional como Cygwin ou o Subsistema Linux.</p>
 </div>
 <div id="sql" class="section level3" number="3.3.3">
 <h3><span class="header-section-number">3.3.3</span> SQL</h3>
-<p>Como o mecanismo SQL usa o pacote DBI você deve estabelecer uma conexão DBI com um banco de dados. Você pode utilizar o comando</p>
+<p>Como o mecanismo SQL usa o pacote DBI, deve-se estabelecer uma conexão DBI com um banco de dados, o que pode ser feito através do comando</p>
 <div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="executando-código.html#cb43-1" aria-hidden="true"></a>DBI<span class="op">::</span><span class="kw">dbConnect</span>()</span></code></pre></div>
-<p>Você pode usar essa conexão em um fragmento SQL através da opção de conexão como mosta o exemplo 4 utilizando SQLite.</p>
+<p>Pode-se usar essa conexão em um fragmento SQL através da opção de conexão, como demonstrado a seguir utilizando o SQLite.</p>
 <p>Exemplo 4:</p>
 <div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="executando-código.html#cb44-1" aria-hidden="true"></a><span class="kw">library</span>(DBI)</span>
 <span id="cb44-2"><a href="executando-código.html#cb44-2" aria-hidden="true"></a>db =<span class="st"> </span><span class="kw">dbConnect</span>(RSQLite<span class="op">::</span><span class="kw">SQLite</span>(), <span class="dt">dbname =</span> <span class="st">&quot;sql.sqlite&quot;</span>)</span></code></pre></div>
@@ -343,27 +340,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb45"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb45-1"><a href="executando-código.html#cb45-1" aria-hidden="true"></a> <span class="in">```{sql, connection = db}</span></span>
 <span id="cb45-2"><a href="executando-código.html#cb45-2" aria-hidden="true"></a><span class="in">SELECT * FROM trials</span></span>
 <span id="cb45-3"><a href="executando-código.html#cb45-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
-<p>O número de registros exibidos é controlado pela opção <code>max.print</code> que é derivada da função sql.max.print.</p>
-<p>No exemplo 5 o seguinte fragmento de código exibe os 15 primeiros registros.</p>
+<p>Para controlar o numero de registros exibidos, usa-se a opção <code>max.print</code> que é derivada da função sql.max.print.</p>
+<p>O fragmento de código a seguir exemplifica os 15 primeiros registros.</p>
 <div class="sourceCode" id="cb46"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb46-1"><a href="executando-código.html#cb46-1" aria-hidden="true"></a> <span class="in">```{sql, connection=db, max.print = 15}</span></span>
 <span id="cb46-2"><a href="executando-código.html#cb46-2" aria-hidden="true"></a><span class="in">SELECT * FROM trials</span></span>
 <span id="cb46-3"><a href="executando-código.html#cb46-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
-<p>Caso queria especificar para nenhum limite no registro utilize <code>max.print = NA</code>.</p>
-<p>Se você quiser atribuir os resultados da consulta SQL a um objeto R como um quadro de dados basta utilizar o comando <code>output.var</code>.</p>
-<p>Como mostra o exemplo 6</p>
+<p>Caso deseja-se especificar que não haja nenhum limite no registro, usa-se <code>max.print = NA</code>.</p>
+<p>Para atribuir os resultados da consulta SQL a um objeto R como um quadro de dados, basta utilizar o comando <code>output.var</code> como é mostrado a seguir:</p>
 <div class="sourceCode" id="cb47"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb47-1"><a href="executando-código.html#cb47-1" aria-hidden="true"></a> <span class="in">```{sql, connection=db, output.var=&quot;trials&quot;}</span></span>
 <span id="cb47-2"><a href="executando-código.html#cb47-2" aria-hidden="true"></a><span class="in">SELECT * FROM trials</span></span>
 <span id="cb47-3"><a href="executando-código.html#cb47-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
-<p>Quando os resultados de uma consulta SQL são atribuídos a um quadro de dados, nenhum registro será impresso no documento. Caso queira, você pode imprimir manualmente o quadro de dados em um bloco R subsequente. Se você precisar ligar os valores das variáveis R em consultas SQL, você pode fazer isso prefaciando a variável R referências com uma interrogação (?). Assim como mostra o exemplo 7.</p>
+<p>Quando os resultados de uma consulta SQL são atribuídos a um quadro de dados, nenhum registro será impresso no documento. Porém é ossível imprimir manualmente o quadro de dados em um bloco R subsequente. Caso seja necesário ligar os valores das variáveis R em consultas SQL, pode-se fazê-lo prefaciando a variável R de referência com uma interrogação (?). Como mostra o exemplo a seguir:</p>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="executando-código.html#cb48-1" aria-hidden="true"></a>subjects =<span class="st"> </span><span class="dv">10</span></span></code></pre></div>
 <div class="sourceCode" id="cb49"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb49-1"><a href="executando-código.html#cb49-1" aria-hidden="true"></a> <span class="in">```{sql, connection=db, output.var=&quot;trials&quot;, eval = FALSE}</span></span>
 <span id="cb49-2"><a href="executando-código.html#cb49-2" aria-hidden="true"></a><span class="in">SELECT * FROM trials WHERE subjects &gt;= ?subjects</span></span>
 <span id="cb49-3"><a href="executando-código.html#cb49-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
-<p>Se você tiver muitos fragmentos SQL, pode ser útil definir um padrão para a opção de fragmento de conexão no fragmento de configuração, de forma que não seja necessário especificar a conexão em cada fragmento individual. Você consegue conforme mostra o exemplo 8.</p>
+<p>Caso haja muitos fragmentos SQL, pode ser útil definir um padrão para a opção de fragmento de conexão no fragmento de configuração, de forma que não seja necessário especificar a conexão em cada fragmento individual. Conforme mostra a seguir:</p>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="executando-código.html#cb50-1" aria-hidden="true"></a><span class="kw">library</span>(DBI)</span>
 <span id="cb50-2"><a href="executando-código.html#cb50-2" aria-hidden="true"></a>db =<span class="st"> </span><span class="kw">dbConnect</span>(RSQLite<span class="op">::</span><span class="kw">SQLite</span>(), <span class="dt">dbname =</span> <span class="st">&quot;sql.sqlite&quot;</span>)</span>
 <span id="cb50-3"><a href="executando-código.html#cb50-3" aria-hidden="true"></a>knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">connection =</span> <span class="st">&quot;db&quot;</span>)</span></code></pre></div>
-<p>Observe que a opção de conexão deve ser uma string nomeando o objeto de conexão (não o próprio objeto). Depois de definido, você pode executar blocos SQL sem especificar uma conexão explícita como mostra o exemplo 9.</p>
+<p>Observe que a opção de conexão deve ser uma string nomeando o objeto de conexão (não o próprio objeto). Depois de definido, pode-se executar blocos SQL sem especificar uma conexão explícita como é exemplificado a seguir:</p>
 <div class="sourceCode" id="cb51"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb51-1"><a href="executando-código.html#cb51-1" aria-hidden="true"></a> <span class="in">```{sql}</span></span>
 <span id="cb51-2"><a href="executando-código.html#cb51-2" aria-hidden="true"></a><span class="in">SELECT * FROM trials</span></span>
 <span id="cb51-3"><a href="executando-código.html#cb51-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
@@ -371,7 +367,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="rcpp" class="section level3" number="3.3.4">
 <h3><span class="header-section-number">3.3.4</span> Rcpp</h3>
 <p>O mecanismo Rcpp permite a compilação de C ++ em funções R com o comando <code>rcpp::sourceCpp()</code></p>
-<p>O resultado é apresentado no exemplo 10.</p>
+<p>O resultado é apresentado a seguir:</p>
 <div class="sourceCode" id="cb52"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb52-1"><a href="executando-código.html#cb52-1" aria-hidden="true"></a> <span class="in">```{Rcpp}</span></span>
 <span id="cb52-2"><a href="executando-código.html#cb52-2" aria-hidden="true"></a><span class="in">#include &lt;Rcpp.h&gt;</span></span>
 <span id="cb52-3"><a href="executando-código.html#cb52-3" aria-hidden="true"></a><span class="in">using namespace Rcpp;</span></span>
@@ -380,11 +376,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb52-6"><a href="executando-código.html#cb52-6" aria-hidden="true"></a><span class="in">return x * 2;</span></span>
 <span id="cb52-7"><a href="executando-código.html#cb52-7" aria-hidden="true"></a><span class="in">}</span></span>
 <span id="cb52-8"><a href="executando-código.html#cb52-8" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
-<p>A execução desse trecho compilará o código e tornará a função C ++ com o comando:</p>
-<p>timesTwo ()</p>
-<p>Disponível para R. Você pode armazenar em cache a compilação de blocos de código C ++ usando o cache de knitr padrão, ou seja, adicionar o comando:</p>
-<p>cache = TRUE</p>
-<p>Conforme mostra o exemplo 11.</p>
+<p>A execução desse trecho compilará o código e tornará a função C ++ com o comando <code>timesTwo ()</code> disponível para R.Pode-se armazenar em cache a compilação de blocos de código C ++ usando o cache de knitr padrão, ou seja, adicionar o comando <code>cache = TRUE</code>, da seguinte forma:</p>
 <div class="sourceCode" id="cb53"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb53-1"><a href="executando-código.html#cb53-1" aria-hidden="true"></a> <span class="in">```{Rcpp, cache=TRUE}</span></span>
 <span id="cb53-2"><a href="executando-código.html#cb53-2" aria-hidden="true"></a><span class="in">#include &lt;Rcpp.h&gt;</span></span>
 <span id="cb53-3"><a href="executando-código.html#cb53-3" aria-hidden="true"></a><span class="in">using namespace Rcpp;</span></span>
@@ -393,27 +385,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb53-6"><a href="executando-código.html#cb53-6" aria-hidden="true"></a><span class="in">return x * 2;</span></span>
 <span id="cb53-7"><a href="executando-código.html#cb53-7" aria-hidden="true"></a><span class="in">}</span></span>
 <span id="cb53-8"><a href="executando-código.html#cb53-8" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
-<p>Em alguns casos, é desejável combinar todos os pedaços de código Rcpp em um documento em uma única unidade de compilação, pois economiza tempo. Para isso use o comando <code>ref.label</code> junto com o comando <code>knitr::all_rcpp_labels()</code>.</p>
-<p>Pois assim é possível coletar todos os fragmentos do Rcpp conforme mostra o exemplo 12</p>
+<p>Em alguns casos, é desejável combinar todos os pedaços de código Rcpp em um documento em uma única unidade de compilação, pois economiza tempo. Para isso utiliza-se o comando <code>ref.label</code> junto com o comando <code>knitr::all_rcpp_labels()</code>.</p>
+<p>Deste modo, é possível coletar todos os fragmentos do Rcpp, conforme mostra a seguir:</p>
 </div>
-</div>
-<div id="todos-os-fragmentos-de-códigos-c-serão-combinados-em-um-único-fragmento." class="section level2" number="3.4">
-<h2><span class="header-section-number">3.4</span> Todos os fragmentos de códigos C++ serão combinados em um único fragmento.</h2>
+<div id="todos-os-fragmentos-de-códigos-c-serão-combinados-em-um-único-fragmento." class="section level3" number="3.3.5">
+<h3><span class="header-section-number">3.3.5</span> Todos os fragmentos de códigos C++ serão combinados em um único fragmento.</h3>
 <div class="sourceCode" id="cb54"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb54-1"><a href="executando-código.html#cb54-1" aria-hidden="true"></a> <span class="in">```{Rcpp, ref.label=knitr::all_rcpp_labels(), include=FALSE}</span></span>
 <span id="cb54-2"><a href="executando-código.html#cb54-2" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
-<p>Primeiro é necessário incluir o leitor <code>Rcpp.h</code></p>
+<p>Primeiramente, é necessário incluir o leitor <code>Rcpp.h</code></p>
 <div class="sourceCode" id="cb55"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb55-1"><a href="executando-código.html#cb55-1" aria-hidden="true"></a><span class="pp">#include </span><span class="im">&lt;Rcpp.h&gt;</span></span></code></pre></div>
-<p>Depois você define a função</p>
+<p>Depois, define-se a função:</p>
 <div class="sourceCode" id="cb56"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb56-1"><a href="executando-código.html#cb56-1" aria-hidden="true"></a><span class="co">// [[Rcpp::export]]</span></span>
 <span id="cb56-2"><a href="executando-código.html#cb56-2" aria-hidden="true"></a><span class="dt">int</span> timesTwo(<span class="dt">int</span> x) {</span>
 <span id="cb56-3"><a href="executando-código.html#cb56-3" aria-hidden="true"></a><span class="cf">return</span> x * <span class="dv">2</span>;</span>
 <span id="cb56-4"><a href="executando-código.html#cb56-4" aria-hidden="true"></a>}</span></code></pre></div>
-<p>Assim os dois fragmentos com código Rcpp serão compilados juntos no primeiro pedaço.</p>
-<div id="stan" class="section level3" number="3.4.1">
-<h3><span class="header-section-number">3.4.1</span> Stan</h3>
-<p>A linguagem Stan permite a incorporação da linguagem probabilística. Para tanto, utilize o comando:</p>
-<p>output.var</p>
-<p>Como mostra o exemplo 13</p>
+<p>Com isso, os dois fragmentos com código Rcpp serão compilados juntos no primeiro pedaço.</p>
+</div>
+<div id="stan" class="section level3" number="3.3.6">
+<h3><span class="header-section-number">3.3.6</span> Stan</h3>
+<p>A linguagem Stan permite a incorporação da linguagem probabilística. Para tanto, utilize o comando <code>output.var</code>. A seguir é exemplificado um pouco de linguagem Stan:</p>
 <pre class="stan"><code>parameters {
 real y[2];
 }
@@ -425,82 +415,74 @@ y[2] ~ double_exponential(0, 2);
 <span id="cb58-2"><a href="executando-código.html#cb58-2" aria-hidden="true"></a>fit =<span class="st"> </span><span class="kw">sampling</span>(ex1)</span>
 <span id="cb58-3"><a href="executando-código.html#cb58-3" aria-hidden="true"></a><span class="kw">print</span>(fit)</span></code></pre></div>
 </div>
-<div id="java-script" class="section level3" number="3.4.2">
-<h3><span class="header-section-number">3.4.2</span> Java Script</h3>
-<p>Se você visa que seu documento tenha saída HTML, é possível executar um Java Script nele usando esta linguagem denominada js.
-O exemplo 14 apresenta como mudar a cor do título para vermelho.</p>
-<script type="text/javascript">
-$('.title').css('color', 'red')
-</script>
-<p>Da mesma forma, você pode incorporar regras CSS no documento de saída. Por exemplo, o seguinte fragmento de código transforma
-texto dentro do corpo do documento vermelho:</p>
-<style type="text/css">
-body {
-color: red;
-}
-</style>
+<div id="java-script" class="section level3" number="3.3.7">
+<h3><span class="header-section-number">3.3.7</span> Java Script</h3>
+<p>Se há a intenção de gerar um documento com saída HTML, é possível executar um Java Script dentro do R Markdown usando esta linguagem denominada js.
+O exemplo a seguir mostra commo mudar a cor do título para vermelho.</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb59-1"><a href="executando-código.html#cb59-1" aria-hidden="true"></a><span class="fu">$</span>(<span class="st">&#39;.title&#39;</span>)<span class="op">.</span><span class="fu">css</span>(<span class="st">&#39;color&#39;</span><span class="op">,</span> <span class="st">&#39;red&#39;</span>)</span></code></pre></div>
+<p>Da mesma forma, pode-se incorporar a regras CSS no documento de saída. O código a seguir exemplifica isso, mostrando como transformar o texto dentro do corpo do documento vermelho:</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb60-1"><a href="executando-código.html#cb60-1" aria-hidden="true"></a>body {</span>
+<span id="cb60-2"><a href="executando-código.html#cb60-2" aria-hidden="true"></a><span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb60-3"><a href="executando-código.html#cb60-3" aria-hidden="true"></a>}</span></code></pre></div>
 </div>
-<div id="julia" class="section level3" number="3.4.3">
-<h3><span class="header-section-number">3.4.3</span> Julia</h3>
-<p>A linguagem Julia é suportado pelo pacote JuliaCall igual a linguagem python. Vejamos o exemplo 15 abaixo</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb59-1"><a href="executando-código.html#cb59-1" aria-hidden="true"></a>a <span class="op">=</span> sqrt(<span class="fl">2</span>)<span class="op">;</span> <span class="co"># the semicolon inhibits printing</span></span></code></pre></div>
+<div id="julia" class="section level3" number="3.3.8">
+<h3><span class="header-section-number">3.3.8</span> Julia</h3>
+<p>A linguagem Julia é suportada pelo pacote JuliaCall, de forma análoga a linguagem Python.</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb61-1"><a href="executando-código.html#cb61-1" aria-hidden="true"></a>a <span class="op">=</span> sqrt(<span class="fl">2</span>)<span class="op">;</span> <span class="co"># the semicolon inhibits printing</span></span></code></pre></div>
 <pre><code>## 1.4142135623730951</code></pre>
 </div>
-<div id="c-and-fortran" class="section level3" number="3.4.4">
-<h3><span class="header-section-number">3.4.4</span> C and Fortran</h3>
-<p>Para blocos de código que usam C ou Fortran, o knitr usa R CMD SHLIB para compilar o código e carregar o objeto (um arquivo * .so no Unix ou * .dll no Windows). Então você pode usar o comando</p>
-<p>.C () / .Fortran ()</p>
-<p>Para chamar as funções C / Fortran conforma mostra o exemplo 16.</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb61-1"><a href="executando-código.html#cb61-1" aria-hidden="true"></a><span class="dt">void</span> square(<span class="dt">double</span> *x) {</span>
-<span id="cb61-2"><a href="executando-código.html#cb61-2" aria-hidden="true"></a>*x = *x * *x;</span>
-<span id="cb61-3"><a href="executando-código.html#cb61-3" aria-hidden="true"></a>}</span></code></pre></div>
-<p>Test the <code>square()</code> function:</p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="executando-código.html#cb62-1" aria-hidden="true"></a><span class="kw">.C</span>(<span class="st">&#39;square&#39;</span>, <span class="dv">9</span>)</span></code></pre></div>
+<div id="c-and-fortran" class="section level3" number="3.3.9">
+<h3><span class="header-section-number">3.3.9</span> C and Fortran</h3>
+<p>Para blocos de código que usam C ou Fortran, o <strong>knitr</strong> usa R CMD SHLIB para compilar o código e carregar o objeto (um arquivo <code>.so</code> no Unix ou <code>.dll</code> no Windows). Então você pode usar o comando <code>.C ()</code> ou <code>/ .Fortran ()</code> para as funções C / Fortran, como é mostrado a seguir, respectivamente:</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb63-1"><a href="executando-código.html#cb63-1" aria-hidden="true"></a><span class="dt">void</span> square(<span class="dt">double</span> *x) {</span>
+<span id="cb63-2"><a href="executando-código.html#cb63-2" aria-hidden="true"></a>*x = *x * *x;</span>
+<span id="cb63-3"><a href="executando-código.html#cb63-3" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="executando-código.html#cb64-1" aria-hidden="true"></a><span class="kw">.C</span>(<span class="st">&#39;square&#39;</span>, <span class="dv">9</span>)</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] 81</code></pre>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="executando-código.html#cb64-1" aria-hidden="true"></a><span class="kw">.C</span>(<span class="st">&#39;square&#39;</span>, <span class="dv">123</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="executando-código.html#cb66-1" aria-hidden="true"></a><span class="kw">.C</span>(<span class="st">&#39;square&#39;</span>, <span class="dv">123</span>)</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] 15129</code></pre>
 <!-- citacoes **bookdown** [@R-bookdown] -->
 <!-- Só pra ficar claro se alguem ler essa parte aqui, esse negócio esquisito é um comentário -->
 </div>
 </div>
-<div id="exemplo" class="section level2" number="3.5">
-<h2><span class="header-section-number">3.5</span> Exemplo</h2>
+<div id="exemplo" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Exemplo</h2>
 <p>Para que o código seja executado no meio de um texto, é necessário usar o caractere <code>`</code>, antes e depois do código descrito. Exemplo:</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="executando-código.html#cb66-1" aria-hidden="true"></a>Este texto gera<span class="op">:</span><span class="st"> `</span><span class="dt">r format(Sys.Date(), &quot;%d/%m/%Y&quot;)</span><span class="st">`</span>.</span></code></pre></div>
-<p>Este texto gera: 12/10/2020.</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="executando-código.html#cb68-1" aria-hidden="true"></a>Este texto gera<span class="op">:</span><span class="st"> `</span><span class="dt">r format(Sys.Date(), &quot;%d/%m/%Y&quot;)</span><span class="st">`</span>.</span></code></pre></div>
+<p>Este texto gera: 13/10/2020.</p>
 <hr />
 <p>O código também pode ser executado dentro de blocos. Blocos de código são inseridos da seguinte forma:</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb67-1"><a href="executando-código.html#cb67-1" aria-hidden="true"></a><span class="in">```{r}</span></span>
-<span id="cb67-2"><a href="executando-código.html#cb67-2" aria-hidden="true"></a><span class="in">format(Sys.Date(), &quot;%d/%m/%Y&quot;)</span></span>
-<span id="cb67-3"><a href="executando-código.html#cb67-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb69-1"><a href="executando-código.html#cb69-1" aria-hidden="true"></a><span class="in">```{r}</span></span>
+<span id="cb69-2"><a href="executando-código.html#cb69-2" aria-hidden="true"></a><span class="in">format(Sys.Date(), &quot;%d/%m/%Y&quot;)</span></span>
+<span id="cb69-3"><a href="executando-código.html#cb69-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
 <p>O que gera o seguinte output ao ser compilado seu arquivo R Markdown:</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="executando-código.html#cb68-1" aria-hidden="true"></a><span class="kw">format</span>(<span class="kw">Sys.Date</span>(), <span class="st">&quot;%d/%m/%Y&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;12/10/2020&quot;</code></pre>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="executando-código.html#cb70-1" aria-hidden="true"></a><span class="kw">format</span>(<span class="kw">Sys.Date</span>(), <span class="st">&quot;%d/%m/%Y&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;13/10/2020&quot;</code></pre>
 <hr />
 <p>Algumas das opções básicas de blocos de código <a href="executando-código.html#flags">já mencionadas</a>:</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb70-1"><a href="executando-código.html#cb70-1" aria-hidden="true"></a><span class="in">```{r, echo = FALSE}</span></span>
-<span id="cb70-2"><a href="executando-código.html#cb70-2" aria-hidden="true"></a><span class="in">2 + 2</span></span>
-<span id="cb70-3"><a href="executando-código.html#cb70-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
-<pre><code>## [1] 4</code></pre>
-<div class="sourceCode" id="cb72"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb72-1"><a href="executando-código.html#cb72-1" aria-hidden="true"></a><span class="in">```{r, eval = FALSE}</span></span>
+<div class="sourceCode" id="cb72"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb72-1"><a href="executando-código.html#cb72-1" aria-hidden="true"></a><span class="in">```{r, echo = FALSE}</span></span>
 <span id="cb72-2"><a href="executando-código.html#cb72-2" aria-hidden="true"></a><span class="in">2 + 2</span></span>
 <span id="cb72-3"><a href="executando-código.html#cb72-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="executando-código.html#cb73-1" aria-hidden="true"></a><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb74"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb74-1"><a href="executando-código.html#cb74-1" aria-hidden="true"></a><span class="in">```{r, eval = FALSE}</span></span>
+<span id="cb74-2"><a href="executando-código.html#cb74-2" aria-hidden="true"></a><span class="in">2 + 2</span></span>
+<span id="cb74-3"><a href="executando-código.html#cb74-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="executando-código.html#cb75-1" aria-hidden="true"></a><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></span></code></pre></div>
 <hr />
 <p>Exemplo de utilização de blocos de código para inserir imagens como descrito no <a href="sintaxe.html#inserindo-imagens">capítulo 2</a></p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb74-1"><a href="executando-código.html#cb74-1" aria-hidden="true"></a><span class="in">```{r}</span></span>
-<span id="cb74-2"><a href="executando-código.html#cb74-2" aria-hidden="true"></a><span class="in">knitr::include_graphics(&quot;img/logoestats.jpeg&quot;)</span></span>
-<span id="cb74-3"><a href="executando-código.html#cb74-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="executando-código.html#cb75-1" aria-hidden="true"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;img/logoestats.jpeg&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb76"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb76-1"><a href="executando-código.html#cb76-1" aria-hidden="true"></a><span class="in">```{r}</span></span>
+<span id="cb76-2"><a href="executando-código.html#cb76-2" aria-hidden="true"></a><span class="in">knitr::include_graphics(&quot;img/logoestats.jpeg&quot;)</span></span>
+<span id="cb76-3"><a href="executando-código.html#cb76-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="executando-código.html#cb77-1" aria-hidden="true"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;img/logoestats.jpeg&quot;</span>)</span></code></pre></div>
 <p><img src="img/logoestats.jpeg" width="32" style="display: block; margin: auto;" /></p>
 <hr />
 <p>Inserindo tabelas dentro de blocos de código:</p>
-<div class="sourceCode" id="cb76"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb76-1"><a href="executando-código.html#cb76-1" aria-hidden="true"></a><span class="in">```{r}</span></span>
-<span id="cb76-2"><a href="executando-código.html#cb76-2" aria-hidden="true"></a><span class="in">knitr::kable(cars[1:5,], caption = &quot;Carros&quot;)</span></span>
-<span id="cb76-3"><a href="executando-código.html#cb76-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="executando-código.html#cb77-1" aria-hidden="true"></a>knitr<span class="op">::</span><span class="kw">kable</span>(cars[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>,], <span class="dt">caption =</span> <span class="st">&quot;Carros&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb78"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb78-1"><a href="executando-código.html#cb78-1" aria-hidden="true"></a><span class="in">```{r}</span></span>
+<span id="cb78-2"><a href="executando-código.html#cb78-2" aria-hidden="true"></a><span class="in">knitr::kable(cars[1:5,], caption = &quot;Carros&quot;)</span></span>
+<span id="cb78-3"><a href="executando-código.html#cb78-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="executando-código.html#cb79-1" aria-hidden="true"></a>knitr<span class="op">::</span><span class="kw">kable</span>(cars[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>,], <span class="dt">caption =</span> <span class="st">&quot;Carros&quot;</span>)</span></code></pre></div>
 <table>
 <caption><span id="tab:unnamed-chunk-37">Table 3.1: </span>Carros</caption>
 <thead>
@@ -534,10 +516,10 @@ color: red;
 </table>
 <hr />
 <p>Exemplo utilizando outra <a href="executando-código.html#linguagens-suportadas">linguagem suportada</a>, neste caso python:</p>
-<div class="sourceCode" id="cb78"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb78-1"><a href="executando-código.html#cb78-1" aria-hidden="true"></a><span class="in">```{python}</span></span>
-<span id="cb78-2"><a href="executando-código.html#cb78-2" aria-hidden="true"></a><span class="in">print(5 ** 3)</span></span>
-<span id="cb78-3"><a href="executando-código.html#cb78-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
-<div class="sourceCode" id="cb79"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb79-1"><a href="executando-código.html#cb79-1" aria-hidden="true"></a><span class="bu">print</span>(<span class="dv">5</span> <span class="op">**</span> <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb80-1"><a href="executando-código.html#cb80-1" aria-hidden="true"></a><span class="in">```{python}</span></span>
+<span id="cb80-2"><a href="executando-código.html#cb80-2" aria-hidden="true"></a><span class="in">print(5 ** 3)</span></span>
+<span id="cb80-3"><a href="executando-código.html#cb80-3" aria-hidden="true"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="executando-código.html#cb81-1" aria-hidden="true"></a><span class="bu">print</span>(<span class="dv">5</span> <span class="op">**</span> <span class="dv">3</span>)</span></code></pre></div>
 <pre><code>## 125</code></pre>
 <hr />
 <p>Exemplos mais detalhados de R e de outras linguagens suportadas estão disponíveis neste <a href="exemplos/104-intro_blocos_de_codigo.html">link</a>.</p>

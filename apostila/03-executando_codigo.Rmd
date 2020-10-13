@@ -298,12 +298,12 @@ print(fit)
 Se há a intenção de gerar um documento com saída HTML, é possível executar um Java Script dentro do R Markdown usando esta linguagem denominada js.
 O exemplo a seguir mostra commo mudar a cor do título para vermelho.
 
-```{js, echo=FALSE}
+```{js, eval=FALSE}
 $('.title').css('color', 'red')
 ```
 Da mesma forma, pode-se incorporar a regras CSS no documento de saída. O código a seguir exemplifica isso, mostrando como transformar o texto dentro do corpo do documento vermelho:
 
-```{css, echo=FALSE}
+```{css, eval=FALSE}
 body {
 color: red;
 }

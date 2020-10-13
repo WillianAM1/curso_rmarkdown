@@ -6,7 +6,7 @@
 \contentsline {subsection}{\numberline {1.4.1}Windows}{8}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Linux}{9}{subsection.1.4.2}%
 \contentsline {subsection}{\numberline {1.4.3}MacOS}{9}{subsection.1.4.3}%
-\contentsline {subsubsection}{\numberline {1.4.3.1}Configuração do MikTek para Windowns}{10}{subsubsection.1.4.3.1}%
+\contentsline {subsubsection}{\numberline {1.4.3.1}Configuração do MikTek para Windows}{10}{subsubsection.1.4.3.1}%
 \contentsline {chapter}{\numberline {2}Sintaxe}{13}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Prêambulo}{13}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Definindo tipo de output}{13}{subsection.2.1.1}%
@@ -29,12 +29,12 @@
 \contentsline {subsection}{\numberline {3.3.2}Script Shell}{24}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}SQL}{24}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}Rcpp}{26}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}Todos os fragmentos de códigos C++ serão combinados em um único fragmento.}{27}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Stan}{27}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Java Script}{27}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Julia}{28}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}C and Fortran}{28}{subsection.3.4.4}%
-\contentsline {section}{\numberline {3.5}Exemplo}{28}{section.3.5}%
+\contentsline {subsection}{\numberline {3.3.5}Todos os fragmentos de códigos C++ serão combinados em um único fragmento.}{26}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Stan}{27}{subsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.3.7}Java Script}{27}{subsection.3.3.7}%
+\contentsline {subsection}{\numberline {3.3.8}Julia}{27}{subsection.3.3.8}%
+\contentsline {subsection}{\numberline {3.3.9}C and Fortran}{28}{subsection.3.3.9}%
+\contentsline {section}{\numberline {3.4}Exemplo}{28}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Customização e Tipos de Arquivo}{31}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Opções avançadas no preâmbulo}{31}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Apresentação de slides}{31}{section.4.2}%
