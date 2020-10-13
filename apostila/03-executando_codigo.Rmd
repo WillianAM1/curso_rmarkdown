@@ -76,7 +76,7 @@ print("Curso de R markdown")
 
 ## Linguagens Suportadas
 
-Por meio do pacote knitr que forneceu um grande número de motores de linguagem o R Markdown suporta outras linguagens tais como [Python](https://www.python.org/), [Julia](https://julialang.org/), C++, SQL. Esses motores de linguagem podem ser acessados dentro de blocos de código designando sua respectiva engine, as engines no knitr são:
+Por meio do pacote **knitr**, que forneceu um grande número de motores de linguagem, o R Markdown suporta outras linguagens, tais como [Python](https://www.python.org/), [Julia](https://julialang.org/), C++, SQL. Esses motores de linguagem podem ser acessados dentro de blocos de código designando sua respectiva engine, as engines no knitr são:
 
 ```{r}
 names(knitr::knit_engines$get())
@@ -84,77 +84,75 @@ names(knitr::knit_engines$get())
 
 ### Linguagem Python
 
-Para utilizar a linguagem python primeiro é necessário instalar o pacote reticulate com o comando:
+Para utilizar a linguagem python, é necessário instalar o pacote `reticulate` com o comando:
 ```{r, eval = FALSE}
 install.packages("reticulate")
 ```
 
-Com esse pacote é possível executar todos os fragmentos de código Python em uma mesma seção. Caso deseje executar um trecho do código pode usar o comando:
+Com esse pacote é possível executar todos os fragmentos de código Python em uma mesma seção. Para executar um trecho do código, usa-se o seguinte comando:
 
 `python.reticulate = FALSE`
 
-Vale ressaltar que se você estiver usando uma versão do knitr inferior a 1.18 você deve atualizar seus pacotes R. Por padrão o reticulate usa a versão padrão encontrada em seu path. Para encontrar onde esta instalado o python em seu computador use o comando:
+Vale ressaltar que se a versão do **kniter** utilizada for inferior a 1.18é  necessário a atualizar os pacotes R. Por definição, o reticulate usa a versão padrão encontrada em seu path. 
+Para encontrar onde esta instalado o Python no computador, usa-se o seguinte comando:
 
 ```{r, eval = FALSE}
 Sys.which("python")
 ```
 
-Você pode escolher a versão de Python com o comando:
+Pode-se também escolher a versão de Python a ser utilizada como a função:
 
 ```{r, eval = FALSE}
 use_python()
 ```
 
-Vejamos no exemplo 1 como você pode fazer:
+Exemplo 1: Definindo a versão do Python.
 
-Exemplo 1:
 
 ```{r, eval = FALSE}
 library(reticulate)
 use_python("/usr/local/bin/python")
 ```
 
-Vejamos no exemplo 2 para usar pedaços de código Python. Outrossim, para isso você deve utilizar o comando
+Exemplo 2: Definindo e recuperando variáveis no Python.
 
 ```{r, eval = FALSE}
 py$name 
 ```
 
-Onde `name` é o nome da variável que você deseja usar na sessão Python. Para recuperar um valor Python use também py$name. 
+Onde `name` é o nome da variável que você deseja usar na sessão. Para recuperar um valor Python também utiliza-se py$name. 
 
-Exemplo 2:
+Exemplo 3: Executando um bloco de código R e um bloco de código Python.
 
-Um pedaço de código R normal
+#código em R
 
 ```{r}
 x <- 42
 print(x)
 ```
 
-No exemplo 3 vemos a utilização de um pedaço de um código python 
-
-Exemplo 3:
+#código em Python
 
 ```{python teste}
 x = 42 * 2
 print(x)
 ```
 
-O valor de `x` na sessão Python é py$x. Não é o mesmo `x` de R.
+Nesse caso o valor de `x` na sessão em Python é py$x, sendo diferente do valor atribuido a  `x` da sessão em R.
 
 ### Script Shell
 
-Você pode escrever scripts Shell em R Markdown, se seu sistema puder executá-los (o bash executável ou sh deve existir). Normalmente, isso não é um problema para usuários de Linux ou macOS. Não é impossível para os usuários do Windows, mas você terá que instalar software adicional (como Cygwin ou o Subsistema Linux).
+Pode-se escrever scripts Shell em R Markdown, desde que o sistema possa executá-los, ou seja, o bash executável ou sh deve existir, o que normalmente não é um problema para usuários de Linux ou macOS. Para usuários windows, é necessário ainstalação de um software adicional como Cygwin ou o Subsistema Linux.
 
 ### SQL
 
-Como o mecanismo SQL usa o pacote DBI você deve estabelecer uma conexão DBI com um banco de dados. Você pode utilizar o comando 
+Como o mecanismo SQL usa o pacote DBI, deve-se estabelecer uma conexão DBI com um banco de dados, o que pode ser feito através do comando 
 
 ```{r, eval = FALSE}
 DBI::dbConnect()
 ```
 
-Você pode usar essa conexão em um fragmento SQL através da opção de conexão como mosta o exemplo 4 utilizando SQLite.
+Pode-se usar essa conexão em um fragmento SQL através da opção de conexão, como demonstrado a seguir utilizando o SQLite.
 
 Exemplo 4:
 
@@ -171,9 +169,9 @@ SELECT * FROM trials
 ```
 ````
 
-O número de registros exibidos é controlado pela opção `max.print` que é derivada da função sql.max.print.
+Para controlar o numero de registros exibidos, usa-se a opção `max.print` que é derivada da função sql.max.print.
 
-No exemplo 5 o seguinte fragmento de código exibe os 15 primeiros registros.
+O fragmento de código a seguir exemplifica os 15 primeiros registros.
 
 ````markdown
 `r ''` ```{sql, connection=db, max.print = 15}
@@ -181,11 +179,9 @@ SELECT * FROM trials
 ```
 ````
 
-Caso queria especificar para nenhum limite no registro utilize `max.print = NA`.
+Caso deseja-se especificar que não haja nenhum limite no registro, usa-se `max.print = NA`.
 
-Se você quiser atribuir os resultados da consulta SQL a um objeto R como um quadro de dados basta utilizar o comando `output.var`.
-
-Como mostra o exemplo 6
+Para  atribuir os resultados da consulta SQL a um objeto R como um quadro de dados,  basta utilizar o comando `output.var` como é mostrado a seguir:
 
 ````markdown
 `r ''` ```{sql, connection=db, output.var="trials"}
@@ -193,7 +189,7 @@ SELECT * FROM trials
 ```
 ````
 
-Quando os resultados de uma consulta SQL são atribuídos a um quadro de dados, nenhum registro será impresso no documento. Caso queira, você pode imprimir manualmente o quadro de dados em um bloco R subsequente. Se você precisar ligar os valores das variáveis R em consultas SQL, você pode fazer isso prefaciando a variável R referências com uma interrogação (?). Assim como mostra o exemplo 7.
+Quando os resultados de uma consulta SQL são atribuídos a um quadro de dados, nenhum registro será impresso no documento. Porém é ossível imprimir manualmente o quadro de dados em um bloco R subsequente. Caso seja necesário ligar os valores das variáveis R em consultas SQL, pode-se fazê-lo prefaciando a variável R de referência com uma interrogação (?). Como mostra o exemplo a seguir:
 
 ```{r}
 subjects = 10
@@ -205,7 +201,7 @@ SELECT * FROM trials WHERE subjects >= ?subjects
 ```
 ````
 
-Se você tiver muitos fragmentos SQL, pode ser útil definir um padrão para a opção de fragmento de conexão no fragmento de configuração, de forma que não seja necessário especificar a conexão em cada fragmento individual. Você consegue conforme mostra o exemplo 8.
+Caso haja muitos fragmentos SQL, pode ser útil definir um padrão para a opção de fragmento de conexão no fragmento de configuração, de forma que não seja necessário especificar a conexão em cada fragmento individual. Conforme mostra a seguir:
 
 ```{r, eval = FALSE}
 library(DBI)
@@ -213,7 +209,7 @@ db = dbConnect(RSQLite::SQLite(), dbname = "sql.sqlite")
 knitr::opts_chunk$set(connection = "db")
 ```
 
-Observe que a opção de conexão deve ser uma string nomeando o objeto de conexão (não o próprio objeto). Depois de definido, você pode executar blocos SQL sem especificar uma conexão explícita como mostra o exemplo 9.
+Observe que a opção de conexão deve ser uma string nomeando o objeto de conexão (não o próprio objeto). Depois de definido, pode-se executar blocos SQL sem especificar uma conexão explícita como é exemplificado a seguir:
 
 ````markdown
 `r ''` ```{sql}
@@ -225,7 +221,7 @@ SELECT * FROM trials
 
 O mecanismo Rcpp permite a compilação de C ++ em funções R com o comando `rcpp::sourceCpp()`
 
-O resultado é apresentado no exemplo 10.
+O resultado é apresentado a seguir:
 
 ````markdown
 `r ''` ```{Rcpp}
@@ -238,15 +234,7 @@ return x * 2;
 ```
 ````
 
-A execução desse trecho compilará o código e tornará a função C ++ com o comando:
-
-timesTwo () 
-
-Disponível para R. Você pode armazenar em cache a compilação de blocos de código C ++ usando o cache de knitr padrão, ou seja, adicionar o comando:
-
-cache = TRUE
-
-Conforme mostra o exemplo 11. 
+A execução desse trecho compilará o código e tornará a função C ++ com o comando `timesTwo ()` disponível para R.Pode-se armazenar em cache a compilação de blocos de código C ++ usando o cache de knitr padrão, ou seja, adicionar o comando `cache = TRUE`, da seguinte forma: 
 
 ````markdown
 `r ''` ```{Rcpp, cache=TRUE}
@@ -259,23 +247,23 @@ return x * 2;
 ```
 ````
 
-Em alguns casos, é desejável combinar todos os pedaços de código Rcpp em um documento em uma única unidade de compilação, pois economiza tempo. Para isso use o comando `ref.label` junto com o comando `knitr::all_rcpp_labels()`.
+Em alguns casos, é desejável combinar todos os pedaços de código Rcpp em um documento em uma única unidade de compilação, pois economiza tempo. Para isso utiliza-se o  comando `ref.label` junto com o comando `knitr::all_rcpp_labels()`.
 
-Pois assim é possível coletar todos os fragmentos do Rcpp conforme mostra o exemplo 12
+Deste modo, é possível coletar todos os fragmentos do Rcpp, conforme mostra a seguir:
 
-## Todos os fragmentos de códigos C++ serão combinados em um único fragmento.
+### Todos os fragmentos de códigos C++ serão combinados em um único fragmento.
 ````markdown
 `r ''` ```{Rcpp, ref.label=knitr::all_rcpp_labels(), include=FALSE}
 ```
 ````
 
-Primeiro é necessário incluir o leitor `Rcpp.h`
+Primeiramente, é necessário incluir o leitor `Rcpp.h`
 
 ```{Rcpp, eval=FALSE}
 #include <Rcpp.h>
 ```
 
-Depois você define a função
+Depois, define-se a função:
 
 ```{Rcpp, eval=FALSE}
 // [[Rcpp::export]]
@@ -284,15 +272,11 @@ return x * 2;
 }
 ```
 
-Assim os dois fragmentos com código Rcpp serão compilados juntos no primeiro pedaço.
+Com isso, os dois fragmentos com código Rcpp serão compilados juntos no primeiro pedaço.
 
 ### Stan 
 
-A linguagem Stan permite a incorporação da linguagem probabilística. Para tanto, utilize o comando:
-
-output.var 
-
-Como mostra o exemplo 13
+A linguagem Stan permite a incorporação da linguagem probabilística. Para tanto, utilize o comando `output.var`. A seguir é exemplificado um pouco de linguagem Stan:
 
 ```{stan, output.var="ex1", eval = FALSE}
 parameters {
@@ -311,14 +295,13 @@ print(fit)
 
 ### Java Script
 
-Se você visa que seu documento tenha saída HTML, é possível executar um Java Script nele usando esta linguagem denominada js.
-O exemplo 14 apresenta como mudar a cor do título para vermelho.
+Se há a intenção de gerar um documento com saída HTML, é possível executar um Java Script dentro do R Markdown usando esta linguagem denominada js.
+O exemplo a seguir mostra commo mudar a cor do título para vermelho.
 
 ```{js, echo=FALSE}
 $('.title').css('color', 'red')
 ```
-Da mesma forma, você pode incorporar regras CSS no documento de saída. Por exemplo, o seguinte fragmento de código transforma
-texto dentro do corpo do documento vermelho:
+Da mesma forma, pode-se incorporar a regras CSS no documento de saída. O código a seguir exemplifica isso, mostrando como transformar o texto dentro do corpo do documento vermelho:
 
 ```{css, echo=FALSE}
 body {
@@ -328,7 +311,7 @@ color: red;
 
 ### Julia
 
-A linguagem Julia é suportado pelo pacote JuliaCall igual a linguagem python. Vejamos o exemplo 15 abaixo
+A linguagem Julia é suportada pelo pacote JuliaCall, de forma análoga a linguagem Python.
 
 ```{julia, cache = TRUE}
 a = sqrt(2); # the semicolon inhibits printing
@@ -336,18 +319,14 @@ a = sqrt(2); # the semicolon inhibits printing
 
 ### C and Fortran
 
-Para blocos de código que usam C ou Fortran, o knitr usa R CMD SHLIB para compilar o código e carregar o objeto (um arquivo * .so no Unix ou * .dll no Windows). Então você pode usar o comando
-
- .C () / .Fortran ()
-
- Para chamar as funções C / Fortran conforma mostra o exemplo 16.
+Para blocos de código que usam C ou Fortran, o **knitr** usa R CMD SHLIB para compilar o código e carregar o objeto (um arquivo `.so` no Unix ou `.dll` no Windows). Então você pode usar o comando ` .C () ` ou `/ .Fortran ()` para as funções C / Fortran, como é mostrado a seguir, respectivamente:
 
 ```{c, test-c, results='hide'}
 void square(double *x) {
 *x = *x * *x;
 }
 ```
-Test the `square()` function:
+
 ```{r}
 .C('square', 9)
 .C('square', 123)
