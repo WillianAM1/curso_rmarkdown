@@ -272,3 +272,49 @@ knitr::include_graphics(rep("img/logoestats.jpeg", 3))
 [Exemplo Sumário e Cabeçalhos](exemplos/102-sumario_e_cabecalho.html)
 
 [Exemplo formatação de textos](exemplos/103-formatacao_de_texto.html)
+
+## Expressões Matemáticas
+
+As Equações inline em LaTeX podem ser escritas utilizando um par de cifrões, por exemplo, `$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$ `(output atual: $f(k)={n \choose k}p^{k}(1-p)^{n-k}$ ); expressões matemáticas do estilo de exibição podem ser escritas utlizando um par de cifrões duplos, por exemplo, `$$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$$ `, ficando o output da seguinte maneira:
+$$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$$
+Você também pode usar ambientes matemáticos dentro `$ $` OU `$$ $$`, isto é
+```{latex}
+\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}
+\end{array}
+```
+\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}
+\end{array}
+
+```{latex}
+$$X = \begin{bmatrix}1 & x_{1}\\
+1 & x_{2}\\
+1 & x_{3}
+\end{bmatrix}$$
+```
+
+$$X = \begin{bmatrix}1 & x_{1}\\
+1 & x_{2}\\
+1 & x_{3}
+\end{bmatrix}$$
+
+```{latex}
+$$\Theta = \begin{pmatrix}\alpha & \beta\\
+\gamma & \delta
+\end{pmatrix}$$
+```
+\Theta = \begin{pmatrix}\alpha & \beta\\
+\gamma & \delta
+\end{pmatrix}
+
+```{latex}
+$$\begin{vmatrix}a & b\\
+c & d
+\end{vmatrix}=ad-bc$$
+```
+\begin{vmatrix}a & b\\
+c & d
+\end{vmatrix}=ad-bc
