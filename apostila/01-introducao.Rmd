@@ -65,7 +65,7 @@ Em seguida, escolha o tipo de arquivo desejado:
 
 ![](img/file.png)
 
-*Obs*: Para gerar documentos em PDF, é necessário ter instalado em seu computador o programa [Latex](#download-rmd-e-latex).
+*Obs*: Para gerar documentos em PDF, é necessário ter instalado em seu computador o programa [Latex](#download-miktex).
 
 Seguindo os passos acima, você terá criado o seu primeiro documento em R Markdown. Vale ressaltar que é possível utilizar o R Markdown sem que tenha instalado o R Studio, porém, é necessário ter instalado o programa [Pandoc](https://pandoc.org).
 

@@ -159,7 +159,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.4" data-path="sintaxe.html"><a href="sintaxe.html#listas"><i class="fa fa-check"></i><b>2.2.4</b> Listas</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="sintaxe.html"><a href="sintaxe.html#inserindo-imagens"><i class="fa fa-check"></i><b>2.3</b> Inserindo Imagens</a></li>
-<li class="chapter" data-level="2.4" data-path="sintaxe.html"><a href="sintaxe.html#exemplos"><i class="fa fa-check"></i><b>2.4</b> Exemplos</a></li>
+<li class="chapter" data-level="2.4" data-path="sintaxe.html"><a href="sintaxe.html#expressões-matemáticas"><i class="fa fa-check"></i><b>2.4</b> Expressões Matemáticas</a></li>
+<li class="chapter" data-level="2.5" data-path="sintaxe.html"><a href="sintaxe.html#exemplos"><i class="fa fa-check"></i><b>2.5</b> Exemplos</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="executando-código.html"><a href="executando-código.html"><i class="fa fa-check"></i><b>3</b> Executando Código</a>
 <ul>
@@ -578,69 +579,69 @@ O pacote <strong>xaringan</strong> é uma extensão R Markdown baseada no JavaSc
 <div id="documento-de-texto-opendocument" class="section level3" number="4.3.1">
 <h3><span class="header-section-number">4.3.1</span> Documento de texto OpenDocument</h3>
 <p>Para criar um documento OpenDocument Text (ODT) a partir do R Markdown, você especifica o <code>odt_document</code> no formato de saída nos metadados YAML do seu documento:</p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb114-1"><a href="customização-e-tipos-de-arquivo.html#cb114-1" aria-hidden="true"></a><span class="co">---</span></span>
-<span id="cb114-2"><a href="customização-e-tipos-de-arquivo.html#cb114-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
-<span id="cb114-3"><a href="customização-e-tipos-de-arquivo.html#cb114-3" aria-hidden="true"></a><span class="an">author:</span><span class="co"> Estats</span></span>
-<span id="cb114-4"><a href="customização-e-tipos-de-arquivo.html#cb114-4" aria-hidden="true"></a><span class="an">date:</span><span class="co"> Agosto 01, 2020</span></span>
-<span id="cb114-5"><a href="customização-e-tipos-de-arquivo.html#cb114-5" aria-hidden="true"></a><span class="an">output:</span><span class="co"> odt_document</span></span>
-<span id="cb114-6"><a href="customização-e-tipos-de-arquivo.html#cb114-6" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
-<p>Semelhante a <code>word_document</code>,você, também pode fornecer um documento de referência de estilo para <code>odt_document</code> percorrer a <code>reference_odt</code> na configuração. Para obter os melhores resultados, o documento ODT de referência deve ser uma versão modificada de um arquivo ODT produzido usando rmarkdown. Por exemplo:</p>
-<div class="sourceCode" id="cb115"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb115-1"><a href="customização-e-tipos-de-arquivo.html#cb115-1" aria-hidden="true"></a><span class="co">---</span></span>
-<span id="cb115-2"><a href="customização-e-tipos-de-arquivo.html#cb115-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
-<span id="cb115-3"><a href="customização-e-tipos-de-arquivo.html#cb115-3" aria-hidden="true"></a><span class="an">output:</span></span>
-<span id="cb115-4"><a href="customização-e-tipos-de-arquivo.html#cb115-4" aria-hidden="true"></a><span class="co">  odt_document:</span></span>
-<span id="cb115-5"><a href="customização-e-tipos-de-arquivo.html#cb115-5" aria-hidden="true"></a><span class="co">    reference_odt: meu-estilo.odt</span></span>
-<span id="cb115-6"><a href="customização-e-tipos-de-arquivo.html#cb115-6" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
-</div>
-<div id="documento-do-word" class="section level3" number="4.3.2">
-<h3><span class="header-section-number">4.3.2</span> Documento do Word</h3>
-<p>Para criar um documento do Word a partir do R Markdown, você especifica o <code>word_document</code> no formato de saída nos metadados YAML do seu documento:</p>
-<div class="sourceCode" id="cb116"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb116-1"><a href="customização-e-tipos-de-arquivo.html#cb116-1" aria-hidden="true"></a><span class="co">---</span></span>
-<span id="cb116-2"><a href="customização-e-tipos-de-arquivo.html#cb116-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
-<span id="cb116-3"><a href="customização-e-tipos-de-arquivo.html#cb116-3" aria-hidden="true"></a><span class="an">author:</span><span class="co"> Estats</span></span>
-<span id="cb116-4"><a href="customização-e-tipos-de-arquivo.html#cb116-4" aria-hidden="true"></a><span class="an">date:</span><span class="co"> Agosto 01, 2020</span></span>
-<span id="cb116-5"><a href="customização-e-tipos-de-arquivo.html#cb116-5" aria-hidden="true"></a><span class="an">output:</span><span class="co"> word_document</span></span>
-<span id="cb116-6"><a href="customização-e-tipos-de-arquivo.html#cb116-6" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
-<p>A característica mais notável dos documentos do Word é o modelo do Word, também conhecido como “documento de referência de estilo”. Você pode especificar um documento a ser usado como referência de estilo na produção de um <code>*.docx</code> arquivo (um documento do Word). Isso permitirá que você personalize itens como margens e outras características de formatação. Para obter os melhores resultados, o documento de referência deve ser uma versão modificada de um <code>.docx</code> arquivo produzido usando rmarkdown. O caminho de tal documento pode ser passado para o <code>reference_docx</code> argumento do <code>word_document</code> no formato de saída. Passe <code>"default"</code> para usar os estilos padrão. Por exemplo:</p>
-<div class="sourceCode" id="cb117"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb117-1"><a href="customização-e-tipos-de-arquivo.html#cb117-1" aria-hidden="true"></a><span class="co">---</span></span>
-<span id="cb117-2"><a href="customização-e-tipos-de-arquivo.html#cb117-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
-<span id="cb117-3"><a href="customização-e-tipos-de-arquivo.html#cb117-3" aria-hidden="true"></a><span class="an">output:</span></span>
-<span id="cb117-4"><a href="customização-e-tipos-de-arquivo.html#cb117-4" aria-hidden="true"></a><span class="co">  word_document:</span></span>
-<span id="cb117-5"><a href="customização-e-tipos-de-arquivo.html#cb117-5" aria-hidden="true"></a><span class="co">    reference_docx: meu-estilo.docx</span></span>
-<span id="cb117-6"><a href="customização-e-tipos-de-arquivo.html#cb117-6" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
-</div>
-<div id="documento-de-pdf" class="section level3" number="4.3.3">
-<h3><span class="header-section-number">4.3.3</span> Documento de PDF</h3>
-<p>Para criar um documento PDF a partir do R Markdown, você especifica o <code>pdf_document</code> no formato de saída nos metadados YAML:</p>
 <div class="sourceCode" id="cb118"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb118-1"><a href="customização-e-tipos-de-arquivo.html#cb118-1" aria-hidden="true"></a><span class="co">---</span></span>
 <span id="cb118-2"><a href="customização-e-tipos-de-arquivo.html#cb118-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
 <span id="cb118-3"><a href="customização-e-tipos-de-arquivo.html#cb118-3" aria-hidden="true"></a><span class="an">author:</span><span class="co"> Estats</span></span>
 <span id="cb118-4"><a href="customização-e-tipos-de-arquivo.html#cb118-4" aria-hidden="true"></a><span class="an">date:</span><span class="co"> Agosto 01, 2020</span></span>
-<span id="cb118-5"><a href="customização-e-tipos-de-arquivo.html#cb118-5" aria-hidden="true"></a><span class="an">output:</span><span class="co"> pdf_document</span></span>
+<span id="cb118-5"><a href="customização-e-tipos-de-arquivo.html#cb118-5" aria-hidden="true"></a><span class="an">output:</span><span class="co"> odt_document</span></span>
 <span id="cb118-6"><a href="customização-e-tipos-de-arquivo.html#cb118-6" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
-<p>Dentro dos documentos R Markdown que geram saída em PDF, você pode usar LaTeX bruto e até mesmo definir macros LaTeX.</p>
-<p>Observe que a saída de PDF (incluindo slides Beamer) requer uma instalação do LaTeX:</p>
-<div class="sourceCode" id="cb119"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb119-1"><a href="customização-e-tipos-de-arquivo.html#cb119-1" aria-hidden="true"></a>install.packages(&#39;tinytex&#39;)</span>
-<span id="cb119-2"><a href="customização-e-tipos-de-arquivo.html#cb119-2" aria-hidden="true"></a>tinytex::install_tinytex()  # install TinyTeX</span></code></pre></div>
-<div id="índice" class="section level4" number="4.3.3.1">
-<h4><span class="header-section-number">4.3.3.1</span> Índice</h4>
-<p>Você pode adicionar um sumário usando a <code>toc</code> na cofiguração e especificar a profundidade dos cabeçalhos aos quais se aplica usando a <code>toc_depth</code> na cofiguração. Por exemplo:</p>
+<p>Semelhante a <code>word_document</code>,você, também pode fornecer um documento de referência de estilo para <code>odt_document</code> percorrer a <code>reference_odt</code> na configuração. Para obter os melhores resultados, o documento ODT de referência deve ser uma versão modificada de um arquivo ODT produzido usando rmarkdown. Por exemplo:</p>
+<div class="sourceCode" id="cb119"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb119-1"><a href="customização-e-tipos-de-arquivo.html#cb119-1" aria-hidden="true"></a><span class="co">---</span></span>
+<span id="cb119-2"><a href="customização-e-tipos-de-arquivo.html#cb119-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
+<span id="cb119-3"><a href="customização-e-tipos-de-arquivo.html#cb119-3" aria-hidden="true"></a><span class="an">output:</span></span>
+<span id="cb119-4"><a href="customização-e-tipos-de-arquivo.html#cb119-4" aria-hidden="true"></a><span class="co">  odt_document:</span></span>
+<span id="cb119-5"><a href="customização-e-tipos-de-arquivo.html#cb119-5" aria-hidden="true"></a><span class="co">    reference_odt: meu-estilo.odt</span></span>
+<span id="cb119-6"><a href="customização-e-tipos-de-arquivo.html#cb119-6" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
+</div>
+<div id="documento-do-word" class="section level3" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Documento do Word</h3>
+<p>Para criar um documento do Word a partir do R Markdown, você especifica o <code>word_document</code> no formato de saída nos metadados YAML do seu documento:</p>
 <div class="sourceCode" id="cb120"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb120-1"><a href="customização-e-tipos-de-arquivo.html#cb120-1" aria-hidden="true"></a><span class="co">---</span></span>
 <span id="cb120-2"><a href="customização-e-tipos-de-arquivo.html#cb120-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
-<span id="cb120-3"><a href="customização-e-tipos-de-arquivo.html#cb120-3" aria-hidden="true"></a><span class="an">output:</span></span>
-<span id="cb120-4"><a href="customização-e-tipos-de-arquivo.html#cb120-4" aria-hidden="true"></a><span class="co">  pdf_document:</span></span>
-<span id="cb120-5"><a href="customização-e-tipos-de-arquivo.html#cb120-5" aria-hidden="true"></a><span class="co">    toc: true</span></span>
-<span id="cb120-6"><a href="customização-e-tipos-de-arquivo.html#cb120-6" aria-hidden="true"></a><span class="co">    toc_depth: 2</span></span>
-<span id="cb120-7"><a href="customização-e-tipos-de-arquivo.html#cb120-7" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
-<p>Se a profundidade do TOC não for especificada explicitamente, o padrão é 2 (significando que todos os cabeçalhos de nível 1 e 2 serão incluídos no TOC), enquanto o padrão é 3 pol <code>html_document</code>.</p>
-<p>Você pode adicionar numeração de seção aos cabeçalhos usando a <code>number_sections</code> na cofiguração:</p>
+<span id="cb120-3"><a href="customização-e-tipos-de-arquivo.html#cb120-3" aria-hidden="true"></a><span class="an">author:</span><span class="co"> Estats</span></span>
+<span id="cb120-4"><a href="customização-e-tipos-de-arquivo.html#cb120-4" aria-hidden="true"></a><span class="an">date:</span><span class="co"> Agosto 01, 2020</span></span>
+<span id="cb120-5"><a href="customização-e-tipos-de-arquivo.html#cb120-5" aria-hidden="true"></a><span class="an">output:</span><span class="co"> word_document</span></span>
+<span id="cb120-6"><a href="customização-e-tipos-de-arquivo.html#cb120-6" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
+<p>A característica mais notável dos documentos do Word é o modelo do Word, também conhecido como “documento de referência de estilo”. Você pode especificar um documento a ser usado como referência de estilo na produção de um <code>*.docx</code> arquivo (um documento do Word). Isso permitirá que você personalize itens como margens e outras características de formatação. Para obter os melhores resultados, o documento de referência deve ser uma versão modificada de um <code>.docx</code> arquivo produzido usando rmarkdown. O caminho de tal documento pode ser passado para o <code>reference_docx</code> argumento do <code>word_document</code> no formato de saída. Passe <code>"default"</code> para usar os estilos padrão. Por exemplo:</p>
 <div class="sourceCode" id="cb121"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb121-1"><a href="customização-e-tipos-de-arquivo.html#cb121-1" aria-hidden="true"></a><span class="co">---</span></span>
 <span id="cb121-2"><a href="customização-e-tipos-de-arquivo.html#cb121-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
 <span id="cb121-3"><a href="customização-e-tipos-de-arquivo.html#cb121-3" aria-hidden="true"></a><span class="an">output:</span></span>
-<span id="cb121-4"><a href="customização-e-tipos-de-arquivo.html#cb121-4" aria-hidden="true"></a><span class="co">  pdf_document:</span></span>
-<span id="cb121-5"><a href="customização-e-tipos-de-arquivo.html#cb121-5" aria-hidden="true"></a><span class="co">    toc: true</span></span>
-<span id="cb121-6"><a href="customização-e-tipos-de-arquivo.html#cb121-6" aria-hidden="true"></a><span class="co">    number_sections: true</span></span>
-<span id="cb121-7"><a href="customização-e-tipos-de-arquivo.html#cb121-7" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
+<span id="cb121-4"><a href="customização-e-tipos-de-arquivo.html#cb121-4" aria-hidden="true"></a><span class="co">  word_document:</span></span>
+<span id="cb121-5"><a href="customização-e-tipos-de-arquivo.html#cb121-5" aria-hidden="true"></a><span class="co">    reference_docx: meu-estilo.docx</span></span>
+<span id="cb121-6"><a href="customização-e-tipos-de-arquivo.html#cb121-6" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
+</div>
+<div id="documento-de-pdf" class="section level3" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> Documento de PDF</h3>
+<p>Para criar um documento PDF a partir do R Markdown, você especifica o <code>pdf_document</code> no formato de saída nos metadados YAML:</p>
+<div class="sourceCode" id="cb122"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb122-1"><a href="customização-e-tipos-de-arquivo.html#cb122-1" aria-hidden="true"></a><span class="co">---</span></span>
+<span id="cb122-2"><a href="customização-e-tipos-de-arquivo.html#cb122-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
+<span id="cb122-3"><a href="customização-e-tipos-de-arquivo.html#cb122-3" aria-hidden="true"></a><span class="an">author:</span><span class="co"> Estats</span></span>
+<span id="cb122-4"><a href="customização-e-tipos-de-arquivo.html#cb122-4" aria-hidden="true"></a><span class="an">date:</span><span class="co"> Agosto 01, 2020</span></span>
+<span id="cb122-5"><a href="customização-e-tipos-de-arquivo.html#cb122-5" aria-hidden="true"></a><span class="an">output:</span><span class="co"> pdf_document</span></span>
+<span id="cb122-6"><a href="customização-e-tipos-de-arquivo.html#cb122-6" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
+<p>Dentro dos documentos R Markdown que geram saída em PDF, você pode usar LaTeX bruto e até mesmo definir macros LaTeX.</p>
+<p>Observe que a saída de PDF (incluindo slides Beamer) requer uma instalação do LaTeX:</p>
+<div class="sourceCode" id="cb123"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb123-1"><a href="customização-e-tipos-de-arquivo.html#cb123-1" aria-hidden="true"></a>install.packages(&#39;tinytex&#39;)</span>
+<span id="cb123-2"><a href="customização-e-tipos-de-arquivo.html#cb123-2" aria-hidden="true"></a>tinytex::install_tinytex()  # install TinyTeX</span></code></pre></div>
+<div id="índice" class="section level4" number="4.3.3.1">
+<h4><span class="header-section-number">4.3.3.1</span> Índice</h4>
+<p>Você pode adicionar um sumário usando a <code>toc</code> na cofiguração e especificar a profundidade dos cabeçalhos aos quais se aplica usando a <code>toc_depth</code> na cofiguração. Por exemplo:</p>
+<div class="sourceCode" id="cb124"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb124-1"><a href="customização-e-tipos-de-arquivo.html#cb124-1" aria-hidden="true"></a><span class="co">---</span></span>
+<span id="cb124-2"><a href="customização-e-tipos-de-arquivo.html#cb124-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
+<span id="cb124-3"><a href="customização-e-tipos-de-arquivo.html#cb124-3" aria-hidden="true"></a><span class="an">output:</span></span>
+<span id="cb124-4"><a href="customização-e-tipos-de-arquivo.html#cb124-4" aria-hidden="true"></a><span class="co">  pdf_document:</span></span>
+<span id="cb124-5"><a href="customização-e-tipos-de-arquivo.html#cb124-5" aria-hidden="true"></a><span class="co">    toc: true</span></span>
+<span id="cb124-6"><a href="customização-e-tipos-de-arquivo.html#cb124-6" aria-hidden="true"></a><span class="co">    toc_depth: 2</span></span>
+<span id="cb124-7"><a href="customização-e-tipos-de-arquivo.html#cb124-7" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
+<p>Se a profundidade do TOC não for especificada explicitamente, o padrão é 2 (significando que todos os cabeçalhos de nível 1 e 2 serão incluídos no TOC), enquanto o padrão é 3 pol <code>html_document</code>.</p>
+<p>Você pode adicionar numeração de seção aos cabeçalhos usando a <code>number_sections</code> na cofiguração:</p>
+<div class="sourceCode" id="cb125"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb125-1"><a href="customização-e-tipos-de-arquivo.html#cb125-1" aria-hidden="true"></a><span class="co">---</span></span>
+<span id="cb125-2"><a href="customização-e-tipos-de-arquivo.html#cb125-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
+<span id="cb125-3"><a href="customização-e-tipos-de-arquivo.html#cb125-3" aria-hidden="true"></a><span class="an">output:</span></span>
+<span id="cb125-4"><a href="customização-e-tipos-de-arquivo.html#cb125-4" aria-hidden="true"></a><span class="co">  pdf_document:</span></span>
+<span id="cb125-5"><a href="customização-e-tipos-de-arquivo.html#cb125-5" aria-hidden="true"></a><span class="co">    toc: true</span></span>
+<span id="cb125-6"><a href="customização-e-tipos-de-arquivo.html#cb125-6" aria-hidden="true"></a><span class="co">    number_sections: true</span></span>
+<span id="cb125-7"><a href="customização-e-tipos-de-arquivo.html#cb125-7" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
 <p>Se você estiver familiarizado com LaTeX, <code>number_sections: true</code> significa <code>\section{}</code> e <code>number_sections: false</code>significa <code>\section*{}</code> para seções em LaTeX (também se aplica a outros níveis de “seções” como <code>\chapter{}</code>, e <code>\subsection{}</code>).</p>
 </div>
 <div id="opções-de-imagem" class="section level4" number="4.3.3.2">
@@ -652,14 +653,14 @@ O pacote <strong>xaringan</strong> é uma extensão R Markdown baseada no JavaSc
 <li><p><code>fig_caption</code> controla se as figuras são renderizadas com legendas.</p></li>
 <li><p><code>dev</code> controla o dispositivo gráfico usado para renderizar figuras.</p></li>
 </ul>
-<div class="sourceCode" id="cb122"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb122-1"><a href="customização-e-tipos-de-arquivo.html#cb122-1" aria-hidden="true"></a><span class="co">---</span></span>
-<span id="cb122-2"><a href="customização-e-tipos-de-arquivo.html#cb122-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
-<span id="cb122-3"><a href="customização-e-tipos-de-arquivo.html#cb122-3" aria-hidden="true"></a><span class="an">output:</span></span>
-<span id="cb122-4"><a href="customização-e-tipos-de-arquivo.html#cb122-4" aria-hidden="true"></a><span class="co">  pdf_document:</span></span>
-<span id="cb122-5"><a href="customização-e-tipos-de-arquivo.html#cb122-5" aria-hidden="true"></a><span class="co">    fig_width: 7</span></span>
-<span id="cb122-6"><a href="customização-e-tipos-de-arquivo.html#cb122-6" aria-hidden="true"></a><span class="co">    fig_height: 6</span></span>
-<span id="cb122-7"><a href="customização-e-tipos-de-arquivo.html#cb122-7" aria-hidden="true"></a><span class="co">    fig_caption: true</span></span>
-<span id="cb122-8"><a href="customização-e-tipos-de-arquivo.html#cb122-8" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb126-1"><a href="customização-e-tipos-de-arquivo.html#cb126-1" aria-hidden="true"></a><span class="co">---</span></span>
+<span id="cb126-2"><a href="customização-e-tipos-de-arquivo.html#cb126-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
+<span id="cb126-3"><a href="customização-e-tipos-de-arquivo.html#cb126-3" aria-hidden="true"></a><span class="an">output:</span></span>
+<span id="cb126-4"><a href="customização-e-tipos-de-arquivo.html#cb126-4" aria-hidden="true"></a><span class="co">  pdf_document:</span></span>
+<span id="cb126-5"><a href="customização-e-tipos-de-arquivo.html#cb126-5" aria-hidden="true"></a><span class="co">    fig_width: 7</span></span>
+<span id="cb126-6"><a href="customização-e-tipos-de-arquivo.html#cb126-6" aria-hidden="true"></a><span class="co">    fig_height: 6</span></span>
+<span id="cb126-7"><a href="customização-e-tipos-de-arquivo.html#cb126-7" aria-hidden="true"></a><span class="co">    fig_caption: true</span></span>
+<span id="cb126-8"><a href="customização-e-tipos-de-arquivo.html#cb126-8" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
 </div>
 <div id="impressão-de-tabela" class="section level4" number="4.3.3.3">
 <h4><span class="header-section-number">4.3.3.3</span> Impressão de Tabela</h4>
@@ -687,32 +688,32 @@ O pacote <strong>xaringan</strong> é uma extensão R Markdown baseada no JavaSc
 </tbody>
 </table>
 <p>Por Exemplo:</p>
-<div class="sourceCode" id="cb123"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb123-1"><a href="customização-e-tipos-de-arquivo.html#cb123-1" aria-hidden="true"></a><span class="co">---</span></span>
-<span id="cb123-2"><a href="customização-e-tipos-de-arquivo.html#cb123-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
-<span id="cb123-3"><a href="customização-e-tipos-de-arquivo.html#cb123-3" aria-hidden="true"></a><span class="an">output:</span></span>
-<span id="cb123-4"><a href="customização-e-tipos-de-arquivo.html#cb123-4" aria-hidden="true"></a><span class="co">  pdf_document:</span></span>
-<span id="cb123-5"><a href="customização-e-tipos-de-arquivo.html#cb123-5" aria-hidden="true"></a><span class="co">    df_print: kable</span></span>
-<span id="cb123-6"><a href="customização-e-tipos-de-arquivo.html#cb123-6" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
+<div class="sourceCode" id="cb127"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb127-1"><a href="customização-e-tipos-de-arquivo.html#cb127-1" aria-hidden="true"></a><span class="co">---</span></span>
+<span id="cb127-2"><a href="customização-e-tipos-de-arquivo.html#cb127-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
+<span id="cb127-3"><a href="customização-e-tipos-de-arquivo.html#cb127-3" aria-hidden="true"></a><span class="an">output:</span></span>
+<span id="cb127-4"><a href="customização-e-tipos-de-arquivo.html#cb127-4" aria-hidden="true"></a><span class="co">  pdf_document:</span></span>
+<span id="cb127-5"><a href="customização-e-tipos-de-arquivo.html#cb127-5" aria-hidden="true"></a><span class="co">    df_print: kable</span></span>
+<span id="cb127-6"><a href="customização-e-tipos-de-arquivo.html#cb127-6" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
 </div>
 <div id="destaque-de-sintaxe" class="section level4" number="4.3.3.4">
 <h4><span class="header-section-number">4.3.3.4</span> Destaque de sintaxe</h4>
 <p>A <code>highlight</code> na configuração especifica o estilo de realce da sintaxe. Seu uso em <code>pdf_document</code> é o mesmo que <code>html_document</code>. Por exemplo:</p>
-<div class="sourceCode" id="cb124"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb124-1"><a href="customização-e-tipos-de-arquivo.html#cb124-1" aria-hidden="true"></a><span class="co">---</span></span>
-<span id="cb124-2"><a href="customização-e-tipos-de-arquivo.html#cb124-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
-<span id="cb124-3"><a href="customização-e-tipos-de-arquivo.html#cb124-3" aria-hidden="true"></a><span class="an">output:</span></span>
-<span id="cb124-4"><a href="customização-e-tipos-de-arquivo.html#cb124-4" aria-hidden="true"></a><span class="co">  pdf_document:</span></span>
-<span id="cb124-5"><a href="customização-e-tipos-de-arquivo.html#cb124-5" aria-hidden="true"></a><span class="co">    highlight: tango</span></span>
-<span id="cb124-6"><a href="customização-e-tipos-de-arquivo.html#cb124-6" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb128-1"><a href="customização-e-tipos-de-arquivo.html#cb128-1" aria-hidden="true"></a><span class="co">---</span></span>
+<span id="cb128-2"><a href="customização-e-tipos-de-arquivo.html#cb128-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
+<span id="cb128-3"><a href="customização-e-tipos-de-arquivo.html#cb128-3" aria-hidden="true"></a><span class="an">output:</span></span>
+<span id="cb128-4"><a href="customização-e-tipos-de-arquivo.html#cb128-4" aria-hidden="true"></a><span class="co">  pdf_document:</span></span>
+<span id="cb128-5"><a href="customização-e-tipos-de-arquivo.html#cb128-5" aria-hidden="true"></a><span class="co">    highlight: tango</span></span>
+<span id="cb128-6"><a href="customização-e-tipos-de-arquivo.html#cb128-6" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
 </div>
 <div id="opções-latex" class="section level4" number="4.3.3.5">
 <h4><span class="header-section-number">4.3.3.5</span> Opções LaTeX</h4>
 <p>Muitos aspectos do modelo de látex usado para criar documentos PDF podem ser personalizados usando top-level YAML metadados (note que estas opções não aparecem por baixo da <code>output</code> secção, mas sim aparecer no nível superior, juntamente com <code>title</code>, <code>author</code> e assim por diante). Por exemplo:</p>
-<div class="sourceCode" id="cb125"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb125-1"><a href="customização-e-tipos-de-arquivo.html#cb125-1" aria-hidden="true"></a><span class="co">---</span></span>
-<span id="cb125-2"><a href="customização-e-tipos-de-arquivo.html#cb125-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
-<span id="cb125-3"><a href="customização-e-tipos-de-arquivo.html#cb125-3" aria-hidden="true"></a><span class="an">output:</span><span class="co"> pdf_document</span></span>
-<span id="cb125-4"><a href="customização-e-tipos-de-arquivo.html#cb125-4" aria-hidden="true"></a><span class="an">fontsize:</span><span class="co"> 11pt</span></span>
-<span id="cb125-5"><a href="customização-e-tipos-de-arquivo.html#cb125-5" aria-hidden="true"></a><span class="an">geometry:</span><span class="co"> margin=1in</span></span>
-<span id="cb125-6"><a href="customização-e-tipos-de-arquivo.html#cb125-6" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
+<div class="sourceCode" id="cb129"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb129-1"><a href="customização-e-tipos-de-arquivo.html#cb129-1" aria-hidden="true"></a><span class="co">---</span></span>
+<span id="cb129-2"><a href="customização-e-tipos-de-arquivo.html#cb129-2" aria-hidden="true"></a><span class="an">title:</span><span class="co"> &quot;Curso&quot;</span></span>
+<span id="cb129-3"><a href="customização-e-tipos-de-arquivo.html#cb129-3" aria-hidden="true"></a><span class="an">output:</span><span class="co"> pdf_document</span></span>
+<span id="cb129-4"><a href="customização-e-tipos-de-arquivo.html#cb129-4" aria-hidden="true"></a><span class="an">fontsize:</span><span class="co"> 11pt</span></span>
+<span id="cb129-5"><a href="customização-e-tipos-de-arquivo.html#cb129-5" aria-hidden="true"></a><span class="an">geometry:</span><span class="co"> margin=1in</span></span>
+<span id="cb129-6"><a href="customização-e-tipos-de-arquivo.html#cb129-6" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
 <p>Algumas variáveis de metadados disponíveis são exibidas na Tabela abaixo:</p>
 <table>
 <colgroup>
@@ -760,11 +761,11 @@ O pacote <strong>xaringan</strong> é uma extensão R Markdown baseada no JavaSc
 <div id="pacotes-latex-para-citações" class="section level4" number="4.3.3.6">
 <h4><span class="header-section-number">4.3.3.6</span> Pacotes LaTeX para citações</h4>
 <p>Por padrão, as citações são processadas por meio do <code>pandoc-citeproc</code>, o que funciona para todos os formatos de saída. Para saída em PDF, às vezes é melhor usar pacotes LaTeX para processar citações, como <code>natbib</code> ou <code>biblatex</code>. Para usar um desses pacotes, basta definir a opção <code>citation_package</code> como <code>natbib</code> ou <code>biblatex</code>, por exemplo:</p>
-<div class="sourceCode" id="cb126"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb126-1"><a href="customização-e-tipos-de-arquivo.html#cb126-1" aria-hidden="true"></a><span class="co">---</span></span>
-<span id="cb126-2"><a href="customização-e-tipos-de-arquivo.html#cb126-2" aria-hidden="true"></a><span class="an">output:</span></span>
-<span id="cb126-3"><a href="customização-e-tipos-de-arquivo.html#cb126-3" aria-hidden="true"></a><span class="co">  pdf_document:</span></span>
-<span id="cb126-4"><a href="customização-e-tipos-de-arquivo.html#cb126-4" aria-hidden="true"></a><span class="co">    citation_package: natbib</span></span>
-<span id="cb126-5"><a href="customização-e-tipos-de-arquivo.html#cb126-5" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
+<div class="sourceCode" id="cb130"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb130-1"><a href="customização-e-tipos-de-arquivo.html#cb130-1" aria-hidden="true"></a><span class="co">---</span></span>
+<span id="cb130-2"><a href="customização-e-tipos-de-arquivo.html#cb130-2" aria-hidden="true"></a><span class="an">output:</span></span>
+<span id="cb130-3"><a href="customização-e-tipos-de-arquivo.html#cb130-3" aria-hidden="true"></a><span class="co">  pdf_document:</span></span>
+<span id="cb130-4"><a href="customização-e-tipos-de-arquivo.html#cb130-4" aria-hidden="true"></a><span class="co">    citation_package: natbib</span></span>
+<span id="cb130-5"><a href="customização-e-tipos-de-arquivo.html#cb130-5" aria-hidden="true"></a><span class="co">---</span></span></code></pre></div>
 </div>
 </div>
 </div>
@@ -856,13 +857,13 @@ output:
 <p>É possível dentro do seu arquivo R Markdown definir classes e ids para suas seções da mesma forma que se define <a href="customização-e-tipos-de-arquivo.html#abas">abas</a>. Por exemplo:</p>
 <pre><code>## Cabeçalho {#cabecalho-2 .enfase}</code></pre>
 <p>Se fosse criado um cabeçalho da forma acima, poderiamos modificar esta seção no arquivo css usado da seguinte forma:</p>
-<div class="sourceCode" id="cb136"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb136-1"><a href="customização-e-tipos-de-arquivo.html#cb136-1" aria-hidden="true"></a><span class="pp">#cabecalho-2</span> {</span>
-<span id="cb136-2"><a href="customização-e-tipos-de-arquivo.html#cb136-2" aria-hidden="true"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
-<span id="cb136-3"><a href="customização-e-tipos-de-arquivo.html#cb136-3" aria-hidden="true"></a>}</span>
-<span id="cb136-4"><a href="customização-e-tipos-de-arquivo.html#cb136-4" aria-hidden="true"></a></span>
-<span id="cb136-5"><a href="customização-e-tipos-de-arquivo.html#cb136-5" aria-hidden="true"></a><span class="fu">.enfase</span> {</span>
-<span id="cb136-6"><a href="customização-e-tipos-de-arquivo.html#cb136-6" aria-hidden="true"></a>  <span class="kw">font-size</span>: <span class="dv">1.2</span><span class="dt">em</span><span class="op">;</span></span>
-<span id="cb136-7"><a href="customização-e-tipos-de-arquivo.html#cb136-7" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb140"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb140-1"><a href="customização-e-tipos-de-arquivo.html#cb140-1" aria-hidden="true"></a><span class="pp">#cabecalho-2</span> {</span>
+<span id="cb140-2"><a href="customização-e-tipos-de-arquivo.html#cb140-2" aria-hidden="true"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb140-3"><a href="customização-e-tipos-de-arquivo.html#cb140-3" aria-hidden="true"></a>}</span>
+<span id="cb140-4"><a href="customização-e-tipos-de-arquivo.html#cb140-4" aria-hidden="true"></a></span>
+<span id="cb140-5"><a href="customização-e-tipos-de-arquivo.html#cb140-5" aria-hidden="true"></a><span class="fu">.enfase</span> {</span>
+<span id="cb140-6"><a href="customização-e-tipos-de-arquivo.html#cb140-6" aria-hidden="true"></a>  <span class="kw">font-size</span>: <span class="dv">1.2</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb140-7"><a href="customização-e-tipos-de-arquivo.html#cb140-7" aria-hidden="true"></a>}</span></code></pre></div>
 <p><strong>Opções de figuras</strong></p>
 <p>É possível definir opções no preâmbulo configurações para as imagens geradas em blocos de código. Nessas opções podemos definir atributos como altura da imagem, largura da imagem, etc.</p>
 <p>Utilizando a opção <code>fig_width</code> é possível definir a largura das imagens geradas, e utilizando <code>fig_height</code> é possivel controlar altura da imagem.</p>
@@ -930,13 +931,13 @@ Esse pacote possui várias funções como:
 - Crie storyboards para apresentar sequências de visualizações e comentários relacionados;
 -Opcionalmente, use o Shiny para gerar visualizações dinamicamente.</p>
 <p>Para criar um painel no RMarkdown, existem duas opções:
-A primeira é criar um documento em RMarkdown com flexdashboard::flex_dashboard como formato de saída.
-<img src="img/Dash%201.png" />
-Para a segunda opção é necessário primeiro instalar o pacote “flexdashboard” no RStudio, depois siga os passos abaixo:
+A primeira é criar um documento em RMarkdown com flexdashboard::flex_dashboard como formato de saída.</p>
+<p><img src="img/Dash%201.png" /></p>
+<p>Para a segunda opção é necessário primeiro instalar o pacote “flexdashboard” no RStudio, depois siga os passos abaixo:
 File -&gt; New File -&gt; RMarkdown
-Depois:
-<img src="img/Dash%202.png" />
-Para maior conhecimento acesse, <a href="https://rmarkdown.rstudio.com/flexdashboard/" class="uri">https://rmarkdown.rstudio.com/flexdashboard/</a></p>
+Depois:</p>
+<p><img src="img/Dash%202.png" /></p>
+<p>Para maior conhecimento acesse, <a href="https://rmarkdown.rstudio.com/flexdashboard/" class="uri">https://rmarkdown.rstudio.com/flexdashboard/</a></p>
 </div>
 <div id="blogdown" class="section level3" number="4.5.2">
 <h3><span class="header-section-number">4.5.2</span> Blogdown</h3>
@@ -1016,6 +1017,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

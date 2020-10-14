@@ -129,7 +129,7 @@ Sobrescrito^2^
 \ 
 :::
 :::::: {.column width="48%" data-latex="{0.48\textwidth}"}
-# Cabeçalho 1
+<h1>Cabeçalho 1</h1>
 :::
 ::::::
 ***
@@ -143,7 +143,7 @@ Sobrescrito^2^
 \ 
 :::
 :::::: {.column width="48%" data-latex="{0.48\textwidth}"}
-## Cabeçalho 2
+<h2>Cabeçalho 2</h2>
 :::
 ::::::
 ***
@@ -157,7 +157,7 @@ Sobrescrito^2^
 \ 
 :::
 :::::: {.column width="48%" data-latex="{0.48\textwidth}"}
-### Cabeçalho 3
+<h3>Cabeçalho 3</h3>
 :::
 ::::::
 ***
@@ -171,7 +171,7 @@ Sobrescrito^2^
 \ 
 :::
 :::::: {.column width="48%" data-latex="{0.48\textwidth}"}
-#### Cabeçalho 4
+<h4>Cabeçalho 4</h4>
 :::
 ::::::
 ***
@@ -185,7 +185,7 @@ Sobrescrito^2^
 \ 
 :::
 :::::: {.column width="48%" data-latex="{0.48\textwidth}"}
-##### Cabeçalho 5
+<h5>Cabeçalho 5</h5>
 :::
 ::::::
 ***
@@ -199,7 +199,7 @@ Sobrescrito^2^
 \ 
 :::
 :::::: {.column width="48%" data-latex="{0.48\textwidth}"}
-###### Cabeçalho 6
+<h6>Cabeçalho 6</h6>
 :::
 ::::::
 ***

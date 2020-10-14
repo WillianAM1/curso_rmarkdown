@@ -159,7 +159,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.4" data-path="sintaxe.html"><a href="sintaxe.html#listas"><i class="fa fa-check"></i><b>2.2.4</b> Listas</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="sintaxe.html"><a href="sintaxe.html#inserindo-imagens"><i class="fa fa-check"></i><b>2.3</b> Inserindo Imagens</a></li>
-<li class="chapter" data-level="2.4" data-path="sintaxe.html"><a href="sintaxe.html#exemplos"><i class="fa fa-check"></i><b>2.4</b> Exemplos</a></li>
+<li class="chapter" data-level="2.4" data-path="sintaxe.html"><a href="sintaxe.html#expressões-matemáticas"><i class="fa fa-check"></i><b>2.4</b> Expressões Matemáticas</a></li>
+<li class="chapter" data-level="2.5" data-path="sintaxe.html"><a href="sintaxe.html#exemplos"><i class="fa fa-check"></i><b>2.5</b> Exemplos</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="executando-código.html"><a href="executando-código.html"><i class="fa fa-check"></i><b>3</b> Executando Código</a>
 <ul>
@@ -309,7 +310,7 @@ Abaixo está uma lista com todos os formatos suportados por padrão com o pacote
 <p><img src="img/new.png" /></p>
 <p>Em seguida, escolha o tipo de arquivo desejado:</p>
 <p><img src="img/file.png" /></p>
-<p><em>Obs</em>: Para gerar documentos em PDF, é necessário ter instalado em seu computador o programa <a href="#download-rmd-e-latex">Latex</a>.</p>
+<p><em>Obs</em>: Para gerar documentos em PDF, é necessário ter instalado em seu computador o programa <a href="intro.html#download-miktex">Latex</a>.</p>
 <p>Seguindo os passos acima, você terá criado o seu primeiro documento em R Markdown. Vale ressaltar que é possível utilizar o R Markdown sem que tenha instalado o R Studio, porém, é necessário ter instalado o programa <a href="https://pandoc.org">Pandoc</a>.</p>
 </div>
 <div id="download-miktex" class="section level2" number="1.4">
@@ -399,6 +400,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

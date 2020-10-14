@@ -159,7 +159,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.4" data-path="sintaxe.html"><a href="sintaxe.html#listas"><i class="fa fa-check"></i><b>2.2.4</b> Listas</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="sintaxe.html"><a href="sintaxe.html#inserindo-imagens"><i class="fa fa-check"></i><b>2.3</b> Inserindo Imagens</a></li>
-<li class="chapter" data-level="2.4" data-path="sintaxe.html"><a href="sintaxe.html#exemplos"><i class="fa fa-check"></i><b>2.4</b> Exemplos</a></li>
+<li class="chapter" data-level="2.4" data-path="sintaxe.html"><a href="sintaxe.html#expressões-matemáticas"><i class="fa fa-check"></i><b>2.4</b> Expressões Matemáticas</a></li>
+<li class="chapter" data-level="2.5" data-path="sintaxe.html"><a href="sintaxe.html#exemplos"><i class="fa fa-check"></i><b>2.5</b> Exemplos</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="executando-código.html"><a href="executando-código.html"><i class="fa fa-check"></i><b>3</b> Executando Código</a>
 <ul>
@@ -253,14 +254,14 @@ output: pdf_document
 <p>No código acima, <code>output</code> foi definido como <code>pdf_document</code>. Output é o formato final do seu documento, e <code>pdf_document</code> é, dentro do pacote <code>rmarkdown</code>, o formato pdf. Para gerar arquivos de formatos diferentes, é necessário somente que seja modificado a opção de <code>output</code> no preâmbulo.</p>
 <p>Note que a opção definida no preâmbulo foi escrita entre duas linhas tracejadas. Não é possível definir as configurações fora dessas linhas tracejadas. Da mesma forma, não é possível escrever partes do documento ou rodar códigos de <code>R</code> dentro dessas linhas.</p>
 <p>Por padrão no <code>yaml</code>, utilizado no preâmbulo de R Markdown, a opção a ser definida é escrita sem espaços, seguida de dois pontos, espaço e então a definição da opção.</p>
-<p>Existem ainda opções dentro de outras, como por exemplo <code>pdf_document</code>, em que é possível definir configurações se o documento terá ou não sumário, quantos níveis de <a href="#cabeçalhos">cabeçalho</a> serão utilizados no sumário, etc.</p>
+<p>Existem ainda opções dentro de outras, como por exemplo <code>pdf_document</code>, em que é possível definir configurações se o documento terá ou não sumário, quantos níveis de <a href="sintaxe.html#títulos">cabeçalho</a> serão utilizados no sumário, etc.</p>
 <pre><code>---
 output: pdf_document:
   toc: true
   toc_depth: 3
   latex_engine: xelatex
 ---</code></pre>
-<p>No exemplo acima, foi definido <code>toc</code> (table of contents) como <code>true</code>, o que vai fazer com que seja gerado um sumário no documento final. Vale ressaltar que em <code>yaml</code> o valor lógico de verdadeiro é escrito com todas as letras minúsculas. A opção <code>toc_depth: 3</code>, dedfine que ao gerar o sumário, até três níveis de <a href="#cabeçalhos">cabeçalho</a> aparecerão no sumário.</p>
+<p>No exemplo acima, foi definido <code>toc</code> (table of contents) como <code>true</code>, o que vai fazer com que seja gerado um sumário no documento final. Vale ressaltar que em <code>yaml</code> o valor lógico de verdadeiro é escrito com todas as letras minúsculas. A opção <code>toc_depth: 3</code>, dedfine que ao gerar o sumário, até três níveis de <a href="sintaxe.html#títulos">cabeçalho</a> aparecerão no sumário.</p>
 </div>
 <div id="informações-gerais" class="section level3" number="2.1.2">
 <h3><span class="header-section-number">2.1.2</span> Informações Gerais</h3>
@@ -292,7 +293,7 @@ output: pdf_document:
   toc_depth: 3
   latex_engine: xelatex
 ---</code></pre>
-<p>Por fim definiu-se também a opção <code>title</code> que indica o título do documento final. Mais customizações no documento são abordadas no <a href="#depois-crio">capítulo 4</a>.</p>
+<p>Por fim definiu-se também a opção <code>title</code> que indica o título do documento final. Mais customizações no documento são abordadas no <a href="customização-e-tipos-de-arquivo.html">capítulo 4</a>.</p>
 </div>
 </div>
 <div id="textos" class="section level2" number="2.2">
@@ -438,8 +439,48 @@ Figure 2.1: Logo da Estats
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="sintaxe.html#cb24-1" aria-hidden="true"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;img/logoestats.jpeg&quot;</span>, <span class="dv">3</span>))</span></code></pre></div>
 <p><img src="img/logoestats.jpeg" width="32" style="display: block; margin: auto;" /><img src="img/logoestats.jpeg" width="32" style="display: block; margin: auto;" /><img src="img/logoestats.jpeg" width="32" style="display: block; margin: auto;" /></p>
 </div>
-<div id="exemplos" class="section level2" number="2.4">
-<h2><span class="header-section-number">2.4</span> Exemplos</h2>
+<div id="expressões-matemáticas" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Expressões Matemáticas</h2>
+<p>As Equações inline em LaTeX podem ser escritas utilizando um par de cifrões, por exemplo, <code>$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$</code>(output atual: <span class="math inline">\(f(k)={n \choose k}p^{k}(1-p)^{n-k}\)</span> ); expressões matemáticas do estilo de exibição podem ser escritas utlizando um par de cifrões duplos, por exemplo, <code>$$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$$</code>, ficando o output da seguinte maneira:
+<span class="math display">\[f(k) = {n \choose k} p^{k} (1-p)^{n-k}\]</span>
+Você também pode usar ambientes matemáticos dentro <code>$ $</code> OU <code>$$ $$</code>, isto é</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb25-1"><a href="sintaxe.html#cb25-1" aria-hidden="true"></a><span class="ss">$$</span><span class="kw">\begin</span>{<span class="ex">array</span>}<span class="ss">{ccc}</span></span>
+<span id="cb25-2"><a href="sintaxe.html#cb25-2" aria-hidden="true"></a><span class="ss">x_{11} &amp; x_{12} &amp; x_{13}</span><span class="sc">\\</span></span>
+<span id="cb25-3"><a href="sintaxe.html#cb25-3" aria-hidden="true"></a><span class="ss">x_{21} &amp; x_{22} &amp; x_{23}</span></span>
+<span id="cb25-4"><a href="sintaxe.html#cb25-4" aria-hidden="true"></a><span class="kw">\end</span>{<span class="ex">array</span>}<span class="ss">$$</span></span></code></pre></div>
+<p><span class="math display">\[\begin{array}{ccc}
+x_{11} &amp; x_{12} &amp; x_{13}\\
+x_{21} &amp; x_{22} &amp; x_{23}
+\end{array}\]</span></p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb26-1"><a href="sintaxe.html#cb26-1" aria-hidden="true"></a><span class="ss">$$X = </span><span class="kw">\begin</span>{<span class="ex">bmatrix</span>}</span>
+<span id="cb26-2"><a href="sintaxe.html#cb26-2" aria-hidden="true"></a><span class="ss">1 &amp; x_{1}</span><span class="sc">\\</span></span>
+<span id="cb26-3"><a href="sintaxe.html#cb26-3" aria-hidden="true"></a><span class="ss">1 &amp; x_{2}</span><span class="sc">\\</span></span>
+<span id="cb26-4"><a href="sintaxe.html#cb26-4" aria-hidden="true"></a><span class="ss">1 &amp; x_{3}</span></span>
+<span id="cb26-5"><a href="sintaxe.html#cb26-5" aria-hidden="true"></a><span class="kw">\end</span>{<span class="ex">bmatrix</span>}<span class="ss">$$</span></span></code></pre></div>
+<p><span class="math display">\[X = \begin{bmatrix}
+1 &amp; x_{1}\\
+1 &amp; x_{2}\\
+1 &amp; x_{3}
+\end{bmatrix}\]</span></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb27-1"><a href="sintaxe.html#cb27-1" aria-hidden="true"></a><span class="ss">$$</span><span class="sc">\Theta</span><span class="ss"> = </span><span class="kw">\begin</span>{<span class="ex">pmatrix</span>}</span>
+<span id="cb27-2"><a href="sintaxe.html#cb27-2" aria-hidden="true"></a><span class="sc">\alpha</span><span class="ss"> &amp; </span><span class="sc">\beta\\</span></span>
+<span id="cb27-3"><a href="sintaxe.html#cb27-3" aria-hidden="true"></a><span class="sc">\gamma</span><span class="ss"> &amp; </span><span class="sc">\delta</span></span>
+<span id="cb27-4"><a href="sintaxe.html#cb27-4" aria-hidden="true"></a><span class="kw">\end</span>{<span class="ex">pmatrix</span>}<span class="ss">$$</span></span></code></pre></div>
+<p><span class="math display">\[\Theta = \begin{pmatrix}
+\alpha &amp; \beta\\
+\gamma &amp; \delta
+\end{pmatrix}\]</span></p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb28-1"><a href="sintaxe.html#cb28-1" aria-hidden="true"></a><span class="ss">$$</span><span class="kw">\begin</span>{<span class="ex">vmatrix</span>}</span>
+<span id="cb28-2"><a href="sintaxe.html#cb28-2" aria-hidden="true"></a><span class="ss">a &amp; b</span><span class="sc">\\</span></span>
+<span id="cb28-3"><a href="sintaxe.html#cb28-3" aria-hidden="true"></a><span class="ss">c &amp; d</span></span>
+<span id="cb28-4"><a href="sintaxe.html#cb28-4" aria-hidden="true"></a><span class="kw">\end</span>{<span class="ex">vmatrix</span>}<span class="ss">=ad-bc$$</span></span></code></pre></div>
+<p><span class="math display">\[\begin{vmatrix}
+a &amp; b\\
+c &amp; d
+\end{vmatrix}=ad-bc\]</span></p>
+</div>
+<div id="exemplos" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Exemplos</h2>
 <p><a href="exemplos/102-sumario_e_cabecalho.html">Exemplo Sumário e Cabeçalhos</a></p>
 <p><a href="exemplos/103-formatacao_de_texto.html">Exemplo formatação de textos</a></p>
 
@@ -501,6 +542,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

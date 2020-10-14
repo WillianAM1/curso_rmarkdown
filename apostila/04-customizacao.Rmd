@@ -843,11 +843,15 @@ Esse pacote possui várias funções como:
 
 Para criar um painel no RMarkdown, existem duas opções:
 A primeira é criar um documento em RMarkdown com flexdashboard::flex_dashboard como formato de saída.
+
 ![](img/Dash 1.png)
+
 Para a segunda opção é necessário primeiro instalar o pacote “flexdashboard” no RStudio, depois siga os passos abaixo:
 File -> New File -> RMarkdown
 Depois:
+
 ![](img/Dash 2.png)
+
 Para maior conhecimento acesse, https://rmarkdown.rstudio.com/flexdashboard/
 
 ### Blogdown
@@ -868,4 +872,3 @@ O “bookdown” é um pacote que facilita a construção de livros. Ele também
 - Recursos de formatação, como referência cruzada e numeração de figuras, equações e tabelas;
 - Os documentos podem ser facilmente exportados em muitos formatos adequados como PDF, e-books e sites HTML.
 Para maior entendimento do bookdown, acesse https://bookdown.org/yihui/bookdown/
-

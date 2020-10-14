@@ -22,7 +22,7 @@ Note que a opção definida no preâmbulo foi escrita entre duas linhas tracejad
 
 Por padrão no `yaml`, utilizado no preâmbulo de R Markdown, a opção a ser definida é escrita sem espaços, seguida de dois pontos, espaço e então a definição da opção.
 
-Existem ainda opções dentro de outras, como por exemplo `pdf_document`, em que é possível definir configurações se o documento terá ou não sumário, quantos níveis de [cabeçalho](#cabeçalhos) serão utilizados no sumário, etc.
+Existem ainda opções dentro de outras, como por exemplo `pdf_document`, em que é possível definir configurações se o documento terá ou não sumário, quantos níveis de [cabeçalho](#títulos) serão utilizados no sumário, etc.
 
 ```
 ---
@@ -33,7 +33,7 @@ output: pdf_document:
 ---
 ```
 
-No exemplo acima, foi definido `toc` (table of contents) como `true`, o que vai fazer com que seja gerado um sumário no documento final. Vale ressaltar que em `yaml` o valor lógico de verdadeiro é escrito com todas as letras minúsculas. A opção `toc_depth: 3`, dedfine que ao gerar o sumário, até três níveis de [cabeçalho](#cabeçalhos) aparecerão no sumário.
+No exemplo acima, foi definido `toc` (table of contents) como `true`, o que vai fazer com que seja gerado um sumário no documento final. Vale ressaltar que em `yaml` o valor lógico de verdadeiro é escrito com todas as letras minúsculas. A opção `toc_depth: 3`, dedfine que ao gerar o sumário, até três níveis de [cabeçalho](#títulos) aparecerão no sumário.
 
 ### Informações Gerais
 
@@ -77,7 +77,7 @@ output: pdf_document:
 ---
 ```
 
-Por fim definiu-se também a opção `title` que indica o título do documento final. Mais customizações no documento são abordadas no [capítulo 4](#depois-crio).
+Por fim definiu-se também a opção `title` que indica o título do documento final. Mais customizações no documento são abordadas no [capítulo 4](customização-e-tipos-de-arquivo.html).
 
 ## Textos
 
@@ -267,54 +267,61 @@ knitr::include_graphics(rep("img/logoestats.jpeg", 3))
 knitr::include_graphics(rep("img/logoestats.jpeg", 3))
 ```
 
-## Exemplos
-
-[Exemplo Sumário e Cabeçalhos](exemplos/102-sumario_e_cabecalho.html)
-
-[Exemplo formatação de textos](exemplos/103-formatacao_de_texto.html)
-
 ## Expressões Matemáticas
 
 As Equações inline em LaTeX podem ser escritas utilizando um par de cifrões, por exemplo, `$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$ `(output atual: $f(k)={n \choose k}p^{k}(1-p)^{n-k}$ ); expressões matemáticas do estilo de exibição podem ser escritas utlizando um par de cifrões duplos, por exemplo, `$$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$$ `, ficando o output da seguinte maneira:
 $$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$$
 Você também pode usar ambientes matemáticos dentro `$ $` OU `$$ $$`, isto é
-```{latex}
-\begin{array}{ccc}
-x_{11} & x_{12} & x_{13}\\
-x_{21} & x_{22} & x_{23}
-\end{array}
-```
-\begin{array}{ccc}
-x_{11} & x_{12} & x_{13}\\
-x_{21} & x_{22} & x_{23}
-\end{array}
 
-```{latex}
-$$X = \begin{bmatrix}1 & x_{1}\\
+```{latex, eval = FALSE}
+$$\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}
+\end{array}$$
+```
+$$\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}
+\end{array}$$
+
+```{latex, eval = FALSE}
+$$X = \begin{bmatrix}
+1 & x_{1}\\
 1 & x_{2}\\
 1 & x_{3}
 \end{bmatrix}$$
 ```
 
-$$X = \begin{bmatrix}1 & x_{1}\\
+$$X = \begin{bmatrix}
+1 & x_{1}\\
 1 & x_{2}\\
 1 & x_{3}
 \end{bmatrix}$$
 
-```{latex}
-$$\Theta = \begin{pmatrix}\alpha & \beta\\
+```{latex, eval = FALSE}
+$$\Theta = \begin{pmatrix}
+\alpha & \beta\\
 \gamma & \delta
 \end{pmatrix}$$
 ```
-\Theta = \begin{pmatrix}\alpha & \beta\\
+$$\Theta = \begin{pmatrix}
+\alpha & \beta\\
 \gamma & \delta
-\end{pmatrix}
+\end{pmatrix}$$
 
-```{latex}
-$$\begin{vmatrix}a & b\\
+```{latex, eval = FALSE}
+$$\begin{vmatrix}
+a & b\\
 c & d
 \end{vmatrix}=ad-bc$$
 ```
-\begin{vmatrix}a & b\\
+$$\begin{vmatrix}
+a & b\\
 c & d
-\end{vmatrix}=ad-bc
+\end{vmatrix}=ad-bc$$
+
+## Exemplos
+
+[Exemplo Sumário e Cabeçalhos](exemplos/102-sumario_e_cabecalho.html)
+
+[Exemplo formatação de textos](exemplos/103-formatacao_de_texto.html)
