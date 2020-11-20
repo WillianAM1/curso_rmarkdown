@@ -193,6 +193,29 @@ Para Adicionar subitens em uma lista, é preciso adcionar um espaço de tabulaç
     - Um sub-item
     - Outro sub-item
 
+### Citações e referências bibliográficas
+
+No R Markdown trabalhamos com as referências bibliográficas de maneira similar ao LaTex.
+Em seu diretório de projeto, crie um script *.bib* para catalogar as referências bibliográficas com a seguinte sintaxe:
+```
+@book{NomeDaReferênciaBibliográfica,
+ author  ={Sobrenome, N. and Sobrenome2, N2.},
+ title   ={},
+ organization={},
+ address ={},
+ publisher={},
+ pages   =999,
+ series  ={},
+ number  =99,
+ note    ={Bibliografia: p. 131--132},
+ isbn ={XX-XXX-XXXX-X},
+ issn ={XXXX-XXXX},
+ year ={2000}
+}
+```
+*Para saber como criar diferentes referências para as distintas publicações possíveis, acesse o [link](https://github.com/abntex/limarka/wiki/Adicionando-refer%C3%AAncias).*
+
+Com o script *.bib* pronto, podemos adicioná-lo ao YAML do arquivo *.rmd* através do parâmetro `Bibliography: script.bib`, assim será possivel realizar as citações facilmente com `@NomeDaReferênciaBibliográfica` e no final da publicação as referências contidas no arquivo *.bib* serão exibidas.
 
 ## Inserindo Imagens
 
