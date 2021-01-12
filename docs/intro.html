@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Curso de RMarkdown</title>
-  <meta name="description" content="Curso de RMarkdown" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <title>Curso de R Markdown</title>
+  <meta name="description" content="Curso de R Markdown" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Curso de RMarkdown" />
+  <meta property="og:title" content="Curso de R Markdown" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="estatsej/curso_rmarkdown" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Curso de RMarkdown" />
+  <meta name="twitter:title" content="Curso de R Markdown" />
   
   
   
@@ -32,7 +32,7 @@
   
 
 <link rel="next" href="sintaxe.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -129,7 +129,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="https://www.youtube.com/playlist?list=PLByBVTMOnJlNi1Abz8Ova_LcXZfiHqwVp" target="blank">Playlist das aulas</a></li>
+#<li><a href="https://www.youtube.com/playlist?list=PLByBVTMOnJlNi1Abz8Ova_LcXZfiHqwVp" target="blank">Playlist das aulas</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introdução</a>
@@ -157,6 +157,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.2" data-path="sintaxe.html"><a href="sintaxe.html#formatação-de-textos-negrito-itálico-sobrescrito-tachado-e-código"><i class="fa fa-check"></i><b>2.2.2</b> Formatação de textos (negrito, itálico, sobrescrito, tachado e código)</a></li>
 <li class="chapter" data-level="2.2.3" data-path="sintaxe.html"><a href="sintaxe.html#links"><i class="fa fa-check"></i><b>2.2.3</b> Links</a></li>
 <li class="chapter" data-level="2.2.4" data-path="sintaxe.html"><a href="sintaxe.html#listas"><i class="fa fa-check"></i><b>2.2.4</b> Listas</a></li>
+<li class="chapter" data-level="2.2.5" data-path="sintaxe.html"><a href="sintaxe.html#citações-e-referências-bibliográficas"><i class="fa fa-check"></i><b>2.2.5</b> Citações e referências bibliográficas</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="sintaxe.html"><a href="sintaxe.html#inserindo-imagens"><i class="fa fa-check"></i><b>2.3</b> Inserindo Imagens</a></li>
 <li class="chapter" data-level="2.4" data-path="sintaxe.html"><a href="sintaxe.html#expressões-matemáticas"><i class="fa fa-check"></i><b>2.4</b> Expressões Matemáticas</a></li>
@@ -230,7 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Curso de RMarkdown</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Curso de R Markdown</a>
           </h1>
         </div>
 
@@ -239,7 +240,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">Curso de RMarkdown</h1>
+<h1 class="title">Curso de R Markdown</h1>
 <p class="author"><em>Estats Consultoria</em></p>
 </div>
 <div id="intro" class="section level1" number="1">
@@ -282,7 +283,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 6) Shiny (Shiny Document e Shy Presentation)
 7) From Template (GitHub document e Package Vignette)</p>
 <p>Além disso, pode-se alterar o formato utilizando a função abaixo, sendo que <code>render</code> refere-se ao local que está salvo seu documento e <code>output_format</code> ao tipo de documento desejado, conforme os exemplos apontados no início.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="intro.html#cb1-1" aria-hidden="true"></a><span class="kw">render</span>(<span class="st">&quot;teste.Rmd&quot;</span>, <span class="dt">output_format =</span> <span class="st">&quot;pdf_document&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="intro.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">render</span>(<span class="st">&quot;teste.Rmd&quot;</span>, <span class="at">output_format =</span> <span class="st">&quot;pdf_document&quot;</span>)</span></code></pre></div>
 <p>O mesmo pode ser feito para outros formatos.
 Abaixo está uma lista com todos os formatos suportados por padrão com o pacote <code>rmarkdown</code>.</p>
 <ul>
@@ -305,7 +306,7 @@ Abaixo está uma lista com todos os formatos suportados por padrão com o pacote
 <h2><span class="header-section-number">1.3</span> Criando o primeiro documento</h2>
 <p>Para gerar um arquivo em R Markdown é necessário abrir o programa R Studio e instalar o pacote rmarkdown :
 <!--![](img/ins.png)--></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="intro.html#cb2-1" aria-hidden="true"></a><span class="kw">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="intro.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</span></code></pre></div>
 <p>Após a instalação do pacote no R Studio, siga os seguintes passos:</p>
 <p><img src="img/new.png" /></p>
 <p>Em seguida, escolha o tipo de arquivo desejado:</p>

@@ -19,69 +19,70 @@
 \contentsline {subsubsection}{\numberline {2.2.4.1}Lista Ordenada}{16}{subsubsection.2.2.4.1}%
 \contentsline {subsubsection}{\numberline {2.2.4.2}Lista Não-Ordenada}{16}{subsubsection.2.2.4.2}%
 \contentsline {subsubsection}{\numberline {2.2.4.3}Subitens em uma lista}{17}{subsubsection.2.2.4.3}%
-\contentsline {section}{\numberline {2.3}Inserindo Imagens}{17}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Expressões Matemáticas}{19}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Exemplos}{20}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Executando Código}{21}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Introdução}{21}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Flags}{21}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Linguagens Suportadas}{23}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Linguagem Python}{23}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Script Shell}{24}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}SQL}{24}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Rcpp}{26}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Todos os fragmentos de códigos C++ serão combinados em um único fragmento.}{26}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}Stan}{27}{subsection.3.3.6}%
-\contentsline {subsection}{\numberline {3.3.7}Java Script}{27}{subsection.3.3.7}%
-\contentsline {subsection}{\numberline {3.3.8}Julia}{27}{subsection.3.3.8}%
-\contentsline {subsection}{\numberline {3.3.9}C and Fortran}{28}{subsection.3.3.9}%
-\contentsline {section}{\numberline {3.4}Exemplo}{28}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Customização e Tipos de Arquivo}{31}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Opções avançadas no preâmbulo}{31}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Apresentação de slides}{31}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}ioslides}{31}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Modos de Exibição do Slide}{32}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Aparência Visual}{32}{subsection.4.2.3}%
-\contentsline {subsubsection}{Tamanho da Apresentação}{32}{section*.2}%
-\contentsline {subsubsection}{Velocidade de Transição}{32}{section*.3}%
-\contentsline {paragraph}{\numberline {4.2.3.0.1}Destacando o código}{33}{paragraph.4.2.3.0.1}%
-\contentsline {paragraph}{\numberline {4.2.3.0.2}Adicionando um Logotipo}{33}{paragraph.4.2.3.0.2}%
-\contentsline {paragraph}{\numberline {4.2.3.0.3}Tabelas}{34}{paragraph.4.2.3.0.3}%
-\contentsline {paragraph}{\numberline {4.2.3.0.4}Layout Avançado}{34}{paragraph.4.2.3.0.4}%
-\contentsline {paragraph}{\numberline {4.2.3.0.5}Cor do Texto}{34}{paragraph.4.2.3.0.5}%
-\contentsline {paragraph}{\numberline {4.2.3.0.6}Modo de Apresentação}{34}{paragraph.4.2.3.0.6}%
-\contentsline {paragraph}{\numberline {4.2.3.0.7}Impressão e Output em PDF}{35}{paragraph.4.2.3.0.7}%
-\contentsline {paragraph}{\numberline {4.2.3.0.8}Templates Customizados}{35}{paragraph.4.2.3.0.8}%
-\contentsline {subsection}{\numberline {4.2.4}Slidy}{35}{subsection.4.2.4}%
-\contentsline {subsubsection}{Modos de Exibição}{36}{section*.4}%
-\contentsline {subsubsection}{Tamanho do Texto}{36}{section*.5}%
-\contentsline {subsubsection}{Elementos de Rodapé}{37}{section*.6}%
-\contentsline {subsection}{\numberline {4.2.5}Beamer}{37}{subsection.4.2.5}%
-\contentsline {subsubsection}{Temas}{37}{section*.7}%
-\contentsline {subsubsection}{Nível do Slide}{37}{section*.8}%
-\contentsline {subsection}{\numberline {4.2.6}PowerPoint}{38}{subsection.4.2.6}%
-\contentsline {subsubsection}{Templates Customizados}{39}{section*.9}%
-\contentsline {subsection}{\numberline {4.2.7}Reveal.js}{40}{subsection.4.2.7}%
-\contentsline {subsection}{\numberline {4.2.8}Xaringan}{40}{subsection.4.2.8}%
-\contentsline {section}{\numberline {4.3}Documentos}{41}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Documento de texto OpenDocument}{41}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Documento do Word}{41}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Documento de PDF}{42}{subsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.3.1}Índice}{42}{subsubsection.4.3.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.3.2}Opções de imagem}{43}{subsubsection.4.3.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3.3}Impressão de Tabela}{43}{subsubsection.4.3.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.3.4}Destaque de sintaxe}{44}{subsubsection.4.3.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.3.5}Opções LaTeX}{44}{subsubsection.4.3.3.5}%
-\contentsline {subsubsection}{\numberline {4.3.3.6}Pacotes LaTeX para citações}{45}{subsubsection.4.3.3.6}%
-\contentsline {section}{\numberline {4.4}HTML}{45}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Súmario}{45}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Numerando seções}{46}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Abas}{47}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Aparência}{47}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Impressão de Tabela}{49}{subsection.4.4.5}%
-\contentsline {subsection}{\numberline {4.4.6}Personalização avançada}{49}{subsection.4.4.6}%
-\contentsline {section}{\numberline {4.5}Pacotes úteis}{50}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Flexdashboard}{50}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Blogdown}{51}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Pkgdown}{51}{subsection.4.5.3}%
-\contentsline {subsection}{\numberline {4.5.4}Bookdown}{52}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {2.2.5}Citações e referências bibliográficas}{17}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}Inserindo Imagens}{18}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Expressões Matemáticas}{20}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Exemplos}{21}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Executando Código}{23}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introdução}{23}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Flags}{23}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Linguagens Suportadas}{25}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Linguagem Python}{25}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Script Shell}{26}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}SQL}{26}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Rcpp}{28}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Todos os fragmentos de códigos C++ serão combinados em um único fragmento.}{28}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Stan}{29}{subsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.3.7}Java Script}{29}{subsection.3.3.7}%
+\contentsline {subsection}{\numberline {3.3.8}Julia}{29}{subsection.3.3.8}%
+\contentsline {subsection}{\numberline {3.3.9}C and Fortran}{30}{subsection.3.3.9}%
+\contentsline {section}{\numberline {3.4}Exemplo}{30}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Customização e Tipos de Arquivo}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Opções avançadas no preâmbulo}{33}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Apresentação de slides}{33}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}ioslides}{33}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Modos de Exibição do Slide}{34}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Aparência Visual}{34}{subsection.4.2.3}%
+\contentsline {subsubsection}{Tamanho da Apresentação}{34}{section*.2}%
+\contentsline {subsubsection}{Velocidade de Transição}{34}{section*.3}%
+\contentsline {paragraph}{\numberline {4.2.3.0.1}Destacando o código}{35}{paragraph.4.2.3.0.1}%
+\contentsline {paragraph}{\numberline {4.2.3.0.2}Adicionando um Logotipo}{35}{paragraph.4.2.3.0.2}%
+\contentsline {paragraph}{\numberline {4.2.3.0.3}Tabelas}{36}{paragraph.4.2.3.0.3}%
+\contentsline {paragraph}{\numberline {4.2.3.0.4}Layout Avançado}{36}{paragraph.4.2.3.0.4}%
+\contentsline {paragraph}{\numberline {4.2.3.0.5}Cor do Texto}{36}{paragraph.4.2.3.0.5}%
+\contentsline {paragraph}{\numberline {4.2.3.0.6}Modo de Apresentação}{36}{paragraph.4.2.3.0.6}%
+\contentsline {paragraph}{\numberline {4.2.3.0.7}Impressão e Output em PDF}{37}{paragraph.4.2.3.0.7}%
+\contentsline {paragraph}{\numberline {4.2.3.0.8}Templates Customizados}{37}{paragraph.4.2.3.0.8}%
+\contentsline {subsection}{\numberline {4.2.4}Slidy}{37}{subsection.4.2.4}%
+\contentsline {subsubsection}{Modos de Exibição}{38}{section*.4}%
+\contentsline {subsubsection}{Tamanho do Texto}{38}{section*.5}%
+\contentsline {subsubsection}{Elementos de Rodapé}{39}{section*.6}%
+\contentsline {subsection}{\numberline {4.2.5}Beamer}{39}{subsection.4.2.5}%
+\contentsline {subsubsection}{Temas}{39}{section*.7}%
+\contentsline {subsubsection}{Nível do Slide}{39}{section*.8}%
+\contentsline {subsection}{\numberline {4.2.6}PowerPoint}{40}{subsection.4.2.6}%
+\contentsline {subsubsection}{Templates Customizados}{41}{section*.9}%
+\contentsline {subsection}{\numberline {4.2.7}Reveal.js}{42}{subsection.4.2.7}%
+\contentsline {subsection}{\numberline {4.2.8}Xaringan}{42}{subsection.4.2.8}%
+\contentsline {section}{\numberline {4.3}Documentos}{43}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Documento de texto OpenDocument}{43}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Documento do Word}{43}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Documento de PDF}{44}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}Índice}{44}{subsubsection.4.3.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.3.2}Opções de imagem}{45}{subsubsection.4.3.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3.3}Impressão de Tabela}{45}{subsubsection.4.3.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.4}Destaque de sintaxe}{46}{subsubsection.4.3.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.3.5}Opções LaTeX}{46}{subsubsection.4.3.3.5}%
+\contentsline {subsubsection}{\numberline {4.3.3.6}Pacotes LaTeX para citações}{47}{subsubsection.4.3.3.6}%
+\contentsline {section}{\numberline {4.4}HTML}{47}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Súmario}{47}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Numerando seções}{48}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Abas}{49}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Aparência}{49}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Impressão de Tabela}{51}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.6}Personalização avançada}{51}{subsection.4.4.6}%
+\contentsline {section}{\numberline {4.5}Pacotes úteis}{52}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Flexdashboard}{52}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Blogdown}{53}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Pkgdown}{53}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Bookdown}{54}{subsection.4.5.4}%

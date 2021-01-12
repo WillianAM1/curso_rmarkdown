@@ -1,5 +1,5 @@
 --- 
-title: "Curso de RMarkdown"
+title: "Curso de R Markdown"
 author: "Estats Consultoria"
 output: pdf_document
 documentclass: book
