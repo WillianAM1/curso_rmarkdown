@@ -608,7 +608,7 @@ output:
 
 ## HTML
 
-Originalmente a linguagem markdown foi feita para facilitar a geração de arquivos html, então por padrão, R Markdown te suporte para a criação de arquivos html.
+Originalmente a linguagem markdown foi feita para facilitar a geração de arquivos html, então por padrão, R Markdown tem suporte para a criação de arquivos html.
 
 Todo arquivo R Markdown sem tipo de output especificado, é transformado em html.
 
@@ -635,7 +635,7 @@ output:
 ---
 ```
 
-Outra opção disponível para o cabeçalho é `toc_float`, quando definida como verdadeira, o sumário não ficara fixo no início do arquivo hmtl, ele ficará sempre visivel, independente da parte do arquivo que esteja sendo visualizada. A opção `toc_float` pode ser definida da seguinte forma:
+Outra opção disponível para o cabeçalho é `toc_float`, quando definida como verdadeira, o sumário não ficara fixo no início do arquivo html, ele ficará sempre visivel, independente da parte do arquivo que esteja sendo visualizada. A opção `toc_float` pode ser definida da seguinte forma:
     
 ```
 ---
@@ -646,7 +646,7 @@ output:
 ---
 ```
   
-Dentro de `toc_float` existem duas outras opções a serem definidas, `collapsed`, que por padrão é definida como verdadeira, e `smooth_control`, que também é definida como verdadeira po padrão.
+Dentro de `toc_float` existem duas outras opções a serem definidas, `collapsed`, que por padrão é definida como verdadeira, e `smooth_control`, que também é definida como verdadeira por padrão.
   
 A opção `collapsed` define o que aparecerá no sumário o tempo todo, quando definido como verdadeiro, ele esconde as subseções de sessões que não estejam sendo visualizadas, as expandindo quando se estiver olhando essa determinada sessão, e quando definido como falso, o sumário mostra todas as seções e subseções o tempo todo.
   
